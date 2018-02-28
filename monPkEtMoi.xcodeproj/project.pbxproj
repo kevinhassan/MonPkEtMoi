@@ -15,6 +15,12 @@
 		2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */; };
 		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
+		EC14A06720468F4E00B2220D /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = EC14A06220468F4E00B2220D /* calendar.png */; };
+		EC14A06820468F4E00B2220D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = EC14A06320468F4E00B2220D /* home.png */; };
+		EC14A06920468F4E00B2220D /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = EC14A06420468F4E00B2220D /* info.png */; };
+		EC14A06A20468F4E00B2220D /* pillule.png in Resources */ = {isa = PBXBuildFile; fileRef = EC14A06520468F4E00B2220D /* pillule.png */; };
+		EC14A06B20468F4E00B2220D /* Sports-Exercise-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EC14A06620468F4E00B2220D /* Sports-Exercise-icon.png */; };
+		EC2441F92046B24F006FB691 /* ContactMedicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC14A06220468F4E00B2220D /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = "../Xcode/Trouble-P/image/calendar.png"; sourceTree = "<group>"; };
+		EC14A06320468F4E00B2220D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = "../Xcode/Trouble-P/image/home.png"; sourceTree = "<group>"; };
+		EC14A06420468F4E00B2220D /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = info.png; path = "../Xcode/Trouble-P/image/info.png"; sourceTree = "<group>"; };
+		EC14A06520468F4E00B2220D /* pillule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pillule.png; path = "../Xcode/Trouble-P/image/pillule.png"; sourceTree = "<group>"; };
+		EC14A06620468F4E00B2220D /* Sports-Exercise-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sports-Exercise-icon.png"; path = "../Xcode/Trouble-P/image/Sports-Exercise-icon.png"; sourceTree = "<group>"; };
+		EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactMedicTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 		2380FCE12045A58A00763F43 = {
 			isa = PBXGroup;
 			children = (
+				EC14A06120468EA600B2220D /* Images */,
 				2380FCEC2045A58A00763F43 /* monPkEtMoi */,
 				2380FD042045A58D00763F43 /* monPkEtMoiTests */,
 				2380FD0F2045A58E00763F43 /* monPkEtMoiUITests */,
@@ -106,6 +119,7 @@
 				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
 				2380FCFC2045A58D00763F43 /* Info.plist */,
 				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
+				EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */,
 			);
 			path = monPkEtMoi;
 			sourceTree = "<group>";
@@ -126,6 +140,18 @@
 				2380FD122045A58E00763F43 /* Info.plist */,
 			);
 			path = monPkEtMoiUITests;
+			sourceTree = "<group>";
+		};
+		EC14A06120468EA600B2220D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EC14A06220468F4E00B2220D /* calendar.png */,
+				EC14A06320468F4E00B2220D /* home.png */,
+				EC14A06420468F4E00B2220D /* info.png */,
+				EC14A06520468F4E00B2220D /* pillule.png */,
+				EC14A06620468F4E00B2220D /* Sports-Exercise-icon.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */,
+				EC14A06B20468F4E00B2220D /* Sports-Exercise-icon.png in Resources */,
+				EC14A06820468F4E00B2220D /* home.png in Resources */,
+				EC14A06720468F4E00B2220D /* calendar.png in Resources */,
+				EC14A06A20468F4E00B2220D /* pillule.png in Resources */,
 				2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */,
 				2380FCF32045A58A00763F43 /* Main.storyboard in Resources */,
+				EC14A06920468F4E00B2220D /* info.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +296,7 @@
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				2380FCF02045A58A00763F43 /* ViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
+				EC2441F92046B24F006FB691 /* ContactMedicTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +543,7 @@
 				2380FD172045A58E00763F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2380FD182045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +552,7 @@
 				2380FD1A2045A58E00763F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2380FD1B2045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +561,7 @@
 				2380FD1D2045A58E00763F43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
