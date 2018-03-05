@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
-    var names : [String] = []
+class ViewController: UIViewController {
     @IBOutlet weak var contactMedic: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +19,5 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return self.names.count
-    
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = self.contactMedic.dequeueReusableCell(withIdentifier: "contactMedicalCell",for: indexPath) as! ContactMedicTableViewCell
-        cell.prenomMedic.text = self.names[indexPath.row]
-        return cell
-    
-    }
-    
 }
 
