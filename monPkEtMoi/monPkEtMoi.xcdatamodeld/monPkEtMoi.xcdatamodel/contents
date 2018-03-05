@@ -1,4 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class"/>
+    <entity name="ActiviteRealise" representedClassName="ActiviteRealise" syncable="YES" codeGenerationType="class"/>
+    <entity name="Date" representedClassName="Date" syncable="YES" codeGenerationType="class"/>
+    <entity name="Etat" representedClassName="Etat" syncable="YES" codeGenerationType="class"/>
+    <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class"/>
+    <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class"/>
+    <entity name="Patient" representedClassName="Patient" parentEntity="Personne" syncable="YES" codeGenerationType="class">
+        <attribute name="tempsPreparation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Soignant" inverseName="newRelationship" inverseEntity="Soignant" syncable="YES"/>
+    </entity>
+    <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
+        <attribute name="adresse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="PlageHoraire" representedClassName="PlageHoraire" syncable="YES" codeGenerationType="class"/>
+    <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class"/>
+    <entity name="Prise" representedClassName="Prise" syncable="YES" codeGenerationType="class"/>
+    <entity name="RDV" representedClassName="RDV" syncable="YES" codeGenerationType="class">
+        <attribute name="dateRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descriptionRDV" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureRDV" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lieuRDV" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Soignant" representedClassName="Soignant" syncable="YES" codeGenerationType="class">
+        <relationship name="newRelationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="newRelationship" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleActivite" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleEvenement" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="TypeSoignant" representedClassName="TypeSoignant" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleTypeSoignant" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Patient" positionX="-119" positionY="-229" width="128" height="73"/>
+        <element name="Personne" positionX="-135" positionY="-378" width="128" height="118"/>
+        <element name="PlageHoraire" positionX="198" positionY="-387" width="128" height="45"/>
+        <element name="Date" positionX="198" positionY="-261" width="128" height="45"/>
+        <element name="Medicament" positionX="-108" positionY="-18" width="128" height="45"/>
+        <element name="Posologie" positionX="88" positionY="-72" width="128" height="45"/>
+        <element name="Prise" positionX="90" positionY="72" width="128" height="45"/>
+        <element name="Evenement" positionX="-387" positionY="36" width="128" height="45"/>
+        <element name="RDV" positionX="-342" positionY="-121" width="128" height="103"/>
+        <element name="Soignant" positionX="-423" positionY="-432" width="128" height="58"/>
+        <element name="TypeSoignant" positionX="-432" positionY="-279" width="128" height="58"/>
+        <element name="TypeEvenement" positionX="-567" positionY="-36" width="128" height="58"/>
+        <element name="ActiviteRealise" positionX="52" positionY="-162" width="128" height="45"/>
+        <element name="Activite" positionX="198" positionY="-153" width="128" height="45"/>
+        <element name="TypeActivite" positionX="358" positionY="-153" width="128" height="58"/>
+        <element name="Etat" positionX="34" positionY="-279" width="128" height="45"/>
+    </elements>
 </model>
