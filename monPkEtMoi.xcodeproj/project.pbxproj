@@ -16,6 +16,7 @@
 		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
 		EC2441F92046B24F006FB691 /* ContactMedicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */; };
+		EC85BB93204D810B00B54CD2 /* patientController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC85BB92204D810B00B54CD2 /* patientController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactMedicTableViewCell.swift; sourceTree = "<group>"; };
+		EC85BB92204D810B00B54CD2 /* patientController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,8 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				EC85BB91204D80E400B54CD2 /* VIews */,
+				EC85BB90204D80C500B54CD2 /* Controllers */,
 				2380FCED2045A58A00763F43 /* AppDelegate.swift */,
 				2380FCEF2045A58A00763F43 /* ViewController.swift */,
 				2380FCF12045A58A00763F43 /* Main.storyboard */,
@@ -137,6 +141,21 @@
 			children = (
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		EC85BB90204D80C500B54CD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC85BB92204D810B00B54CD2 /* patientController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EC85BB91204D80E400B54CD2 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC85BB93204D810B00B54CD2 /* patientController.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				2380FCF02045A58A00763F43 /* ViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
