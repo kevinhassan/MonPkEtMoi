@@ -74,14 +74,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Contacts médicaux" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tNC-7p-HtD">
-                                                    <rect key="frame" x="15" y="12" width="148" height="21"/>
+                                                    <rect key="frame" x="15" y="12" width="147.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hI4-Sn-qqr">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20"/>
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -332,7 +332,7 @@
         <!--Accueil non enregistré-->
         <scene sceneID="PXB-bV-CKi">
             <objects>
-                <viewController title="Accueil non enregistré" id="BE2-a5-Vzb" customClass="patientController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Accueil non enregistré" id="BE2-a5-Vzb" customClass="CommencerViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JB7-d1-uD8"/>
                         <viewControllerLayoutGuide type="bottom" id="pFo-t7-x9L"/>
@@ -370,7 +370,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCl-dq-Kyd">
-                                <rect key="frame" x="125" y="496" width="125" height="30"/>
+                                <rect key="frame" x="125" y="496" width="125" height="36"/>
                                 <color key="backgroundColor" red="0.95675891639999999" green="0.95692259069999996" blue="0.95674854519999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="125" id="Jug-xH-878"/>
@@ -379,7 +379,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vwc-UE-zyp" kind="show" id="1YC-sq-Jgs"/>
+                                    <segue destination="Vwc-UE-zyp" kind="show" identifier="showFormulaireid" id="1YC-sq-Jgs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -404,12 +404,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="5pO-Xg-lIA"/>
                     <connections>
+                        <outlet property="boutonCommencer" destination="uCl-dq-Kyd" id="dPC-Fg-7ri"/>
                         <outlet property="commencerButton" destination="uCl-dq-Kyd" id="ETp-LI-Bcx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJ9-Q5-tX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868.1159420289857" y="-614.67391304347836"/>
+            <point key="canvasLocation" x="1868" y="-614.84257871064472"/>
         </scene>
         <!--Patient Controller-->
         <scene sceneID="zq4-F4-sib">
@@ -574,7 +575,7 @@
         <!--Bienvenue!-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectType" id="BYZ-38-t0r" customClass="ViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -689,7 +690,7 @@
                                         </date>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date de naissance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-Vc-j3Q">
-                                        <rect key="frame" x="90" y="207" width="189" height="21"/>
+                                        <rect key="frame" x="89" y="207" width="189" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
