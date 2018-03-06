@@ -111,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				EC837E98204D87570089A823 /* Model */,
-				EC85BB91204D80E400B54CD2 /* VIews */,
 				EC85BB90204D80C500B54CD2 /* Controllers */,
 				2380FCED2045A58A00763F43 /* AppDelegate.swift */,
 				2380FCEF2045A58A00763F43 /* ViewController.swift */,
@@ -166,13 +165,6 @@
 				EC837EA5204DACC90089A823 /* CommencerViewController.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		EC85BB91204D80E400B54CD2 /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

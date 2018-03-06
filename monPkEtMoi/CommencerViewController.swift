@@ -10,57 +10,98 @@ import UIKit
 import CoreData
 import Foundation
 
-class CommencerViewController: UIViewController{
-    @IBOutlet weak var boutonCommencer: UIButton!
-    let segueShowFormulaireid = "showFormulaireid"
+class CommencerViewController: UIViewController, UITableViewDelegate{
+    
+    var patients : [Patient] = []
     
     
+    @IBAction func addAction(_ sener: Any){
+        let alert = UIAlertController(title: "Nouveau Nom",
+                                      message: "Ajouter un nom",
+                                      preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title : "Ajouter",
+                                       style: .default)
+        
+        {
+            [unowned self] action in
+            guard let textField = alert.textFields?.first,
+                let nameToSave = textField.text else{
+                    return
+            }
+            self.saveNewPatient(withName: nameToSave)
     
-    var patient : [Patient] = []
-    var erreur : String? = nil
+        }
+        
+        let cancelAction = UIAlertAction(title: "Annuler",
+                                         style: .default)
+        
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert,animated: true)
+    }
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request : NSFetchRequest<Patient> = Patient.fetchRequest()
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
-            self.erreur = "Impossible de charger les données"
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            self.alerteError(errorMsg : "Could not save person", userinfo: "Unknow reason")
             return
         }
         
         let context = appDelegate.persistentContainer.viewContext
-        // Do any additional setup after loading the view.
-        do{
-            try self.patient = context.fetch(request)
-        }
-        catch let error as NSError{
-            self.erreur = ("\(error)")
-        }
-        
+        // creer une requête associée à l'entité patient
+                
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == self.segueShowFormulaireid{
-            if self.isExist(patient: self.patient){
-                
-            }
-        }
-    }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    public func isExist(patient : [Patient]) -> Bool {
-        var isExist  : Bool = false
-        if(patient.count>0){
-            isExist = true
+    
+    
+    func saveNewPatient(withName nom: String){
+        //first get context into application delegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            self.alerteError(errorMsg : "Could not save person", userinfo: "Unknow reason")
+            return
         }
-        return isExist
+        
+        let context = appDelegate.persistentContainer.viewContext
+        //Create a person managedObject
+        let patient = Patient(context : context)
+        //then modify its name
+        patient.nom = nom
+        do{
+            try context.save()
+            self.patients.append(patient)
+        }catch let error as NSError{
+            self.alerteError(errorMsg: "\(error)", userinfo: "\(error.userInfo)")
+            return
+        }
     }
 
+    
+    func alerteError(errorMsg error : String, userinfo user : String = "") {
+        let alert = UIAlertController(title: error,
+                                      message: user,
+                                      preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Ok",
+                                         style: .default)
+
+        
+        alert.addAction(cancelAction)
+        present(alert,animated: true)
+
+    }
     
     
     /*

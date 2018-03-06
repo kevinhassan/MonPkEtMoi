@@ -22,6 +22,8 @@ import Foundation
 
 
 extension Patient {
-    
+    func existPatient(){
+        
+    }
 }
 
