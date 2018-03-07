@@ -15,7 +15,6 @@
 		2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */; };
 		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
-		EC2441F92046B24F006FB691 /* ContactMedicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */; };
 		EC837E9A204D87890089A823 /* patientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* patientModel.swift */; };
 		EC837E9C204D932E0089A823 /* personModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E9B204D932E0089A823 /* personModel.swift */; };
 		EC837EA4204DAC930089A823 /* AjoutPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AjoutPatientViewController.swift */; };
@@ -54,7 +53,6 @@
 		2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactMedicTableViewCell.swift; sourceTree = "<group>"; };
 		EC837E99204D87890089A823 /* patientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientModel.swift; sourceTree = "<group>"; };
 		EC837E9B204D932E0089A823 /* personModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personModel.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AjoutPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjoutPatientViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
 				2380FCFC2045A58D00763F43 /* Info.plist */,
 				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
-				EC2441F82046B24F006FB691 /* ContactMedicTableViewCell.swift */,
 			);
 			path = monPkEtMoi;
 			sourceTree = "<group>";
@@ -307,7 +304,6 @@
 				EC837EA4204DAC930089A823 /* AjoutPatientViewController.swift in Sources */,
 				EC837E9C204D932E0089A823 /* personModel.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
-				EC2441F92046B24F006FB691 /* ContactMedicTableViewCell.swift in Sources */,
 				EC837E9A204D87890089A823 /* patientModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

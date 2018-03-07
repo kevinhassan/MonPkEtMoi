@@ -24,11 +24,12 @@
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" parentEntity="Personne" syncable="YES" codeGenerationType="class">
-        <attribute name="tempsPreparation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="tempsPreparation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="etre_soigner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="soigner" inverseEntity="Soignant" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
         <attribute name="adresse" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
@@ -74,8 +75,8 @@
         <element name="Etat" positionX="34" positionY="-279" width="128" height="58"/>
         <element name="Evenement" positionX="-387" positionY="36" width="128" height="58"/>
         <element name="Medicament" positionX="-108" positionY="-18" width="128" height="88"/>
-        <element name="Patient" positionX="7" positionY="-388" width="128" height="73"/>
-        <element name="Personne" positionX="-209" positionY="-243" width="128" height="118"/>
+        <element name="Patient" positionX="7" positionY="-388" width="128" height="75"/>
+        <element name="Personne" positionX="-209" positionY="-243" width="128" height="135"/>
         <element name="PlageHoraire" positionX="198" positionY="-387" width="128" height="73"/>
         <element name="Posologie" positionX="88" positionY="-72" width="128" height="103"/>
         <element name="Prise" positionX="90" positionY="72" width="128" height="88"/>
