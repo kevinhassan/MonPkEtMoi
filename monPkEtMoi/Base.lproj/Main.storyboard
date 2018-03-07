@@ -247,11 +247,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Création compte patient" id="g08-yM-uF5">
-                                    <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="GhS-oR-7MW">
-                                        <connections>
-                                            <segue destination="c70-t7-3nB" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="m9T-dq-ZMg"/>
-                                        </connections>
-                                    </barButtonItem>
+                                    <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="GhS-oR-7MW"/>
                                 </navigationItem>
                             </items>
                         </navigationBar>
