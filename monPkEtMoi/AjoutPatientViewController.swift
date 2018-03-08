@@ -14,11 +14,17 @@ class AjoutPatientViewController: UITableViewController {
     @IBOutlet weak var prenomTF: UITextField!
     @IBOutlet weak var dateNaissanceTF: UITextField!
     @IBOutlet weak var adresseTF: UITextField!
-    @IBOutlet weak var tempsPreparationTF: UITableViewCell!
-    @IBOutlet weak var mailTF: NSLayoutConstraint!
+    @IBOutlet weak var tempsPreparationTF: UITextField!
+    @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!
-    @IBOutlet weak var Boutonenregistrer: UIBarButtonItem!
     
+    /// Vérifier que le formulaire est valide
+    func validateForm(_ inputs: [String: UITextField])-> Bool {
+        // Filtrer les valeurs optionnelles (textField vide)
+        let res = inputs.filter{(key, input) in !(input.text?.isEmpty ?? true)}
+        // Si même taille alors pas de valeurs vides
+        return res.count == (inputs.count)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,25 +46,13 @@ class AjoutPatientViewController: UITableViewController {
     
     @IBAction func addPatient(_ sender: UIBarButtonItem)
     {
-        guard let nom = nomTextField.text else{
-                    return
+        let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
+
+        if validateForm(inputs){
+            DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Votre compte a été enregistré avec succès")
+        }else{
+            // Afficher une pop up d'erreur 
         }
-        guard let prenom = prenomTF.text else{
-                    return
-        }
-            
-        self.saveNewPatient(withName: nom, withPrenom : prenom)
-        
-        let alert = UIAlertController(title: "Bienvenue",
-                                      message: "Le compte a été créé avec succès !",
-                                      preferredStyle: .actionSheet)
-        
-        let continuerAction = UIAlertAction(title: "Continuer",
-                                         style: .default)
-        
-        
-        alert.addAction(continuerAction)
-        present(alert,animated: true)
     }
     
     
