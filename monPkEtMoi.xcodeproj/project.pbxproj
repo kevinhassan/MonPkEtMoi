@@ -18,6 +18,7 @@
 		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
+		B225486C205437850027FB86 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* TimePicker.swift */; };
 		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
 		EC837E9A204D87890089A823 /* patientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* patientModel.swift */; };
@@ -61,6 +62,7 @@
 		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		B225486B205437850027FB86 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
 				2380FCFC2045A58D00763F43 /* Info.plist */,
 				B2254869205420F80027FB86 /* DatePicker.swift */,
+				B225486B205437850027FB86 /* TimePicker.swift */,
 			);
 			path = monPkEtMoi;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				EC837E9C204D932E0089A823 /* personModel.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
+				B225486C205437850027FB86 /* TimePicker.swift in Sources */,
 				EC837E9A204D87890089A823 /* patientModel.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
 			);

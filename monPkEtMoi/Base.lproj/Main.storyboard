@@ -420,14 +420,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcM-FX-7is">
                                                     <rect key="frame" x="5" y="0.0" width="365" height="43.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temps de préparation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52X-YZ-Afe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="167.5" height="43.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Temps de préparation (Minutes)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52X-YZ-Afe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="244.5" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-6c-rJP">
-                                                            <rect key="frame" x="167.5" y="0.0" width="189.5" height="43.5"/>
+                                                        <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wzg-6c-rJP" customClass="TimePicker" customModule="monPkEtMoi" customModuleProvider="target">
+                                                            <rect key="frame" x="244.5" y="0.0" width="112.5" height="43.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -550,7 +550,7 @@
                         <outlet property="nomTextField" destination="MJO-7u-CSN" id="q1t-4l-VA0"/>
                         <outlet property="prenomTF" destination="8FE-Km-sZt" id="8f6-TA-HIo"/>
                         <outlet property="telTF" destination="TbR-UY-yBn" id="rTU-iy-lfg"/>
-                        <outlet property="tempsPreparationTF" destination="wzg-6c-rJP" id="bVA-PK-cfc"/>
+                        <outlet property="tempsPreparationTF" destination="wzg-6c-rJP" id="l2p-Hn-pA9"/>
                         <segue destination="BYZ-38-t0r" kind="show" id="xg7-Qv-Qa4"/>
                     </connections>
                 </tableViewController>

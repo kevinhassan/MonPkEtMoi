@@ -13,12 +13,12 @@ class AjoutPatientViewController: UITableViewController {
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var prenomTF: UITextField!
     @IBOutlet weak var dateNaissanceTF: DatePicker!
+    @IBOutlet weak var tempsPreparationTF: TimePicker!
     @IBOutlet weak var adresseTF: UITextField!
-    @IBOutlet weak var tempsPreparationTF: UITextField!
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!
     
-    /// Vérifier que le formulaire est valide
+    // MARK: - Valider données formulaire
     func validateForm(_ inputs: [String: UITextField])-> Bool {
         // Filtrer les valeurs optionnelles (textField vide)
         let res = inputs.filter{(key, input) in !(input.text?.isEmpty ?? true)}
@@ -38,29 +38,27 @@ class AjoutPatientViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     
-    
+    // MARK: - Formulaire à envoyer
     @IBAction func addPatient(_ sender: UIBarButtonItem)
     {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
         if validateForm(inputs){
-            // ajouter patient
+            saveNewPatient(inputs)
             DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Votre compte a été enregistré avec succès")
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
     
+    // MARK: - Enregistrer les informations du patient
     
-    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: Date, withAdress adresse : String, withTempsP tempsP : Int){
-    
+    func saveNewPatient(_ inputs: [String: UITextField]){
+        // TODO: mapper les keys pour sauvegarder le contexte
+        
         let patient = Patient(context : CoreDataManager.context)
-        //then modify its name
-        patient.nom = nom
-        patient.prenom = prenom
-//        patient.dateNaissance = date
-        patient.adresse = adresse
-//        patient.tempsPreparation = tempsP
-        CoreDataManager.save()
+        // inputs.map((key,value) in patient.key = value)
+        print(patient)
+        //CoreDataManager.save()
     }
 }
