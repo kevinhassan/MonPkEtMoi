@@ -19,5 +19,8 @@ class DialogBoxHelper{
     class func alert(view: UIViewController, error: NSError){
         self.alert(view: view, WithTitle: "\(error)", andMessage: "\(error.userInfo)")
     }
+    class func alert(view: UIViewController, errorMessage: String){
+        self.alert(view: view, WithTitle: "Erreur", andMessage: "\(errorMessage)")
+    }
 }
 

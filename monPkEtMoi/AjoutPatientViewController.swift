@@ -18,6 +18,9 @@ class AjoutPatientViewController: UITableViewController {
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!
     
+    let datePicker = UIDatePicker()
+
+    
     /// Vérifier que le formulaire est valide
     func validateForm(_ inputs: [String: UITextField])-> Bool {
         // Filtrer les valeurs optionnelles (textField vide)
@@ -26,9 +29,19 @@ class AjoutPatientViewController: UITableViewController {
         return res.count == (inputs.count)
     }
     
+    func initFormFields(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneButton], animated: true)
+        dateNaissanceTF.inputAccessoryView = toolbar
+        dateNaissanceTF.inputView = datePicker
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.initFormFields()
         // Do any additional setup after loading the view.
     }
 
@@ -49,65 +62,31 @@ class AjoutPatientViewController: UITableViewController {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
         if validateForm(inputs){
+            // ajouter patient
             DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Votre compte a été enregistré avec succès")
         }else{
-            // Afficher une pop up d'erreur 
+            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
     
     
-    func saveNewPatient(withName nom: String, withPrenom prenom: String){
-//    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: Date, withAdress adresse : String, withTempsP tempsP : Date){
+    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: Date, withAdress adresse : String, withTempsP tempsP : Int){
     
-        //first get context into application delegate
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            self.alerteError(errorMsg : "Could not save person", userinfo: "Unknow reason")
-            return
-        }
-        
-        let context = appDelegate.persistentContainer.viewContext
-        //Create a person managedObject
-        let patient = Patient(context : context)
+        let patient = Patient(context : CoreDataManager.context)
         //then modify its name
         patient.nom = nom
         patient.prenom = prenom
 //        patient.dateNaissance = date
-//        patient.adresse = adresse
+        patient.adresse = adresse
 //        patient.tempsPreparation = tempsP
-        
-        do{
-            try context.save()
-        }catch let error as NSError{
-            self.alerteError(errorMsg: "\(error)", userinfo: "\(error.userInfo)")
-            return
-        }
+        CoreDataManager.save()
     }
-    
-    
-    func alerteError(errorMsg error : String, userinfo user : String = "") {
-        let alert = UIAlertController(title: error,
-                                      message: user,
-                                      preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Ok",
-                                         style: .default)
-        
-        
-        alert.addAction(cancelAction)
-        present(alert,animated: true)
-        
+    func donePressed(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        dateFormatter.locale = Locale(identifier: "fr_FR")
+        dateNaissanceTF.text = dateFormatter.string(from: datePicker.date)
+        self.view.endEditing(true)
     }
-
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
