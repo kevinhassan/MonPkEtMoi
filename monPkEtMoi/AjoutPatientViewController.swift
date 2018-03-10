@@ -12,14 +12,11 @@ class AjoutPatientViewController: UITableViewController {
 
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var prenomTF: UITextField!
-    @IBOutlet weak var dateNaissanceTF: UITextField!
+    @IBOutlet weak var dateNaissanceTF: DatePicker!
     @IBOutlet weak var adresseTF: UITextField!
     @IBOutlet weak var tempsPreparationTF: UITextField!
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!
-    
-    let datePicker = UIDatePicker()
-
     
     /// Vérifier que le formulaire est valide
     func validateForm(_ inputs: [String: UITextField])-> Bool {
@@ -29,25 +26,10 @@ class AjoutPatientViewController: UITableViewController {
         return res.count == (inputs.count)
     }
     
-    func initFormFields(){
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
-        
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
-        toolbar.setItems([doneButton], animated: true)
-        dateNaissanceTF.inputAccessoryView = toolbar
-        dateNaissanceTF.inputView = datePicker
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.initFormFields()
         // Do any additional setup after loading the view.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -80,13 +62,5 @@ class AjoutPatientViewController: UITableViewController {
         patient.adresse = adresse
 //        patient.tempsPreparation = tempsP
         CoreDataManager.save()
-    }
-    func donePressed(){
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .none
-        dateFormatter.locale = Locale(identifier: "fr_FR")
-        dateNaissanceTF.text = dateFormatter.string(from: datePicker.date)
-        self.view.endEditing(true)
     }
 }

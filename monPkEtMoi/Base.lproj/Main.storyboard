@@ -350,7 +350,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-7x-TdX">
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-7x-TdX" customClass="DatePicker" customModule="monPkEtMoi" customModuleProvider="target">
                                                             <rect key="frame" x="140.5" y="0.0" width="224.5" height="43.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -545,7 +545,7 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="adresseTF" destination="Vi9-Bb-vfA" id="gB8-Sg-iTd"/>
-                        <outlet property="dateNaissanceTF" destination="5rQ-7x-TdX" id="IxP-Co-II3"/>
+                        <outlet property="dateNaissanceTF" destination="5rQ-7x-TdX" id="oec-y4-4qJ"/>
                         <outlet property="mailTF" destination="H9U-P0-DTc" id="Dgn-7z-2yi"/>
                         <outlet property="nomTextField" destination="MJO-7u-CSN" id="q1t-4l-VA0"/>
                         <outlet property="prenomTF" destination="8FE-Km-sZt" id="8f6-TA-HIo"/>
