@@ -17,14 +17,12 @@ class CoreDataManager : NSObject{
         return appDelegate.persistentContainer.viewContext
     }
     
-    @discardableResult
-    class func save() -> NSError?{
-        
+    
+    class func save() throws {
         do {
             try CoreDataManager.context.save()
-            return nil
         } catch let error as NSError {
-            return error
+            throw error
         }
     }
 }

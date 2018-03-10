@@ -44,8 +44,14 @@ class AjoutPatientViewController: UITableViewController {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
         if validateForm(inputs){
-            //withDate: inputs["dateNaissance"]?.text
-            saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withAdress : (inputs["adresse"]?.text)!, withTempsP: Int((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
+            let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()
+            do{
+                try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
+                DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès")
+            }catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
+            
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
@@ -53,10 +59,20 @@ class AjoutPatientViewController: UITableViewController {
     
     // MARK: - Enregistrer les informations du patient
     
-    func saveNewPatient(withName nom: String, withPrenom prenom: String,  withAdress adresse : String, withTempsP tempsP : Int, withMail mail: String, withTel tel: String){
-        //withDate date: Date
+    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int, withMail mail: String, withTel tel: String) throws {
+
         let patient: Patient = Patient(context : CoreDataManager.context)
-        
-        CoreDataManager.save()
+        patient.nom = nom
+        patient.prenom = prenom
+        patient.dateNaissance = date
+        patient.adresse = adresse
+        patient.tempsPreparation = Int64(tempsP)
+        patient.mail = mail
+        patient.tel = tel
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
     }
 }
