@@ -44,8 +44,8 @@ class AjoutPatientViewController: UITableViewController {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
         if validateForm(inputs){
-            saveNewPatient(inputs)
-            DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Votre compte a été enregistré avec succès")
+            //withDate: inputs["dateNaissance"]?.text
+            saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withAdress : (inputs["adresse"]?.text)!, withTempsP: Int((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
@@ -53,12 +53,10 @@ class AjoutPatientViewController: UITableViewController {
     
     // MARK: - Enregistrer les informations du patient
     
-    func saveNewPatient(_ inputs: [String: UITextField]){
-        // TODO: mapper les keys pour sauvegarder le contexte
+    func saveNewPatient(withName nom: String, withPrenom prenom: String,  withAdress adresse : String, withTempsP tempsP : Int, withMail mail: String, withTel tel: String){
+        //withDate date: Date
+        let patient: Patient = Patient(context : CoreDataManager.context)
         
-        let patient = Patient(context : CoreDataManager.context)
-        // inputs.map((key,value) in patient.key = value)
-        print(patient)
-        //CoreDataManager.save()
+        CoreDataManager.save()
     }
 }
