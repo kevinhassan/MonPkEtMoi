@@ -46,7 +46,7 @@ class AjoutPatientViewController: UITableViewController {
         if validateForm(inputs){
             let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()
             do{
-                try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
+                try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int64((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
                 DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès")
             }catch let error as NSError{
                 DialogBoxHelper.alert(view: self, error: error)
@@ -59,14 +59,14 @@ class AjoutPatientViewController: UITableViewController {
     
     // MARK: - Enregistrer les informations du patient
     
-    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int, withMail mail: String, withTel tel: String) throws {
+    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) throws {
 
         let patient: Patient = Patient(context : CoreDataManager.context)
         patient.nom = nom
         patient.prenom = prenom
         patient.dateNaissance = date
         patient.adresse = adresse
-        patient.tempsPreparation = Int64(tempsP)
+        patient.tempsPreparation = tempsP
         patient.mail = mail
         patient.tel = tel
         do{
