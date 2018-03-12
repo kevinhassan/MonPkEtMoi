@@ -47,7 +47,9 @@ class AjoutPatientViewController: UITableViewController {
             let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()
             do{
                 try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int64((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
-                DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès")
+                DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+                    self.present(vc, animated: true, completion: nil)})
             }catch let error as NSError{
                 DialogBoxHelper.alert(view: self, error: error)
             }

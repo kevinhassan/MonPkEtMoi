@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 class DialogBoxHelper{
-    class func alert(view: UIViewController, WithTitle title : String, andMessage msg: String = ""){
+    class func alert(view: UIViewController, WithTitle title : String, andMessage msg: String = "", closure: ((UIAlertAction) -> Void)? = nil){
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "Ok", style: .default)
-        alert.addAction(cancelAction)
+        let continueAction = UIAlertAction(title: "Ok", style: .default, handler: closure)
+        alert.addAction(continueAction)
         view.present(alert, animated: true)
     }
     class func alert(view: UIViewController, error: NSError){
