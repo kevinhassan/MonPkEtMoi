@@ -36,6 +36,7 @@ extension Patient {
         let request: NSFetchRequest = Patient.fetchRequest()
         do {
             let patients: [Patient] = try CoreDataManager.context.fetch(request)
+            
             return patients.first
         } catch let error as NSError {
             throw error

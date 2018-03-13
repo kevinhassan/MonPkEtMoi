@@ -44,7 +44,7 @@ class AjoutPatientViewController: UITableViewController {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
         if validateForm(inputs){
-            let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()
+            let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()!
             do{
                 try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int64((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
                 DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in

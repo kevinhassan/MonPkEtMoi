@@ -32,7 +32,12 @@ class DatePicker: UITextField{
         self.text = dateFormatter.string(from: datePicker.date)
         self.resignFirstResponder()
     }
-    func getDate()->NSDate{
+    func getDate()->NSDate?{
         return self.dateFormatter.date(from: self.text!)! as NSDate
+    }
+ 
+    func setDate(date: NSDate){
+        self.dateFormatter.dateFormat = "dd/MM/yyyy"
+        self.text = self.dateFormatter.string(for: date)
     }
 }

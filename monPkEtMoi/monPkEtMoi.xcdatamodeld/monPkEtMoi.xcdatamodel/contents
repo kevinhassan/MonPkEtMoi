@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dureeExercice" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="repetHebdomadaire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -71,7 +71,7 @@
     <elements>
         <element name="Activite" positionX="198" positionY="-153" width="128" height="88"/>
         <element name="ActiviteRealise" positionX="52" positionY="-162" width="128" height="103"/>
-        <element name="Date" positionX="198" positionY="-261" width="128" height="43"/>
+        <element name="Date" positionX="198" positionY="-261" width="128" height="45"/>
         <element name="Etat" positionX="34" positionY="-279" width="128" height="58"/>
         <element name="Evenement" positionX="-387" positionY="36" width="128" height="58"/>
         <element name="Medicament" positionX="-108" positionY="-18" width="128" height="88"/>
