@@ -1559,7 +1559,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Mon profil" id="bcI-zc-qwH">
-                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="49J-Zi-sDM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="49J-Zi-sDM">
+                            <connections>
+                                <action selector="updatePatient:" destination="Ddm-GP-Vcn" id="nXc-xY-rMd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="adresseTF" destination="uuf-LT-nea" id="rNi-qE-gJg"/>
