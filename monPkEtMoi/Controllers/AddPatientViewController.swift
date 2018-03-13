@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-class AjoutPatientViewController: UITableViewController {
+class AddPatientViewController: UITableViewController {
 
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var prenomTF: UITextField!

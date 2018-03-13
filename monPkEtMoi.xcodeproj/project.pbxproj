@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
 		2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
-		2380FCF02045A58A00763F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCEF2045A58A00763F43 /* ViewController.swift */; };
 		2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
 		2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */; };
 		2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF72045A58C00763F43 /* Assets.xcassets */; };
@@ -23,8 +22,7 @@
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
 		EC837E9A204D87890089A823 /* patientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* patientModel.swift */; };
 		EC837E9C204D932E0089A823 /* personModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E9B204D932E0089A823 /* personModel.swift */; };
-		EC837EA4204DAC930089A823 /* AjoutPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AjoutPatientViewController.swift */; };
-		EC837EA6204DACC90089A823 /* CommencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA5204DACC90089A823 /* CommencerViewController.swift */; };
+		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +46,6 @@
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2380FCEF2045A58A00763F43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2380FCF22045A58A00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = monPkEtMoi.xcdatamodel; sourceTree = "<group>"; };
 		2380FCF72045A58C00763F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,8 +66,7 @@
 		B2DF0079205172B00055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		EC837E99204D87890089A823 /* patientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientModel.swift; sourceTree = "<group>"; };
 		EC837E9B204D932E0089A823 /* personModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personModel.swift; sourceTree = "<group>"; };
-		EC837EA3204DAC930089A823 /* AjoutPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjoutPatientViewController.swift; sourceTree = "<group>"; };
-		EC837EA5204DACC90089A823 /* CommencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommencerViewController.swift; sourceTree = "<group>"; };
+		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,16 +118,15 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
-				B2DF00732051713D0055B0CA /* Helpers */,
-				EC837E98204D87570089A823 /* Model */,
-				EC85BB90204D80C500B54CD2 /* Controllers */,
+				C13F3280205885CD00C7CC8A /* Model */,
+				C13F327E2058859D00C7CC8A /* Helpers */,
+				C13F32832058860300C7CC8A /* Controllers */,
+				C13F327D2058858900C7CC8A /* Components */,
 				2380FCED2045A58A00763F43 /* AppDelegate.swift */,
 				2380FCF12045A58A00763F43 /* Main.storyboard */,
 				2380FCF72045A58C00763F43 /* Assets.xcassets */,
 				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
 				2380FCFC2045A58D00763F43 /* Info.plist */,
-				B2254869205420F80027FB86 /* DatePicker.swift */,
-				B225486B205437850027FB86 /* TimePicker.swift */,
 			);
 			path = monPkEtMoi;
 			sourceTree = "<group>";
@@ -154,13 +149,42 @@
 			path = monPkEtMoiUITests;
 			sourceTree = "<group>";
 		};
-		B2DF00732051713D0055B0CA /* Helpers */ = {
+		C13F327D2058858900C7CC8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2254869205420F80027FB86 /* DatePicker.swift */,
+				B225486B205437850027FB86 /* TimePicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C13F327E2058859D00C7CC8A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				B2DF00742051717A0055B0CA /* CoreDataManager.swift */,
 				B2DF0076205171960055B0CA /* DialogBoxHelper.swift */,
 			);
-			name = Helpers;
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C13F3280205885CD00C7CC8A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC837E99204D87890089A823 /* patientModel.swift */,
+				EC837E9B204D932E0089A823 /* personModel.swift */,
+				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C13F32832058860300C7CC8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC837EA3204DAC930089A823 /* AddPatientViewController.swift */,
+				234E135D205064B7000658F7 /* HomeViewController.swift */,
+				23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		EC14A06120468EA600B2220D /* Images */ = {
@@ -168,28 +192,6 @@
 			children = (
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		EC837E98204D87570089A823 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EC837E99204D87890089A823 /* patientModel.swift */,
-				EC837E9B204D932E0089A823 /* personModel.swift */,
-				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		EC85BB90204D80C500B54CD2 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2380FCEF2045A58A00763F43 /* ViewController.swift */,
-				EC837EA3204DAC930089A823 /* AjoutPatientViewController.swift */,
-				EC837EA5204DACC90089A823 /* CommencerViewController.swift */,
-				234E135D205064B7000658F7 /* HomeViewController.swift */,
-				23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,13 +327,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC837EA6204DACC90089A823 /* CommencerViewController.swift in Sources */,
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
-				2380FCF02045A58A00763F43 /* ViewController.swift in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
-				EC837EA4204DAC930089A823 /* AjoutPatientViewController.swift in Sources */,
+				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				EC837E9C204D932E0089A823 /* personModel.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
