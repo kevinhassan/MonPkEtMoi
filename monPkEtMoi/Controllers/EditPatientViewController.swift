@@ -53,13 +53,18 @@ class EditPatientViewController: UITableViewController{
         patient?.mail = mailTF.text
         patient?.dateNaissance = dateNaissanceTF.getDate()
         patient?.tempsPreparation = Int64(tempsPreparationTF.text!)!
-        do{
-            try CoreDataManager.save()
-            DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
-                self.navigationController?.popViewController(animated: true)
-            })
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
+        let inputs:[String: UITextField] = ["nom": nomTF,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
+        if(FormValidatorHelper.validateForm(inputs)){
+            do{
+                try CoreDataManager.save()
+                DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
+                    self.navigationController?.popViewController(animated: true)
+                })
+            }catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
 }
