@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Home Patient View Controller-->
         <scene sceneID="WXB-DP-Dsm">
             <objects>
-                <navigationController id="uDB-Fi-43v" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homePatient" id="uDB-Fi-43v" customClass="HomePatientViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dVj-Dn-xxG">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="7365.6000000000004" y="-2109.8950524737634"/>
         </scene>
-        <!--Ajout Patient View Controller-->
+        <!--Add Patient View Controller-->
         <scene sceneID="cvU-nG-8ta">
             <objects>
-                <tableViewController id="mIP-do-LBN" customClass="AjoutPatientViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mIP-do-LBN" customClass="AddPatientViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="cRT-8y-qtG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -749,7 +749,7 @@
         <!--Accueil-->
         <scene sceneID="dNr-kU-7bf">
             <objects>
-                <viewController id="DWF-y2-fOM" customClass="ViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DWF-y2-fOM" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IBz-Ud-HuZ"/>
                         <viewControllerLayoutGuide type="bottom" id="rvf-4g-x4j"/>
@@ -925,7 +925,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="reglageIcon" id="CXA-qt-aV0">
                             <connections>
-                                <segue destination="mFD-iP-uul" kind="show" id="pHR-gO-SVT"/>
+                                <segue destination="vf0-bh-Rym" kind="show" id="dD2-0L-BYa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -945,6 +945,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bA-Ld-QS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5696" y="-617.09145427286364"/>
+        </scene>
+        <!--Patient Settings View Controller-->
+        <scene sceneID="57E-By-5VI">
+            <objects>
+                <tableViewController id="vf0-bh-Rym" customClass="PatientSettingsViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="9lb-Xz-u7e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Profil personnel" id="uIu-b5-A8Z">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Kd9-CP-K2F" detailTextLabel="vhq-zq-5Ou" style="IBUITableViewCellStyleValue1" id="bqc-Q7-kSa">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bqc-Q7-kSa" id="QXy-Ba-xA3">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Mon profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kd9-CP-K2F">
+                                                    <rect key="frame" x="16" y="12" width="77" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Voir" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhq-zq-5Ou">
+                                                    <rect key="frame" x="310" y="12" width="30" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Ddm-GP-Vcn" kind="show" id="t7r-47-Syh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Paramétres avancées" footerTitle="Le mode médecin permet de voir le suivie du patient" id="eg5-Kv-8IG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="AAg-Jd-C62" style="IBUITableViewCellStyleDefault" id="IjU-Km-Sy5">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IjU-Km-Sy5" id="TFB-Wx-x88">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Tt-KC-H8G">
+                                                    <rect key="frame" x="163" y="6" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="changeMode:" destination="vf0-bh-Rym" eventType="valueChanged" id="5rP-38-seC"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Mode médecin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AAg-Jd-C62">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="vf0-bh-Rym" id="sOd-zy-PsE"/>
+                            <outlet property="delegate" destination="vf0-bh-Rym" id="Gz7-vv-Yq9"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="modeMedecin" destination="IjU-Km-Sy5" id="nNx-3b-HNn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esX-I7-4DC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6539" y="-688"/>
         </scene>
         <!--Contact médical-->
         <scene sceneID="ega-Lx-xGi">
@@ -1185,89 +1267,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDH-ci-CXC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8233" y="-1406"/>
-        </scene>
-        <!--Paramètres-->
-        <scene sceneID="VW6-S1-lX7">
-            <objects>
-                <tableViewController id="mFD-iP-uul" customClass="ParametreViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Vex-gS-0VD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Profil personnel" id="6us-CW-8rP">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="mbo-iT-a4l" detailTextLabel="SUD-Yl-p4l" style="IBUITableViewCellStyleValue1" id="7gt-et-NQp">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" tableViewCell="7gt-et-NQp" id="f25-wR-HDl">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Mon profil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="mbo-iT-a4l">
-                                                    <rect key="frame" x="16" y="12" width="77" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Voir" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="SUD-Yl-p4l">
-                                                    <rect key="frame" x="310" y="12" width="30" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="Ddm-GP-Vcn" kind="show" id="zzY-Uv-5Q0"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Paramétres avancés" footerTitle="Le mode médecin permet d'obtenir le suivie du patient" id="x9e-cg-zid">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ka6-fw-xYz" style="IBUITableViewCellStyleDefault" id="5Fe-zy-PmH">
-                                        <rect key="frame" x="0.0" y="163" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="5Fe-zy-PmH" id="Iac-vf-OMx">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Mode médecin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ka6-fw-xYz">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GfR-Qv-LW1">
-                                                    <rect key="frame" x="163" y="6" width="49" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <connections>
-                                                        <action selector="changerMode:" destination="mFD-iP-uul" eventType="valueChanged" id="Rlg-WJ-c01"/>
-                                                    </connections>
-                                                </switch>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="mFD-iP-uul" id="dA9-nq-b6R"/>
-                            <outlet property="delegate" destination="mFD-iP-uul" id="5cF-7Z-GXL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Paramètres" id="x1C-hz-0u8"/>
-                    <connections>
-                        <outlet property="modeMedecin" destination="GfR-Qv-LW1" id="kzg-ff-m6S"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oT8-ne-AOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6668" y="-591"/>
         </scene>
         <!--Mon profil-->
         <scene sceneID="LhB-WS-ax5">
@@ -1583,7 +1582,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BFQ-N8-JtY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7537" y="-591"/>
+            <point key="canvasLocation" x="7308" y="-689"/>
         </scene>
         <!--Prénom Nom-->
         <scene sceneID="Xg4-bf-Ha2">
@@ -2857,10 +2856,10 @@
             </objects>
             <point key="canvasLocation" x="1765.5999999999999" y="985.45727136431788"/>
         </scene>
-        <!--Home Medecin View Controller-->
+        <!--Home Doctor View Controller-->
         <scene sceneID="7V6-8h-d4i">
             <objects>
-                <navigationController storyboardIdentifier="homeMedecin" id="caF-WH-W7O" customClass="HomeMedecinViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="homeDoctor" id="caF-WH-W7O" customClass="HomeDoctorViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="paF-RW-um5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2895,7 +2894,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="dtC-36-IdS">
             <objects>
-                <tabBarController storyboardIdentifier="accueilMedecin" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="qTR-sr-1lh" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="qTR-sr-1lh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="pBe-gN-79N">
                         <barButtonItem key="rightBarButtonItem" image="reglageIcon" id="5lp-fM-4qN">
@@ -3236,7 +3235,7 @@
         <!--Paramètres-->
         <scene sceneID="kKy-fd-mUZ">
             <objects>
-                <tableViewController id="QQw-bR-w0M" customClass="ParametreViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="QQw-bR-w0M" customClass="DoctorSettingsViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hFg-5E-xA3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3262,7 +3261,7 @@
                                                     <rect key="frame" x="163" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="changerMode:" destination="QQw-bR-w0M" eventType="valueChanged" id="TOc-zU-Vv6"/>
+                                                        <action selector="changeMode:" destination="QQw-bR-w0M" eventType="valueChanged" id="ayt-Ut-fmT"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -3277,6 +3276,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Paramètres" id="czz-Bv-4m3"/>
+                    <connections>
+                        <outlet property="modeMedecin" destination="xVA-1I-CFW" id="W64-LP-aqc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNt-i1-Quu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
