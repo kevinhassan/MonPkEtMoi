@@ -20,13 +20,14 @@
 		B225486C205437850027FB86 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* TimePicker.swift */; };
 		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
+		B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0B20597B7F00C608EA /* EvenementDAOExtension.swift */; };
+		B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */; };
 		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
 		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
 		C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159437120589C73004968E0 /* DoctorSettingsViewController.swift */; };
 		C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943732058ABEF004968E0 /* FormValidatorHelper.swift */; };
-		EC837E9A204D87890089A823 /* patientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* patientModel.swift */; };
-		EC837E9C204D932E0089A823 /* personModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E9B204D932E0089A823 /* personModel.swift */; };
+		EC837E9A204D87890089A823 /* PatientDAOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* PatientDAOExtension.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,13 +70,14 @@
 		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		B2DF0079205172B00055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B2DF2C0B20597B7F00C608EA /* EvenementDAOExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementDAOExtension.swift; sourceTree = "<group>"; };
+		B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
 		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
 		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
 		C159437120589C73004968E0 /* DoctorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSettingsViewController.swift; sourceTree = "<group>"; };
 		C15943732058ABEF004968E0 /* FormValidatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidatorHelper.swift; sourceTree = "<group>"; };
-		EC837E99204D87890089A823 /* patientModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = patientModel.swift; sourceTree = "<group>"; };
-		EC837E9B204D932E0089A823 /* personModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = personModel.swift; sourceTree = "<group>"; };
+		EC837E99204D87890089A823 /* PatientDAOExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDAOExtension.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				B2DF2C0A205979BB00C608EA /* DAO */,
 				C13F3280205885CD00C7CC8A /* Model */,
 				C13F327E2058859D00C7CC8A /* Helpers */,
 				C13F32832058860300C7CC8A /* Controllers */,
@@ -137,6 +140,7 @@
 				2380FCF72045A58C00763F43 /* Assets.xcassets */,
 				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
 				2380FCFC2045A58D00763F43 /* Info.plist */,
+				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
 			);
 			path = monPkEtMoi;
 			sourceTree = "<group>";
@@ -157,6 +161,15 @@
 				2380FD122045A58E00763F43 /* Info.plist */,
 			);
 			path = monPkEtMoiUITests;
+			sourceTree = "<group>";
+		};
+		B2DF2C0A205979BB00C608EA /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				EC837E99204D87890089A823 /* PatientDAOExtension.swift */,
+				B2DF2C0B20597B7F00C608EA /* EvenementDAOExtension.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 		C13F327D2058858900C7CC8A /* Components */ = {
@@ -181,9 +194,6 @@
 		C13F3280205885CD00C7CC8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EC837E99204D87890089A823 /* patientModel.swift */,
-				EC837E9B204D932E0089A823 /* personModel.swift */,
-				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +208,7 @@
 				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
 				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
 				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
+				B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -349,14 +360,15 @@
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
-				EC837E9C204D932E0089A823 /* personModel.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
 				B225486C205437850027FB86 /* TimePicker.swift in Sources */,
-				EC837E9A204D87890089A823 /* patientModel.swift in Sources */,
+				EC837E9A204D87890089A823 /* PatientDAOExtension.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
+				B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */,
+				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
