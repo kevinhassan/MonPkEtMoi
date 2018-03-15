@@ -38,19 +38,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        do{
-            let exist:Bool = try Patient.existPatient()
-            if exist {
-                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = homeViewController
-                self.window?.makeKeyAndVisible()
-            }
-            return true
-        }catch{
-            fatalError("Application crashed")
-        }
+//        do{
+//            let exist:Bool = try Patient.existPatient()
+//            if exist {
+//                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+//                self.window = UIWindow(frame: UIScreen.main.bounds)
+//                self.window?.rootViewController = homeViewController
+//                self.window?.makeKeyAndVisible()
+//            }
+//            return true
+//        }catch{
+//            fatalError("Application crashed")
+//        }
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

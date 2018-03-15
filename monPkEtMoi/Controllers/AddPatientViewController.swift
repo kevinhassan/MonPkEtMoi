@@ -63,14 +63,14 @@ class AddPatientViewController: UITableViewController {
     
     func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) throws {
 
-        let patient: Patient = Patient(context : CoreDataManager.context)
-        patient.nom = nom
-        patient.prenom = prenom
-        patient.dateNaissance = date
-        patient.adresse = adresse
-        patient.tempsPreparation = tempsP
-        patient.mail = mail
-        patient.tel = tel
+//        let patient: Patient = Patient(context : CoreDataManager.context)
+//        patient.nom = nom
+//        patient.prenom = prenom
+//        patient.dateNaissance = date
+//        patient.adresse = adresse
+//        patient.tempsPreparation = tempsP
+//        patient.mail = mail
+//        patient.tel = tel
         do{
             try CoreDataManager.save()
         }catch let error as NSError{

@@ -10,7 +10,7 @@ import CoreData
 import UIKit
 import Foundation
 
-extension Patient {
+extension PatientDAO {
     static func existPatient() throws -> Bool {
         do{
             guard ((try self.get()) != nil) else{
@@ -21,15 +21,13 @@ extension Patient {
             throw error
         }
     }
-    static func get() throws -> Patient? {
-        let request: NSFetchRequest = Patient.fetchRequest()
-        do {
-            let patients: [Patient] = try CoreDataManager.context.fetch(request)
-            
-            return patients.first
-        } catch let error as NSError {
-            throw error
+    static func get() -> PatientDAO? {
+        let context = CoreDataManager.context
+        guard let entity = NSEntityDescription.entity(forEntityName: "PatientDAO", in: context) else {
+            return nil
         }
+        let patient = PatientDAO(entity: entity, insertInto: context)
+        return patient
     }
 }
 
