@@ -10,8 +10,12 @@ import Foundation
 import CoreData
 
 class CoreDataPatientDAO: PatientDAO{
-    private let context: NSManagedObjectContext = CoreDataManager.context
     private let entityName: String = "Patient"
+    private let context: NSManagedObjectContext
+    
+    init(context:  NSManagedObjectContext){
+        self.context = context
+    }
     
     func get() throws -> Patient? {
         do{
@@ -52,7 +56,7 @@ class CoreDataPatientDAO: PatientDAO{
     }
     
     func create() -> Patient{
-        return Patient(context: context)
+        return Patient(context: self.context)
     }
     
     func save(patient: Patient) throws {
