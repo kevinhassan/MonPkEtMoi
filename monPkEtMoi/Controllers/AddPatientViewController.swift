@@ -13,7 +13,7 @@ class AddPatientViewController: UITableViewController {
     @IBOutlet weak var nomTextField: UITextField!
     @IBOutlet weak var prenomTF: UITextField!
     @IBOutlet weak var dateNaissanceTF: DatePicker!
-    @IBOutlet weak var tempsPreparationTF: TimePicker!
+    @IBOutlet weak var tempsPreparationTF: CountDownPicker!
     @IBOutlet weak var adresseTF: UITextField!
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!

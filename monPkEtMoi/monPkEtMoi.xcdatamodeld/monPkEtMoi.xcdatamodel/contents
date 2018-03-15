@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
         <attribute name="dureeExercice" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="repetHebdomadaire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -17,6 +17,8 @@
     </entity>
     <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="descriptionEvenement" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeEvenement" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionMedicament" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,12 +26,11 @@
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Patient" representedClassName="Patient" parentEntity="Personne" syncable="YES" codeGenerationType="class">
+        <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tempsPreparation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="etre_soigner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="soigner" inverseEntity="Soignant" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
         <attribute name="adresse" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="mail" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
@@ -57,7 +58,7 @@
         <attribute name="lieuRDV" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Soignant" representedClassName="Soignant" parentEntity="Personne" syncable="YES" codeGenerationType="class">
-        <relationship name="soigner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Patient" inverseName="etre_soigner" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="hasType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" syncable="YES"/>
     </entity>
     <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleActivite" optional="YES" attributeType="String" syncable="YES"/>
@@ -69,21 +70,21 @@
         <attribute name="libelleTypeSoignant" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="198" positionY="-153" width="128" height="88"/>
-        <element name="ActiviteRealise" positionX="52" positionY="-162" width="128" height="103"/>
+        <element name="Activite" positionX="205" positionY="-144" width="128" height="88"/>
+        <element name="ActiviteRealise" positionX="18" positionY="-162" width="128" height="103"/>
         <element name="Date" positionX="198" positionY="-261" width="128" height="45"/>
         <element name="Etat" positionX="34" positionY="-279" width="128" height="58"/>
-        <element name="Evenement" positionX="-387" positionY="36" width="128" height="58"/>
+        <element name="Evenement" positionX="-387" positionY="36" width="128" height="88"/>
         <element name="Medicament" positionX="-108" positionY="-18" width="128" height="88"/>
-        <element name="Patient" positionX="7" positionY="-388" width="128" height="75"/>
-        <element name="Personne" positionX="-209" positionY="-243" width="128" height="135"/>
+        <element name="Patient" positionX="7" positionY="-388" width="128" height="73"/>
+        <element name="Personne" positionX="-216" positionY="-288" width="128" height="118"/>
         <element name="PlageHoraire" positionX="198" positionY="-387" width="128" height="73"/>
-        <element name="Posologie" positionX="88" positionY="-72" width="128" height="103"/>
+        <element name="Posologie" positionX="-153" positionY="140" width="128" height="103"/>
         <element name="Prise" positionX="90" positionY="72" width="128" height="88"/>
         <element name="RDV" positionX="-209" positionY="-490" width="128" height="103"/>
         <element name="Soignant" positionX="-441" positionY="-373" width="128" height="58"/>
         <element name="TypeActivite" positionX="358" positionY="-153" width="128" height="58"/>
-        <element name="TypeEvenement" positionX="-567" positionY="-36" width="128" height="58"/>
-        <element name="TypeSoignant" positionX="-432" positionY="-279" width="128" height="58"/>
+        <element name="TypeEvenement" positionX="-684" positionY="-54" width="126" height="58"/>
+        <element name="TypeSoignant" positionX="-495" positionY="-256" width="128" height="58"/>
     </elements>
 </model>

@@ -1,5 +1,5 @@
 //
-//  TimePicker.swift
+//  CountdownPicker.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 10/03/2018.
@@ -12,7 +12,7 @@ import UIKit
 import Foundation
 import UIKit
 
-class TimePicker: UITextField{
+class CountDownPicker: UITextField{
     let timePicker = UIDatePicker()
     let timeFormatter = DateFormatter()
     

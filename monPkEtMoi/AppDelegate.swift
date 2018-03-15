@@ -17,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // TODO: - Initialization part
+//        let typeE = TypeEvenement(context: CoreDataManager.context)
+//        typeE.libelleEvenement = "Somnolance"
+//        let typeE2 = TypeEvenement(context: CoreDataManager.context)
+//        typeE2.libelleEvenement = "Chute"
+//        let typeE3 = TypeEvenement(context: CoreDataManager.context)
+//        typeE3.libelleEvenement = "Hallucination"
+//        let typeE4 = TypeEvenement(context: CoreDataManager.context)
+//        typeE4.libelleEvenement = "Prise de dispersible"
+//        let typeE5 = TypeEvenement(context: CoreDataManager.context)
+//        typeE5.libelleEvenement = "Clic / bolus d'Apokinon"
+//        do{
+//            try CoreDataManager.save()
+//        }catch{
+//            
+//        }
         return true
     }
     

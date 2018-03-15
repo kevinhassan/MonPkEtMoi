@@ -17,7 +17,7 @@
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
-		B225486C205437850027FB86 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* TimePicker.swift */; };
+		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
 		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
 		B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0B20597B7F00C608EA /* EvenementDAOExtension.swift */; };
@@ -27,6 +27,8 @@
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
 		C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159437120589C73004968E0 /* DoctorSettingsViewController.swift */; };
 		C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943732058ABEF004968E0 /* FormValidatorHelper.swift */; };
+		C15943762059D68E004968E0 /* TypeEvenementDAOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943752059D68E004968E0 /* TypeEvenementDAOExtension.swift */; };
+		C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943792059F4FA004968E0 /* DateAndTimePicker.swift */; };
 		EC837E9A204D87890089A823 /* PatientDAOExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* PatientDAOExtension.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +67,7 @@
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-		B225486B205437850027FB86 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
 		B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
@@ -77,6 +79,8 @@
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
 		C159437120589C73004968E0 /* DoctorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSettingsViewController.swift; sourceTree = "<group>"; };
 		C15943732058ABEF004968E0 /* FormValidatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidatorHelper.swift; sourceTree = "<group>"; };
+		C15943752059D68E004968E0 /* TypeEvenementDAOExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementDAOExtension.swift; sourceTree = "<group>"; };
+		C15943792059F4FA004968E0 /* DateAndTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimePicker.swift; sourceTree = "<group>"; };
 		EC837E99204D87890089A823 /* PatientDAOExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDAOExtension.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				B2DF2C0A205979BB00C608EA /* DAO */,
-				C13F3280205885CD00C7CC8A /* Model */,
 				C13F327E2058859D00C7CC8A /* Helpers */,
 				C13F32832058860300C7CC8A /* Controllers */,
 				C13F327D2058858900C7CC8A /* Components */,
@@ -168,6 +171,7 @@
 			children = (
 				EC837E99204D87890089A823 /* PatientDAOExtension.swift */,
 				B2DF2C0B20597B7F00C608EA /* EvenementDAOExtension.swift */,
+				C15943752059D68E004968E0 /* TypeEvenementDAOExtension.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -176,7 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				B2254869205420F80027FB86 /* DatePicker.swift */,
-				B225486B205437850027FB86 /* TimePicker.swift */,
+				B225486B205437850027FB86 /* CountDownPicker.swift */,
+				C15943792059F4FA004968E0 /* DateAndTimePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,13 +194,6 @@
 				B2DF0076205171960055B0CA /* DialogBoxHelper.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		C13F3280205885CD00C7CC8A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C13F32832058860300C7CC8A /* Controllers */ = {
@@ -355,13 +353,14 @@
 			files = (
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
+				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
-				B225486C205437850027FB86 /* TimePicker.swift in Sources */,
+				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
 				EC837E9A204D87890089A823 /* PatientDAOExtension.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
@@ -369,6 +368,7 @@
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
 				B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
+				C15943762059D68E004968E0 /* TypeEvenementDAOExtension.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
