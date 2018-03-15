@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
+		236F6329205A95FF0061AE9F /* ShowEventPatientTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236F6328205A95FF0061AE9F /* ShowEventPatientTableViewController.swift */; };
 		2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
 		2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
 		2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		236F6328205A95FF0061AE9F /* ShowEventPatientTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientTableViewController.swift; sourceTree = "<group>"; };
 		2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2380FCF22045A58A00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
 				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
 				B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */,
+				236F6328205A95FF0061AE9F /* ShowEventPatientTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
+				236F6329205A95FF0061AE9F /* ShowEventPatientTableViewController.swift in Sources */,
 				B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
 				C15943762059D68E004968E0 /* TypeEvenementDAOExtension.swift in Sources */,
