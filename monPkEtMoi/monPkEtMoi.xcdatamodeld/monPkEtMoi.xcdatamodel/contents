@@ -25,7 +25,7 @@
         <attribute name="dosage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nom" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="PatientDAO" representedClassName="PatientDAO" parentEntity="Personne" syncable="YES" codeGenerationType="class">
+    <entity name="Patient" representedClassName="Patient" parentEntity="Personne" syncable="YES" codeGenerationType="class">
         <attribute name="dateNaissance" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tempsPreparation" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
@@ -76,7 +76,7 @@
         <element name="Etat" positionX="34" positionY="-279" width="128" height="58"/>
         <element name="Evenement" positionX="-387" positionY="36" width="128" height="88"/>
         <element name="Medicament" positionX="-108" positionY="-18" width="128" height="88"/>
-        <element name="PatientDAO" positionX="7" positionY="-388" width="128" height="75"/>
+        <element name="Patient" positionX="7" positionY="-388" width="128" height="75"/>
         <element name="Personne" positionX="-216" positionY="-288" width="128" height="118"/>
         <element name="PlageHoraire" positionX="198" positionY="-387" width="128" height="73"/>
         <element name="Posologie" positionX="-153" positionY="140" width="128" height="103"/>
