@@ -15,6 +15,7 @@
 		2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */; };
 		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
+		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
 		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
@@ -65,6 +66,7 @@
 		2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
 				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
 				B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */,
+				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
+				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
 				B2DF2C0C20597B7F00C608EA /* EvenementDAOExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
 				C15943762059D68E004968E0 /* TypeEvenementDAOExtension.swift in Sources */,
