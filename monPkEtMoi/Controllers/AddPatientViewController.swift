@@ -18,14 +18,6 @@ class AddPatientViewController: UITableViewController {
     @IBOutlet weak var mailTF: UITextField!
     @IBOutlet weak var telTF: UITextField!
     
-    // MARK: - Valider données formulaire
-    func validateForm(_ inputs: [String: UITextField])-> Bool {
-        // Filtrer les valeurs optionnelles (textField vide)
-        let res = inputs.filter{(key, input) in !(input.text?.isEmpty ?? true)}
-        // Si même taille alors pas de valeurs vides
-        return res.count == (inputs.count)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -43,17 +35,12 @@ class AddPatientViewController: UITableViewController {
     {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
 
-        if validateForm(inputs){
-            let dateF:NSDate = ((inputs["dateNaissance"]) as?DatePicker)!.getDate()!
-            do{
-                try saveNewPatient(withName: inputs["nom"]!.text!, withPrenom: (inputs["prenom"]?.text)!, withDate: dateF,withAdress : (inputs["adresse"]?.text)!, withTempsP: Int64((inputs["tempsPreparation"]?.text)!)!, withMail: (inputs["mail"]?.text)!, withTel:  (inputs["tel"]?.text)!)
-                DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
-                    self.present(vc, animated: true, completion: nil)})
-            }catch let error as NSError{
-                DialogBoxHelper.alert(view: self, error: error)
-            }
-            
+        if FormValidatorHelper.validateForm(inputs){
+            let dateF:NSDate = ((dateNaissanceTF))!.getDate()!
+            saveNewPatient(withName: nomTextField.text!, withPrenom: prenomTF.text!, withDate: dateF,withAdress : adresseTF.text!, withTempsP: Int64(tempsPreparationTF.text!)!, withMail: mailTF.text!, withTel:  telTF.text!)
+            DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+                self.present(vc, animated: true, completion: nil)})
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
@@ -61,20 +48,21 @@ class AddPatientViewController: UITableViewController {
     
     // MARK: - Enregistrer les informations du patient
     
-    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) throws {
-
-//        let patient: Patient = Patient(context : CoreDataManager.context)
-//        patient.nom = nom
-//        patient.prenom = prenom
-//        patient.dateNaissance = date
-//        patient.adresse = adresse
-//        patient.tempsPreparation = tempsP
-//        patient.mail = mail
-//        patient.tel = tel
+    func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) {
+        let daoF = CoreDataDAOFactory.getInstance()
+        let patientDAO = daoF.getPatientDAO()
+        let newPatient: Patient = patientDAO.create()
+        newPatient.nom = nom
+        newPatient.prenom = prenom
+        newPatient.dateNaissance = date
+        newPatient.adresse = adresse
+        newPatient.tempsPreparation = tempsP
+        newPatient.mail = mail
+        newPatient.tel = tel
         do{
-            try CoreDataManager.save()
+            try patientDAO.save(patient: newPatient)
         }catch let error as NSError{
-            throw error
+            DialogBoxHelper.alert(view: self, error: error)
         }
     }
 }

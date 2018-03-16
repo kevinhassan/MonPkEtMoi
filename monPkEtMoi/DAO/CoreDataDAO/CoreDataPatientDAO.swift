@@ -19,8 +19,10 @@ class CoreDataPatientDAO: PatientDAO{
     
     func get() throws -> Patient? {
         do{
-            let patient: Patient = (try self.getAll()?.first)!
-            return patient
+            guard let patients: [Patient] = try self.getAll() else{
+                return nil
+            }
+            return patients.first
         }catch let error as NSError{
             throw error
         }

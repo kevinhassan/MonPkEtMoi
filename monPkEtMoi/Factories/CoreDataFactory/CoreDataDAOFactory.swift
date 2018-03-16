@@ -11,16 +11,17 @@ import CoreData
 
 class CoreDataDAOFactory: ProtocolDAOFactory{
     
-    private static var instance: CoreDataDAOFactory = CoreDataDAOFactory()
+    private static var instance: CoreDataDAOFactory?
     private let context: NSManagedObjectContext = CoreDataManager.context
     
-    private init(){
-        
-    }
+    private init(){}
     static func getInstance() -> CoreDataDAOFactory{
-        return CoreDataDAOFactory.instance
+        guard let instanceFactory = CoreDataDAOFactory.instance else {
+            return CoreDataDAOFactory()
+        }
+        return instanceFactory
     }
-    func getPatientDAO() -> PatientDAO {
+    func getPatientDAO() -> CoreDataPatientDAO {
         return CoreDataPatientDAO(context: self.context)
     }
 }
