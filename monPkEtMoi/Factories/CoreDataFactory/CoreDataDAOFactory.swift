@@ -10,6 +10,12 @@ import Foundation
 import CoreData
 
 class CoreDataDAOFactory: ProtocolDAOFactory{
+    typealias A = CoreDataPatientDAO
+    
+    typealias B = CoreDataEvenementDAO
+    
+    typealias C = CoreDataTypeEvenementDAO
+    
     
     private static var instance: CoreDataDAOFactory?
     private let context: NSManagedObjectContext = CoreDataManager.context
@@ -23,5 +29,11 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     }
     func getPatientDAO() -> CoreDataPatientDAO {
         return CoreDataPatientDAO(context: self.context)
+    }
+    func getEvenementDAO() -> CoreDataEvenementDAO {
+        return CoreDataEvenementDAO(context: self.context)
+    }
+    func getTypeEvenementDAO() -> CoreDataTypeEvenementDAO {
+        return CoreDataTypeEvenementDAO(context: self.context)
     }
 }

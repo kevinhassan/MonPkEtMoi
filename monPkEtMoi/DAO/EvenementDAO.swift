@@ -1,5 +1,5 @@
 //
-//  EvenementDAOExtension.swift
+//  EvenementDAO.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 14/03/2018.
@@ -10,14 +10,10 @@ import Foundation
 import CoreData
 import UIKit
 
-extension Evenement{
-    static func getAll() throws -> [Evenement]{
-        let request: NSFetchRequest<Evenement> = Evenement.fetchRequest()
-        do {
-            let events: [Evenement] = try CoreDataManager.context.fetch(request)
-            return events
-        } catch let error as NSError {
-            throw error
-        }
-    }
+import Foundation
+
+protocol EvenementDAO {
+    func getAll() throws-> [Evenement]?
+    func save(evenement: Evenement) throws
 }
+

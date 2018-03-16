@@ -9,7 +9,13 @@
 import Foundation
 
 protocol ProtocolDAOFactory {
-    associatedtype T
-    func getPatientDAO() -> T
+    associatedtype A
+    associatedtype B
+    associatedtype C
+
+    func getPatientDAO() -> A
+    func getEvenementDAO() -> B
+    func getTypeEvenementDAO() -> C
 }
+
 

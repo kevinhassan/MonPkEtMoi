@@ -15,18 +15,17 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var typeEvent: UITextField!
     @IBOutlet weak var descriptionEvent: UITextField!
     
+    let typeEventDAO = CoreDataDAOFactory.getInstance().getTypeEvenementDAO()
+    let eventDAO = CoreDataDAOFactory.getInstance().getEvenementDAO()
+
     @IBAction func addEvent(_ sender: Any) {
         let inputs:[String: UITextField] = ["dateEvent": dateEvent,"typeEvent": typeEvent]
         if(FormValidatorHelper.validateForm(inputs)){
-            do{
-                try saveNewEvent(withDate: dateEvent.getDate()!, withType: typeEvent.text!, withDescription: descriptionEvent.text ?? "")
-                DialogBoxHelper.alert(view: self, WithTitle: "Ajout réussi", andMessage: "Evenement ajouté", closure: { (action) in
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePatient") as! HomePatientViewController
-                    self.present(vc, animated: true, completion: nil)
-                })
-            }catch{
-                DialogBoxHelper.alert(view: self, errorMessage: "L'enregistrement de l'évènement a échoué")
-            }
+            saveNewEvent(withDate: dateEvent.getDate()!, withType: typeEvent.text!, withDescription: descriptionEvent.text ?? "")
+            DialogBoxHelper.alert(view: self, WithTitle: "Ajout réussi", andMessage: "Evenement ajouté", closure: { (action) in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePatient") as! HomePatientViewController
+                self.present(vc, animated: true, completion: nil)
+            })
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
@@ -44,7 +43,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         typeEvent.inputAccessoryView = toolbar
         typeEvent.inputView = typePicker
         do{
-            let typesEv: [TypeEvenement] = try TypeEvenement.getAll()
+            let typesEv: [TypeEvenement] = try typeEventDAO.getAll()!
             typesEvenement = typesEv.map({ (typeEvenement: TypeEvenement) -> String in
                 return typeEvenement.libelleEvenement!
             })
@@ -62,15 +61,15 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         typeEvent.resignFirstResponder()
     }
     
-    func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String) throws{
-        let evenement: Evenement = Evenement(context : CoreDataManager.context)
-        evenement.date = date
-        evenement.hasType?.libelleEvenement = type
-        evenement.descriptionEvenement = description
+    func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String){
+        let newEvent: Evenement = eventDAO.create()
+        newEvent.date = date
+        newEvent.hasType?.libelleEvenement = type
+        newEvent.descriptionEvenement = description
         do{
-            try CoreDataManager.save()
+            try eventDAO.save(evenement: newEvent)
         }catch let error as NSError{
-            throw error
+            DialogBoxHelper.alert(view: self, error: error)
         }
     }
     
