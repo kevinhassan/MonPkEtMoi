@@ -12,6 +12,9 @@ public class DataHelper {
     
     static func seedDataStore() {
         seedMedicament()
+        seedEtat()
+        seedTypeSoignant()
+        seedTypeEvenement()
     }
     fileprivate static func seedMedicament(){
         let medicaments = MedicamentSeed().medicaments
@@ -23,6 +26,48 @@ public class DataHelper {
             newMedicament.dosageMedicament = medicament.doses
             do{
                 try medicamentDAO.save(medicament: newMedicament)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+    fileprivate static func seedEtat(){
+        let etats = EtatSeed().etats
+        let etatDAO = CoreDataDAOFactory.getInstance().getEtatDAO()
+        
+        for etat in etats {
+            let newEtat: Etat = etatDAO.create()
+            newEtat.libelleEtat = etat
+            do{
+                try etatDAO.save(etat: newEtat)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+    fileprivate static func seedTypeSoignant(){
+        let typesSoignant = TypeSoignantSeed().typesSoignant
+        let typeSoignantDAO = CoreDataDAOFactory.getInstance().getTypeSoignantDAO()
+        
+        for type in typesSoignant {
+            let newType: TypeSoignant = typeSoignantDAO.create()
+            newType.libelleTypeSoignant = type
+            do{
+                try typeSoignantDAO.save(typeSoignant: newType)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
+    fileprivate static func seedTypeEvenement(){
+        let typesEvenement = TypeEvenementSeed().typesEvenement
+        let typeEvenementDAO = CoreDataDAOFactory.getInstance().getTypeEvenementDAO()
+        
+        for type in typesEvenement {
+            let newType: TypeEvenement = typeEvenementDAO.create()
+            newType.libelleTypeEvenement = type
+            do{
+                try typeEvenementDAO.save(typeEvenement: newType)
             }catch {
                 fatalError("Error cannot populate DB")
             }

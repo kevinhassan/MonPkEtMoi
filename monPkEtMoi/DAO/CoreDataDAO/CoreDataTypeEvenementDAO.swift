@@ -26,4 +26,14 @@ class CoreDataTypeEvenementDAO: TypeEvenementDAO{
             throw error
         }
     }
+    func create() -> TypeEvenement{
+        return TypeEvenement(context: self.context)
+    }
+    func save(typeEvenement: TypeEvenement) throws{
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
+    }
 }
