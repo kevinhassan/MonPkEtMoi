@@ -17,6 +17,7 @@
     </entity>
     <entity name="Etat" representedClassName="Etat" syncable="YES" codeGenerationType="class">
         <attribute name="libelleEtat" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirEtat" inverseEntity="PlageHoraire" syncable="YES"/>
     </entity>
     <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
         <attribute name="dateEvenement" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -36,7 +37,7 @@
         <relationship name="assisterA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="assistePar" inverseEntity="RDV" syncable="YES"/>
         <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="concernePatient" inverseEntity="Activite" syncable="YES"/>
         <relationship name="avoirEvenement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evenement" inverseName="concernePatient" inverseEntity="Evenement" syncable="YES"/>
-        <relationship name="etreEtat" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" syncable="YES"/>
+        <relationship name="etreEtat" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="concernePatient" inverseEntity="PlageHoraire" syncable="YES"/>
         <relationship name="prisPar" toMany="YES" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concernePatient" inverseEntity="Posologie" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
@@ -49,7 +50,8 @@
     <entity name="PlageHoraire" representedClassName="PlageHoraire" syncable="YES" codeGenerationType="class">
         <attribute name="heureDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="avoirEtat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" syncable="YES"/>
+        <relationship name="avoirEtat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="concerneHoraire" inverseEntity="Etat" syncable="YES"/>
+        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="etreEtat" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="datePosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -93,12 +95,12 @@
     <elements>
         <element name="Activite" positionX="-218" positionY="-45" width="128" height="133"/>
         <element name="ActiviteRealise" positionX="-243" positionY="152" width="128" height="118"/>
-        <element name="Etat" positionX="144" positionY="-522" width="128" height="58"/>
+        <element name="Etat" positionX="144" positionY="-522" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="103"/>
         <element name="Medicament" positionX="259" positionY="-346" width="128" height="103"/>
         <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
-        <element name="PlageHoraire" positionX="-90" positionY="-522" width="128" height="88"/>
+        <element name="PlageHoraire" positionX="-90" positionY="-522" width="128" height="103"/>
         <element name="Posologie" positionX="45" positionY="-346" width="128" height="148"/>
         <element name="Prise" positionX="43" positionY="-153" width="128" height="103"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>

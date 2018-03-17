@@ -45,7 +45,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         do{
             let typesEv: [TypeEvenement] = try typeEventDAO.getAll()!
             typesEvenement = typesEv.map({ (typeEvenement: TypeEvenement) -> String in
-                return typeEvenement.libelleEvenement!
+                return typeEvenement.libelleTypeEvenement!
             })
             typesEvenement?.insert("", at: 0)
         }catch{
@@ -63,8 +63,8 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     
     func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String){
         let newEvent: Evenement = eventDAO.create()
-        newEvent.date = date
-        newEvent.hasType?.libelleEvenement = type
+        newEvent.dateEvenement = date
+        newEvent.avoirType?.libelleTypeEvenement = type
         newEvent.descriptionEvenement = description
         do{
             try eventDAO.save(evenement: newEvent)

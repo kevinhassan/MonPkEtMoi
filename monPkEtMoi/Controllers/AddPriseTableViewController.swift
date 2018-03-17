@@ -32,7 +32,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         do{
             let medocs: [Medicament] = try Medicament.getAll()
             medicaments = medocs.map({ (medoc: Medicament) -> String in
-                return medoc.nom!
+                return medoc.nomMedicament!
             })
             medicaments?.insert("", at: 0)
         }catch{
