@@ -33,7 +33,7 @@
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dosageMedicament" attributeType="Transformable" customClassName="[Float]" syncable="YES"/>
+        <attribute name="dosageMedicament" attributeType="Transformable" customClassName="[Any]" syncable="YES"/>
         <attribute name="nomMedicament" attributeType="String" syncable="YES"/>
         <relationship name="concernePosologie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concerneMedicament" inverseEntity="Posologie" syncable="YES"/>
     </entity>
@@ -110,6 +110,7 @@
     <elements>
         <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="133"/>
         <element name="ActiviteRealisee" positionX="-243" positionY="152" width="128" height="118"/>
+        <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="103"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="103"/>
@@ -120,11 +121,10 @@
         <element name="Prise" positionX="9" positionY="182" width="128" height="88"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="73"/>
+        <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
         <element name="TypeActivite" positionX="-468" positionY="8" width="128" height="73"/>
+        <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
         <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="73"/>
-        <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
-        <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
-        <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
     </elements>
 </model>

@@ -10,8 +10,6 @@ import Foundation
 import CoreData
 import UIKit
 
-import Foundation
-
 protocol EvenementDAO {
     func getAll() throws-> [Evenement]?
     func save(evenement: Evenement) throws

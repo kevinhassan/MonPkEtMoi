@@ -25,8 +25,5 @@ class CoreDataManager : NSObject{
             throw error
         }
     }
-    class func initDB() throws {
-        
-    }
 }
 

@@ -14,6 +14,8 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var dateDebut: DatePicker!
     @IBOutlet var jours: [UISwitch]!
     
+    let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
+
     @IBAction func addPrise(_ sender: Any) {
 
     }
@@ -30,7 +32,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         medicamentTF.inputAccessoryView = toolbar
         medicamentTF.inputView = typePicker
         do{
-            let medocs: [Medicament] = try Medicament.getAll()
+            let medocs: [Medicament] = (try medicamentDAO.getAll())!
             medicaments = medocs.map({ (medoc: Medicament) -> String in
                 return medoc.nomMedicament!
             })

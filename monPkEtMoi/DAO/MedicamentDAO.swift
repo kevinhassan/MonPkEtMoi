@@ -9,14 +9,8 @@
 import Foundation
 import CoreData
 
-extension Medicament{
-    static func getAll() throws -> [Medicament] {
-        let request: NSFetchRequest<Medicament> = Medicament.fetchRequest()
-        do {
-            let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
-            return medicaments
-        } catch let error as NSError {
-            throw error
-        }
-    }
+protocol MedicamentDAO {
+    func getAll() throws -> [Medicament]?
+    func save(medicament: Medicament) throws
+    func remove(medicament: Medicament) throws
 }

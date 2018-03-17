@@ -21,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // Si l'application n'a jamais été installé alors on remplis la BD
+        if(!UserDefaults.standard.bool(forKey: "wasLaunched")){
+            print("test")
+            DataHelper.seedDataStore()
+            UserDefaults.standard.set(true, forKey: "wasLaunched")
+        }
         let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
         do{
             let exist:Bool = try patientDAO.exist()
