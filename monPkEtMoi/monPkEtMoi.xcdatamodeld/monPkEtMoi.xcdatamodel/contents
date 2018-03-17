@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Activite" representedClassName="Activite" syncable="YES" codeGenerationType="class">
+    <entity name="ActivitePrescrite" representedClassName="ActivitePrescrite" syncable="YES" codeGenerationType="class">
         <attribute name="dureeActivite" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="repetHebdomadaire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="repetJournaliere" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="avoirActivite" inverseEntity="TypeActivite" syncable="YES"/>
         <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirActivite" inverseEntity="Patient" syncable="YES"/>
-        <relationship name="estEffectue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealise" inverseName="concerneActivite" inverseEntity="ActiviteRealise" syncable="YES"/>
+        <relationship name="estEffectue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
     </entity>
-    <entity name="ActiviteRealise" representedClassName="ActiviteRealise" syncable="YES" codeGenerationType="class">
+    <entity name="ActiviteRealisee" representedClassName="ActiviteRealisee" syncable="YES" codeGenerationType="class">
         <attribute name="dateActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dureeRealise" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="estRealise" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="heureActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="concerneActivite" maxCount="1" deletionRule="Nullify" destinationEntity="Activite" inverseName="estEffectue" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="concerneActivite" maxCount="1" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="estEffectue" inverseEntity="ActivitePrescrite" syncable="YES"/>
+    </entity>
+    <entity name="Avis" representedClassName="Avis" syncable="YES" codeGenerationType="class">
+        <attribute name="commentaireAvis" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reponseAvis" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="concerneTraceur" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="avoirAvis" inverseEntity="Traceur" syncable="YES"/>
+        <relationship name="etreType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeAvis" inverseName="avoirAvis" inverseEntity="TypeAvis" syncable="YES"/>
     </entity>
     <entity name="Etat" representedClassName="Etat" syncable="YES" codeGenerationType="class">
         <attribute name="libelleEtat" optional="YES" attributeType="String" syncable="YES"/>
@@ -35,9 +41,9 @@
         <attribute name="dateNaissance" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="tempsPreparation" attributeType="Integer 64" minValueString="0" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="assisterA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="assistePar" inverseEntity="RDV" syncable="YES"/>
-        <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="concernePatient" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="concernePatient" inverseEntity="ActivitePrescrite" syncable="YES"/>
         <relationship name="avoirEvenement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evenement" inverseName="concernePatient" inverseEntity="Evenement" syncable="YES"/>
-        <relationship name="etreEtat" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="concernePatient" inverseEntity="PlageHoraire" syncable="YES"/>
+        <relationship name="avoirTraceur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="concernePatient" inverseEntity="Traceur" syncable="YES"/>
         <relationship name="prisPar" toMany="YES" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concernePatient" inverseEntity="Posologie" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
@@ -51,7 +57,7 @@
         <attribute name="heureDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="avoirEtat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="concerneHoraire" inverseEntity="Etat" syncable="YES"/>
-        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="etreEtat" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="avoirTraceur" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="concerneHoraire" inverseEntity="Traceur" syncable="YES"/>
     </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="datePosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -79,9 +85,19 @@
         <relationship name="assisterPar" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="donnePar" inverseEntity="RDV" syncable="YES"/>
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="avoirSoignant" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
+    <entity name="Traceur" representedClassName="Traceur" syncable="YES" codeGenerationType="class">
+        <attribute name="dateTraceur" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="avoirAvis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avis" inverseName="concerneTraceur" inverseEntity="Avis" syncable="YES"/>
+        <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirTraceur" inverseEntity="PlageHoraire" syncable="YES"/>
+        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTraceur" inverseEntity="Patient" syncable="YES"/>
+    </entity>
     <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeActivite" attributeType="String" syncable="YES"/>
-        <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Activite" inverseName="avoirType" inverseEntity="Activite" syncable="YES"/>
+        <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="avoirType" inverseEntity="ActivitePrescrite" syncable="YES"/>
+    </entity>
+    <entity name="TypeAvis" representedClassName="TypeAvis" syncable="YES" codeGenerationType="class">
+        <attribute name="libelleTypeAvis" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="avoirAvis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avis" inverseName="etreType" inverseEntity="Avis" syncable="YES"/>
     </entity>
     <entity name="TypeEvenement" representedClassName="TypeEvenement" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeEvenement" attributeType="String" syncable="YES"/>
@@ -92,20 +108,23 @@
         <relationship name="avoirSoignant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="avoirType" inverseEntity="Soignant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Activite" positionX="-218" positionY="-45" width="128" height="133"/>
-        <element name="ActiviteRealise" positionX="-243" positionY="152" width="128" height="118"/>
-        <element name="Etat" positionX="144" positionY="-522" width="128" height="73"/>
+        <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="133"/>
+        <element name="ActiviteRealisee" positionX="-243" positionY="152" width="128" height="118"/>
+        <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="103"/>
-        <element name="Medicament" positionX="259" positionY="-346" width="128" height="103"/>
+        <element name="Medicament" positionX="178" positionY="9" width="128" height="103"/>
         <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
-        <element name="PlageHoraire" positionX="-90" positionY="-522" width="128" height="103"/>
-        <element name="Posologie" positionX="45" positionY="-346" width="128" height="148"/>
-        <element name="Prise" positionX="43" positionY="-153" width="128" height="88"/>
+        <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
+        <element name="Posologie" positionX="-18" positionY="-13" width="128" height="148"/>
+        <element name="Prise" positionX="9" positionY="182" width="128" height="88"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="73"/>
         <element name="TypeActivite" positionX="-468" positionY="8" width="128" height="73"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
         <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="73"/>
+        <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
+        <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
+        <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
     </elements>
 </model>
