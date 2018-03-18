@@ -9,5 +9,6 @@
 import Foundation
 
 struct TypeAvisSeed{
-    let typesAvis:[String] = ["Somnolence","Chute","Hallucination", "Prise de dispersible","Clic / bolus d’Apokinon"]
+    let typesAvis:[String] = ["Akinésie de début de dose","Akinésie de fin de dose","Distonie du gros orteil", "Dyskinésies invalidantes","Effet On / Off",
+                              "Fluctuations non motrices", "Hallucinations", "Freezing"]
 }

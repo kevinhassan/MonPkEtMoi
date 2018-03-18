@@ -13,17 +13,12 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var medicamentTF: UITextField!
     @IBOutlet weak var dateDebut: DatePicker!
     @IBOutlet weak var nbMedicamentTF: UITextField!
-    @IBOutlet var jours: [UISwitch]!
     @IBOutlet weak var dosageLabel: UILabel!
     
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
 
     var medocs: [Medicament] = []
-
-    @IBAction func addPrise(_ sender: Any) {
-        
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,4 +75,10 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         medicamentTF.text = medocs[pickerView.selectedRow(inComponent: 0)].nomMedicament!
         dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament![pickerView.selectedRow(inComponent: 1)]
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        print("salut")
+    }
+
 }

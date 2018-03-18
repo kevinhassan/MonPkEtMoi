@@ -40,6 +40,7 @@
 		C168D7E8205B47820004AE3E /* CoreDataTypeEvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7E7205B47820004AE3E /* CoreDataTypeEvenementDAO.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1823D98205D907600DFCA42 /* CoreDataMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D97205D907600DFCA42 /* CoreDataMedicamentDAO.swift */; };
+		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
 		C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35E9205DB43000937BFF /* EtatSeed.swift */; };
 		C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */; };
 		C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
@@ -52,6 +53,8 @@
 		C1CA35FC205DBF8200937BFF /* TypeAvisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FB205DBF8200937BFF /* TypeAvisDAO.swift */; };
 		C1CA35FE205E627B00937BFF /* CoreDataPosologieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FD205E627B00937BFF /* CoreDataPosologieDAO.swift */; };
 		C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FF205E62B000937BFF /* PosologieDAO.swift */; };
+		C1F31B46205E96A900233282 /* addPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* addPriseHeuresViewController.swift */; };
+		C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
 		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
 		EC837E9A204D87890089A823 /* PatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* PatientDAO.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
@@ -116,6 +119,7 @@
 		C168D7E7205B47820004AE3E /* CoreDataTypeEvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTypeEvenementDAO.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1823D97205D907600DFCA42 /* CoreDataMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMedicamentDAO.swift; sourceTree = "<group>"; };
+		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		C1CA35E9205DB43000937BFF /* EtatSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatSeed.swift; sourceTree = "<group>"; };
 		C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSoignantSeed.swift; sourceTree = "<group>"; };
 		C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 		C1CA35FB205DBF8200937BFF /* TypeAvisDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisDAO.swift; sourceTree = "<group>"; };
 		C1CA35FD205E627B00937BFF /* CoreDataPosologieDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPosologieDAO.swift; sourceTree = "<group>"; };
 		C1CA35FF205E62B000937BFF /* PosologieDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieDAO.swift; sourceTree = "<group>"; };
+		C1F31B45205E96A900233282 /* addPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPriseHeuresViewController.swift; sourceTree = "<group>"; };
+		C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
 		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
 		EC837E99204D87890089A823 /* PatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDAO.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,7 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				C1F31B4B205EB3E200233282 /* Cells */,
 				C1FCF72C205D76E50088C3F4 /* Seeds */,
 				C168D7DD205B2B5F0004AE3E /* Factories */,
 				B2D3E140205ADD9400BC26B3 /* Models */,
@@ -247,6 +254,7 @@
 				B2254869205420F80027FB86 /* DatePicker.swift */,
 				B225486B205437850027FB86 /* CountDownPicker.swift */,
 				C15943792059F4FA004968E0 /* DateAndTimePicker.swift */,
+				C1B1E00F205E880F003F9C66 /* TimePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 				B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */,
 				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
 				B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */,
+				C1F31B45205E96A900233282 /* addPriseHeuresViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +318,14 @@
 				C168D7E1205B2DAC0004AE3E /* CoreDataDAOFactory.swift */,
 			);
 			path = CoreDataFactory;
+			sourceTree = "<group>";
+		};
+		C1F31B4B205EB3E200233282 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C1FCF72C205D76E50088C3F4 /* Seeds */ = {
@@ -468,6 +485,8 @@
 				C1823D98205D907600DFCA42 /* CoreDataMedicamentDAO.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				C168D7DF205B2CED0004AE3E /* ProtocolDAOFactory.swift in Sources */,
+				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
+				C1F31B46205E96A900233282 /* addPriseHeuresViewController.swift in Sources */,
 				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
 				C168D7E2205B2DAC0004AE3E /* CoreDataDAOFactory.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
@@ -483,6 +502,7 @@
 				C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
+				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
 				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
 				B2D3E142205AE56500BC26B3 /* MedicamentDAO.swift in Sources */,

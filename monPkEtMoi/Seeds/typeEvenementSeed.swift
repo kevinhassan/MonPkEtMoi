@@ -9,6 +9,5 @@
 import Foundation
 
 struct TypeEvenementSeed{
-    let typesEvenement:[String] = ["Akinésie de début de dose","Akinésie de fin de dose","Distonie du gros orteil", "Dyskinésies invalidantes","Effet On / Off",
-                                   "Fluctuations non motrices", "Hallucinations", "Freezing"]
+    let typesEvenement:[String] = ["Somnolence","Chute","Hallucination", "Prise de dispersible","Clic / bolus d’Apokinon"]
 }
