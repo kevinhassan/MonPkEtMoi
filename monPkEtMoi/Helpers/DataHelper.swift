@@ -73,4 +73,18 @@ public class DataHelper {
             }
         }
     }
+    fileprivate static func seedTypeAvis(){
+        let typesAvis = TypeAvisSeed().typesAvis
+        let typeAvisDAO = CoreDataDAOFactory.getInstance().getTypeAvisDAO()
+        
+        for type in typesAvis {
+            let newType: TypeAvis = typeAvisDAO.create()
+            newType.libelleTypeAvis = type
+            do{
+                try typeAvisDAO.save(typeAvis: newType)
+            }catch {
+                fatalError("Error cannot populate DB")
+            }
+        }
+    }
 }

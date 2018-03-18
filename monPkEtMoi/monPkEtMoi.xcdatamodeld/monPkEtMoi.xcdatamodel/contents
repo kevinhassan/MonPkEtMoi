@@ -33,7 +33,7 @@
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionMedicament" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dosageMedicament" attributeType="Transformable" customClassName="[Any]" syncable="YES"/>
+        <attribute name="dosageMedicament" attributeType="Transformable" customClassName="[String]" syncable="YES"/>
         <attribute name="nomMedicament" attributeType="String" syncable="YES"/>
         <relationship name="concernePosologie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concerneMedicament" inverseEntity="Posologie" syncable="YES"/>
     </entity>
@@ -61,8 +61,9 @@
     </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="datePosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="frequenceDePriseHeb" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="frequenceDePriseJ" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dosagePosologie" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frequenceDePriseHeb" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="frequenceDePriseJ" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nbMedicament" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="avoirPrise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prise" inverseName="concernePosologie" inverseEntity="Prise" syncable="YES"/>
         <relationship name="concerneMedicament" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="concernePosologie" inverseEntity="Medicament" syncable="YES"/>
@@ -117,7 +118,7 @@
         <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
         <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
-        <element name="Posologie" positionX="-18" positionY="-13" width="128" height="148"/>
+        <element name="Posologie" positionX="-18" positionY="-13" width="128" height="163"/>
         <element name="Prise" positionX="9" positionY="182" width="128" height="88"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="73"/>

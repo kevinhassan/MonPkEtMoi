@@ -16,7 +16,9 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     typealias D = CoreDataMedicamentDAO
     typealias E = CoreDataTypeSoignantDAO
     typealias F = CoreDataEtatDAO
-
+    typealias G = CoreDataTypeAvisDAO
+    typealias H = CoreDataPosologieDAO
+    
     private static var instance: CoreDataDAOFactory?
     private let context: NSManagedObjectContext = CoreDataManager.context
     
@@ -44,5 +46,11 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     }
     func getEtatDAO() -> CoreDataEtatDAO{
         return CoreDataEtatDAO(context: self.context)
+    }
+    func getTypeAvisDAO() -> CoreDataTypeAvisDAO{
+        return CoreDataTypeAvisDAO(context: self.context)
+    }
+    func getPosologieDAO() -> CoreDataPosologieDAO{
+        return CoreDataPosologieDAO(context: self.context)
     }
 }

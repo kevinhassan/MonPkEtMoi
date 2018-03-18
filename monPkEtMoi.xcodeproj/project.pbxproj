@@ -47,6 +47,11 @@
 		C1CA35F2205DB81E00937BFF /* EtatDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F1205DB81E00937BFF /* EtatDAO.swift */; };
 		C1CA35F4205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F3205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift */; };
 		C1CA35F6205DB8A800937BFF /* CoreDataEtatDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F5205DB8A800937BFF /* CoreDataEtatDAO.swift */; };
+		C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */; };
+		C1CA35FA205DBF3400937BFF /* CoreDataTypeAvisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F9205DBF3400937BFF /* CoreDataTypeAvisDAO.swift */; };
+		C1CA35FC205DBF8200937BFF /* TypeAvisDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FB205DBF8200937BFF /* TypeAvisDAO.swift */; };
+		C1CA35FE205E627B00937BFF /* CoreDataPosologieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FD205E627B00937BFF /* CoreDataPosologieDAO.swift */; };
+		C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35FF205E62B000937BFF /* PosologieDAO.swift */; };
 		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
 		EC837E9A204D87890089A823 /* PatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837E99204D87890089A823 /* PatientDAO.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
@@ -118,6 +123,11 @@
 		C1CA35F1205DB81E00937BFF /* EtatDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatDAO.swift; sourceTree = "<group>"; };
 		C1CA35F3205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTypeSoignantDAO.swift; sourceTree = "<group>"; };
 		C1CA35F5205DB8A800937BFF /* CoreDataEtatDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEtatDAO.swift; sourceTree = "<group>"; };
+		C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisSeed.swift; sourceTree = "<group>"; };
+		C1CA35F9205DBF3400937BFF /* CoreDataTypeAvisDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTypeAvisDAO.swift; sourceTree = "<group>"; };
+		C1CA35FB205DBF8200937BFF /* TypeAvisDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisDAO.swift; sourceTree = "<group>"; };
+		C1CA35FD205E627B00937BFF /* CoreDataPosologieDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPosologieDAO.swift; sourceTree = "<group>"; };
+		C1CA35FF205E62B000937BFF /* PosologieDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieDAO.swift; sourceTree = "<group>"; };
 		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
 		EC837E99204D87890089A823 /* PatientDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientDAO.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +235,8 @@
 				B2D3E141205AE56500BC26B3 /* MedicamentDAO.swift */,
 				C1CA35EF205DB81500937BFF /* TypeSoignantDAO.swift */,
 				C1CA35F1205DB81E00937BFF /* EtatDAO.swift */,
+				C1CA35FB205DBF8200937BFF /* TypeAvisDAO.swift */,
+				C1CA35FF205E62B000937BFF /* PosologieDAO.swift */,
 			);
 			path = DAO;
 			sourceTree = "<group>";
@@ -276,6 +288,8 @@
 				C1823D97205D907600DFCA42 /* CoreDataMedicamentDAO.swift */,
 				C1CA35F3205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift */,
 				C1CA35F5205DB8A800937BFF /* CoreDataEtatDAO.swift */,
+				C1CA35F9205DBF3400937BFF /* CoreDataTypeAvisDAO.swift */,
+				C1CA35FD205E627B00937BFF /* CoreDataPosologieDAO.swift */,
 			);
 			path = CoreDataDAO;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 				C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */,
 				C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */,
 				C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */,
+				C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */,
 			);
 			path = Seeds;
 			sourceTree = "<group>";
@@ -457,11 +472,15 @@
 				C168D7E2205B2DAC0004AE3E /* CoreDataDAOFactory.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
+				C1CA35FE205E627B00937BFF /* CoreDataPosologieDAO.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
+				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
 				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
 				B2DDBB93205AD9A300E7F3C1 /* AddPriseTableViewController.swift in Sources */,
+				C1CA35FC205DBF8200937BFF /* TypeAvisDAO.swift in Sources */,
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				C1CA35F6205DB8A800937BFF /* CoreDataEtatDAO.swift in Sources */,
+				C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
@@ -479,6 +498,7 @@
 				B2DF2C0C20597B7F00C608EA /* EvenementDAO.swift in Sources */,
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C168D7E6205B45070004AE3E /* CoreDataEvenementDAO.swift in Sources */,
+				C1CA35FA205DBF3400937BFF /* CoreDataTypeAvisDAO.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
 				C15943762059D68E004968E0 /* TypeEvenementDAO.swift in Sources */,

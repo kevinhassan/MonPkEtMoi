@@ -12,14 +12,18 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
 
     @IBOutlet weak var medicamentTF: UITextField!
     @IBOutlet weak var dateDebut: DatePicker!
+    @IBOutlet weak var nbMedicamentTF: UITextField!
     @IBOutlet var jours: [UISwitch]!
+    @IBOutlet weak var dosageLabel: UILabel!
     
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
+    let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
+
+    var medocs: [Medicament] = []
 
     @IBAction func addPrise(_ sender: Any) {
-
+        
     }
-    var medicaments: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +36,10 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         medicamentTF.inputAccessoryView = toolbar
         medicamentTF.inputView = typePicker
         do{
-            let medocs: [Medicament] = (try medicamentDAO.getAll())!
-            medicaments = medocs.map({ (medoc: Medicament) -> String in
-                return medoc.nomMedicament!
-            })
-            medicaments?.insert("", at: 0)
+            medocs = (try medicamentDAO.getAll())!
         }catch{
         }
+        dateDebut.setDate(date: NSDate())
     }
 
     func donePressed(){
@@ -53,18 +54,30 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     // MARK: UIPickerView Delegation
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        return 2
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return medicaments!.count
+        if component == 0 {
+            return medocs.count
+        }else{
+            let medicamentSelected = pickerView.selectedRow(inComponent: 0)
+            return medocs[medicamentSelected].dosageMedicament!.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return medicaments?[row]
+        if component == 0 {
+            return medocs[row].nomMedicament
+        }else{
+            let medicamentSelected = pickerView.selectedRow(inComponent: 0)
+            return medocs[medicamentSelected].dosageMedicament![row]
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        medicamentTF.text = medicaments?[row]
+        pickerView.reloadComponent(1)
+        medicamentTF.text = medocs[pickerView.selectedRow(inComponent: 0)].nomMedicament!
+        dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament![pickerView.selectedRow(inComponent: 1)]
     }
 }
