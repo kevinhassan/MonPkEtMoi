@@ -61,12 +61,12 @@
     </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="datePosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="dosagePosologie" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="heuresPrise" attributeType="Transformable" customClassName="[Date]" syncable="YES"/>
+        <attribute name="dosagePosologie" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heuresPrise" attributeType="Transformable" customClassName="[NSDate]" syncable="YES"/>
         <attribute name="nbMedicament" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="avoirPrise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Prise" inverseName="concernePosologie" inverseEntity="Prise" syncable="YES"/>
         <relationship name="concerneMedicament" maxCount="1" deletionRule="Nullify" destinationEntity="Medicament" inverseName="concernePosologie" inverseEntity="Medicament" syncable="YES"/>
-        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="prisPar" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="prisPar" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="Prise" representedClassName="Prise" syncable="YES" codeGenerationType="class">
         <attribute name="estPris" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>

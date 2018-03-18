@@ -1,5 +1,5 @@
 //
-//  addPriseTableViewController.swift
+//  AddPriseTableViewController.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 15/03/2018.
@@ -19,7 +19,8 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
 
     var medocs: [Medicament] = []
-
+    var posologie: Posologie? = nil
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         let typePicker = UIPickerView()
@@ -35,6 +36,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         }catch{
         }
         dateDebut.setDate(date: NSDate())
+        self.posologie = posologieDAO.create()
     }
 
     func donePressed(){
@@ -75,10 +77,25 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         medicamentTF.text = medocs[pickerView.selectedRow(inComponent: 0)].nomMedicament!
         dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament![pickerView.selectedRow(inComponent: 1)]
     }
+    @IBAction func NextView(_ sender: Any) {
+        let inputs = ["medicament":medicamentTF, "dateDebut":dateDebut,"nbMedicament": nbMedicamentTF]
+        if FormValidatorHelper.validateForm(inputs as! [String : UITextField]){
+            performSegue(withIdentifier: "addHeures", sender: self)
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Données invalides")
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        print("salut")
+        let heuresViewController = segue.destination as! AddPriseHeuresViewController
+        posologie?.datePosologie = ((self.dateDebut)!.getDate()! as NSDate)
+        posologie?.dosagePosologie = self.dosageLabel.text
+        posologie?.nbMedicament = Int16(self.nbMedicamentTF.text!)!
+        do{
+            posologie?.concerneMedicament = try medicamentDAO.getByName(name: self.medicamentTF.text!)
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        heuresViewController.posologie = self.posologie!
     }
 
 }

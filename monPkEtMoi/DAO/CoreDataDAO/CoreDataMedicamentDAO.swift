@@ -39,4 +39,20 @@ class CoreDataMedicamentDAO: MedicamentDAO {
     func remove(medicament: Medicament) throws{
   
     }
+    func getByName(name: String) throws -> Medicament? {
+        let predicate = NSPredicate(format: "nomMedicament == %@", name)
+        let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
+        request.predicate = predicate
+
+        do{
+            let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
+            if medicaments.count>0{
+                return medicaments[0]
+            }else{
+                return nil
+            }
+        }catch let error as NSError{
+            throw error
+        }
+    }
 }

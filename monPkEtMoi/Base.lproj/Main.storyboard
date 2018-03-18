@@ -796,7 +796,7 @@
         <!--Prises-->
         <scene sceneID="Mza-2d-rbl">
             <objects>
-                <viewController id="E14-d3-xBr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePrise" id="E14-d3-xBr" customClass="HomePriseViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kx9-Go-OSi"/>
                         <viewControllerLayoutGuide type="bottom" id="QQr-oF-iwH"/>
@@ -3465,8 +3465,7 @@
                     <navigationItem key="navigationItem" title="Ajout Prise" id="QPe-Z0-5s4">
                         <barButtonItem key="rightBarButtonItem" title="Suivant" id="ULk-KZ-Enh">
                             <connections>
-                                <action selector="addPrise:" destination="suZ-zZ-lub" id="HnC-DK-3mT"/>
-                                <segue destination="VHM-Gj-tuM" kind="show" id="n5s-O7-XDB"/>
+                                <action selector="NextView:" destination="suZ-zZ-lub" id="1vg-lP-ebx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -3476,6 +3475,7 @@
                         <outlet property="dosageLabel" destination="I96-2h-luA" id="H7L-fJ-kbC"/>
                         <outlet property="medicamentTF" destination="Ai1-bI-Efu" id="L4O-gZ-qYR"/>
                         <outlet property="nbMedicamentTF" destination="gFR-bF-mgQ" id="o8U-ef-BPw"/>
+                        <segue destination="VHM-Gj-tuM" kind="show" identifier="addHeures" id="xrk-gi-zrf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="29a-x4-fBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3485,7 +3485,7 @@
         <!--Heures de prise-->
         <scene sceneID="jCj-P9-zvD">
             <objects>
-                <tableViewController id="VHM-Gj-tuM" customClass="addPriseHeuresViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="VHM-Gj-tuM" customClass="AddPriseHeuresViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2R-kN-tVO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3572,16 +3572,22 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Heures de prise" id="BHX-C8-FsL">
-                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="Iro-bC-NDX"/>
+                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="Iro-bC-NDX">
+                            <connections>
+                                <action selector="savePosologie:" destination="VHM-Gj-tuM" id="vAe-It-zlA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="removeButton" destination="5w5-Tc-DoY" id="Ogr-AL-PLO"/>
+                        <segue destination="ZBG-hJ-qUM" kind="unwind" identifier="unwindFromAddHeuresPrise" unwindAction="unwindFromAddHeuresPriseWithSegue:" id="kxc-de-CGS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3l-eA-l2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ZBG-hJ-qUM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4086" y="1661"/>
+            <point key="canvasLocation" x="4086" y="1687"/>
         </scene>
         <!--Ajout exercice-->
         <scene sceneID="23z-ip-Z4o">

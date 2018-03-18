@@ -8,11 +8,14 @@
 
 import UIKit
 
-class addPriseHeuresViewController: UITableViewController {
+class AddPriseHeuresViewController: UITableViewController {
 
     var heuresPriseCell: [HeurePriseTableViewCell] = [HeurePriseTableViewCell()]
     @IBOutlet weak var removeButton: UIButton!
     
+    var posologie: Posologie? = nil
+    let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
+
     @IBAction func removeHeure(_ sender: Any) {
         heuresPriseCell.removeLast()
         tableView.beginUpdates()
@@ -56,7 +59,24 @@ class addPriseHeuresViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! HeurePriseTableViewCell
         
         cell.heurePriseLabel.text = "Heure de prise"
+        heuresPriseCell[indexPath.row] = cell
         return cell
+    }
+    @IBAction func savePosologie(_ sender: Any) {
+        print("dedans")
+        let heures:[NSDate] = heuresPriseCell.map{(cell) in
+            return cell.heurePriseTF.getDate()
+        }
+        self.posologie?.heuresPrise = heures
+        do{
+            try posologieDAO.save(posologie: self.posologie!)
+            DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
+                self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
+            })
+        } catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        
     }
 }
 
