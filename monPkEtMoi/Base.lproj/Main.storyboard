@@ -2999,9 +2999,11 @@
                     <tabBarItem key="tabBarItem" title="Médicaments" image="prise" id="m6S-eh-7R3"/>
                     <connections>
                         <segue destination="8Uz-6B-bSf" kind="show" identifier="showMedicament" id="JeQ-M3-2nx"/>
+                        <segue destination="Nfi-iL-mBW" kind="unwind" unwindAction="unwindFromAddHeuresPriseWithSegue:" id="8bt-yT-OO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Fr-jb-2YY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Nfi-iL-mBW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1518" y="-1981"/>
         </scene>
@@ -3094,7 +3096,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vH-NK-doU">
-                                                    <rect key="frame" x="16" y="11" width="343" height="20.5"/>
+                                                    <rect key="frame" x="16" y="11.5" width="343" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMs-nW-sz3">
                                                             <rect key="frame" x="0.0" y="0.0" width="301" height="20.5"/>
@@ -3112,10 +3114,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="4vH-NK-doU" firstAttribute="centerY" secondItem="ULQ-Ge-UXe" secondAttribute="centerY" id="7RN-oZ-9pP"/>
-                                                <constraint firstItem="4vH-NK-doU" firstAttribute="leading" secondItem="ULQ-Ge-UXe" secondAttribute="leadingMargin" id="EdG-ek-6Xu"/>
-                                                <constraint firstItem="4vH-NK-doU" firstAttribute="centerX" secondItem="ULQ-Ge-UXe" secondAttribute="centerX" id="S87-lW-x8P"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="4vH-NK-doU" secondAttribute="trailing" id="ugP-XY-dxb"/>
+                                                <constraint firstItem="4vH-NK-doU" firstAttribute="leading" secondItem="ULQ-Ge-UXe" secondAttribute="leading" constant="16" id="CNe-0K-bOb"/>
+                                                <constraint firstAttribute="trailing" secondItem="4vH-NK-doU" secondAttribute="trailing" constant="16" id="GMC-8F-81H"/>
+                                                <constraint firstItem="4vH-NK-doU" firstAttribute="centerY" secondItem="ULQ-Ge-UXe" secondAttribute="centerY" id="cpY-DM-9Jy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3127,7 +3128,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2F-Wk-NnX">
-                                                    <rect key="frame" x="16" y="12" width="343" height="20.5"/>
+                                                    <rect key="frame" x="16" y="11.5" width="343" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hao-BW-7Nl">
                                                             <rect key="frame" x="0.0" y="0.0" width="88" height="20.5"/>
@@ -3145,10 +3146,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="W2F-Wk-NnX" secondAttribute="trailing" id="4xW-e3-ZZv"/>
-                                                <constraint firstItem="W2F-Wk-NnX" firstAttribute="centerY" secondItem="Hrn-G1-iGA" secondAttribute="centerY" id="E1y-rO-hKW"/>
-                                                <constraint firstItem="W2F-Wk-NnX" firstAttribute="centerX" secondItem="Hrn-G1-iGA" secondAttribute="centerX" id="PPf-gN-3lt"/>
-                                                <constraint firstItem="W2F-Wk-NnX" firstAttribute="leading" secondItem="Hrn-G1-iGA" secondAttribute="leadingMargin" id="l2w-JO-8CD"/>
+                                                <constraint firstAttribute="trailing" secondItem="W2F-Wk-NnX" secondAttribute="trailing" constant="16" id="XR4-eE-41U"/>
+                                                <constraint firstItem="W2F-Wk-NnX" firstAttribute="centerY" secondItem="Hrn-G1-iGA" secondAttribute="centerY" id="fX2-wg-qrk"/>
+                                                <constraint firstItem="W2F-Wk-NnX" firstAttribute="leading" secondItem="Hrn-G1-iGA" secondAttribute="leading" constant="16" id="joD-ME-FCo"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3159,31 +3159,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-x3-Hlm">
-                                                    <rect key="frame" x="16" y="12" width="325" height="20.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-x3-Hlm">
+                                                    <rect key="frame" x="16" y="7" width="309" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5re-Em-Y1J">
-                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdE-4F-dw0">
+                                                            <rect key="frame" x="247" y="0.0" width="62" height="30"/>
+                                                            <state key="normal" title="Afficher"/>
+                                                            <connections>
+                                                                <action selector="showDetails" destination="8Uz-6B-bSf" eventType="touchUpInside" id="Wo2-oQ-wN1"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="UdE-4F-dw0" secondAttribute="trailing" id="bma-Pr-Nvs"/>
+                                                    </constraints>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdE-4F-dw0">
-                                                    <rect key="frame" x="286" y="7.5" width="55" height="30"/>
-                                                    <state key="normal" title="Afficher"/>
-                                                    <connections>
-                                                        <action selector="showDetails" destination="8Uz-6B-bSf" eventType="touchUpInside" id="Wo2-oQ-wN1"/>
-                                                    </connections>
-                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="2VQ-x3-Hlm" secondAttribute="trailing" id="6LT-QS-cPx"/>
-                                                <constraint firstItem="UdE-4F-dw0" firstAttribute="centerY" secondItem="5re-Em-Y1J" secondAttribute="centerY" id="6ST-RO-I60"/>
-                                                <constraint firstItem="2VQ-x3-Hlm" firstAttribute="centerY" secondItem="d4V-xN-7Wg" secondAttribute="centerY" id="TJ2-ka-2ki"/>
-                                                <constraint firstItem="2VQ-x3-Hlm" firstAttribute="leading" secondItem="d4V-xN-7Wg" secondAttribute="leading" constant="16" id="kk5-vU-uaK"/>
-                                                <constraint firstAttribute="trailing" secondItem="UdE-4F-dw0" secondAttribute="trailing" id="nTk-qT-IAL"/>
+                                                <constraint firstItem="2VQ-x3-Hlm" firstAttribute="centerY" secondItem="d4V-xN-7Wg" secondAttribute="centerY" id="Av0-8q-Krr"/>
+                                                <constraint firstItem="2VQ-x3-Hlm" firstAttribute="leading" secondItem="d4V-xN-7Wg" secondAttribute="leading" constant="16" id="jjJ-dj-bjR"/>
+                                                <constraint firstAttribute="trailing" secondItem="2VQ-x3-Hlm" secondAttribute="trailing" constant="16" id="phs-Ay-Xgb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3197,16 +3198,22 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Supprimer médicament" selectedImage="supprimerIcon" id="Gq0-oE-KbP"/>
                     <navigationItem key="navigationItem" title="Title" id="uDb-jI-3xZ">
-                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="zDQ-OH-Wg7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="zDQ-OH-Wg7">
+                            <connections>
+                                <action selector="saveMedicament:" destination="8Uz-6B-bSf" id="gbU-8v-46L"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="descriptionTF" destination="6x0-Oc-sQG" id="79U-Rg-Yx1"/>
                         <outlet property="nomMedicament" destination="NFi-VL-4zz" id="rs3-2s-CWe"/>
                         <segue destination="ae5-he-U1n" kind="show" identifier="showDoses" id="3ne-FU-HD4"/>
+                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="unwindToMedicamentList" unwindAction="unwideFromMedicamentDetailWithSegue:" id="MFS-qW-rya"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eek-87-6zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tcy-nd-tEh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1517.5999999999999" y="-1263.4182908545729"/>
         </scene>

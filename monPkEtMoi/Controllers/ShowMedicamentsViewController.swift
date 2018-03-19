@@ -26,7 +26,11 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
+            
+    }
+    
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
