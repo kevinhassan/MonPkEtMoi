@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol PosologieDAO {
+protocol PosologieDAO: {
     func getAll() throws-> [Posologie]?
     func save(posologie: Posologie) throws
 }

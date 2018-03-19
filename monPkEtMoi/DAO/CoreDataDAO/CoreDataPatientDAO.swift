@@ -16,56 +16,16 @@ class CoreDataPatientDAO: PatientDAO{
     init(context:  NSManagedObjectContext){
         self.context = context
     }
-    
-    func get() throws -> Patient? {
-        do{
-            guard let patients: [Patient] = try self.getAll() else{
-                return nil
-            }
-            return patients.first
-        }catch let error as NSError{
-            throw error
-        }
+    func create(obj: PatientModel) -> Bool{
+        return true
     }
-    
-    func getAll() throws -> [Patient]? {
-        let request: NSFetchRequest<Patient> = NSFetchRequest(entityName: self.entityName)
-        do{
-            let patients:[Patient] = try self.context.fetch(request)
-            return patients
-        }catch let error as NSError{
-            throw error
-        }
+    func delete(obj: PatientModel) -> Bool {
+        return true
     }
-    
-    func exist() throws -> Bool {
-        do{
-            guard let _: Patient = try self.get() else {
-                return false
-            }
-            return true
-        }catch let error as NSError{
-            throw error
-        }
+    func update(obj: PatientModel) -> Bool {
+        return true
     }
-    
-    func update(patient: Patient) throws  {
-        do{
-            try CoreDataManager.save()
-        }catch let error as NSError{
-            throw error
-        }
-    }
-    
-    func create() -> Patient{
-        return Patient(context: self.context)
-    }
-    
-    func save(patient: Patient) throws {
-        do{
-            try CoreDataManager.save()
-        }catch let error as NSError{
-            throw error
-        }
+    func find() -> PatientModel? {
+        return nil
     }
 }

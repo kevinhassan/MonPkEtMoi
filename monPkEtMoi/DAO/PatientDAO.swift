@@ -8,9 +8,6 @@
 
 import Foundation
 
-protocol PatientDAO {
-    func get() throws-> Patient?
-    func exist() throws -> Bool
-    func update(patient: Patient) throws
-    func save(patient: Patient) throws
+protocol PatientDAO:DAO {
+    typealias T = PatientModel
 }

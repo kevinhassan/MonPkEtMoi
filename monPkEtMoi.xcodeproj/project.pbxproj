@@ -20,7 +20,7 @@
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
 		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
 		B2D3E142205AE56500BC26B3 /* MedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E141205AE56500BC26B3 /* MedicamentDAO.swift */; };
-		B2D3E144205AEA7F00BC26B3 /* PatientModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientModelExtension.swift */; };
+		B2D3E144205AEA7F00BC26B3 /* PatientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientModel.swift */; };
 		B2DDBB93205AD9A300E7F3C1 /* AddPriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */; };
 		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
@@ -104,7 +104,7 @@
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
 		B2D3E141205AE56500BC26B3 /* MedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDAO.swift; sourceTree = "<group>"; };
-		B2D3E143205AEA7F00BC26B3 /* PatientModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModelExtension.swift; sourceTree = "<group>"; };
+		B2D3E143205AEA7F00BC26B3 /* PatientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientModel.swift; sourceTree = "<group>"; };
 		B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseTableViewController.swift; sourceTree = "<group>"; };
 		B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		B2D3E140205ADD9400BC26B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B2D3E143205AEA7F00BC26B3 /* PatientModelExtension.swift */,
+				B2D3E143205AEA7F00BC26B3 /* PatientModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -552,7 +552,7 @@
 				C1CA35F0205DB81500937BFF /* TypeSoignantDAO.swift in Sources */,
 				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
-				B2D3E144205AEA7F00BC26B3 /* PatientModelExtension.swift in Sources */,
+				B2D3E144205AEA7F00BC26B3 /* PatientModel.swift in Sources */,
 				C1CA35F4205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
