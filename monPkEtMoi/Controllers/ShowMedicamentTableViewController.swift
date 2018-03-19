@@ -46,8 +46,9 @@ class ShowMedicamentTableViewController: UITableViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ShowDosageMedicamentTableViewController
-        destinationVC.medicament = self.medicament
+        if(segue.identifier != "unwindToMedicamentList"){
+            let destinationVC = segue.destination as! ShowDosageMedicamentTableViewController
+            destinationVC.medicament = self.medicament
+        }
     }
-
 }

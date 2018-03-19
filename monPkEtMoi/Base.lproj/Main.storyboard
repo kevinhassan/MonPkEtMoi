@@ -3209,7 +3209,7 @@
                         <outlet property="descriptionTF" destination="6x0-Oc-sQG" id="79U-Rg-Yx1"/>
                         <outlet property="nomMedicament" destination="NFi-VL-4zz" id="rs3-2s-CWe"/>
                         <segue destination="ae5-he-U1n" kind="show" identifier="showDoses" id="3ne-FU-HD4"/>
-                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="unwindToMedicamentList" unwindAction="unwideFromMedicamentDetailWithSegue:" id="MFS-qW-rya"/>
+                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="unwindToMedicamentList" unwindAction="unwideFromMedicamentDetailWithSegue:" id="Nyn-Hu-k8O"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eek-87-6zf" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -29,7 +29,7 @@
         <attribute name="dateEvenement" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descriptionEvenement" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeEvenement" inverseName="avoirEvenement" inverseEntity="TypeEvenement" syncable="YES"/>
-        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirEvenement" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirEvenement" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="Medicament" representedClassName="Medicament" syncable="YES" codeGenerationType="class">
         <attribute name="descriptionMedicament" optional="YES" attributeType="String" syncable="YES"/>
@@ -112,7 +112,7 @@
         <element name="ActiviteRealisee" positionX="-243" positionY="152" width="128" height="118"/>
         <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
-        <element name="Evenement" positionX="-405" positionY="-207" width="128" height="103"/>
+        <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="103"/>
         <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
