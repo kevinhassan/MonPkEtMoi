@@ -18,6 +18,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     let typeEventDAO = CoreDataDAOFactory.getInstance().getTypeEvenementDAO()
     let eventDAO = CoreDataDAOFactory.getInstance().getEvenementDAO()
 
+    // MARK: - Vérifier que le formulaire est conforme
     @IBAction func addEvent(_ sender: Any) {
         let inputs:[String: UITextField] = ["dateEvent": dateEvent,"typeEvent": typeEvent]
         if(FormValidatorHelper.validateForm(inputs)){
@@ -56,11 +57,12 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    // MARK: - Fermer le clavier
     func donePressed(){
         typeEvent.resignFirstResponder()
     }
     
+    // MARK: - Enregistrer le nouvel évenement
     func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String){
         let newEvent: Evenement = eventDAO.create()
         newEvent.dateEvenement = date
@@ -73,8 +75,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         }
     }
     
-    // MARK: UIPickerView Delegation
-    
+    // MARK: - UIPickerView Delegation
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

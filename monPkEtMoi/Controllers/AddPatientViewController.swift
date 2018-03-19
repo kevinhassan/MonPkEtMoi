@@ -24,17 +24,11 @@ class AddPatientViewController: UITableViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    
-    // MARK: - Formulaire à envoyer
+    // MARK: - Formulaire à envoyer s'il est conforme
     @IBAction func addPatient(_ sender: UIBarButtonItem)
     {
         let inputs:[String: UITextField] = ["nom": nomTextField,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
-
+        
         if FormValidatorHelper.validateForm(inputs){
             let dateF:NSDate = ((dateNaissanceTF))!.getDate()!
             saveNewPatient(withName: nomTextField.text!, withPrenom: prenomTF.text!, withDate: dateF,withAdress : adresseTF.text!, withTempsP: Int64(tempsPreparationTF.text!)!, withMail: mailTF.text!, withTel:  telTF.text!)
@@ -47,7 +41,6 @@ class AddPatientViewController: UITableViewController {
     }
     
     // MARK: - Enregistrer les informations du patient
-    
     func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) {
         let daoF = CoreDataDAOFactory.getInstance()
         let patientDAO = daoF.getPatientDAO()

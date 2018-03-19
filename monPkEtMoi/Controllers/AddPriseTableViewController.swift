@@ -20,7 +20,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
 
     var medocs: [Medicament] = []
     var posologie: Posologie? = nil
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let typePicker = UIPickerView()
@@ -38,7 +38,8 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         dateDebut.setDate(date: NSDate())
         self.posologie = posologieDAO.create()
     }
-
+    
+    // MARK: - Fermer le clavier
     func donePressed(){
         medicamentTF.resignFirstResponder()
     }
@@ -48,8 +49,21 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: UIPickerView Delegation
+    // MARK: - Envoyer la posologie à la vue suivante
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let heuresViewController = segue.destination as! AddPriseHeuresViewController
+        posologie?.datePosologie = ((self.dateDebut)!.getDate()! as NSDate)
+        posologie?.dosagePosologie = self.dosageLabel.text
+        posologie?.nbMedicament = Int16(self.nbMedicamentTF.text!)!
+        do{
+            posologie?.concerneMedicament = try medicamentDAO.getByName(name: self.medicamentTF.text!)
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        heuresViewController.posologie = self.posologie!
+    }
     
+    // MARK: - UIPickerView Delegation
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -85,17 +99,4 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
             DialogBoxHelper.alert(view: self, errorMessage: "Données invalides")
         }
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let heuresViewController = segue.destination as! AddPriseHeuresViewController
-        posologie?.datePosologie = ((self.dateDebut)!.getDate()! as NSDate)
-        posologie?.dosagePosologie = self.dosageLabel.text
-        posologie?.nbMedicament = Int16(self.nbMedicamentTF.text!)!
-        do{
-            posologie?.concerneMedicament = try medicamentDAO.getByName(name: self.medicamentTF.text!)
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-        heuresViewController.posologie = self.posologie!
-    }
-
 }

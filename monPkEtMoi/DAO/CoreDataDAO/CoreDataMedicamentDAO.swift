@@ -19,6 +19,8 @@ class CoreDataMedicamentDAO: MedicamentDAO {
     
     func getAll() throws -> [Medicament]? {
         let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
+        let sort = NSSortDescriptor(key: #keyPath(Medicament.nomMedicament), ascending: true)
+        request.sortDescriptors = [sort]
         do {
             let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
             return medicaments
