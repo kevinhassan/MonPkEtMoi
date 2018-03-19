@@ -12,5 +12,6 @@ import Foundation
 
 protocol TypeEvenementDAO {
     func getAll() throws-> [TypeEvenement]?
+    func getByName(typeEvenement: String) throws -> TypeEvenement?
 }
 

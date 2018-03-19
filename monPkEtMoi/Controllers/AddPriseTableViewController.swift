@@ -12,6 +12,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
 
     @IBOutlet weak var medicamentTF: UITextField!
     @IBOutlet weak var dateDebut: DatePicker!
+    @IBOutlet weak var dateFin: DatePicker!
     @IBOutlet weak var nbMedicamentTF: UITextField!
     @IBOutlet weak var dosageLabel: UILabel!
     
@@ -52,7 +53,9 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     // MARK: - Envoyer la posologie à la vue suivante
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let heuresViewController = segue.destination as! AddPriseHeuresViewController
-        posologie?.datePosologie = ((self.dateDebut)!.getDate()! as NSDate)
+        posologie?.dateDebutPosologie = ((self.dateDebut)!.getDate()! as NSDate)
+        posologie?.dateFinPosologie = ((self.dateFin)!.getDate()! as NSDate)
+
         posologie?.dosagePosologie = self.dosageLabel.text
         posologie?.nbMedicament = Int16(self.nbMedicamentTF.text!)!
         do{
@@ -92,7 +95,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament![pickerView.selectedRow(inComponent: 1)]
     }
     @IBAction func NextView(_ sender: Any) {
-        let inputs = ["medicament":medicamentTF, "dateDebut":dateDebut,"nbMedicament": nbMedicamentTF]
+        let inputs = ["medicament":medicamentTF, "dateDebut":dateDebut,"dateFin": dateFin, "nbMedicament": nbMedicamentTF]
         if FormValidatorHelper.validateForm(inputs as! [String : UITextField]){
             performSegue(withIdentifier: "addHeures", sender: self)
         }else{

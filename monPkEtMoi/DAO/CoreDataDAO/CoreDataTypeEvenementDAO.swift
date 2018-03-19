@@ -26,6 +26,20 @@ class CoreDataTypeEvenementDAO: TypeEvenementDAO{
             throw error
         }
     }
+    func getByName(typeEvenement: String) throws -> TypeEvenement?{
+        let predicate: NSPredicate = NSPredicate(format: "libelleTypeEvenement == %@", typeEvenement)
+        let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
+        request.predicate = predicate
+        do{
+            let typesEvent:[TypeEvenement] = try self.context.fetch(request)
+            if (typesEvent.count > 0) {
+                return typesEvent[0]
+            }
+            return nil
+        }catch let error as NSError{
+            throw error
+        }
+    }
     func create() -> TypeEvenement{
         return TypeEvenement(context: self.context)
     }

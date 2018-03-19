@@ -65,6 +65,12 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     // MARK: - Enregistrer le nouvel évenement
     func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String){
         let newEvent: Evenement = eventDAO.create()
+        do{
+            let typeEvent: TypeEvenement? = try typeEventDAO.getByName(typeEvenement: type)
+            newEvent.avoirType = typeEvent
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
         newEvent.dateEvenement = date
         newEvent.avoirType?.libelleTypeEvenement = type
         newEvent.descriptionEvenement = description
