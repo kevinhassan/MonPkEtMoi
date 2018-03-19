@@ -13,10 +13,12 @@ class CoreDataPatientDAO: PatientDAO{
     private let entityName: String = "Patient"
     private let context: NSManagedObjectContext
     
-    init(context:  NSManagedObjectContext){
-        self.context = context
+    init(){
+        self.context = CoreDataManager.context
     }
     func create(obj: PatientModel) -> Bool{
+        var patient: Patient = Patient(context: self.context)
+        patient.
         return true
     }
     func delete(obj: PatientModel) -> Bool {

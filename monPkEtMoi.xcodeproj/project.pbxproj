@@ -17,6 +17,13 @@
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
 		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
+		23E895142060412B00473DC3 /* EvenementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E895132060412B00473DC3 /* EvenementModel.swift */; };
+		23E89516206041F200473DC3 /* TypeEvenementModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E89515206041F200473DC3 /* TypeEvenementModel.swift */; };
+		23E895182060426600473DC3 /* MedicamentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E895172060426600473DC3 /* MedicamentModel.swift */; };
+		23E8951A2060436F00473DC3 /* TypeSoignantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E895192060436F00473DC3 /* TypeSoignantModel.swift */; };
+		23E8951C206043E400473DC3 /* EtatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8951B206043E400473DC3 /* EtatModel.swift */; };
+		23E8951E2060448600473DC3 /* TypeAvisModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8951D2060448600473DC3 /* TypeAvisModel.swift */; };
+		23E895202060452B00473DC3 /* PosologieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8951F2060452B00473DC3 /* PosologieModel.swift */; };
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
 		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
 		B2D3E142205AE56500BC26B3 /* MedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E141205AE56500BC26B3 /* MedicamentDAO.swift */; };
@@ -101,6 +108,13 @@
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
+		23E895132060412B00473DC3 /* EvenementModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenementModel.swift; sourceTree = "<group>"; };
+		23E89515206041F200473DC3 /* TypeEvenementModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeEvenementModel.swift; sourceTree = "<group>"; };
+		23E895172060426600473DC3 /* MedicamentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicamentModel.swift; sourceTree = "<group>"; };
+		23E895192060436F00473DC3 /* TypeSoignantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeSoignantModel.swift; sourceTree = "<group>"; };
+		23E8951B206043E400473DC3 /* EtatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtatModel.swift; sourceTree = "<group>"; };
+		23E8951D2060448600473DC3 /* TypeAvisModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAvisModel.swift; sourceTree = "<group>"; };
+		23E8951F2060452B00473DC3 /* PosologieModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosologieModel.swift; sourceTree = "<group>"; };
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
 		B2D3E141205AE56500BC26B3 /* MedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentDAO.swift; sourceTree = "<group>"; };
@@ -242,6 +256,13 @@
 			isa = PBXGroup;
 			children = (
 				B2D3E143205AEA7F00BC26B3 /* PatientModel.swift */,
+				23E895132060412B00473DC3 /* EvenementModel.swift */,
+				23E89515206041F200473DC3 /* TypeEvenementModel.swift */,
+				23E895172060426600473DC3 /* MedicamentModel.swift */,
+				23E895192060436F00473DC3 /* TypeSoignantModel.swift */,
+				23E8951B206043E400473DC3 /* EtatModel.swift */,
+				23E8951D2060448600473DC3 /* TypeAvisModel.swift */,
+				23E8951F2060452B00473DC3 /* PosologieModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -502,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
+				23E895202060452B00473DC3 /* PosologieModel.swift in Sources */,
 				C168D7E8205B47820004AE3E /* CoreDataTypeEvenementDAO.swift in Sources */,
 				C1823D98205D907600DFCA42 /* CoreDataMedicamentDAO.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
@@ -517,6 +539,7 @@
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
 				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
 				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
+				23E89516206041F200473DC3 /* TypeEvenementModel.swift in Sources */,
 				B2DDBB93205AD9A300E7F3C1 /* AddPriseTableViewController.swift in Sources */,
 				C17050CA205F147F007C6E14 /* ShowMedicamentTableViewController.swift in Sources */,
 				C1CA35FC205DBF8200937BFF /* TypeAvisDAO.swift in Sources */,
@@ -524,6 +547,7 @@
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				C1CA35F6205DB8A800937BFF /* CoreDataEtatDAO.swift in Sources */,
 				C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */,
+				23E895182060426600473DC3 /* MedicamentModel.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
 				C1753B1C20601D96001EA44D /* DAO.swift in Sources */,
 				C1753B1E20601E10001EA44D /* TypeFactory.swift in Sources */,
@@ -546,14 +570,18 @@
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C168D7E6205B45070004AE3E /* CoreDataEvenementDAO.swift in Sources */,
 				C1CA35FA205DBF3400937BFF /* CoreDataTypeAvisDAO.swift in Sources */,
+				23E8951E2060448600473DC3 /* TypeAvisModel.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
+				23E8951C206043E400473DC3 /* EtatModel.swift in Sources */,
 				C15943762059D68E004968E0 /* TypeEvenementDAO.swift in Sources */,
+				23E8951A2060436F00473DC3 /* TypeSoignantModel.swift in Sources */,
 				C1CA35F0205DB81500937BFF /* TypeSoignantDAO.swift in Sources */,
 				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 				B2D3E144205AEA7F00BC26B3 /* PatientModel.swift in Sources */,
 				C1CA35F4205DB87D00937BFF /* CoreDataTypeSoignantDAO.swift in Sources */,
+				23E895142060412B00473DC3 /* EvenementModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
