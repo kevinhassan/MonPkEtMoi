@@ -11,13 +11,18 @@ import CoreData
 
 class CoreDataPatientDAO: PatientDAO{
     private let entityName: String = "Patient"
-    private let context: NSManagedObjectContext
+    private let dao: Patient
     
     init(){
-        self.context = CoreDataManager.context
+        self.dao = Patient(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
     func create(obj: PatientModel) -> Bool{
-        var patient: Patient = Patient(context: self.context)
+        self.dao.nom = obj.nom
+        self.dao.prenom = obj.prenom
+        self.dao.tel = obj.tel
+        self.dao.mail = obj.mail
+        self.dao.dateNaissance = obj.dateNaissance
+        self.dao.tempsPreparation = obj.tempsPreparation
         return true
     }
     func delete(obj: PatientModel) -> Bool {

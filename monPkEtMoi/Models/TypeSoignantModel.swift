@@ -9,15 +9,7 @@
 import Foundation
 
 class TypeSoignantModel{
-    private var libelleTypeSoignant: String
-    {
-        get{
-            return self.libelleTypeSoignant
-        }
-        set{
-            self.libelleTypeSoignant = newValue
-        }
-    }
+    var libelleTypeSoignant: String
     
     init(libelleTypeSoignant: String){
         self.libelleTypeSoignant = libelleTypeSoignant

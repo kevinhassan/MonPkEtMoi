@@ -17,6 +17,12 @@ class CoreDataManager : NSObject{
         return appDelegate.persistentContainer.viewContext
     }
     
+    static func entity(forName name: String) -> NSEntityDescription{
+        guard let entity = NSEntityDescription.entity(forEntityName: name, in: self.context) else{
+            fatalError()
+        }
+        return entity
+    }
     
     class func save() throws {
         do {

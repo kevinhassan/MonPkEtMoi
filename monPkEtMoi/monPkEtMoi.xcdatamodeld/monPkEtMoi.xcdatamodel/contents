@@ -115,7 +115,7 @@
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="105"/>
-        <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
+        <element name="Patient" positionX="-207" positionY="-346" width="108" height="150"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
         <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>

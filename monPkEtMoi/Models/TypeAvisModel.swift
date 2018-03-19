@@ -9,15 +9,7 @@
 import Foundation
 
 class TypeAvisModel {
-    private var libelleTypeAvis: String
-    {
-        get{
-            return self.libelleTypeAvis
-        }
-        set{
-            self.libelleTypeAvis = newValue
-        }
-    }
+    var libelleTypeAvis: String
     
     init(libelleTypeAvis: String){
         self.libelleTypeAvis = libelleTypeAvis

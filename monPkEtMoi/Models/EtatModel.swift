@@ -9,15 +9,7 @@
 import Foundation
 
 class EtatModel{
-    private var libelleEtat: String
-    {
-        get{
-            return self.libelleEtat
-        }
-        set{
-            self.libelleEtat = newValue
-        }
-    }
+    var libelleEtat: String
     
     init(libelleEtat: String){
         self.libelleEtat = libelleEtat
