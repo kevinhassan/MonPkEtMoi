@@ -3058,7 +3058,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Dosages" id="qT8-km-6rF">
                         <rightBarButtonItems>
-                            <barButtonItem title="Enregistrer" id="Je8-9R-a3L"/>
+                            <barButtonItem title="Enregistrer" id="Je8-9R-a3L">
+                                <connections>
+                                    <action selector="saveMedicament:" destination="ae5-he-U1n" id="W6e-tf-CG0"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="add" id="PCG-Pw-yIe">
                                 <connections>
                                     <action selector="addDosage:" destination="ae5-he-U1n" id="BRn-3E-1pI"/>
