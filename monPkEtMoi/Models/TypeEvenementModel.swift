@@ -10,6 +10,14 @@ import Foundation
 
 class TypeEvenementModel {
     private var libelleTypeEvenement: String
+    {
+        get{
+            return self.libelleTypeEvenement
+        }
+        set{
+            self.libelleTypeEvenement = newValue
+        }
+    }
     
     init(libelleTypeEvenement: String){
         self.libelleTypeEvenement = libelleTypeEvenement

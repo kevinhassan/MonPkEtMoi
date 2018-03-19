@@ -18,7 +18,6 @@ class CoreDataPatientDAO: PatientDAO{
     }
     func create(obj: PatientModel) -> Bool{
         var patient: Patient = Patient(context: self.context)
-        patient.
         return true
     }
     func delete(obj: PatientModel) -> Bool {

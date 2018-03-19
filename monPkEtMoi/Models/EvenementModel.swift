@@ -10,7 +10,24 @@ import Foundation
 
 class EvenementModel{
     private var dateEvenement: NSDate
+    {
+        get{
+            return self.dateEvenement
+        }
+        set{
+            self.dateEvenement = newValue
+        }
+    }
+    
     private var descriptionEvenenement: String?
+    {
+        get{
+            return self.descriptionEvenenement
+        }
+        set{
+            self.descriptionEvenenement = newValue
+        }
+    }
     
     init(dateEvenement: NSDate, descriptionEvenement: String?){
         self.dateEvenement = dateEvenement
