@@ -11,29 +11,43 @@ import CoreData
 
 class CoreDataTypeAvisDAO: TypeAvisDAO{
     private let entityName: String = "TypeAvis"
-    private let context: NSManagedObjectContext
+    private let dao: TypeAvis
     
-    init(context:  NSManagedObjectContext){
-        self.context = context
+    init(){
+        self.dao = TypeAvis(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
-    func getAll() throws -> [TypeAvis]? {
+    func get() throws -> [TypeAvisModel]? {
         let request: NSFetchRequest<TypeAvis> = NSFetchRequest(entityName: self.entityName)
         do {
-            let types: [TypeAvis] = try CoreDataManager.context.fetch(request)
-            return types
+            let etats: [TypeAvis] = try CoreDataManager.context.fetch(request)
+            let etat:[TypeAvisModel] = etats.map{(type: TypeAvis) in
+                return TypeAvisModel(libelleTypeAvis: type.libelleTypeAvis!)
+            }
+            return etat
         } catch let error as NSError {
             throw error
         }
     }
-    
-    func create() -> TypeAvis{
-        return TypeAvis(context: self.context)
-    }
-    func save(typeAvis: TypeAvis) throws{
+
+    func create(obj: TypeAvisModel) throws {
+        self.dao.libelleTypeAvis = obj.libelleTypeAvis
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
-            throw error
+            throw(error)
         }
     }
+    func delete(obj: TypeAvisModel) throws {
+    }
+    func update(obj: TypeAvisModel) throws {
+        do{
+            try self.create(obj: obj)
+        }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func find() throws -> TypeAvisModel? {
+        return nil
+    }
+
 }

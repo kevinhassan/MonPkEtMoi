@@ -12,29 +12,43 @@ import Foundation
 
 class CoreDataEtatDAO: EtatDAO {
     private let entityName: String = "Etat"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
+    private let dao: Etat
+
+    init(){
+        self.dao = Etat(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
-    func getAll() throws -> [Etat]? {
+    func get() throws -> [EtatModel]? {
         let request: NSFetchRequest<Etat> = NSFetchRequest(entityName: self.entityName)
         do {
             let etats: [Etat] = try CoreDataManager.context.fetch(request)
-            return etats
+            let etat:[EtatModel] = etats.map{(et: Etat) in
+                return EtatModel(libelleEtat: et.libelleEtat!)
+            }
+            return etat
         } catch let error as NSError {
             throw error
         }
     }
     
-    func create() -> Etat{
-        return Etat(context: self.context)
-    }
-    func save(etat: Etat) throws{
+    func create(obj: EtatModel) throws {
+        self.dao.libelleEtat = obj.libelleEtat
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
-            throw error
+            throw(error)
         }
     }
+    func delete(obj: EtatModel) throws {
+    }
+    func update(obj: EtatModel) throws {
+        do{
+            try self.create(obj: obj)
+        }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func find() throws -> EtatModel? {
+        return nil
+    }
+    
 }
