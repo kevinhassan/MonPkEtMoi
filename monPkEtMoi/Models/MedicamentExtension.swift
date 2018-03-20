@@ -55,5 +55,5 @@ extension Medicament{
             throw error
         }
     }
-    
+
 }
