@@ -10,13 +10,13 @@ import UIKit
 
 class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
-    var medicaments: [Medicament] = []
-    var medicamentSelected: Medicament? = nil
+    var medicaments: [MedicamentModel] = []
+    var medicamentSelected: MedicamentModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-            medicaments = (try medicamentDAO.getAll())!
+            medicaments = try medicamentDAO.get()
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }

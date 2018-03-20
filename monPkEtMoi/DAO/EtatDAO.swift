@@ -7,13 +7,9 @@
 //
 
 import CoreData
-import UIKit
 import Foundation
 
-protocol EtatDAO {
-    func getAll() throws-> [Etat]?
-    func save(etat: Etat) throws
-
+protocol EtatDAO:DAO {
 }
 
 

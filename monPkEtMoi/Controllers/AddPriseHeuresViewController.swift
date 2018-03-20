@@ -13,7 +13,7 @@ class AddPriseHeuresViewController: UITableViewController {
     var heuresPriseCell: [HeurePriseTableViewCell] = [HeurePriseTableViewCell()]
     @IBOutlet weak var removeButton: UIButton!
     
-    var posologie: Posologie? = nil
+    var posologie: PosologieModel? = nil
     let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
 
      // MARK: - Supprimer un champ d'heure si il y'en a plus d'un
@@ -39,13 +39,12 @@ class AddPriseHeuresViewController: UITableViewController {
     //MARK: - Sauvegarder la posologie si le formulaire est valide
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     @IBAction func savePosologie(_ sender: Any) {
-        print("dedans")
         let heures:[NSDate] = heuresPriseCell.map{(cell) in
             return cell.heurePriseTF.getDate()
         }
         self.posologie?.heuresPrise = heures
         do{
-            try posologieDAO.save(posologie: self.posologie!)
+            try posologieDAO.create(obj: self.posologie!)
             DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
             })

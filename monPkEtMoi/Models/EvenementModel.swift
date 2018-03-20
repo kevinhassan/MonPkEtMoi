@@ -11,9 +11,11 @@ import Foundation
 class EvenementModel{
     var dateEvenement: NSDate
     var descriptionEvenenement: String?
+    var typeEvenement: TypeEvenementModel
     
-    init(dateEvenement: NSDate, descriptionEvenement: String?){
+    init(dateEvenement: NSDate, descriptionEvenement: String?, typeEvenement: TypeEvenementModel){
         self.dateEvenement = dateEvenement
         self.descriptionEvenenement = descriptionEvenement
+        self.typeEvenement = typeEvenement
     }
 }

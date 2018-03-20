@@ -9,9 +9,5 @@
 import Foundation
 import CoreData
 
-protocol MedicamentDAO {
-    func getAll() throws -> [Medicament]?
-    func getByName(name: String) throws -> Medicament?
-    func save(medicament: Medicament) throws
-    func remove(medicament: Medicament) throws
+protocol MedicamentDAO:DAO {
 }

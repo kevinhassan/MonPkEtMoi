@@ -9,5 +9,4 @@
 import Foundation
 
 protocol PatientDAO:DAO {
-    typealias T = PatientModel
 }

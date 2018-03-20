@@ -7,37 +7,36 @@
 //
 
 import Foundation
-
-import Foundation
 import CoreData
 
 class CoreDataEvenementDAO: EvenementDAO{
     private let entityName: String = "Evenement"
-    private let context: NSManagedObjectContext
+    private let dao: Evenement
     
-    init(context:  NSManagedObjectContext){
-        self.context = context
+    init(){
+        self.dao = Evenement(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
-
-    func getAll() throws -> [Evenement]? {
-        let request: NSFetchRequest<Evenement> = NSFetchRequest(entityName: self.entityName)
-        do{
-            let events:[Evenement] = try self.context.fetch(request)
-            return events
-        }catch let error as NSError{
-            throw error
-        }
-    }
-    
-    func create() -> Evenement{
-        return Evenement(context: self.context)
-    }
-    
-    func save(evenement event: Evenement) throws {
+    func create(obj: EvenementModel) throws {
+        let typeEvenementDAO = CoreDataTypeEvenementDAO()
+        self.dao.avoirType = typeEvenementDAO.produce(obj: obj.typeEvenement)
+        self.dao.dateEvenement = obj.dateEvenement
+        self.dao.descriptionEvenement = obj.descriptionEvenenement
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
-            throw error
+            throw(error)
         }
+    }
+    func delete(obj: EvenementModel) throws {
+    }
+    func update(obj: EvenementModel) throws {
+        do{
+            try self.create(obj: obj)
+        }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func find() throws -> EvenementModel? {
+        return nil
     }
 }

@@ -9,10 +9,21 @@
 import Foundation
 import CoreData
 
-class CoreDataDAOFactory{
+class CoreDataDAOFactory: ProtocolDAOFactory{
+    typealias A = CoreDataPatientDAO
+    typealias B = CoreDataEvenementDAO
+    typealias C = CoreDataTypeEvenementDAO
+    typealias D = CoreDataMedicamentDAO
+    typealias E = CoreDataTypeSoignantDAO
+    typealias F = CoreDataEtatDAO
+    typealias G = CoreDataTypeAvisDAO
+    typealias H = CoreDataPosologieDAO
+    
+    
     private static var instance: CoreDataDAOFactory?
     
     private init(){}
+    
     static func getInstance() -> CoreDataDAOFactory{
         guard let instanceFactory = CoreDataDAOFactory.instance else {
             return CoreDataDAOFactory()

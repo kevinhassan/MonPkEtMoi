@@ -9,45 +9,48 @@
 import Foundation
 import CoreData
 
-class CoreDataTypeEvenementDAO: TypeEvenementDAO{
+class CoreDataTypeEvenementDAO:TypeEvenementDAO{
     private let entityName: String = "TypeEvenement"
-    private let context: NSManagedObjectContext
+    private let dao: TypeEvenement
     
-    init(context:  NSManagedObjectContext){
-        self.context = context
+    init(){
+        self.dao = TypeEvenement(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
-
-    func getAll() throws-> [TypeEvenement]?{
-        let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
-        do{
-            let typesEvent:[TypeEvenement] = try self.context.fetch(request)
-            return typesEvent
-        }catch let error as NSError{
-            throw error
-        }
-    }
-    func getByName(typeEvenement: String) throws -> TypeEvenement?{
-        let predicate: NSPredicate = NSPredicate(format: "libelleTypeEvenement == %@", typeEvenement)
-        let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
-        request.predicate = predicate
-        do{
-            let typesEvent:[TypeEvenement] = try self.context.fetch(request)
-            if (typesEvent.count > 0) {
-                return typesEvent[0]
-            }
-            return nil
-        }catch let error as NSError{
-            throw error
-        }
-    }
-    func create() -> TypeEvenement{
-        return TypeEvenement(context: self.context)
-    }
-    func save(typeEvenement: TypeEvenement) throws{
+    func create(obj: TypeEvenementModel) throws {
+        self.dao.libelleTypeEvenement = obj.libelleTypeEvenement
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func delete(obj: TypeEvenementModel) throws {
+    }
+    func update(obj: TypeEvenementModel) throws {
+        do{
+            try self.create(obj: obj)
+        }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func find() throws -> TypeEvenementModel? {
+        return nil
+    }
+    func get() throws -> [TypeEvenementModel] {
+        let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
+        do{
+            let typesEvenement:[TypeEvenement] = try CoreDataManager.context.fetch(request)
+            let typesEvenementModel: [TypeEvenementModel] = typesEvenement.map{(type) in
+                return TypeEvenementModel(libelleTypeEvenement: type.libelleTypeEvenement!)
+            }
+            return typesEvenementModel
+        }catch let error as NSError{
             throw error
         }
+    }
+    // TODO: A corriger
+    func produce(obj: TypeEvenementModel) -> TypeEvenement{
+        self.dao.libelleTypeEvenement = obj.libelleTypeEvenement
+        return self.dao
     }
 }

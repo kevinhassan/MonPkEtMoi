@@ -19,8 +19,10 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
 
-    var medocs: [Medicament] = []
-    var posologie: Posologie? = nil
+    var medocs: [MedicamentModel] = []
+    var posologie: PosologieModel? = nil
+    var posMedoc: Int?
+    var posDosage: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +35,10 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
         medicamentTF.inputAccessoryView = toolbar
         medicamentTF.inputView = typePicker
         do{
-            medocs = (try medicamentDAO.getAll())!
+            medocs = try medicamentDAO.get()
         }catch{
         }
         dateDebut.setDate(date: NSDate())
-        self.posologie = posologieDAO.create()
     }
     
     // MARK: - Fermer le clavier
@@ -53,17 +54,11 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     // MARK: - Envoyer la posologie à la vue suivante
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let heuresViewController = segue.destination as! AddPriseHeuresViewController
-        posologie?.dateDebutPosologie = ((self.dateDebut)!.getDate()! as NSDate)
-        posologie?.dateFinPosologie = ((self.dateFin)!.getDate()! as NSDate)
+        posologie = PosologieModel(dateDebutPosologie: self.dateDebut.getDate()!, dateFinPosologie: self.dateFin.getDate()!, dosagePosologie: medocs[posMedoc!].dosageMedicament[posDosage!], nbMedicament: Int16(self.nbMedicamentTF.text!)!)
+        
+        posologie?.medicament = medocs[posMedoc!]
 
-        posologie?.dosagePosologie = self.dosageLabel.text
-        posologie?.nbMedicament = Int16(self.nbMedicamentTF.text!)!
-        do{
-            posologie?.concerneMedicament = try medicamentDAO.getByName(name: self.medicamentTF.text!)
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-        heuresViewController.posologie = self.posologie!
+        heuresViewController.posologie = self.posologie
     }
     
     // MARK: - UIPickerView Delegation
@@ -76,7 +71,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
             return medocs.count
         }else{
             let medicamentSelected = pickerView.selectedRow(inComponent: 0)
-            return medocs[medicamentSelected].dosageMedicament!.count
+            return medocs[medicamentSelected].dosageMedicament.count
         }
     }
     
@@ -85,14 +80,16 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
             return medocs[row].nomMedicament
         }else{
             let medicamentSelected = pickerView.selectedRow(inComponent: 0)
-            return medocs[medicamentSelected].dosageMedicament![row]
+            return medocs[medicamentSelected].dosageMedicament[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pickerView.reloadComponent(1)
-        medicamentTF.text = medocs[pickerView.selectedRow(inComponent: 0)].nomMedicament!
-        dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament![pickerView.selectedRow(inComponent: 1)]
+        posMedoc = pickerView.selectedRow(inComponent: 0)
+        posDosage = pickerView.selectedRow(inComponent: 1)
+        medicamentTF.text = medocs[pickerView.selectedRow(inComponent: 0)].nomMedicament
+        dosageLabel.text = medocs[pickerView.selectedRow(inComponent: 0)].dosageMedicament[pickerView.selectedRow(inComponent: 1)]
     }
     @IBAction func NextView(_ sender: Any) {
         let inputs = ["medicament":medicamentTF, "dateDebut":dateDebut,"dateFin": dateFin, "nbMedicament": nbMedicamentTF]

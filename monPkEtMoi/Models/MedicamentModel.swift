@@ -13,7 +13,7 @@ class MedicamentModel{
     var dosageMedicament: [String]
     var nomMedicament: String
     
-    init(descriptionMedicament: String, dosageMedicament: [String], nomMedicament: String){
+    init(descriptionMedicament: String?, dosageMedicament: [String], nomMedicament: String){
         self.descriptionMedicament = descriptionMedicament
         self.dosageMedicament = dosageMedicament
         self.nomMedicament = nomMedicament

@@ -21,11 +21,9 @@ public class DataHelper {
         let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
 
         for medicament in medicaments {
-            let newMedicament: Medicament = medicamentDAO.create()
-            newMedicament.nomMedicament = medicament.nom
-            newMedicament.dosageMedicament = medicament.doses
+            let newMedicament: MedicamentModel = MedicamentModel(descriptionMedicament: nil, dosageMedicament: medicament.doses, nomMedicament: medicament.nom)
             do{
-                try medicamentDAO.save(medicament: newMedicament)
+                try medicamentDAO.create(obj: newMedicament)
             }catch {
                 fatalError("Error cannot populate DB")
             }
@@ -36,10 +34,10 @@ public class DataHelper {
         let etatDAO = CoreDataDAOFactory.getInstance().getEtatDAO()
         
         for etat in etats {
-            let newEtat: Etat = etatDAO.create()
+            let newEtat: EtatModel = EtatModel(libelleEtat: etat)
             newEtat.libelleEtat = etat
             do{
-                try etatDAO.save(etat: newEtat)
+                try etatDAO.create(obj: newEtat)
             }catch {
                 fatalError("Error cannot populate DB")
             }
@@ -50,10 +48,10 @@ public class DataHelper {
         let typeSoignantDAO = CoreDataDAOFactory.getInstance().getTypeSoignantDAO()
         
         for type in typesSoignant {
-            let newType: TypeSoignant = typeSoignantDAO.create()
+            let newType: TypeSoignantModel = TypeSoignantModel(libelleTypeSoignant: type)
             newType.libelleTypeSoignant = type
             do{
-                try typeSoignantDAO.save(typeSoignant: newType)
+                try typeSoignantDAO.create(obj: newType)
             }catch {
                 fatalError("Error cannot populate DB")
             }
@@ -64,10 +62,10 @@ public class DataHelper {
         let typeEvenementDAO = CoreDataDAOFactory.getInstance().getTypeEvenementDAO()
         
         for type in typesEvenement {
-            let newType: TypeEvenement = typeEvenementDAO.create()
+            let newType: TypeEvenementModel = TypeEvenementModel(libelleTypeEvenement: type)
             newType.libelleTypeEvenement = type
             do{
-                try typeEvenementDAO.save(typeEvenement: newType)
+                try typeEvenementDAO.create(obj: newType)
             }catch {
                 fatalError("Error cannot populate DB")
             }
@@ -78,10 +76,10 @@ public class DataHelper {
         let typeAvisDAO = CoreDataDAOFactory.getInstance().getTypeAvisDAO()
         
         for type in typesAvis {
-            let newType: TypeAvis = typeAvisDAO.create()
+            let newType: TypeAvisModel = TypeAvisModel(libelleTypeAvis: type)
             newType.libelleTypeAvis = type
             do{
-                try typeAvisDAO.save(typeAvis: newType)
+                try typeAvisDAO.create(obj: newType)
             }catch {
                 fatalError("Error cannot populate DB")
             }

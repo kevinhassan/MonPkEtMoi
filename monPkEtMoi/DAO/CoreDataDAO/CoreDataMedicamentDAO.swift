@@ -11,50 +11,50 @@ import CoreData
 
 class CoreDataMedicamentDAO: MedicamentDAO {
     private let entityName: String = "Medicament"
-    private let context: NSManagedObjectContext
-
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    private let dao: Medicament
     
-    func getAll() throws -> [Medicament]? {
-        let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
-        let sort = NSSortDescriptor(key: #keyPath(Medicament.nomMedicament), ascending: true)
-        request.sortDescriptors = [sort]
-        do {
-            let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
-            return medicaments
-        } catch let error as NSError {
-            throw error
-        }
+    init(){
+        self.dao = Medicament(entity: CoreDataManager.entity(forName: self.entityName), insertInto: CoreDataManager.context)
     }
-    func create() -> Medicament{
-        return Medicament(context: self.context)
-    }
-    func save(medicament: Medicament) throws{
+    func create(obj: MedicamentModel) throws {
+        self.dao.descriptionMedicament = obj.descriptionMedicament
+        self.dao.dosageMedicament = obj.dosageMedicament
+        self.dao.nomMedicament = obj.nomMedicament
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
-            throw error
+            throw(error)
         }
     }
-    func remove(medicament: Medicament) throws{
-  
+    func delete(obj: MedicamentModel) throws {
     }
-    func getByName(name: String) throws -> Medicament? {
-        let predicate = NSPredicate(format: "nomMedicament == %@", name)
-        let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
-        request.predicate = predicate
-
+    func update(obj: MedicamentModel) throws {
         do{
-            let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
-            if medicaments.count>0{
-                return medicaments[0]
-            }else{
-                return nil
+            try self.create(obj: obj)
+        }catch let error as NSError{
+            throw(error)
+        }
+    }
+    func find() throws -> MedicamentModel? {
+        return nil
+    }
+    func get() throws -> [MedicamentModel]{
+        let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
+        do{
+            let medocs:[Medicament] = try CoreDataManager.context.fetch(request)
+            let medicaments:[MedicamentModel] = medocs.map{(medicament) in
+                return MedicamentModel(descriptionMedicament: medicament.descriptionMedicament, dosageMedicament: medicament.dosageMedicament!, nomMedicament: medicament.nomMedicament!)
             }
+            return medicaments
         }catch let error as NSError{
             throw error
         }
+    }
+    // TODO: A corriger
+    func produce(obj: MedicamentModel) -> Medicament{
+        self.dao.descriptionMedicament = obj.descriptionMedicament
+        self.dao.dosageMedicament = obj.dosageMedicament
+        self.dao.nomMedicament = obj.nomMedicament
+        return self.dao
     }
 }

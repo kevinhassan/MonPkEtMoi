@@ -7,13 +7,9 @@
 //
 
 import CoreData
-import UIKit
 import Foundation
 
-protocol TypeAvisDAO {
-    func getAll() throws-> [TypeAvis]?
-    func save(typeAvis: TypeAvis) throws
-    
+protocol TypeAvisDAO:DAO {
 }
 
 

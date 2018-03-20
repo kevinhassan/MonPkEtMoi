@@ -13,7 +13,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBOutlet weak var nomMedicament: UILabel!
     @IBOutlet weak var descriptionTF: UITextField!
     
-    var medicament:Medicament? = nil
+    var medicament:MedicamentModel? = nil
     let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     
     override func viewDidLoad() {
@@ -36,7 +36,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBAction func saveMedicament(_ sender: Any) {
         medicament?.descriptionMedicament = self.descriptionTF.text
         do{
-            try medicamentDAO.save(medicament: medicament!)
+            try medicamentDAO.create(obj: medicament!)
             DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
                     self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
             })

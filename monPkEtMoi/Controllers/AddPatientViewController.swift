@@ -44,16 +44,9 @@ class AddPatientViewController: UITableViewController {
     func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) {
         let daoF = CoreDataDAOFactory.getInstance()
         let patientDAO = daoF.getPatientDAO()
-        let newPatient: Patient = patientDAO.create()
-        newPatient.nom = nom
-        newPatient.prenom = prenom
-        newPatient.dateNaissance = date
-        newPatient.adresse = adresse
-        newPatient.tempsPreparation = tempsP
-        newPatient.mail = mail
-        newPatient.tel = tel
+        let newPatient: PatientModel = PatientModel(adresse: adresse, nom: nom, prenom: prenom, tel: tel, mail: mail, dateNaissance: date, tempsPreparation: tempsP)
         do{
-            try patientDAO.save(patient: newPatient)
+            try patientDAO.create(obj: newPatient)
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }

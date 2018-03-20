@@ -11,8 +11,8 @@ import Foundation
 protocol DAO {
     associatedtype T
     
-    func create(obj: T) -> Bool
-    func delete(obj: T) -> Bool
-    func update(obj: T) -> Bool
-    func find() -> T?
+    func create(obj: T) throws
+    func delete(obj: T) throws
+    func update(obj: T) throws 
+    func find() throws -> T?
 }

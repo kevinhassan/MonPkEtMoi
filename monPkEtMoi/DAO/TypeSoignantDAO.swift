@@ -7,12 +7,9 @@
 //
 
 import CoreData
-import UIKit
 import Foundation
 
-protocol TypeSoignantDAO {
-    func getAll() throws-> [TypeSoignant]?
-    func save(typeSoignant: TypeSoignant) throws
+protocol TypeSoignantDAO:DAO{
 }
 
 

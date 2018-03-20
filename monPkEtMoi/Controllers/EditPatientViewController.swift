@@ -19,23 +19,23 @@ class EditPatientViewController: UITableViewController{
     @IBOutlet weak var telTF: UITextField!
     @IBOutlet weak var mailTF: UITextField!
     
-    var patient:Patient?
+    var patient:PatientModel?
     let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
 
-    func initEditFormPatient(patient: Patient)-> Void{
+    func initEditFormPatient(patient: PatientModel)-> Void{
         nomTF.text = patient.nom
         prenomTF.text = patient.prenom
         adresseTF.text = patient.adresse
         telTF.text = patient.tel
         mailTF.text = patient.mail
-        dateNaissanceTF.setDate(date: patient.dateNaissance!)
+        dateNaissanceTF.setDate(date: patient.dateNaissance)
         tempsPreparationTF.text = String(patient.tempsPreparation)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-            patient = try patientDAO.get()
+            patient = try patientDAO.getOne()
             initEditFormPatient(patient: patient!)
         }catch{
             fatalError("Error happen")
@@ -45,18 +45,19 @@ class EditPatientViewController: UITableViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    // MARK: - Mettre à jours les données du patient
     @IBAction func updatePatient(_ sender: Any) {
-        patient?.nom =  nomTF.text
-        patient?.prenom = prenomTF.text
-        patient?.adresse = adresseTF.text
-        patient?.tel = telTF.text
-        patient?.mail = mailTF.text
-        patient?.dateNaissance = dateNaissanceTF.getDate()
+        patient?.nom =  nomTF.text!
+        patient?.prenom = prenomTF.text!
+        patient?.adresse = adresseTF.text!
+        patient?.tel = telTF.text!
+        patient?.mail = mailTF.text!
+        patient?.dateNaissance = dateNaissanceTF.getDate()!
         patient?.tempsPreparation = Int64(tempsPreparationTF.text!)!
         let inputs:[String: UITextField] = ["nom": nomTF,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
         if(FormValidatorHelper.validateForm(inputs)){
             do{
-                try patientDAO.update(patient: patient!)
+                try patientDAO.update(obj: patient!)
                 DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
                     self.navigationController?.popViewController(animated: true)
                 })

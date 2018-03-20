@@ -41,7 +41,6 @@
 		C15943762059D68E004968E0 /* TypeEvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943752059D68E004968E0 /* TypeEvenementDAO.swift */; };
 		C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943792059F4FA004968E0 /* DateAndTimePicker.swift */; };
 		C168D7DC205B191F0004AE3E /* CoreDataPatientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7DB205B191F0004AE3E /* CoreDataPatientDAO.swift */; };
-		C168D7DF205B2CED0004AE3E /* AbstractDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7DE205B2CED0004AE3E /* AbstractDAOFactory.swift */; };
 		C168D7E2205B2DAC0004AE3E /* CoreDataDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7E1205B2DAC0004AE3E /* CoreDataDAOFactory.swift */; };
 		C168D7E6205B45070004AE3E /* CoreDataEvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7E5205B45070004AE3E /* CoreDataEvenementDAO.swift */; };
 		C168D7E8205B47820004AE3E /* CoreDataTypeEvenementDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168D7E7205B47820004AE3E /* CoreDataTypeEvenementDAO.swift */; };
@@ -51,7 +50,7 @@
 		C1753B16205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B15205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift */; };
 		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
 		C1753B1C20601D96001EA44D /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B1B20601D96001EA44D /* DAO.swift */; };
-		C1753B1E20601E10001EA44D /* TypeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B1D20601E10001EA44D /* TypeFactory.swift */; };
+		C1753B202060665F001EA44D /* ProtocolDAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B1F2060665F001EA44D /* ProtocolDAOFactory.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1823D98205D907600DFCA42 /* CoreDataMedicamentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D97205D907600DFCA42 /* CoreDataMedicamentDAO.swift */; };
 		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
@@ -134,7 +133,6 @@
 		C15943752059D68E004968E0 /* TypeEvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementDAO.swift; sourceTree = "<group>"; };
 		C15943792059F4FA004968E0 /* DateAndTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimePicker.swift; sourceTree = "<group>"; };
 		C168D7DB205B191F0004AE3E /* CoreDataPatientDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPatientDAO.swift; sourceTree = "<group>"; };
-		C168D7DE205B2CED0004AE3E /* AbstractDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractDAOFactory.swift; sourceTree = "<group>"; };
 		C168D7E1205B2DAC0004AE3E /* CoreDataDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDAOFactory.swift; sourceTree = "<group>"; };
 		C168D7E5205B45070004AE3E /* CoreDataEvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEvenementDAO.swift; sourceTree = "<group>"; };
 		C168D7E7205B47820004AE3E /* CoreDataTypeEvenementDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTypeEvenementDAO.swift; sourceTree = "<group>"; };
@@ -144,7 +142,7 @@
 		C1753B15205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDosageMedicamentTableViewController.swift; sourceTree = "<group>"; };
 		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
 		C1753B1B20601D96001EA44D /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
-		C1753B1D20601E10001EA44D /* TypeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeFactory.swift; sourceTree = "<group>"; };
+		C1753B1F2060665F001EA44D /* ProtocolDAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDAOFactory.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1823D97205D907600DFCA42 /* CoreDataMedicamentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMedicamentDAO.swift; sourceTree = "<group>"; };
 		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
@@ -347,8 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				C168D7E0205B2D920004AE3E /* CoreDataFactory */,
-				C168D7DE205B2CED0004AE3E /* AbstractDAOFactory.swift */,
-				C1753B1D20601E10001EA44D /* TypeFactory.swift */,
+				C1753B1F2060665F001EA44D /* ProtocolDAOFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -528,7 +525,6 @@
 				C1823D98205D907600DFCA42 /* CoreDataMedicamentDAO.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
-				C168D7DF205B2CED0004AE3E /* AbstractDAOFactory.swift in Sources */,
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
 				C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */,
 				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
@@ -548,9 +544,9 @@
 				C1CA35F6205DB8A800937BFF /* CoreDataEtatDAO.swift in Sources */,
 				C1CA3600205E62B000937BFF /* PosologieDAO.swift in Sources */,
 				23E895182060426600473DC3 /* MedicamentModel.swift in Sources */,
+				C1753B202060665F001EA44D /* ProtocolDAOFactory.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
 				C1753B1C20601D96001EA44D /* DAO.swift in Sources */,
-				C1753B1E20601E10001EA44D /* TypeFactory.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
