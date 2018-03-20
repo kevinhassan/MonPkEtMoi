@@ -26,6 +26,7 @@
 		B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */; };
 		C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B302061AC4F00F45453 /* EtatExtension.swift */; };
 		C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B322061AD7700F45453 /* EvenementExtension.swift */; };
+		C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B342061AE9700F45453 /* MedicamentExtension.swift */; };
 		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
 		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
@@ -94,6 +95,7 @@
 		B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
 		C1165B302061AC4F00F45453 /* EtatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatExtension.swift; sourceTree = "<group>"; };
 		C1165B322061AD7700F45453 /* EvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementExtension.swift; sourceTree = "<group>"; };
+		C1165B342061AE9700F45453 /* MedicamentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentExtension.swift; sourceTree = "<group>"; };
 		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
 		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */,
 				C1165B302061AC4F00F45453 /* EtatExtension.swift */,
 				C1165B322061AD7700F45453 /* EvenementExtension.swift */,
+				C1165B342061AE9700F45453 /* MedicamentExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
 				C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
 				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
+				C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,

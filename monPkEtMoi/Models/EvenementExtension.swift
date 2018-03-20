@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension Evenement{
-    static func create(withDescription: String, withDate: NSDate, withType: TypeEvenement) throws -> Etat {
+    static func create(withDescription: String, withDate: NSDate, withType: TypeEvenement) throws -> Evenement {
         let evenement = Evenement(context: CoreDataManager.context)
         
         evenement.descriptionEvenement = withDescription
