@@ -1,5 +1,5 @@
 //
-//  PatientExtension.swift
+//  EtatExtension.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 15/03/2018.
