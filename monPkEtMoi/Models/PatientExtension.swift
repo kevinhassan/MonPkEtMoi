@@ -1,5 +1,5 @@
 //
-//  Patient.swift
+//  PatientExtension.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 15/03/2018.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension Patient{
-    static func create(withAdresse: String, withMail: String, withNom: String, withPrenom: String, withTel: String, withTempsPreparation: Int64, withDateNaissance: NSDate) -> Patient {
+    static func create(withAdresse: String, withMail: String, withNom: String, withPrenom: String, withTel: String, withTempsPreparation: Int64, withDateNaissance: NSDate) throws -> Patient {
         
         let patient = Patient(context: CoreDataManager.context)
         
@@ -21,8 +21,11 @@ extension Patient{
         patient.tel = withTel
         patient.tempsPreparation = withTempsPreparation
         patient.dateNaissance = withDateNaissance
-        
-        CoreDataManager.save()
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
         return patient
     }
     
@@ -50,7 +53,7 @@ extension Patient{
     }
     static func exists() throws -> Bool {
         do {
-            guard let _: Patient = try self.get() {
+            guard let _: Patient = try self.get() else {
                 return nil
             }
             return true
@@ -58,5 +61,4 @@ extension Patient{
             throw error
         }
     }
-
 }
