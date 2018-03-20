@@ -11,11 +11,9 @@ import CoreData
 
 class CoreDataPosologieDAO: PosologieDAO{
     private let entityName: String = "Posologie"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    internal static let instance: CoreDataPosologieDAO = CoreDataPosologieDAO()
+
+    private init(){}
     func getAll() throws -> [Posologie]? {
         let request: NSFetchRequest<Posologie> = NSFetchRequest(entityName: self.entityName)
         do {
@@ -27,7 +25,7 @@ class CoreDataPosologieDAO: PosologieDAO{
     }
     
     func create() -> Posologie{
-        return Posologie(context: self.context)
+        return Posologie(context: CoreDataManager.context)
     }
     func save(posologie: Posologie) throws{
         do{

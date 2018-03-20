@@ -11,11 +11,9 @@ import CoreData
 
 class CoreDataPatientDAO: PatientDAO{
     private let entityName: String = "Patient"
-    private let context: NSManagedObjectContext
+    internal static let instance: CoreDataPatientDAO = CoreDataPatientDAO()
     
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    private init(){}
     
     func get() throws -> Patient? {
         do{
@@ -31,7 +29,7 @@ class CoreDataPatientDAO: PatientDAO{
     func getAll() throws -> [Patient]? {
         let request: NSFetchRequest<Patient> = NSFetchRequest(entityName: self.entityName)
         do{
-            let patients:[Patient] = try self.context.fetch(request)
+            let patients:[Patient] = try CoreDataManager.context.fetch(request)
             return patients
         }catch let error as NSError{
             throw error
@@ -58,7 +56,7 @@ class CoreDataPatientDAO: PatientDAO{
     }
     
     func create() -> Patient{
-        return Patient(context: self.context)
+        return Patient(context: CoreDataManager.context)
     }
     
     func save(patient: Patient) throws {

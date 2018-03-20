@@ -11,16 +11,14 @@ import CoreData
 
 class CoreDataTypeEvenementDAO: TypeEvenementDAO{
     private let entityName: String = "TypeEvenement"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    internal static let instance: CoreDataTypeEvenementDAO = CoreDataTypeEvenementDAO()
+
+    private init(){}
 
     func getAll() throws-> [TypeEvenement]?{
         let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
         do{
-            let typesEvent:[TypeEvenement] = try self.context.fetch(request)
+            let typesEvent:[TypeEvenement] = try CoreDataManager.context.fetch(request)
             return typesEvent
         }catch let error as NSError{
             throw error
@@ -31,7 +29,7 @@ class CoreDataTypeEvenementDAO: TypeEvenementDAO{
         let request: NSFetchRequest<TypeEvenement> = NSFetchRequest(entityName: self.entityName)
         request.predicate = predicate
         do{
-            let typesEvent:[TypeEvenement] = try self.context.fetch(request)
+            let typesEvent:[TypeEvenement] = try CoreDataManager.context.fetch(request)
             if (typesEvent.count > 0) {
                 return typesEvent[0]
             }
@@ -41,7 +39,7 @@ class CoreDataTypeEvenementDAO: TypeEvenementDAO{
         }
     }
     func create() -> TypeEvenement{
-        return TypeEvenement(context: self.context)
+        return TypeEvenement(context: CoreDataManager.context)
     }
     func save(typeEvenement: TypeEvenement) throws{
         do{

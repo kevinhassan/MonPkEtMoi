@@ -11,11 +11,10 @@ import CoreData
 
 class CoreDataTypeAvisDAO: TypeAvisDAO{
     private let entityName: String = "TypeAvis"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    internal static let instance: CoreDataTypeAvisDAO = CoreDataTypeAvisDAO()
+
+    private init(){}
+
     func getAll() throws -> [TypeAvis]? {
         let request: NSFetchRequest<TypeAvis> = NSFetchRequest(entityName: self.entityName)
         do {
@@ -27,7 +26,7 @@ class CoreDataTypeAvisDAO: TypeAvisDAO{
     }
     
     func create() -> TypeAvis{
-        return TypeAvis(context: self.context)
+        return TypeAvis(context: CoreDataManager.context)
     }
     func save(typeAvis: TypeAvis) throws{
         do{

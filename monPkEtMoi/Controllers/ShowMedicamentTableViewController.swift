@@ -32,6 +32,14 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBAction func showDetails(){
         performSegue(withIdentifier: "showDoses", sender: self)
     }
+    @IBAction func removeMedicament(_ sender: Any) {
+        do{
+            try medicamentDAO.remove(medicament: medicament!)
+            performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
+        }catch{
+            DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
+        }
+    }
     
     @IBAction func saveMedicament(_ sender: Any) {
         medicament?.descriptionMedicament = self.descriptionTF.text

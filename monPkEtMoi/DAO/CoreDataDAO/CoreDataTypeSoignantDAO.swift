@@ -12,11 +12,8 @@ import Foundation
 
 class CoreDataTypeSoignantDAO: TypeSoignantDAO {
     private let entityName: String = "TypeSoignant"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    internal static let instance: CoreDataTypeSoignantDAO = CoreDataTypeSoignantDAO()
+
     func getAll() throws -> [TypeSoignant]? {
         let request: NSFetchRequest<TypeSoignant> = NSFetchRequest(entityName: self.entityName)
         do {
@@ -28,7 +25,7 @@ class CoreDataTypeSoignantDAO: TypeSoignantDAO {
     }
 
     func create() -> TypeSoignant{
-        return TypeSoignant(context: self.context)
+        return TypeSoignant(context: CoreDataManager.context)
     }
     func save(typeSoignant: TypeSoignant) throws{
         do{

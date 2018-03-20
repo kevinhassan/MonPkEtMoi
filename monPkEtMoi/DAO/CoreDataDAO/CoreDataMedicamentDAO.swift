@@ -11,12 +11,10 @@ import CoreData
 
 class CoreDataMedicamentDAO: MedicamentDAO {
     private let entityName: String = "Medicament"
-    private let context: NSManagedObjectContext
+    internal static let instance: CoreDataMedicamentDAO = CoreDataMedicamentDAO()
 
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
-    
+    private init(){}
+
     func getAll() throws -> [Medicament]? {
         let request: NSFetchRequest<Medicament> = NSFetchRequest(entityName: self.entityName)
         let sort = NSSortDescriptor(key: #keyPath(Medicament.nomMedicament), ascending: true)
@@ -29,7 +27,7 @@ class CoreDataMedicamentDAO: MedicamentDAO {
         }
     }
     func create() -> Medicament{
-        return Medicament(context: self.context)
+        return Medicament(context: CoreDataManager.context)
     }
     func save(medicament: Medicament) throws{
         do{
@@ -39,7 +37,12 @@ class CoreDataMedicamentDAO: MedicamentDAO {
         }
     }
     func remove(medicament: Medicament) throws{
-  
+        do{
+            CoreDataManager.context.delete(medicament)
+            try CoreDataManager.context.save()
+        }catch let error as NSError{
+            throw error
+        }
     }
     func getByName(name: String) throws -> Medicament? {
         let predicate = NSPredicate(format: "nomMedicament == %@", name)

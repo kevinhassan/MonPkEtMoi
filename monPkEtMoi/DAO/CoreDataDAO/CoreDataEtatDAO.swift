@@ -11,12 +11,11 @@ import UIKit
 import Foundation
 
 class CoreDataEtatDAO: EtatDAO {
-    private let entityName: String = "Etat"
-    private let context: NSManagedObjectContext
-    
-    init(context:  NSManagedObjectContext){
-        self.context = context
-    }
+    private let entityName: String = "Etat"    
+    internal static let instance: CoreDataEtatDAO = CoreDataEtatDAO()
+
+    private init(){}
+
     func getAll() throws -> [Etat]? {
         let request: NSFetchRequest<Etat> = NSFetchRequest(entityName: self.entityName)
         do {
@@ -28,7 +27,7 @@ class CoreDataEtatDAO: EtatDAO {
     }
     
     func create() -> Etat{
-        return Etat(context: self.context)
+        return Etat(context: CoreDataManager.context)
     }
     func save(etat: Etat) throws{
         do{

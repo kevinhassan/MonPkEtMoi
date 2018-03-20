@@ -20,7 +20,6 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
     typealias H = CoreDataPosologieDAO
     
     private static var instance: CoreDataDAOFactory?
-    private let context: NSManagedObjectContext = CoreDataManager.context
     
     private init(){}
     static func getInstance() -> CoreDataDAOFactory{
@@ -30,27 +29,27 @@ class CoreDataDAOFactory: ProtocolDAOFactory{
         return instanceFactory
     }
     func getPatientDAO() -> CoreDataPatientDAO {
-        return CoreDataPatientDAO(context: self.context)
+        return CoreDataPatientDAO.instance
     }
     func getEvenementDAO() -> CoreDataEvenementDAO {
-        return CoreDataEvenementDAO(context: self.context)
+        return CoreDataEvenementDAO.instance
     }
     func getTypeEvenementDAO() -> CoreDataTypeEvenementDAO {
-        return CoreDataTypeEvenementDAO(context: self.context)
+        return CoreDataTypeEvenementDAO.instance
     }
     func getMedicamentDAO() -> CoreDataMedicamentDAO {
-        return CoreDataMedicamentDAO(context: self.context)
+        return CoreDataMedicamentDAO.instance
     }
     func getTypeSoignantDAO() -> CoreDataTypeSoignantDAO{
-        return CoreDataTypeSoignantDAO(context: self.context)
+        return CoreDataTypeSoignantDAO.instance
     }
     func getEtatDAO() -> CoreDataEtatDAO{
-        return CoreDataEtatDAO(context: self.context)
+        return CoreDataEtatDAO.instance
     }
     func getTypeAvisDAO() -> CoreDataTypeAvisDAO{
-        return CoreDataTypeAvisDAO(context: self.context)
+        return CoreDataTypeAvisDAO.instance
     }
     func getPosologieDAO() -> CoreDataPosologieDAO{
-        return CoreDataPosologieDAO(context: self.context)
+        return CoreDataPosologieDAO.instance
     }
 }

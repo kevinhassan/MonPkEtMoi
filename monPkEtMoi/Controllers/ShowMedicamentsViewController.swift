@@ -27,9 +27,20 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
-            
+    @IBAction func addMedicament(){
+        
     }
+    
+    @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
+        super.viewDidLoad()
+        do{
+            medicaments = (try medicamentDAO.getAll())!
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    }
+    
+    
     
     // MARK: - Table view data source
 
@@ -42,7 +53,6 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
         // #warning Incomplete implementation, return the number of rows
         return medicaments.count
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "medicamentCell", for: indexPath)
