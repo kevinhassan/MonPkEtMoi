@@ -47,6 +47,15 @@ extension Medicament{
             throw error
         }
     }
+    static func getAll() throws -> [Medicament] {
+        let request: NSFetchRequest<Medicament> = Medicament.fetchRequest()
+        do {
+            let medicaments: Medicament? = try CoreDataManager.context.fetch(request)
+            return medicaments
+        } catch let error as NSError {
+            throw error
+        }
+    }
     func delete() throws {
         do{
             CoreDataManager.context.delete(self)

@@ -20,6 +20,7 @@ extension Posologie{
         posologie.dateFinPosologie = withDateFin
         posologie.heuresPrise = withHeures
         posologie.concerneMedicament = withMedicament
+        posologie.heuresPrise = withHeures
         
         do{
             try CoreDataManager.save()

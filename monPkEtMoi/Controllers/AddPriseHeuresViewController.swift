@@ -14,8 +14,12 @@ class AddPriseHeuresViewController: UITableViewController {
     @IBOutlet weak var removeButton: UIButton!
     
     var posologie: Posologie? = nil
-    let posologieDAO = CoreDataDAOFactory.getInstance().getPosologieDAO()
-
+    var nb: Int16? = nil
+    var dosage: String? = nil
+    var dateD: NSDate? = nil
+    var dateF: NSDate? = nil
+    var medoc: Medicament? = nil
+    
      // MARK: - Supprimer un champ d'heure si il y'en a plus d'un
     @IBAction func removeHeure(_ sender: Any) {
         heuresPriseCell.removeLast()
@@ -43,9 +47,8 @@ class AddPriseHeuresViewController: UITableViewController {
         let heures:[NSDate] = heuresPriseCell.map{(cell) in
             return cell.heurePriseTF.getDate()
         }
-        self.posologie?.heuresPrise = heures
         do{
-            try posologieDAO.save(posologie: self.posologie!)
+            let _ = try Posologie.create(withNbMedicament: nb!, withDosage: dosage!, withDateDebut: dateD!, withDateFin: dateF!, withHeures: heures, withMedicament: medoc!)
             DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
             })
