@@ -15,14 +15,15 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     @IBOutlet weak var typeEvent: UITextField!
     @IBOutlet weak var descriptionEvent: UITextField!
     
-    let typeEventDAO = CoreDataDAOFactory.getInstance().getTypeEvenementDAO()
-    let eventDAO = CoreDataDAOFactory.getInstance().getEvenementDAO()
+    var typesEv: [TypeEvenement]? = nil
+    var posType: Int? = nil
+    var typesEvenement: [String]?
 
     // MARK: - Vérifier que le formulaire est conforme
     @IBAction func addEvent(_ sender: Any) {
         let inputs:[String: UITextField] = ["dateEvent": dateEvent,"typeEvent": typeEvent]
         if(FormValidatorHelper.validateForm(inputs)){
-            saveNewEvent(withDate: dateEvent.getDate()!, withType: typeEvent.text!, withDescription: descriptionEvent.text ?? "")
+            saveNewEvent(withDate: dateEvent.getDate()!, withDescription: descriptionEvent.text)
             DialogBoxHelper.alert(view: self, WithTitle: "Ajout réussi", andMessage: "Evenement ajouté", closure: { (action) in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePatient") as! HomePatientViewController
                 self.present(vc, animated: true, completion: nil)
@@ -31,7 +32,6 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
-    var typesEvenement: [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +44,8 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
         typeEvent.inputAccessoryView = toolbar
         typeEvent.inputView = typePicker
         do{
-            let typesEv: [TypeEvenement] = try typeEventDAO.getAll()!
-            typesEvenement = typesEv.map({ (typeEvenement: TypeEvenement) -> String in
-                return typeEvenement.libelleTypeEvenement!
-            })
-            typesEvenement?.insert("", at: 0)
+            typesEv = try TypeEvenement.getAll()
+            typesEvenement = typesEv?.map{return $0.libelleTypeEvenement!}
         }catch{
         }
     }
@@ -63,19 +60,10 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     // MARK: - Enregistrer le nouvel évenement
-    func saveNewEvent(withDate date: NSDate, withType type: String, withDescription description: String){
-        let newEvent: Evenement = eventDAO.create()
+    func saveNewEvent(withDate date: NSDate, withDescription description: String?){
+        let type: TypeEvenement = self.typesEv![self.posType!]
         do{
-            let typeEvent: TypeEvenement? = try typeEventDAO.getByName(typeEvenement: type)
-            newEvent.avoirType = typeEvent
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-        newEvent.dateEvenement = date
-        newEvent.avoirType?.libelleTypeEvenement = type
-        newEvent.descriptionEvenement = description
-        do{
-            try eventDAO.save(evenement: newEvent)
+            let _ = try Evenement.create(withDescription: description, withDate: date, withType: type)
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
@@ -95,6 +83,7 @@ class AddEventTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.posType = row
         typeEvent.text = typesEvenement?[row]
     }
 }

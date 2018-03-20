@@ -20,7 +20,6 @@ class EditPatientViewController: UITableViewController{
     @IBOutlet weak var mailTF: UITextField!
     
     var patient:Patient?
-    let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
 
     func initEditFormPatient(patient: Patient)-> Void{
         nomTF.text = patient.nom
@@ -35,7 +34,7 @@ class EditPatientViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-            patient = try patientDAO.get()
+            patient = try Patient.get()
             initEditFormPatient(patient: patient!)
         }catch{
             fatalError("Error happen")
@@ -46,23 +45,18 @@ class EditPatientViewController: UITableViewController{
         super.didReceiveMemoryWarning()
     }
     @IBAction func updatePatient(_ sender: Any) {
-        patient?.nom =  nomTF.text
-        patient?.prenom = prenomTF.text
-        patient?.adresse = adresseTF.text
-        patient?.tel = telTF.text
-        patient?.mail = mailTF.text
-        patient?.dateNaissance = dateNaissanceTF.getDate()
-        patient?.tempsPreparation = Int64(tempsPreparationTF.text!)!
+
         let inputs:[String: UITextField] = ["nom": nomTF,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
         if(FormValidatorHelper.validateForm(inputs)){
-            do{
-                try patientDAO.update(patient: patient!)
-                DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
+//            do{
+            patient?.edit(withAdresse: adresseTF.text!, withMail: mailTF.text!, withNom: nomTF.text!, withPrenom: prenomTF.text!, withTel: telTF.text!, withTempsPreparation: Int64(tempsPreparationTF.text!)!, withDateNaissance: dateNaissanceTF.getDate()!)
+
+            DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
                     self.navigationController?.popViewController(animated: true)
                 })
-            }catch let error as NSError{
-                DialogBoxHelper.alert(view: self, error: error)
-            }
+//            }catch let error as NSError{
+//                DialogBoxHelper.alert(view: self, error: error)
+//            }
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }

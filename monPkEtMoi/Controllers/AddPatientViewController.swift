@@ -42,18 +42,8 @@ class AddPatientViewController: UITableViewController {
     
     // MARK: - Enregistrer les informations du patient
     func saveNewPatient(withName nom: String, withPrenom prenom: String, withDate date: NSDate, withAdress adresse : String, withTempsP tempsP : Int64, withMail mail: String, withTel tel: String) {
-        let daoF = CoreDataDAOFactory.getInstance()
-        let patientDAO = daoF.getPatientDAO()
-        let newPatient: Patient = patientDAO.create()
-        newPatient.nom = nom
-        newPatient.prenom = prenom
-        newPatient.dateNaissance = date
-        newPatient.adresse = adresse
-        newPatient.tempsPreparation = tempsP
-        newPatient.mail = mail
-        newPatient.tel = tel
         do{
-            try patientDAO.save(patient: newPatient)
+            let _: Patient  = try Patient.create(withAdresse: adresse, withMail: mail, withNom: nom, withPrenom: prenom, withTel: tel, withTempsPreparation: tempsP, withDateNaissance: date)
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
