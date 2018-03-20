@@ -9,14 +9,14 @@
 import UIKit
 
 class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
+    
     var medicaments: [Medicament] = []
     var medicamentSelected: Medicament? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-            medicaments = (try medicamentDAO.getAll())!
+            medicaments = try Medicament.getAll()
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
@@ -34,7 +34,7 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
     @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
         super.viewDidLoad()
         do{
-            medicaments = (try medicamentDAO.getAll())!
+            medicaments = try Medicament.getAll()
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }

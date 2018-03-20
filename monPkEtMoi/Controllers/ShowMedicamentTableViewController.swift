@@ -14,7 +14,6 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBOutlet weak var descriptionTF: UITextField!
     
     var medicament:Medicament? = nil
-    let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +33,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     }
     @IBAction func removeMedicament(_ sender: Any) {
         do{
-            try medicamentDAO.remove(medicament: medicament!)
+            try medicament!.delete()
             performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
         }catch{
             DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
@@ -42,16 +41,10 @@ class ShowMedicamentTableViewController: UITableViewController {
     }
     
     @IBAction func saveMedicament(_ sender: Any) {
-        medicament?.descriptionMedicament = self.descriptionTF.text
-        do{
-            try medicamentDAO.save(medicament: medicament!)
-            DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
-                    self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
-            })
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-        
+        medicament?.edit(withDescription: self.descriptionTF.text, withNom: nil, withDosage: nil)
+        DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
+        self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
+        })
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier != "unwindToMedicamentList"){

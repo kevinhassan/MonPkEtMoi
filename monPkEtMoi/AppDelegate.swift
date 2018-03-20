@@ -27,9 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DataHelper.seedDataStore()
             UserDefaults.standard.set(true, forKey: "wasLaunched")
         }
-        let patientDAO = CoreDataDAOFactory.getInstance().getPatientDAO()
         do{
-            let exist:Bool = try patientDAO.exist()
+            let exist:Bool = try Patient.exists()
             if exist {
                 let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home") as! HomeViewController

@@ -54,7 +54,7 @@ extension Patient{
     static func exists() throws -> Bool {
         do {
             guard let _: Patient = try self.get() else {
-                return nil
+                return false
             }
             return true
         } catch let error as NSError {

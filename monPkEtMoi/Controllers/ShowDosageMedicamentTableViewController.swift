@@ -12,7 +12,6 @@ class ShowDosageMedicamentTableViewController: UITableViewController {
 
     var medicament:Medicament? = nil
     var dosages: [String]? = nil
-    let medicamentDAO = CoreDataDAOFactory.getInstance().getMedicamentDAO()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +19,10 @@ class ShowDosageMedicamentTableViewController: UITableViewController {
     }
     // TODO: - Mettre à jours le médicament et revenir en arrière
     @IBAction func saveMedicament(_ sender: Any) {
-        medicament?.dosageMedicament = dosages
-        do{
-            try medicamentDAO.save(medicament: medicament!)
-            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "Dosage ajouté", closure: {(action) in
-                self.navigationController?.popViewController(animated: true)
-            })
-        }catch{
-            DialogBoxHelper.alert(view: self, errorMessage: "L'enregistrement a échoué")
-        }
+        medicament?.edit(withDescription: nil, withNom: nil, withDosage: dosages)
+        DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "Dosage ajouté", closure: {(action) in
+        self.navigationController?.popViewController(animated: true)
+        })
     }
     @IBAction func addDosage(_ sender: Any) {
         let alertController = UIAlertController(title: "Ajout du dosage", message: "Entrer le dosage", preferredStyle: .alert)
