@@ -48,17 +48,24 @@ class AddActivitePrescriteViewController: UITableViewController {
             }
         }
         
-        if FormValidatorHelper.validateForm(inputs){
-            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité à été ajoutée avec succès", closure: {(action)->() in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "showActivite") as! ShowActivitePrescriteViewController
-                self.present(vc, animated: true, completion: nil)})
+        if FormValidatorHelper.validateForm(inputs) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
+            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateD: dateDebut.getDate()!, withDateF: dateFin.getDate()!, withType: typeActivite.text!)
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
     
     // MARK: - Enregistrer les informations de l'activite
-    func saveNewActivitePrescrite(withDuree dureePrescrite: Int64) {    }
+    func saveNewActivitePrescrite(withDuree: Int16, withDateD: NSDate, withDateF: NSDate, withType: String) {
+        do{
+            let _ = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDateD, withDateF: withDateF, withType: withType)
+            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité à été ajoutée avec succès", closure: {(action)->() in
+                self.performSegue(withIdentifier: "homeActivite", sender: self)
+            })
+        }catch{
+            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
+        }
+    }
     
     
     

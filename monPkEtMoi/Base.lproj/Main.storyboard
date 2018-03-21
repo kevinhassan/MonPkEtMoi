@@ -848,7 +848,7 @@
         <!--Exercices-->
         <scene sceneID="tVR-oB-LWT">
             <objects>
-                <viewController id="fPC-qg-ZDo" sceneMemberID="viewController">
+                <viewController id="fPC-qg-ZDo" customClass="ShowActivitePrescriteViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="M9v-pT-q4Q"/>
                         <viewControllerLayoutGuide type="bottom" id="2pY-tQ-lSC"/>
@@ -4519,9 +4519,11 @@
                         <outletCollection property="jours" destination="5AE-yf-uPz" collectionClass="NSMutableArray" id="DUQ-ZJ-uxc"/>
                         <outletCollection property="jours" destination="iOf-2B-Uay" collectionClass="NSMutableArray" id="lPe-8W-yTx"/>
                         <outletCollection property="jours" destination="tBX-sg-x2U" collectionClass="NSMutableArray" id="Voo-4I-s01"/>
+                        <segue destination="Gzr-dV-rKA" kind="unwind" identifier="homeActivite" unwindAction="unwindFromAddActiviteWithSegue:" id="XyH-2J-PNN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z5U-zZ-eN3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Gzr-dV-rKA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4908" y="892"/>
         </scene>
