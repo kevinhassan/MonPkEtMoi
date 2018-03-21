@@ -3947,7 +3947,7 @@
         <!--Ajout RDV-->
         <scene sceneID="gul-tj-BRC">
             <objects>
-                <tableViewController id="GYB-4k-pIi" sceneMemberID="viewController">
+                <tableViewController id="GYB-4k-pIi" customClass="AddRDVViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Ga9-Zy-3FD">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4122,9 +4122,10 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateNaissanceTF" destination="LW2-pn-yH3" id="MZs-Ao-Rzs"/>
-                        <outlet property="nomTextField" destination="iNh-07-N8L" id="IUc-sT-hPp"/>
-                        <outlet property="prenomTF" destination="e0w-hV-meq" id="qDg-z2-qaF"/>
+                        <outlet property="dateRDV" destination="iNh-07-N8L" id="CCD-eu-jbV"/>
+                        <outlet property="descriptionRDV" destination="PTg-lo-zB8" id="nH2-pT-RqX"/>
+                        <outlet property="nomSoignant" destination="LW2-pn-yH3" id="bgH-NV-4Fq"/>
+                        <outlet property="typeSoignant" destination="e0w-hV-meq" id="I3P-cw-ybN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f0-sf-83A" userLabel="First Responder" sceneMemberID="firstResponder"/>

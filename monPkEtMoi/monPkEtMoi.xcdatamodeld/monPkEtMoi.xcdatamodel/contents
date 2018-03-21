@@ -77,13 +77,12 @@
     <entity name="RDV" representedClassName="RDV" syncable="YES" codeGenerationType="class">
         <attribute name="dateRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descriptionRDV" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heureRDV" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heureRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lieuRDV" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assistePar" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="assisterA" inverseEntity="Patient" syncable="YES"/>
-        <relationship name="donnePar" maxCount="1" deletionRule="Nullify" destinationEntity="Soignant" inverseName="assisterPar" inverseEntity="Soignant" syncable="YES"/>
+        <relationship name="donner" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="donner" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
     <entity name="Soignant" representedClassName="Soignant" parentEntity="Personne" syncable="YES" codeGenerationType="class">
-        <relationship name="assisterPar" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="donnePar" inverseEntity="RDV" syncable="YES"/>
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="avoirSoignant" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
     <entity name="Traceur" representedClassName="Traceur" syncable="YES" codeGenerationType="class">
@@ -103,6 +102,7 @@
     <entity name="TypeSoignant" representedClassName="TypeSoignant" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSoignant" attributeType="String" syncable="YES"/>
         <relationship name="avoirSoignant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="avoirType" inverseEntity="Soignant" syncable="YES"/>
+        <relationship name="donner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="donner" inverseEntity="RDV" syncable="YES"/>
     </entity>
     <elements>
         <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="135"/>
@@ -117,10 +117,10 @@
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>
         <element name="Prise" positionX="9" positionY="182" width="128" height="88"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
-        <element name="Soignant" positionX="-468" positionY="-550" width="128" height="73"/>
+        <element name="Soignant" positionX="-468" positionY="-550" width="128" height="58"/>
         <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
-        <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="73"/>
+        <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="88"/>
     </elements>
 </model>

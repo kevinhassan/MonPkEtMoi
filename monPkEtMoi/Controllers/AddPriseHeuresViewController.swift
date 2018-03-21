@@ -43,8 +43,7 @@ class AddPriseHeuresViewController: UITableViewController {
     //MARK: - Sauvegarder la posologie si le formulaire est valide
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     @IBAction func savePosologie(_ sender: Any) {
-        print("dedans")
-        let heures:[NSDate] = heuresPriseCell.map{(cell) in
+            let heures:[NSDate] = heuresPriseCell.map{(cell) in
             return cell.heurePriseTF.getDate()
         }
         do{
