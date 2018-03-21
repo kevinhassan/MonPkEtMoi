@@ -41,10 +41,14 @@ class ShowMedicamentTableViewController: UITableViewController {
     }
     
     @IBAction func saveMedicament(_ sender: Any) {
-        medicament?.edit(withDescription: self.descriptionTF.text, withNom: nil, withDosage: nil)
-        DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
-        self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
-        })
+        do{
+            try medicament?.edit(withDescription: self.descriptionTF.text, withNom: nil, withDosage: nil)
+            DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
+                self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
+            })
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier != "unwindToMedicamentList"){

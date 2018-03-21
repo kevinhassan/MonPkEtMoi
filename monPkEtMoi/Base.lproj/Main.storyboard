@@ -3204,7 +3204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="2VQ-x3-Hlm">
-                                                    <rect key="frame" x="16" y="7" width="309" height="30"/>
+                                                    <rect key="frame" x="16" y="7" width="325" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5re-Em-Y1J">
                                                             <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
@@ -3213,7 +3213,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdE-4F-dw0">
-                                                            <rect key="frame" x="247" y="0.0" width="62" height="30"/>
+                                                            <rect key="frame" x="247" y="0.0" width="78" height="30"/>
                                                             <state key="normal" title="Afficher"/>
                                                             <connections>
                                                                 <action selector="showDetails" destination="8Uz-6B-bSf" eventType="touchUpInside" id="Wo2-oQ-wN1"/>
@@ -3222,13 +3222,14 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="UdE-4F-dw0" secondAttribute="trailing" id="bma-Pr-Nvs"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UdE-4F-dw0" secondAttribute="trailing" id="gS6-YE-uE8"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2VQ-x3-Hlm" firstAttribute="centerY" secondItem="d4V-xN-7Wg" secondAttribute="centerY" id="Av0-8q-Krr"/>
+                                                <constraint firstAttribute="trailing" secondItem="2VQ-x3-Hlm" secondAttribute="trailing" id="e3d-7x-rdv"/>
                                                 <constraint firstItem="2VQ-x3-Hlm" firstAttribute="leading" secondItem="d4V-xN-7Wg" secondAttribute="leading" constant="16" id="jjJ-dj-bjR"/>
-                                                <constraint firstAttribute="trailing" secondItem="2VQ-x3-Hlm" secondAttribute="trailing" constant="16" id="phs-Ay-Xgb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3240,7 +3241,6 @@
                             <outlet property="delegate" destination="8Uz-6B-bSf" id="wvX-kP-hPQ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Supprimer médicament" selectedImage="supprimerIcon" id="Gq0-oE-KbP"/>
                     <navigationItem key="navigationItem" title="Title" id="uDb-jI-3xZ">
                         <barButtonItem key="rightBarButtonItem" title="Enregistrer" id="zDQ-OH-Wg7">
                             <connections>

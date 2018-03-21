@@ -9,7 +9,17 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type TypeEvenement
+ 
+ **libelleTypeEvenement**: TypeEvenement -> String
+ */
 extension TypeEvenement{
+    /// Initialiser un `TypeEvenement`
+    ///
+    /// - Parameters:
+    ///   - withLibelle: `String` nom associé au `TypeEvenement`
     static func create(withLibelle: String) throws -> TypeEvenement {
         let type = TypeEvenement(context: CoreDataManager.context)
         
@@ -23,6 +33,7 @@ extension TypeEvenement{
         return type
     }
     
+    /// Récupérer tous les types `TypeEvenement` stockés
     static func getAll() throws -> [TypeEvenement] {
         let request: NSFetchRequest<TypeEvenement> = TypeEvenement.fetchRequest()
         do {

@@ -9,7 +9,22 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type Evenement
+ 
+ **description**: Evenement -> String?
+ **avoirType**: Evenement -> TypeEvenement
+ **date**: Evenement -> NSDate
+ */
 extension Evenement{
+    
+    /// Initialiser un `Evenement`
+    ///
+    /// - Parameters:
+    ///   - withDescription: `String?` description de l' `Evenement`
+    ///   - withDate: `NSDate` date de l' `Evenement`
+    ///   - withType: `TypeEvenement` type de l' `Evenement`
     static func create(withDescription: String?, withDate: NSDate, withType: TypeEvenement) throws -> Evenement {
         let evenement = Evenement(context: CoreDataManager.context)
         
@@ -24,7 +39,7 @@ extension Evenement{
         }
         return evenement
     }
-    
+    /// Récupérer tous les types `Evenement`en BD
     static func getAll() throws -> [Evenement] {
         let request: NSFetchRequest<Evenement> = Evenement.fetchRequest()
         do {

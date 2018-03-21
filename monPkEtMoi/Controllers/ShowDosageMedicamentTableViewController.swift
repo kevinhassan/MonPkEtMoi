@@ -19,10 +19,14 @@ class ShowDosageMedicamentTableViewController: UITableViewController {
     }
     // TODO: - Mettre à jours le médicament et revenir en arrière
     @IBAction func saveMedicament(_ sender: Any) {
-        medicament?.edit(withDescription: nil, withNom: nil, withDosage: dosages)
-        DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "Dosage ajouté", closure: {(action) in
-        self.navigationController?.popViewController(animated: true)
-        })
+        do{
+            try medicament?.edit(withDescription: nil, withNom: nil, withDosage: dosages)
+            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "Dosage ajouté", closure: {(action) in
+                self.navigationController?.popViewController(animated: true)
+            })
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
     }
     @IBAction func addDosage(_ sender: Any) {
         let alertController = UIAlertController(title: "Ajout du dosage", message: "Entrer le dosage", preferredStyle: .alert)

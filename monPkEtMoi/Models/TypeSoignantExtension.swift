@@ -8,7 +8,17 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type TypeSoignant
+ 
+ **libelleTypeSoignant**: TypeSoignant -> String
+ */
 extension TypeSoignant{
+    /// Initialiser un `Medicament`
+    ///
+    /// - Parameters:	
+    ///   - withLibelle: `String` nom du `TypeSoignant`
     static func create(withLibelle: String) throws -> TypeSoignant {
         let type = TypeSoignant(context: CoreDataManager.context)
         
@@ -21,7 +31,7 @@ extension TypeSoignant{
         }
         return type
     }
-    
+    /// Récupérer tous les types `TypeSoignant` stockés
     static func getAll() throws -> [TypeSoignant] {
         let request: NSFetchRequest<TypeSoignant> = TypeSoignant.fetchRequest()
         do {
