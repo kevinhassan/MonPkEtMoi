@@ -11,12 +11,13 @@ import Foundation
 import CoreData
 
 extension RDV{
-    static func create(withDateRDV: NSDate, withDescription: String, withHeureRDV: NSDate, withLieuRDV: String) throws -> RDV {
+    static func create(withTypeSoignant : TypeSoignant,withDateRDV: NSDate, withDescription: String, withHeureRDV: NSDate, withLieuRDV: String) throws -> RDV {
         let newRDV = RDV(context: CoreDataManager.context)
         newRDV.dateRDV = withDateRDV
         newRDV.descriptionRDV = withDescription
         newRDV.heureRDV = withHeureRDV
         newRDV.lieuRDV = withLieuRDV
+        newRDV.donner = withTypeSoignant
         do{
             try CoreDataManager.save()
         }catch let error as NSError{

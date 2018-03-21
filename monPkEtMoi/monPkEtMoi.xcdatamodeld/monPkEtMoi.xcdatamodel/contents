@@ -79,8 +79,8 @@
         <attribute name="descriptionRDV" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="heureRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lieuRDV" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="assistePar" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="assisterA" inverseEntity="Patient" syncable="YES"/>
-        <relationship name="donner" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="donner" inverseEntity="TypeSoignant" syncable="YES"/>
+        <relationship name="assistePar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="assisterA" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="donner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="donner" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
     <entity name="Soignant" representedClassName="Soignant" parentEntity="Personne" syncable="YES" codeGenerationType="class">
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="avoirSoignant" inverseEntity="TypeSoignant" syncable="YES"/>
@@ -111,12 +111,12 @@
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="105"/>
-        <element name="Patient" positionX="-207" positionY="-346" width="108" height="148"/>
+        <element name="Patient" positionX="-207" positionY="-346" width="108" height="150"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
         <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>
         <element name="Prise" positionX="9" positionY="182" width="128" height="88"/>
-        <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
+        <element name="RDV" positionX="-450" positionY="-376" width="128" height="135"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="58"/>
         <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>

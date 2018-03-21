@@ -22,7 +22,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     
     var typesSoignants : [TypeSoignant] = []
-    
+    var posSoignant: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,6 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
-        dateRDV.setDate(date: NSDate())
     }
     
     // MARK: - Fermer le clavier
@@ -55,7 +54,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     // MARK: - UIPickerView Delegation
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -67,14 +66,16 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        posSoignant = row
         typeSoignant.text = typesSoignants[pickerView.selectedRow(inComponent: 0)].libelleTypeSoignant!
     }
     
+    
     //MARK: - Sauvegarder la posologie si le formulaire est valide
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
-    @IBAction func saveRDV(_ sender: Any) {
+    func saveRDV(withTypeSoignant ts : TypeSoignant, withDateRDV dateRDV : NSDate, withDescription descriptionRDV : String, withHeureRDV heureRDV : NSDate, withLieuRDV lieuRDV : String) {
         do{
-            let _ = try RDV.create(withDateRDV: dateRDV.getDate()!, withDescription: descriptionRDV.description, withHeureRDV: heureRDV.getDate(), withLieuRDV: lieuRDV.description)
+            let _ = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Rendez-vous ajouté", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "unwindFromAddRDV", sender: self)
             })
@@ -83,5 +84,22 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         }
     }
 
+    // MARK: - Formulaire à envoyer s'il est conforme
+    @IBAction func addRDV(_ sender: UIBarButtonItem)
+    {
+        let inputs:[String: UITextField] = ["dateRDV": dateRDV,"heureRDV": heureRDV, "typeSoignant": typeSoignant,"descriptionRDV": descriptionRDV]
+        
+        if FormValidatorHelper.validateForm(inputs){
+            let typeSoignant = typesSoignants[posSoignant!]
+            let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
+            let heureRDV:NSDate = ((self.heureRDV))!.getDate()
+            saveRDV(withTypeSoignant : typeSoignant,withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
+            DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
+                self.present(vc, animated: true, completion: nil)})
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
+        }
+    }
     
 }

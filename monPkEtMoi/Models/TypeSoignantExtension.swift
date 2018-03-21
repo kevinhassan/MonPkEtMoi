@@ -31,6 +31,19 @@ extension TypeSoignant{
             throw error
         }
     }
+    
+    static func getByName(withName name: String) throws -> TypeSoignant? {
+        let libelleTS = name
+    
+        let request: NSFetchRequest<TypeSoignant> = TypeSoignant.fetchRequest()
+        request.predicate = NSPredicate(format: "libelleTypeSoignant == %@", libelleTS)
+        do {
+            let types: [TypeSoignant] = try CoreDataManager.context.fetch(request)
+            return types.first
+        } catch let error as NSError {
+            throw error
+        }
+    }
 }
 
 
