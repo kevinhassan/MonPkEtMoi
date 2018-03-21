@@ -11,15 +11,17 @@ import UIKit
 class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var dateRDV: DatePicker!
+   
+    @IBOutlet weak var heureRDV: TimePicker!
     
     @IBOutlet weak var typeSoignant: UITextField!
     
-    @IBOutlet weak var nomSoignant: UITextField!
-    
     @IBOutlet weak var descriptionRDV: UITextField!
     
+    @IBOutlet weak var lieuRDV: UITextField!
+    
+    
     var typesSoignants : [TypeSoignant] = []
-    var nomsSoignants : [Soignant] = []
     
     
     override func viewDidLoad() {
@@ -72,7 +74,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     @IBAction func saveRDV(_ sender: Any) {
         do{
-            let _ = try RDV.create(withDateRDV: dateRDV.getDate(), withDescription: descriptionRDV.description, withHeureRDV: heureRDV.getDate(), withLieuRDV: lieuRDV.description)
+            let _ = try RDV.create(withDateRDV: dateRDV.getDate()!, withDescription: descriptionRDV.description, withHeureRDV: heureRDV.getDate(), withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Rendez-vous ajouté", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "unwindFromAddRDV", sender: self)
             })

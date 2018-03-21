@@ -4003,22 +4003,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egw-19-PtN">
                                                     <rect key="frame" x="5" y="0.0" width="365" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de soignant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td2-1E-7nA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="131.5" height="44"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heure RDV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N82-ov-2Ub">
+                                                            <rect key="frame" x="0.0" y="0.0" width="84" height="44"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-hV-meq">
-                                                            <rect key="frame" x="131.5" y="0.0" width="233.5" height="44"/>
+                                                            <rect key="frame" x="84" y="0.0" width="281" height="44"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
                                                         </textField>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="td2-1E-7nA" firstAttribute="centerY" secondItem="e0w-hV-meq" secondAttribute="centerY" id="Qmz-np-8Su"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -4041,22 +4038,19 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpt-JE-oOc">
                                                     <rect key="frame" x="5" y="-1" width="365" height="44"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soignant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N82-ov-2Ub">
-                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="44"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type de soignant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td2-1E-7nA">
+                                                            <rect key="frame" x="0.0" y="0.0" width="131.5" height="44"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LW2-pn-yH3">
-                                                            <rect key="frame" x="68" y="0.0" width="297" height="44"/>
+                                                            <rect key="frame" x="131.5" y="0.0" width="233.5" height="44"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                         </textField>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="N82-ov-2Ub" firstAttribute="centerY" secondItem="LW2-pn-yH3" secondAttribute="centerY" id="RHI-cy-MQg"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -4107,6 +4101,44 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IZr-fs-sPI">
+                                        <rect key="frame" x="0.0" y="232" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IZr-fs-sPI" id="GdK-0h-pjc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IF-hs-t4v">
+                                                    <rect key="frame" x="5" y="-1" width="365" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lieu RDV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBI-Aq-r03">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ir8-Z0-IJO">
+                                                            <rect key="frame" x="70" y="0.0" width="295" height="44"/>
+                                                            <nil key="textColor"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="rBI-Aq-r03" firstAttribute="centerY" secondItem="ir8-Z0-IJO" secondAttribute="centerY" id="yJC-XF-TEA"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4IF-hs-t4v" firstAttribute="centerX" secondItem="GdK-0h-pjc" secondAttribute="centerX" id="EdS-u6-5G9"/>
+                                                <constraint firstItem="4IF-hs-t4v" firstAttribute="height" secondItem="GdK-0h-pjc" secondAttribute="height" id="Obt-UJ-mbk"/>
+                                                <constraint firstItem="4IF-hs-t4v" firstAttribute="leading" secondItem="GdK-0h-pjc" secondAttribute="leading" constant="5" id="V5q-LU-Dhk"/>
+                                                <constraint firstItem="4IF-hs-t4v" firstAttribute="centerY" secondItem="GdK-0h-pjc" secondAttribute="centerY" id="YXy-bD-4Vl"/>
+                                                <constraint firstItem="4IF-hs-t4v" firstAttribute="centerY" secondItem="GdK-0h-pjc" secondAttribute="centerY" id="l4p-L1-ftv"/>
+                                                <constraint firstAttribute="trailing" secondItem="4IF-hs-t4v" secondAttribute="trailing" constant="5" id="wDA-8K-SZk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -4122,15 +4154,15 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="dateRDV" destination="iNh-07-N8L" id="CCD-eu-jbV"/>
                         <outlet property="descriptionRDV" destination="PTg-lo-zB8" id="nH2-pT-RqX"/>
-                        <outlet property="nomSoignant" destination="LW2-pn-yH3" id="bgH-NV-4Fq"/>
-                        <outlet property="typeSoignant" destination="e0w-hV-meq" id="I3P-cw-ybN"/>
+                        <outlet property="heureRDV" destination="e0w-hV-meq" id="jKr-Yd-Y1I"/>
+                        <outlet property="lieuRDV" destination="ir8-Z0-IJO" id="MjA-NF-NTb"/>
+                        <outlet property="typeSoignant" destination="LW2-pn-yH3" id="10k-Uy-qBF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1f0-sf-83A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5788" y="892"/>
+            <point key="canvasLocation" x="5788" y="891.90404797601207"/>
         </scene>
         <!--Ajout exercice-->
         <scene sceneID="AO7-Jb-XKF">
