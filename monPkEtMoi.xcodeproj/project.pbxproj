@@ -10,7 +10,6 @@
 		23258C252062557600AB5022 /* AddActiviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActiviteTableViewController.swift */; };
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
-		23258C2B2062607A00AB5022 /* TypeActiviteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2A2062607A00AB5022 /* TypeActiviteExtension.swift */; };
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
 		2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
 		2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
@@ -79,7 +78,6 @@
 		23258C242062557600AB5022 /* AddActiviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActiviteTableViewController.swift; sourceTree = "<group>"; };
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
-		23258C2A2062607A00AB5022 /* TypeActiviteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeActiviteExtension.swift; sourceTree = "<group>"; };
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */,
 				C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */,
 				23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */,
-				23258C2A2062607A00AB5022 /* TypeActiviteExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,7 +445,6 @@
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
 				C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */,
-				23258C2B2062607A00AB5022 /* TypeActiviteExtension.swift in Sources */,
 				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,

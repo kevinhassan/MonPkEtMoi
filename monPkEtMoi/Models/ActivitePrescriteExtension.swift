@@ -10,12 +10,12 @@ import Foundation
 import CoreData
 
 extension ActivitePrescrite{
-    static func create(withType: TypeActivite, withDuree: Int16, withDateD: NSDate, withDateF: NSDate) throws -> ActivitePrescrite {
+    static func create(withDuree: Int16, withDateD: NSDate, withDateF: NSDate, withType: String) throws -> ActivitePrescrite {
         let newActivitePrescrite = ActivitePrescrite(context: CoreDataManager.context)
         newActivitePrescrite.dateFin = withDateF
         newActivitePrescrite.dateDebut = withDateD
         newActivitePrescrite.dureeActivite = withDuree
-        newActivitePrescrite.avoirType = withType
+        newActivitePrescrite.libelleActivite = withType
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
@@ -33,5 +33,12 @@ extension ActivitePrescrite{
             throw error
         }
     }
-
+    func delete() throws {
+        do{
+            CoreDataManager.context.delete(self)
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
+    }
 }

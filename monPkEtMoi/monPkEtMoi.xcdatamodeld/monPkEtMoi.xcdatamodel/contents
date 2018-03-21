@@ -4,7 +4,7 @@
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dureeActivite" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="avoirActivite" inverseEntity="TypeActivite" syncable="YES"/>
+        <attribute name="libelleActivite" attributeType="String" syncable="YES"/>
         <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirActivite" inverseEntity="Patient" syncable="YES"/>
         <relationship name="estEffectue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
     </entity>
@@ -92,10 +92,6 @@
         <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirTraceur" inverseEntity="PlageHoraire" syncable="YES"/>
         <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTraceur" inverseEntity="Patient" syncable="YES"/>
     </entity>
-    <entity name="TypeActivite" representedClassName="TypeActivite" syncable="YES" codeGenerationType="class">
-        <attribute name="libelleTypeActivite" attributeType="String" syncable="YES"/>
-        <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="avoirType" inverseEntity="ActivitePrescrite" syncable="YES"/>
-    </entity>
     <entity name="TypeAvis" representedClassName="TypeAvis" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeAvis" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="avoirAvis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avis" inverseName="etreType" inverseEntity="Avis" syncable="YES"/>
@@ -123,7 +119,6 @@
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="133"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="73"/>
         <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
-        <element name="TypeActivite" positionX="-468" positionY="8" width="128" height="73"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
         <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="73"/>
