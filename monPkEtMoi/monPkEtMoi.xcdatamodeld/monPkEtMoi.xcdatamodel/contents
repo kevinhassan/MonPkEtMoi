@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ActivitePrescrite" representedClassName="ActivitePrescrite" syncable="YES" codeGenerationType="class">
-        <attribute name="dureeActivite" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="repetHebdomadaire" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="repetJournaliere" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dureeActivite" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeActivite" inverseName="avoirActivite" inverseEntity="TypeActivite" syncable="YES"/>
         <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirActivite" inverseEntity="Patient" syncable="YES"/>
         <relationship name="estEffectue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
@@ -109,7 +109,7 @@
         <relationship name="avoirSoignant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="avoirType" inverseEntity="Soignant" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="133"/>
+        <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="135"/>
         <element name="ActiviteRealisee" positionX="-243" positionY="152" width="128" height="118"/>
         <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
