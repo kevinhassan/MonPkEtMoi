@@ -89,7 +89,7 @@ class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, 
     }
     @IBAction func NextView(_ sender: Any) {
         let inputs = ["medicament":medicamentTF, "dateDebut":dateDebut,"dateFin": dateFin, "nbMedicament": nbMedicamentTF]
-        if FormValidatorHelper.validateForm(inputs as! [String : UITextField]){
+        if FormValidatorHelper.validateForm(inputs as! [String : UITextField]) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
             performSegue(withIdentifier: "addHeures", sender: self)
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données invalides")
