@@ -10,8 +10,26 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type RDV
+ 
+ **donner**: RDV -> TypeSoignant
+ **dateRDV**: RDV -> NSDate
+ **descriptionRDV**: RDV -> String?
+ **heureRDV**: RDV -> NSDate
+ **lieuRDV**: RDV -> String
+ */
 extension RDV{
-    static func create(withTypeSoignant : TypeSoignant,withDateRDV: NSDate, withDescription: String, withHeureRDV: NSDate, withLieuRDV: String) throws -> RDV {
+    /// Initialiser une `RDV`
+    ///
+    /// - Parameters:
+    ///   - withTypeSoignant: `Int16` type de soignant du `RDV`
+    ///   - withDateRDV:  `NSDate` date du `RDV`
+    ///   - withDescription: `String?` description `RDV`
+    ///   - withHeureRDV: `NSDate` heure du `RDV`
+    ///   - withLieuRDV: `String` lieu du `RDV`
+    static func create(withTypeSoignant : TypeSoignant,withDateRDV: NSDate, withDescription: String?, withHeureRDV: NSDate, withLieuRDV: String) throws -> RDV {
         let newRDV = RDV(context: CoreDataManager.context)
         newRDV.dateRDV = withDateRDV
         newRDV.descriptionRDV = withDescription
@@ -25,7 +43,7 @@ extension RDV{
         }
         return newRDV
     }
-    
+    /// Récupérer tous les types `RDV`
     static func getAll() throws -> [RDV] {
         let request: NSFetchRequest<RDV> = RDV.fetchRequest()
         do {
@@ -35,7 +53,7 @@ extension RDV{
             throw error
         }
     }
-    
+    /// Supprimer un `RDV`
     func delete() throws {
         do{
             CoreDataManager.context.delete(self)
