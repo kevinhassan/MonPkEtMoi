@@ -15,7 +15,7 @@ class AddActivitePrescriteViewController: UITableViewController {
     @IBOutlet weak var dateDebut: DatePicker!
     @IBOutlet weak var dateFin: DatePicker!
     
-    @IBOutlet weak var libelleActivite: UITextField!
+    @IBOutlet weak var typeActivite: UITextField!
     
     @IBOutlet var jours: [UISwitch]!
     
@@ -35,10 +35,11 @@ class AddActivitePrescriteViewController: UITableViewController {
         
     }
     
+    /// Ajouter les activités à réaliser après l'ajout de l'activité prescrite en faisant un tableau de jours concernés
     @IBAction func addActiviteePrescrite(_ sender: Any) {
         
         
-        let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "libelleActivitee": libelleActivite]
+        let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
         
         var count = 0;
         for item in jours {
@@ -48,7 +49,6 @@ class AddActivitePrescriteViewController: UITableViewController {
         }
         
         if FormValidatorHelper.validateForm(inputs){
-            saveNewActivitePrescrite(withDuree: Int64(dureePrescrite.text!)!, withLibelle: libelleActivite.text!, withCountHebdo: Int64(count))
             DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité à été ajoutée avec succès", closure: {(action)->() in
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "showActivite") as! ShowActivitePrescriteViewController
                 self.present(vc, animated: true, completion: nil)})
@@ -58,19 +58,7 @@ class AddActivitePrescriteViewController: UITableViewController {
     }
     
     // MARK: - Enregistrer les informations de l'activite
-    func saveNewActivitePrescrite(withDuree dureePrescrite: Int64, withLibelle libelleActivite: String, withCountHebdo count: Int64) {
-        let activitePrescriteDAO = daoF.getActivitePrescriteDAO()
-        let newActivitePrescrite: ActivitePrescrite = ActivitePrescrite.create(withDuree: Int16, withLibelle: String, with )
-        newActivitePrescrite.dureeActivite = dureePrescrite
-        newActivitePrescrite.libelleActivite = libelleActivite
-        newActivitePrescrite.repetHebdomadaire = count
-        
-        do{
-            try activitePrescriteDAO.save(activitePrescrite: newActivitePrescrite)
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-    }
+    func saveNewActivitePrescrite(withDuree dureePrescrite: Int64) {    }
     
     
     

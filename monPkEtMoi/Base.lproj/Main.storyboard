@@ -4152,14 +4152,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1h-dy-hMH">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activité" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej7-tG-ecR">
-                                                            <rect key="frame" x="0.0" y="0.0" width="57.5" height="43.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ej7-tG-ecR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="64.5" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-ar-VXF">
-                                                            <rect key="frame" x="57.5" y="0.0" width="285.5" height="43.5"/>
+                                                            <rect key="frame" x="64.5" y="0.0" width="278.5" height="43.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
@@ -4185,14 +4185,14 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5d-c5-gmd">
                                                     <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durée" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-jb-VZy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="43.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Durée (min)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHy-jb-VZy">
+                                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kR3-b9-1M4" customClass="CountDownPicker" customModule="monPkEtMoi" customModuleProvider="target">
-                                                            <rect key="frame" x="46" y="0.0" width="297" height="43.5"/>
+                                                            <rect key="frame" x="89.5" y="0.0" width="253.5" height="43.5"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
@@ -4512,7 +4512,7 @@
                         <outlet property="dateDebut" destination="fLw-2I-fji" id="1CM-YZ-1t2"/>
                         <outlet property="dateFin" destination="kb7-NX-8lM" id="Tbx-bh-NIi"/>
                         <outlet property="dureePrescrite" destination="kR3-b9-1M4" id="Zct-oG-4a3"/>
-                        <outlet property="libelleActivite" destination="bWR-ar-VXF" id="jh5-GP-Ipq"/>
+                        <outlet property="typeActivite" destination="bWR-ar-VXF" id="LUB-wh-WSU"/>
                         <outletCollection property="jours" destination="nlD-NR-PO7" collectionClass="NSMutableArray" id="DMr-r9-xvK"/>
                         <outletCollection property="jours" destination="jJP-1R-BKN" collectionClass="NSMutableArray" id="BzQ-E9-fDm"/>
                         <outletCollection property="jours" destination="RpC-iw-ngx" collectionClass="NSMutableArray" id="Lfy-ht-qxt"/>
