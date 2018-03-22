@@ -25,8 +25,7 @@ class AddEventViewController: UITableViewController, UIPickerViewDelegate, UIPic
         if(FormValidatorHelper.validateForm(inputs)){
             saveNewEvent(withDate: dateEvent.getDate()!, withDescription: descriptionEvent.text)
             DialogBoxHelper.alert(view: self, WithTitle: "Ajout réussi", andMessage: "Evenement ajouté", closure: { (action) in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "homePatient") as! HomePatientViewController
-                self.present(vc, animated: true, completion: nil)
+                    self.performSegue(withIdentifier: "returnToHomePatient", sender: self)
             })
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")

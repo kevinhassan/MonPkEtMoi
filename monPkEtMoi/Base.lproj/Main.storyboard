@@ -777,11 +777,11 @@
                                     <constraint firstAttribute="height" constant="50" id="AGv-C7-WPH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Ajouter Incident">
+                                <state key="normal" title="Ajouter incident">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="pSM-3q-26g" kind="show" id="9II-l5-XHv"/>
+                                    <segue destination="pSM-3q-26g" kind="show" id="kCo-bB-Xhc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2886,13 +2886,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateEve" destination="C5D-ok-HFd" id="eRj-c7-eiQ"/>
                         <outlet property="dateEvent" destination="C5D-ok-HFd" id="l1d-cf-kWz"/>
                         <outlet property="descriptionEvent" destination="EGE-i9-UrB" id="kK5-Jm-ABB"/>
                         <outlet property="typeEvent" destination="HF1-ZK-v4Q" id="rz0-cz-dfv"/>
+                        <segue destination="NUZ-nL-Vgk" kind="unwind" identifier="returnToHomePatient" unwindAction="unwindToHomePatientWithSegue:" id="wg7-ZF-szi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8Z-TO-Sfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="NUZ-nL-Vgk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3270" y="898"/>
         </scene>
