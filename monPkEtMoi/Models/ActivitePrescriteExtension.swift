@@ -9,7 +9,23 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type ActivitePrescrite
+ 
+ **dureeActivite**: ActivitePrescrite -> Int16
+ **libelleActivite**: ActivitePrescrite -> String
+ **dateDebut**: ActivitePrescrite -> NSDate
+ **dateFin**: ActivitePrescrite -> NSDate
+ */
 extension ActivitePrescrite{
+    /// Initialiser une `ActivitePrescrite`
+    ///
+    /// - Parameters:
+    ///   - withDuree: `Int16` durée de l' `ActivitePrescrite`
+    ///   - withDateD:  `NSDate` date début de l' `ActivitePrescrite`
+    ///   - withDateF: `NSDate` date fin de l' `ActivitePrescrite`
+    ///   - withType: `String` type de l' `ActivitePrescrite`
     static func create(withDuree: Int16, withDateD: NSDate, withDateF: NSDate, withType: String) throws -> ActivitePrescrite {
         let newActivitePrescrite = ActivitePrescrite(context: CoreDataManager.context)
         newActivitePrescrite.dateFin = withDateF
@@ -23,7 +39,7 @@ extension ActivitePrescrite{
         }
         return newActivitePrescrite
     }
-    
+    /// Récupérer tous les types `ActivitePrescrite` stockés
     static func getAll() throws -> [ActivitePrescrite] {
         let request: NSFetchRequest<ActivitePrescrite> = ActivitePrescrite.fetchRequest()
         do {
@@ -33,6 +49,7 @@ extension ActivitePrescrite{
             throw error
         }
     }
+    /// Supprimer l'activité prescrite
     func delete() throws {
         do{
             CoreDataManager.context.delete(self)

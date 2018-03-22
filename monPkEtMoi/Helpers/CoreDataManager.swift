@@ -10,6 +10,7 @@ import CoreData
 import UIKit
 
 class CoreDataManager : NSObject{
+    /// Contexte de l'application
     static var context : NSManagedObjectContext {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             fatalError("Application failed")
@@ -17,7 +18,7 @@ class CoreDataManager : NSObject{
         return appDelegate.persistentContainer.viewContext
     }
     
-    
+    /// Sauvegarder le contexte de l'application
     class func save() throws {
         do {
             try CoreDataManager.context.save()

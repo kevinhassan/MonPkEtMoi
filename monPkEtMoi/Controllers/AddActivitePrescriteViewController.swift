@@ -1,5 +1,5 @@
 //
-//  AddActiviteTableViewController.swift
+//  AddActivitePrescriteViewController.swift
 //  monPkEtMoi
 //
 //  Created by Kevin HASSAN on 21/03/2018.
@@ -23,16 +23,6 @@ class AddActivitePrescriteViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        
-        
-        
     }
     
     /// Ajouter les activités à réaliser après l'ajout de l'activité prescrite en faisant un tableau de jours concernés
@@ -41,11 +31,11 @@ class AddActivitePrescriteViewController: UITableViewController {
         
         let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
         
-        var count = 0;
-        for item in jours {
-            if item.isOn {
-                count = count+1
+        var joursActivite:[Int] = jours.map{(jour: UISwitch) in
+            if jour.isOn {
+                return 1
             }
+            return 0
         }
         
         if FormValidatorHelper.validateForm(inputs) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){

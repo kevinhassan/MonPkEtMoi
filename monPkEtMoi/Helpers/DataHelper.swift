@@ -10,12 +10,14 @@ import Foundation
 
 public class DataHelper {
     
+    /// Lancer les seeds pour remplir la base de données
     static func seedDataStore() {
         seedMedicament()
         seedEtat()
         seedTypeSoignant()
         seedTypeEvenement()
     }
+    /// Remplir la base avec la liste des médicaments
     fileprivate static func seedMedicament(){
         let medicaments = MedicamentSeed().medicaments
         
@@ -27,6 +29,7 @@ public class DataHelper {
             }
         }
     }
+    /// Remplir la base avec la liste des etats qu'un patient peut avoir
     fileprivate static func seedEtat(){
         let etats = EtatSeed().etats
         
@@ -38,6 +41,7 @@ public class DataHelper {
             }
         }
     }
+    /// Remplir la base avec la liste des types de soignant
     fileprivate static func seedTypeSoignant(){
         let typesSoignant = TypeSoignantSeed().typesSoignant
         
@@ -49,6 +53,7 @@ public class DataHelper {
             }
         }
     }
+    /// Remplir la base avec la liste des types d'évenement
     fileprivate static func seedTypeEvenement(){
         let typesEvenement = TypeEvenementSeed().typesEvenement
         
@@ -60,6 +65,7 @@ public class DataHelper {
             }
         }
     }
+    /// Remplir la base avec la liste des types d'avis
     fileprivate static func seedTypeAvis(){
         let typesAvis = TypeAvisSeed().typesAvis
         

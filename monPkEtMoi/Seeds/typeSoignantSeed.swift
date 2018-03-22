@@ -15,9 +15,9 @@ struct TypeSoignantSeed {
         ,"gériatre", "médecin spécialiste en médecine physique", "gastro-entérologue", "urologue, gynécologue, sexologue",
          "ophtalmologiste", "ORL-phoniatre", "rhumatologue", "chirurgien orthopédique", "pneumologue",
          "cardiologue", "médecin du travail", "chirurgien-dentiste", "ergothérapeute", "psychomotricien",
-         "pédicure-podologue", "diététicien(ne)", "orthoptiste", "assistant de service social", "Personnels de transport sanitaire",
+         "pédicure-podologue", "diététicien(ne)", "orthoptiste", "assistant de service social", "personnels de transport sanitaire",
          "personnels de soins infirmiers à domicile", "personnels des services d’aide à domicile", "personnels des services d’aide à la personne",
-         "Personnels de coordination gérontologique", "maisons départementales des personnes handicapées", "éducateur médico-sportif",
+         "personnels de coordination gérontologique", "maisons départementales des personnes handicapées", "éducateur médico-sportif",
          "éducateur médico-sportif", "associations de patients"
         
     ]

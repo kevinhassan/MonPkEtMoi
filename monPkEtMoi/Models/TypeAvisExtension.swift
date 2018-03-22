@@ -9,7 +9,18 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type TypeAvis
+ 
+ **libelleTypeAvis**: TypeAvis -> String
+ */
+
 extension TypeAvis{
+    /// Initialiser un `TypeAvis`
+    ///
+    /// - Parameters:
+    ///   - withLibelle: `String` nom associé au `TypeAvis`
     static func create(withLibelle: String) throws -> TypeAvis {
         let type = TypeAvis(context: CoreDataManager.context)
         
@@ -22,7 +33,7 @@ extension TypeAvis{
         }
         return type
     }
-    
+    /// Récupérer tous les types `TypeAvis` stockés
     static func getAll() throws -> [TypeAvis] {
         let request: NSFetchRequest<TypeAvis> = TypeAvis.fetchRequest()
         do {

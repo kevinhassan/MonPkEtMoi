@@ -19,5 +19,8 @@ class ShowEventPatientViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func unwindToHomePatient(segue: UIStoryboardSegue){
+        
+    }
 }

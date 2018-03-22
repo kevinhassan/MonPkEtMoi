@@ -9,7 +9,18 @@
 import Foundation
 import CoreData
 
+// MARK: -
+/**
+ Type Etat
+ 
+ **libelleEtat**: Etat -> String
+ */
 extension Etat{
+    
+    /// Initialiser un `Etat`
+    ///
+    /// - Parameters:
+    ///   - withLibelleEtat: `String` nom de l' `Etat`
     static func create(withLibelleEtat: String) throws -> Etat {
         let etat = Etat(context: CoreDataManager.context)
         
@@ -22,7 +33,8 @@ extension Etat{
         }
         return etat
     }
-    
+    /// Récupérer tous les types `Etat` en BD
+    ///
     static func getAll() throws -> [Etat] {
         let request: NSFetchRequest<Etat> = Etat.fetchRequest()
         do {

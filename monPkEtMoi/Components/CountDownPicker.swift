@@ -16,6 +16,9 @@ class CountDownPicker: UITextField{
     let timePicker = UIDatePicker()
     let timeFormatter = DateFormatter()
     
+    /// Instancier un `CountDownPicker`
+    ///
+    /// Seulement l'heure et les minutes sous le format Locale fr_FR "..h..min"
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         timePicker.datePickerMode = .countDownTimer
@@ -29,6 +32,9 @@ class CountDownPicker: UITextField{
         self.inputView = timePicker
     }
     
+    /// Valider le compteur
+    ///
+    /// La validation par le bouton "Done" ajoute le texte en unité : **Minute**
     func donePressed(){
         self.text = "\(Int(timePicker.countDownDuration/60))"
         self.resignFirstResponder()

@@ -48,15 +48,15 @@ class EditPatientViewController: UITableViewController{
 
         let inputs:[String: UITextField] = ["nom": nomTF,"prenom": prenomTF, "dateNaissance": dateNaissanceTF,"adresse": adresseTF, "tempsPreparation": tempsPreparationTF,"mail": mailTF,"tel": telTF]
         if(FormValidatorHelper.validateForm(inputs)){
-//            do{
-            patient?.edit(withAdresse: adresseTF.text!, withMail: mailTF.text!, withNom: nomTF.text!, withPrenom: prenomTF.text!, withTel: telTF.text!, withTempsPreparation: Int64(tempsPreparationTF.text!)!, withDateNaissance: dateNaissanceTF.getDate()!)
+            do{
+                try patient?.edit(withAdresse: adresseTF.text!, withMail: mailTF.text!, withNom: nomTF.text!, withPrenom: prenomTF.text!, withTel: telTF.text!, withTempsPreparation: Int64(tempsPreparationTF.text!)!, withDateNaissance: dateNaissanceTF.getDate()!)
 
             DialogBoxHelper.alert(view: self, WithTitle: "Mise à jours", andMessage: "Mise à jours du profil réussie", closure: { (action) in
                     self.navigationController?.popViewController(animated: true)
                 })
-//            }catch let error as NSError{
-//                DialogBoxHelper.alert(view: self, error: error)
-//            }
+            }catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }

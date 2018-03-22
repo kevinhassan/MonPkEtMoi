@@ -11,7 +11,8 @@ import UIKit
 class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var medicaments: [Medicament] = []
-    var medicamentSelected: Medicament? = nil
+    var posMedoc: Int? = nil
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,8 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
         super.viewDidLoad()
-        do{
-            medicaments = try Medicament.getAll()
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
+        if(segue.identifier == "removeMedicament"){
+            tableView.reloadData()
         }
     }
     
@@ -61,12 +60,13 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.medicamentSelected = medicaments[indexPath.row]
+        posMedoc = indexPath.row
         performSegue(withIdentifier: "showMedicament", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ShowMedicamentTableViewController
-        destinationVC.medicament = self.medicamentSelected
+        let destinationVC = segue.destination as! ShowMedicamentViewController
+        destinationVC.medicament = medicaments[posMedoc!]
+        destinationVC.posMedoc = posMedoc
     }
 }

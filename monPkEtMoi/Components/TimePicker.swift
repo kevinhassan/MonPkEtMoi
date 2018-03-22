@@ -13,6 +13,9 @@ class TimePicker: UITextField {
     let datePicker = UIDatePicker()
     let dateFormatter = DateFormatter()
     
+    /// Instancier un `TimePicker`
+    ///
+    /// Seulement l'heure sous le format Locale fr_FR "..h..min"
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         datePicker.datePickerMode = .time
@@ -27,11 +30,16 @@ class TimePicker: UITextField {
         self.inputAccessoryView = toolbar
         self.inputView = datePicker
     }
-    
+    /// Valider l'heure
+    ///
+    /// La validation par le bouton "Done" ajoute le texte et ferme le clavier
     func donePressed(){
         self.text = dateFormatter.string(from: datePicker.date)
         self.resignFirstResponder()
     }
+    /// Récupérer l'heure
+    ///
+    /// Prendre l'heure selon le bon format pour l'ajout en BD
     func getDate()->NSDate{
         return self.dateFormatter.date(from: self.text!)! as NSDate
     }
