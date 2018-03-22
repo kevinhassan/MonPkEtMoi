@@ -34,6 +34,7 @@ extension TypeSoignant{
     /// Récupérer tous les types `TypeSoignant` stockés
     static func getAll() throws -> [TypeSoignant] {
         let request: NSFetchRequest<TypeSoignant> = TypeSoignant.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "libelleTypeSoignant", ascending: true)]
         do {
             let types: [TypeSoignant] = try CoreDataManager.context.fetch(request)
             return types

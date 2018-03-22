@@ -23,16 +23,6 @@ class AddActivitePrescriteViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        
-        
-        
     }
     
     /// Ajouter les activités à réaliser après l'ajout de l'activité prescrite en faisant un tableau de jours concernés
@@ -41,17 +31,17 @@ class AddActivitePrescriteViewController: UITableViewController {
         
         let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
         
-        var count = 0;
-        for item in jours {
-            if item.isOn {
-                count = count+1
+        var joursActivite:[Int] = jours.map{(jour: UISwitch) in
+            if jour.isOn {
+                return 1
             }
+            return 0
         }
-        
-        if FormValidatorHelper.validateForm(inputs){
+                
+        if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
             DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité à été ajoutée avec succès", closure: {(action)->() in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "showActivite") as! ShowActivitePrescriteViewController
-                self.present(vc, animated: true, completion: nil)})
+                self.performSegue(withIdentifier: "showActivitePrescrite", sender: self)
+            })
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }

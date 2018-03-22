@@ -77,7 +77,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         do{
             let _ = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Rendez-vous ajouté", andMessage: "Ajout avec succès", closure: {(action) in
-                self.performSegue(withIdentifier: "unwindFromAddRDV", sender: self)
+                self.performSegue(withIdentifier: "showRdv", sender: self)
             })
         } catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
@@ -95,8 +95,8 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
             let heureRDV:NSDate = ((self.heureRDV))!.getDate()
             saveRDV(withTypeSoignant : typeSoignant,withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "home") as! HomeViewController
-                self.present(vc, animated: true, completion: nil)})
+                self.performSegue(withIdentifier: "unwindToShowRDV", sender: self)
+            })
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }

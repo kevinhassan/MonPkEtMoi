@@ -25,7 +25,7 @@ class ShowRDVViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func unwindFromAddRDV(segue : UIStoryboardSegue){
+    @IBAction func unwindToShowRDV(segue : UIStoryboardSegue){
         
     }
 }

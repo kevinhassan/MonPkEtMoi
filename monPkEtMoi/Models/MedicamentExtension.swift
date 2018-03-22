@@ -84,6 +84,7 @@ extension Medicament{
     /// Récupérer tous les types `Medicament` stockés
     static func getAll() throws -> [Medicament] {
         let request: NSFetchRequest<Medicament> = Medicament.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "nomMedicament", ascending: true)]
         do {
             let medicaments: [Medicament] = try CoreDataManager.context.fetch(request)
             return medicaments
