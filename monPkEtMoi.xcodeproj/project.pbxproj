@@ -11,6 +11,9 @@
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
+		236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */; };
+		236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */; };
+		236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */; };
 		2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
 		2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
 		2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */; };
@@ -82,6 +85,9 @@
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentViewController.swift; sourceTree = "<group>"; };
+		236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentDosesViewController.swift; sourceTree = "<group>"; };
+		236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseAjoutTableViewCell.swift; sourceTree = "<group>"; };
 		2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2380FCF22045A58A00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -283,6 +289,8 @@
 				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
 				EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
 				EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
+				236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
+				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 			children = (
 				C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
 				C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
+				236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -449,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
+				236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
 				C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
 				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
@@ -489,8 +499,10 @@
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
+				236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
 				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
+				236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */,
 				23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,
 				23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,
 				B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */,

@@ -15,6 +15,7 @@ class ShowMedicamentViewController: UITableViewController {
     
     var medicament:Medicament? = nil
     var posMedoc: Int? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

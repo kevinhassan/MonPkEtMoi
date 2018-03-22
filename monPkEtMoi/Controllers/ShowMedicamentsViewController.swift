@@ -34,9 +34,8 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
         super.viewDidLoad()
-        if(segue.identifier == "removeMedicament"){
-            tableView.reloadData()
-        }
+        tableView.reloadData()
+        
     }
     
     
@@ -65,8 +64,10 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ShowMedicamentViewController
-        destinationVC.medicament = medicaments[posMedoc!]
-        destinationVC.posMedoc = posMedoc
+        if(segue.identifier == "showMedicament"){
+            let destinationVC = segue.destination as! ShowMedicamentViewController
+            destinationVC.medicament = medicaments[posMedoc!]
+            destinationVC.posMedoc = posMedoc
+        }
     }
 }
