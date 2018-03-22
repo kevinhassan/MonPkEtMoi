@@ -3014,6 +3014,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Médicaments" image="prise" id="m6S-eh-7R3"/>
                     <connections>
+                        <outlet property="tableView" destination="pVU-jt-q6J" id="uGM-ee-xzD"/>
                         <segue destination="8Uz-6B-bSf" kind="show" identifier="showMedicament" id="JeQ-M3-2nx"/>
                         <segue destination="Nfi-iL-mBW" kind="unwind" identifier="showMedicaments" unwindAction="unwindFromAddHeuresPriseWithSegue:" id="8bt-yT-OO7"/>
                     </connections>
@@ -3249,7 +3250,8 @@
                         <outlet property="descriptionTF" destination="6x0-Oc-sQG" id="79U-Rg-Yx1"/>
                         <outlet property="nomMedicament" destination="NFi-VL-4zz" id="rs3-2s-CWe"/>
                         <segue destination="ae5-he-U1n" kind="show" identifier="showDoses" id="3ne-FU-HD4"/>
-                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="unwindToMedicamentList" unwindAction="unwideFromMedicamentDetailWithSegue:" id="Nyn-Hu-k8O"/>
+                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="addMedicament" unwindAction="unwideFromMedicamentDetailWithSegue:" id="Nyn-Hu-k8O"/>
+                        <segue destination="Tcy-nd-tEh" kind="unwind" identifier="removeMedicament" unwindAction="unwideFromMedicamentDetailWithSegue:" id="Lmd-nu-mT1"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eek-87-6zf" userLabel="First Responder" sceneMemberID="firstResponder"/>

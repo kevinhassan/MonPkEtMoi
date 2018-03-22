@@ -14,7 +14,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBOutlet weak var descriptionTF: UITextField!
     
     var medicament:Medicament? = nil
-    
+    var posMedoc: Int? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,7 +34,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     @IBAction func removeMedicament(_ sender: Any) {
         do{
             try medicament!.delete()
-            performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
+            performSegue(withIdentifier: "removeMedicament", sender: self)
         }catch{
             DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
         }
@@ -44,16 +44,20 @@ class ShowMedicamentTableViewController: UITableViewController {
         do{
             try medicament?.edit(withDescription: self.descriptionTF.text, withNom: nil, withDosage: nil)
             DialogBoxHelper.alert(view: self, WithTitle: "Modification du médicament", andMessage: "Modification réussie", closure: {(action) in
-                self.performSegue(withIdentifier: "unwindToMedicamentList", sender: self)
+                self.performSegue(withIdentifier: "addMedicament", sender: self)
             })
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier != "unwindToMedicamentList"){
+        if(segue.identifier == "showDoses"){
             let destinationVC = segue.destination as! ShowDosageMedicamentTableViewController
             destinationVC.medicament = self.medicament
+        }
+        if(segue.identifier == "removeMedicament"){
+            let destinationVC = segue.destination as! ShowMedicamentsViewController
+            destinationVC.medicaments.remove(at: posMedoc!)
         }
     }
 }
