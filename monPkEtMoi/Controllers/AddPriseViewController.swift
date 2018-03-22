@@ -1,5 +1,5 @@
 //
-//  AddPriseTableViewController.swift
+//  AddPriseViewController.swift
 //  monPkEtMoi
 //
 //  Created by Kévin Hassan on 15/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPriseTableViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class AddPriseViewController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var medicamentTF: UITextField!
     @IBOutlet weak var dateDebut: DatePicker!

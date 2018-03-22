@@ -65,7 +65,7 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ShowMedicamentTableViewController
+        let destinationVC = segue.destination as! ShowMedicamentViewController
         destinationVC.medicament = medicaments[posMedoc!]
         destinationVC.posMedoc = posMedoc
     }

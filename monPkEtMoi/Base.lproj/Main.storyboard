@@ -2762,7 +2762,7 @@
         <!--Ajouter incident-->
         <scene sceneID="Tj1-if-Qg8">
             <objects>
-                <tableViewController id="pSM-3q-26g" customClass="AddEventTableViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="pSM-3q-26g" customClass="AddEventViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="oua-KA-LLU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2886,6 +2886,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dateEve" destination="C5D-ok-HFd" id="eRj-c7-eiQ"/>
                         <outlet property="dateEvent" destination="C5D-ok-HFd" id="l1d-cf-kWz"/>
                         <outlet property="descriptionEvent" destination="EGE-i9-UrB" id="kK5-Jm-ABB"/>
                         <outlet property="typeEvent" destination="HF1-ZK-v4Q" id="rz0-cz-dfv"/>
@@ -3027,7 +3028,7 @@
         <!--Dosages-->
         <scene sceneID="ipw-8D-GaJ">
             <objects>
-                <tableViewController id="ae5-he-U1n" customClass="ShowDosageMedicamentTableViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ae5-he-U1n" customClass="ShowDosageMedicamentViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ax5-yc-dH1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3097,7 +3098,7 @@
         <!--Title-->
         <scene sceneID="fAF-Rp-Mw9">
             <objects>
-                <tableViewController id="8Uz-6B-bSf" customClass="ShowMedicamentTableViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="8Uz-6B-bSf" customClass="ShowMedicamentViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EbS-nk-Arf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3609,7 +3610,7 @@
         <!--Ajout Prise-->
         <scene sceneID="eeU-VI-aik">
             <objects>
-                <tableViewController id="suZ-zZ-lub" customClass="AddPriseTableViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="suZ-zZ-lub" customClass="AddPriseViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="gFX-TY-48x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

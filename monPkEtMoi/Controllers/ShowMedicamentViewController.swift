@@ -1,5 +1,5 @@
 //
-//  ShowMedicamentTableViewController.swift
+//  ShowMedicamentViewController.swift
 //  monPkEtMoi
 //
 //  Created by macOS on 18/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowMedicamentTableViewController: UITableViewController {
+class ShowMedicamentViewController: UITableViewController {
 
     @IBOutlet weak var nomMedicament: UILabel!
     @IBOutlet weak var descriptionTF: UITextField!
@@ -52,7 +52,7 @@ class ShowMedicamentTableViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "showDoses"){
-            let destinationVC = segue.destination as! ShowDosageMedicamentTableViewController
+            let destinationVC = segue.destination as! ShowDosageMedicamentViewController
             destinationVC.medicament = self.medicament
         }
         if(segue.identifier == "removeMedicament"){

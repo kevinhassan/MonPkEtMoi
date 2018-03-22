@@ -1,5 +1,5 @@
 //
-//  ShowDosageMedicamentTableViewController.swift
+//  ShowDosageMedicamentViewController.swift
 //  monPkEtMoi
 //
 //  Created by macOS on 18/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowDosageMedicamentTableViewController: UITableViewController {
+class ShowDosageMedicamentViewController: UITableViewController {
 
     var medicament:Medicament? = nil
     var dosages: [String]? = nil

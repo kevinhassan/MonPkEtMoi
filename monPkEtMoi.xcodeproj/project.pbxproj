@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23258C252062557600AB5022 /* AddActiviteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActiviteTableViewController.swift */; };
+		23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
@@ -23,10 +23,10 @@
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
 		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
 		B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */; };
-		B2DDBB93205AD9A300E7F3C1 /* AddPriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */; };
+		B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */; };
 		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
 		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
-		B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */; };
+		B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */; };
 		C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B302061AC4F00F45453 /* EtatExtension.swift */; };
 		C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B322061AD7700F45453 /* EvenementExtension.swift */; };
 		C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B342061AE9700F45453 /* MedicamentExtension.swift */; };
@@ -42,8 +42,8 @@
 		C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943792059F4FA004968E0 /* DateAndTimePicker.swift */; };
 		C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C5205EF463007C6E14 /* HomePriseViewController.swift */; };
 		C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */; };
-		C17050CA205F147F007C6E14 /* ShowMedicamentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C9205F147F007C6E14 /* ShowMedicamentTableViewController.swift */; };
-		C1753B16205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B15205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift */; };
+		C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */; };
+		C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */; };
 		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
@@ -78,7 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23258C242062557600AB5022 /* AddActiviteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActiviteTableViewController.swift; sourceTree = "<group>"; };
+		23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -100,12 +100,12 @@
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
 		B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
-		B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseTableViewController.swift; sourceTree = "<group>"; };
+		B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseViewController.swift; sourceTree = "<group>"; };
 		B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
 		B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		B2DF0079205172B00055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTableViewController.swift; sourceTree = "<group>"; };
+		B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C1165B302061AC4F00F45453 /* EtatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatExtension.swift; sourceTree = "<group>"; };
 		C1165B322061AD7700F45453 /* EvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementExtension.swift; sourceTree = "<group>"; };
 		C1165B342061AE9700F45453 /* MedicamentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentExtension.swift; sourceTree = "<group>"; };
@@ -121,8 +121,8 @@
 		C15943792059F4FA004968E0 /* DateAndTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimePicker.swift; sourceTree = "<group>"; };
 		C17050C5205EF463007C6E14 /* HomePriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePriseViewController.swift; sourceTree = "<group>"; };
 		C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentsViewController.swift; sourceTree = "<group>"; };
-		C17050C9205F147F007C6E14 /* ShowMedicamentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentTableViewController.swift; sourceTree = "<group>"; };
-		C1753B15205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDosageMedicamentTableViewController.swift; sourceTree = "<group>"; };
+		C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentViewController.swift; sourceTree = "<group>"; };
+		C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDosageMedicamentViewController.swift; sourceTree = "<group>"; };
 		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
@@ -271,15 +271,15 @@
 				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
 				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
 				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
-				B2DF2C0D205980DD00C608EA /* AddEventTableViewController.swift */,
+				B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
 				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
-				B2DDBB92205AD9A300E7F3C1 /* AddPriseTableViewController.swift */,
+				B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */,
 				C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */,
 				C17050C5205EF463007C6E14 /* HomePriseViewController.swift */,
 				C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */,
-				C17050C9205F147F007C6E14 /* ShowMedicamentTableViewController.swift */,
-				C1753B15205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift */,
-				23258C242062557600AB5022 /* AddActiviteTableViewController.swift */,
+				C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */,
+				C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */,
+				23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
 				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
 				EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
 				EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
@@ -462,8 +462,8 @@
 				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
 				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
 				EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */,
-				B2DDBB93205AD9A300E7F3C1 /* AddPriseTableViewController.swift in Sources */,
-				C17050CA205F147F007C6E14 /* ShowMedicamentTableViewController.swift in Sources */,
+				B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */,
+				C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */,
 				C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */,
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
@@ -475,7 +475,7 @@
 				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
 				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
 				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
-				23258C252062557600AB5022 /* AddActiviteTableViewController.swift in Sources */,
+				23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */,
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
 				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
@@ -487,9 +487,9 @@
 				C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
-				B2DF2C0E205980DD00C608EA /* AddEventTableViewController.swift in Sources */,
+				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
-				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentTableViewController.swift in Sources */,
+				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 				23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,
 				23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,

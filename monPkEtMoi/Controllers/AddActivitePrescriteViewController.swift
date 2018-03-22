@@ -1,5 +1,5 @@
 //
-//  AddActiviteTableViewController.swift
+//  AddActivitePrescriteViewController.swift
 //  monPkEtMoi
 //
 //  Created by Kevin HASSAN on 21/03/2018.
