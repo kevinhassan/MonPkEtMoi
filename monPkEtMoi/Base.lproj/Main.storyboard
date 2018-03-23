@@ -9,6 +9,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -909,15 +910,84 @@
                                     <segue destination="GYB-4k-pIi" kind="show" id="yZO-F3-5ru"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OQC-NI-Lr7">
+                                <rect key="frame" x="0.0" y="74" width="375" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rdvCell" id="gcz-2i-EbI" customClass="RDVTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gcz-2i-EbI" id="6e6-3k-8rF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-FG-xDA">
+                                                    <rect key="frame" x="15" y="-3.5" width="345" height="50.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-6A-fQX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="50.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-Kf-30j" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                            <rect key="frame" x="50" y="0.0" width="42" height="50.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-F0-lDr" customClass="TimeLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                            <rect key="frame" x="100" y="0.0" width="245" height="50.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wM2-4T-FMn"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Mdl-6A-fQX" firstAttribute="leading" secondItem="KhI-FG-xDA" secondAttribute="leading" id="4pB-ea-f3M"/>
+                                                        <constraint firstAttribute="trailing" secondItem="1oV-F0-lDr" secondAttribute="trailing" id="LZg-DH-lZs"/>
+                                                        <constraint firstAttribute="height" constant="50" id="lEv-Ny-mUQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KhI-FG-xDA" secondAttribute="trailing" id="ZGJ-Lh-ImF"/>
+                                                <constraint firstItem="KhI-FG-xDA" firstAttribute="leading" secondItem="6e6-3k-8rF" secondAttribute="leadingMargin" id="vUK-KV-e7b"/>
+                                                <constraint firstItem="KhI-FG-xDA" firstAttribute="centerY" secondItem="6e6-3k-8rF" secondAttribute="centerY" id="wNJ-lp-Xur"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateRDV" destination="cut-Kf-30j" id="g2F-Ba-8Bj"/>
+                                            <outlet property="heureRDV" destination="1oV-F0-lDr" id="ys0-YE-fZX"/>
+                                            <outlet property="typeRDV" destination="Mdl-6A-fQX" id="Tc1-K9-ls9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qm3-VE-rr2" id="38t-gf-euH"/>
+                                    <outlet property="delegate" destination="qm3-VE-rr2" id="0bs-hA-Hap"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OQC-NI-Lr7" firstAttribute="centerX" secondItem="4dx-3N-eBh" secondAttribute="centerX" id="AMl-Uj-FvD"/>
                             <constraint firstItem="dzV-BI-yVX" firstAttribute="width" secondItem="4dx-3N-eBh" secondAttribute="width" id="DOA-ch-3lf"/>
                             <constraint firstItem="dzV-BI-yVX" firstAttribute="centerX" secondItem="4dx-3N-eBh" secondAttribute="centerX" id="OdP-kJ-1lF"/>
+                            <constraint firstItem="dzV-BI-yVX" firstAttribute="top" secondItem="OQC-NI-Lr7" secondAttribute="bottom" id="R0F-DL-xhu"/>
+                            <constraint firstItem="OQC-NI-Lr7" firstAttribute="top" secondItem="AD9-sm-JDu" secondAttribute="bottom" constant="10" id="bcD-Pj-ov2"/>
                             <constraint firstItem="i1J-iC-uQ3" firstAttribute="top" secondItem="dzV-BI-yVX" secondAttribute="bottom" id="oUJ-Ai-6HR"/>
+                            <constraint firstItem="OQC-NI-Lr7" firstAttribute="leading" secondItem="4dx-3N-eBh" secondAttribute="leading" id="rff-sT-Aoj"/>
+                            <constraint firstAttribute="trailing" secondItem="OQC-NI-Lr7" secondAttribute="trailing" id="vbN-AC-5s7"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rendez-vous" image="rendez-vous" id="wQl-Ql-JAZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="OQC-NI-Lr7" id="czF-ZO-w4V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVr-De-mgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

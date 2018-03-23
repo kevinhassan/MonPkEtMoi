@@ -50,6 +50,9 @@
 		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
+		C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */; };
+		C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F672206476A900B60CCB /* DateLabel.swift */; };
+		C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F674206478DA00B60CCB /* TimeLabel.swift */; };
 		C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35E9205DB43000937BFF /* EtatSeed.swift */; };
 		C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */; };
 		C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
@@ -132,6 +135,9 @@
 		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVTableViewCell.swift; sourceTree = "<group>"; };
+		C1C1F672206476A900B60CCB /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
+		C1C1F674206478DA00B60CCB /* TimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLabel.swift; sourceTree = "<group>"; };
 		C1CA35E9205DB43000937BFF /* EtatSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatSeed.swift; sourceTree = "<group>"; };
 		C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSoignantSeed.swift; sourceTree = "<group>"; };
 		C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
@@ -252,6 +258,8 @@
 				B225486B205437850027FB86 /* CountDownPicker.swift */,
 				C15943792059F4FA004968E0 /* DateAndTimePicker.swift */,
 				C1B1E00F205E880F003F9C66 /* TimePicker.swift */,
+				C1C1F672206476A900B60CCB /* DateLabel.swift */,
+				C1C1F674206478DA00B60CCB /* TimeLabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 				C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
 				C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
 				236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
+				C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -461,6 +470,7 @@
 				236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
 				C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
 				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
+				C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
@@ -469,6 +479,7 @@
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
+				C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */,
 				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
 				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
 				EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */,
@@ -504,6 +515,7 @@
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 				236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */,
 				23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,
+				C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */,
 				23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,
 				B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */,
 			);

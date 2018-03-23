@@ -28,10 +28,6 @@ class ShowMedicamentsViewController: UIViewController, UITableViewDelegate, UITa
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func addMedicament(){
-        
-    }
-    
     @IBAction func unwideFromMedicamentDetail(segue:UIStoryboardSegue){
         super.viewDidLoad()
         tableView.reloadData()
