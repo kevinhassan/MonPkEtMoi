@@ -47,13 +47,10 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableShowActivite.dequeueReusableCell(withIdentifier: "activiteCell", for: indexPath) as! ActivitePrescriteTableViewCell
         
-        cell.libelleActivitePrescrite.text! = self.listeActivite[indexPath.row].libelleActivite!
+        cell.libelleActivitePrescrite.text! = "Nom activité : " + self.listeActivite[indexPath.row].libelleActivite!
         
         cell.dureePrescriteLabel.text! = String(self.listeActivite[indexPath.row].dureeActivite) + " min"
         
-        cell.dateDebutLabel.setDate(date: self.listeActivite[indexPath.row].dateDebut!)
-        
-        cell.dateFinLabel.setDate(date: self.listeActivite[indexPath.row].dateFin!)
         return cell
     }
     
@@ -70,7 +67,7 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     */
     
     @IBAction func unwindFromAddActivite(segue: UIStoryboardSegue){
-        
+        tableShowActivite.reloadData()
     }
 
 }

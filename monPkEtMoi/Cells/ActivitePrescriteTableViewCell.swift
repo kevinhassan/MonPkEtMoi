@@ -12,8 +12,6 @@ class ActivitePrescriteTableViewCell: UITableViewCell {
     
     @IBOutlet weak var libelleActivitePrescrite: UILabel!
     @IBOutlet weak var dureePrescriteLabel: UILabel!
-    @IBOutlet weak var dateDebutLabel: DateLabel!
-    @IBOutlet weak var dateFinLabel: DateLabel!
     
     
     
