@@ -49,11 +49,11 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
         
         cell.libelleActivitePrescrite.text! = self.listeActivite[indexPath.row].libelleActivite!
         
-        cell.dureePrescriteLabel.text! = self.listeActivite[indexPath.row].dureeActivite.description
+        cell.dureePrescriteLabel.text! = String(self.listeActivite[indexPath.row].dureeActivite) + " min"
         
-        cell.dateDebutLabel.text! = self.listeActivite[indexPath.row].dateDebut!.description
+        cell.dateDebutLabel.setDate(date: self.listeActivite[indexPath.row].dateDebut!)
         
-        cell.dateFinLabel.text! = self.listeActivite[indexPath.row].dateFin!.description
+        cell.dateFinLabel.setDate(date: self.listeActivite[indexPath.row].dateFin!)
         return cell
     }
     
