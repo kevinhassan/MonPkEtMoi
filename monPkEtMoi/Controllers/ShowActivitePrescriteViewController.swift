@@ -29,7 +29,7 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     }
     
     @IBAction func unwindToActivitePrescrite(segue: UIStoryboardSegue){
-        
+        self.tableShowActivite.reloadData()
     }
     
     // MARK: - Envoyer la posologie à la vue suivante
