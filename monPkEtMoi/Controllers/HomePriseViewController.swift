@@ -14,6 +14,12 @@ class HomePriseViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        do{
+            try Posologie.getAllMedicamentPrescrit()
+        }catch{
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -44,7 +44,6 @@ class AddMedicamentDosesViewController: UITableViewController {
  
     @IBAction func saveMedicament(_ sender: Any) {
         let doses:[String] = dosesPriseCell.map{(cell) in
-            print(cell)
             return cell.doseTF.text!
         }
         do{

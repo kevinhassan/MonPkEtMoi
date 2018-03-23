@@ -1,815 +1,819 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 46;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
-        23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
-        23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
-        234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
-        236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */; };
-        236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */; };
-        236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */; };
-        2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
-        2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
-        2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */; };
-        2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF72045A58C00763F43 /* Assets.xcassets */; };
-        2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */; };
-        2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
-        2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
-        23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
-        23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
-        399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */; };
-        39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */; };
-        B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
-        B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
-        B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */; };
-        B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */; };
-        B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
-        B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
-        B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */; };
-        C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B302061AC4F00F45453 /* EtatExtension.swift */; };
-        C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B322061AD7700F45453 /* EvenementExtension.swift */; };
-        C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B342061AE9700F45453 /* MedicamentExtension.swift */; };
-        C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B362061B22C00F45453 /* PosologieExtension.swift */; };
-        C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B382061B5D200F45453 /* TypeAvisExtension.swift */; };
-        C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */; };
-        C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */; };
-        C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
-        C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
-        C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
-        C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159437120589C73004968E0 /* DoctorSettingsViewController.swift */; };
-        C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943732058ABEF004968E0 /* FormValidatorHelper.swift */; };
-        C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943792059F4FA004968E0 /* DateAndTimePicker.swift */; };
-        C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C5205EF463007C6E14 /* HomePriseViewController.swift */; };
-        C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */; };
-        C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */; };
-        C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */; };
-        C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
-        C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
-        C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
-        C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */; };
-        C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F672206476A900B60CCB /* DateLabel.swift */; };
-        C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F674206478DA00B60CCB /* TimeLabel.swift */; };
-        C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35E9205DB43000937BFF /* EtatSeed.swift */; };
-        C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */; };
-        C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
-        C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */; };
-        C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */; };
-        C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
-        C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
-        EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */; };
-        EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */; };
-        EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED1220629F55008A5DA2 /* RDVExtention.swift */; };
-        EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
+		23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
+		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
+		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
+		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
+		236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */; };
+		236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */; };
+		236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */; };
+		2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCED2045A58A00763F43 /* AppDelegate.swift */; };
+		2380FCF32045A58A00763F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF12045A58A00763F43 /* Main.storyboard */; };
+		2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */; };
+		2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF72045A58C00763F43 /* Assets.xcassets */; };
+		2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */; };
+		2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */; };
+		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
+		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
+		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
+		399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */; };
+		39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */; };
+		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
+		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
+		B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */; };
+		B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */; };
+		B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF00742051717A0055B0CA /* CoreDataManager.swift */; };
+		B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF0076205171960055B0CA /* DialogBoxHelper.swift */; };
+		B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */; };
+		C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B302061AC4F00F45453 /* EtatExtension.swift */; };
+		C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B322061AD7700F45453 /* EvenementExtension.swift */; };
+		C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B342061AE9700F45453 /* MedicamentExtension.swift */; };
+		C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B362061B22C00F45453 /* PosologieExtension.swift */; };
+		C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B382061B5D200F45453 /* TypeAvisExtension.swift */; };
+		C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */; };
+		C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */; };
+		C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */; };
+		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
+		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
+		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
+		C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159437120589C73004968E0 /* DoctorSettingsViewController.swift */; };
+		C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943732058ABEF004968E0 /* FormValidatorHelper.swift */; };
+		C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15943792059F4FA004968E0 /* DateAndTimePicker.swift */; };
+		C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C5205EF463007C6E14 /* HomePriseViewController.swift */; };
+		C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */; };
+		C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */; };
+		C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */; };
+		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
+		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
+		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
+		C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */; };
+		C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F672206476A900B60CCB /* DateLabel.swift */; };
+		C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F674206478DA00B60CCB /* TimeLabel.swift */; };
+		C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35E9205DB43000937BFF /* EtatSeed.swift */; };
+		C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */; };
+		C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
+		C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */; };
+		C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */; };
+		C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
+		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
+		EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */; };
+		EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */; };
+		EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED1220629F55008A5DA2 /* RDVExtention.swift */; };
+		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        2380FD022045A58D00763F43 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 2380FCE22045A58A00763F43 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 2380FCE92045A58A00763F43;
-            remoteInfo = monPkEtMoi;
-        };
-        2380FD0D2045A58E00763F43 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 2380FCE22045A58A00763F43 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 2380FCE92045A58A00763F43;
-            remoteInfo = monPkEtMoi;
-        };
+		2380FD022045A58D00763F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2380FCE22045A58A00763F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2380FCE92045A58A00763F43;
+			remoteInfo = monPkEtMoi;
+		};
+		2380FD0D2045A58E00763F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2380FCE22045A58A00763F43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2380FCE92045A58A00763F43;
+			remoteInfo = monPkEtMoi;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
-        23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
-        23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
-        234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-        236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentViewController.swift; sourceTree = "<group>"; };
-        236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentDosesViewController.swift; sourceTree = "<group>"; };
-        236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseAjoutTableViewCell.swift; sourceTree = "<group>"; };
-        2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        2380FCF22045A58A00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = monPkEtMoi.xcdatamodel; sourceTree = "<group>"; };
-        2380FCF72045A58C00763F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        2380FCFA2045A58C00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        2380FCFC2045A58D00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiTests.swift; sourceTree = "<group>"; };
-        2380FD072045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
-        2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
-        23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
-        399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteTableViewCell.swift; sourceTree = "<group>"; };
-        39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowActiviteDetailViewController.swift; sourceTree = "<group>"; };
-        B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
-        B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
-        B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
-        B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseViewController.swift; sourceTree = "<group>"; };
-        B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-        B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
-        B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-        B2DF0079205172B00055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-        B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
-        C1165B302061AC4F00F45453 /* EtatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatExtension.swift; sourceTree = "<group>"; };
-        C1165B322061AD7700F45453 /* EvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementExtension.swift; sourceTree = "<group>"; };
-        C1165B342061AE9700F45453 /* MedicamentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentExtension.swift; sourceTree = "<group>"; };
-        C1165B362061B22C00F45453 /* PosologieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieExtension.swift; sourceTree = "<group>"; };
-        C1165B382061B5D200F45453 /* TypeAvisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisExtension.swift; sourceTree = "<group>"; };
-        C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementExtension.swift; sourceTree = "<group>"; };
-        C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSoignantExtension.swift; sourceTree = "<group>"; };
-        C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
-        C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
-        C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
-        C159437120589C73004968E0 /* DoctorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSettingsViewController.swift; sourceTree = "<group>"; };
-        C15943732058ABEF004968E0 /* FormValidatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidatorHelper.swift; sourceTree = "<group>"; };
-        C15943792059F4FA004968E0 /* DateAndTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimePicker.swift; sourceTree = "<group>"; };
-        C17050C5205EF463007C6E14 /* HomePriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePriseViewController.swift; sourceTree = "<group>"; };
-        C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentsViewController.swift; sourceTree = "<group>"; };
-        C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentViewController.swift; sourceTree = "<group>"; };
-        C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDosageMedicamentViewController.swift; sourceTree = "<group>"; };
-        C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
-        C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
-        C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
-        C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVTableViewCell.swift; sourceTree = "<group>"; };
-        C1C1F672206476A900B60CCB /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
-        C1C1F674206478DA00B60CCB /* TimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLabel.swift; sourceTree = "<group>"; };
-        C1CA35E9205DB43000937BFF /* EtatSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatSeed.swift; sourceTree = "<group>"; };
-        C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSoignantSeed.swift; sourceTree = "<group>"; };
-        C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
-        C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisSeed.swift; sourceTree = "<group>"; };
-        C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseHeuresViewController.swift; sourceTree = "<group>"; };
-        C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
-        C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
-        EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRDVViewController.swift; sourceTree = "<group>"; };
-        EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRDVViewController.swift; sourceTree = "<group>"; };
-        EC76ED1220629F55008A5DA2 /* RDVExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVExtention.swift; sourceTree = "<group>"; };
-        EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
+		23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
+		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
+		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
+		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentViewController.swift; sourceTree = "<group>"; };
+		236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentDosesViewController.swift; sourceTree = "<group>"; };
+		236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoseAjoutTableViewCell.swift; sourceTree = "<group>"; };
+		2380FCEA2045A58A00763F43 /* monPkEtMoi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monPkEtMoi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2380FCED2045A58A00763F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2380FCF22045A58A00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = monPkEtMoi.xcdatamodel; sourceTree = "<group>"; };
+		2380FCF72045A58C00763F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2380FCFA2045A58C00763F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2380FCFC2045A58D00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiTests.swift; sourceTree = "<group>"; };
+		2380FD072045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monPkEtMoiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monPkEtMoiUITests.swift; sourceTree = "<group>"; };
+		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
+		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
+		399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteTableViewCell.swift; sourceTree = "<group>"; };
+		39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowActiviteDetailViewController.swift; sourceTree = "<group>"; };
+		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
+		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
+		B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
+		B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseViewController.swift; sourceTree = "<group>"; };
+		B2DF00742051717A0055B0CA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B2DF0076205171960055B0CA /* DialogBoxHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogBoxHelper.swift; sourceTree = "<group>"; };
+		B2DF0078205172AC0055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		B2DF0079205172B00055B0CA /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
+		C1165B302061AC4F00F45453 /* EtatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatExtension.swift; sourceTree = "<group>"; };
+		C1165B322061AD7700F45453 /* EvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementExtension.swift; sourceTree = "<group>"; };
+		C1165B342061AE9700F45453 /* MedicamentExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentExtension.swift; sourceTree = "<group>"; };
+		C1165B362061B22C00F45453 /* PosologieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieExtension.swift; sourceTree = "<group>"; };
+		C1165B382061B5D200F45453 /* TypeAvisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisExtension.swift; sourceTree = "<group>"; };
+		C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementExtension.swift; sourceTree = "<group>"; };
+		C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSoignantExtension.swift; sourceTree = "<group>"; };
+		C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieTableViewCell.swift; sourceTree = "<group>"; };
+		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
+		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
+		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
+		C159437120589C73004968E0 /* DoctorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorSettingsViewController.swift; sourceTree = "<group>"; };
+		C15943732058ABEF004968E0 /* FormValidatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormValidatorHelper.swift; sourceTree = "<group>"; };
+		C15943792059F4FA004968E0 /* DateAndTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTimePicker.swift; sourceTree = "<group>"; };
+		C17050C5205EF463007C6E14 /* HomePriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePriseViewController.swift; sourceTree = "<group>"; };
+		C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentsViewController.swift; sourceTree = "<group>"; };
+		C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMedicamentViewController.swift; sourceTree = "<group>"; };
+		C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDosageMedicamentViewController.swift; sourceTree = "<group>"; };
+		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
+		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVTableViewCell.swift; sourceTree = "<group>"; };
+		C1C1F672206476A900B60CCB /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
+		C1C1F674206478DA00B60CCB /* TimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLabel.swift; sourceTree = "<group>"; };
+		C1CA35E9205DB43000937BFF /* EtatSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtatSeed.swift; sourceTree = "<group>"; };
+		C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSoignantSeed.swift; sourceTree = "<group>"; };
+		C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
+		C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisSeed.swift; sourceTree = "<group>"; };
+		C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseHeuresViewController.swift; sourceTree = "<group>"; };
+		C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
+		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
+		EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRDVViewController.swift; sourceTree = "<group>"; };
+		EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRDVViewController.swift; sourceTree = "<group>"; };
+		EC76ED1220629F55008A5DA2 /* RDVExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVExtention.swift; sourceTree = "<group>"; };
+		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        2380FCE72045A58A00763F43 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FCFE2045A58D00763F43 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FD092045A58E00763F43 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		2380FCE72045A58A00763F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FCFE2045A58D00763F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FD092045A58E00763F43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        2380FCE12045A58A00763F43 = {
-            isa = PBXGroup;
-            children = (
-                EC14A06120468EA600B2220D /* Images */,
-                2380FCEC2045A58A00763F43 /* monPkEtMoi */,
-                2380FD042045A58D00763F43 /* monPkEtMoiTests */,
-                2380FD0F2045A58E00763F43 /* monPkEtMoiUITests */,
-                2380FCEB2045A58A00763F43 /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        2380FCEB2045A58A00763F43 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                2380FCEA2045A58A00763F43 /* monPkEtMoi.app */,
-                2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */,
-                2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
-            isa = PBXGroup;
-            children = (
-                C1F31B4B205EB3E200233282 /* Cells */,
-                C1FCF72C205D76E50088C3F4 /* Seeds */,
-                B2D3E140205ADD9400BC26B3 /* Models */,
-                C13F327E2058859D00C7CC8A /* Helpers */,
-                C13F32832058860300C7CC8A /* Controllers */,
-                C13F327D2058858900C7CC8A /* Components */,
-                2380FCED2045A58A00763F43 /* AppDelegate.swift */,
-                2380FCF12045A58A00763F43 /* Main.storyboard */,
-                2380FCF72045A58C00763F43 /* Assets.xcassets */,
-                2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
-                2380FCFC2045A58D00763F43 /* Info.plist */,
-                2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
-            );
-            path = monPkEtMoi;
-            sourceTree = "<group>";
-        };
-        2380FD042045A58D00763F43 /* monPkEtMoiTests */ = {
-            isa = PBXGroup;
-            children = (
-                2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */,
-                2380FD072045A58E00763F43 /* Info.plist */,
-            );
-            path = monPkEtMoiTests;
-            sourceTree = "<group>";
-        };
-        2380FD0F2045A58E00763F43 /* monPkEtMoiUITests */ = {
-            isa = PBXGroup;
-            children = (
-                2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */,
-                2380FD122045A58E00763F43 /* Info.plist */,
-            );
-            path = monPkEtMoiUITests;
-            sourceTree = "<group>";
-        };
-        B2D3E140205ADD9400BC26B3 /* Models */ = {
-            isa = PBXGroup;
-            children = (
-                B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */,
-                C1165B302061AC4F00F45453 /* EtatExtension.swift */,
-                C1165B322061AD7700F45453 /* EvenementExtension.swift */,
-                C1165B342061AE9700F45453 /* MedicamentExtension.swift */,
-                C1165B362061B22C00F45453 /* PosologieExtension.swift */,
-                C1165B382061B5D200F45453 /* TypeAvisExtension.swift */,
-                C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */,
-                C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */,
-                23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */,
-                EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
-            );
-            path = Models;
-            sourceTree = "<group>";
-        };
-        C13F327D2058858900C7CC8A /* Components */ = {
-            isa = PBXGroup;
-            children = (
-                B2254869205420F80027FB86 /* DatePicker.swift */,
-                B225486B205437850027FB86 /* CountDownPicker.swift */,
-                C15943792059F4FA004968E0 /* DateAndTimePicker.swift */,
-                C1B1E00F205E880F003F9C66 /* TimePicker.swift */,
-                C1C1F672206476A900B60CCB /* DateLabel.swift */,
-                C1C1F674206478DA00B60CCB /* TimeLabel.swift */,
-            );
-            path = Components;
-            sourceTree = "<group>";
-        };
-        C13F327E2058859D00C7CC8A /* Helpers */ = {
-            isa = PBXGroup;
-            children = (
-                C15943732058ABEF004968E0 /* FormValidatorHelper.swift */,
-                B2DF00742051717A0055B0CA /* CoreDataManager.swift */,
-                B2DF0076205171960055B0CA /* DialogBoxHelper.swift */,
-                C1823D93205D89B000DFCA42 /* DataHelper.swift */,
-            );
-            path = Helpers;
-            sourceTree = "<group>";
-        };
-        C13F32832058860300C7CC8A /* Controllers */ = {
-            isa = PBXGroup;
-            children = (
-                EC837EA3204DAC930089A823 /* AddPatientViewController.swift */,
-                234E135D205064B7000658F7 /* HomeViewController.swift */,
-                23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
-                C159436B2058968B004968E0 /* PatientSettingsViewController.swift */,
-                C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
-                C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
-                C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
-                B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
-                23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
-                B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */,
-                C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */,
-                C17050C5205EF463007C6E14 /* HomePriseViewController.swift */,
-                C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */,
-                C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */,
-                C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */,
-                23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
-                23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
-                EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
-                EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
-                236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
-                236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
-                39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
-            );
-            path = Controllers;
-            sourceTree = "<group>";
-        };
-        C1F31B4B205EB3E200233282 /* Cells */ = {
-            isa = PBXGroup;
-            children = (
-                C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
-                C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
-                236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
-                399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */,
-                C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
-            );
-            path = Cells;
-            sourceTree = "<group>";
-        };
-        C1FCF72C205D76E50088C3F4 /* Seeds */ = {
-            isa = PBXGroup;
-            children = (
-                C1CA35E9205DB43000937BFF /* EtatSeed.swift */,
-                C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */,
-                C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */,
-                C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */,
-                C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */,
-            );
-            path = Seeds;
-            sourceTree = "<group>";
-        };
-        EC14A06120468EA600B2220D /* Images */ = {
-            isa = PBXGroup;
-            children = (
-            );
-            name = Images;
-            sourceTree = "<group>";
-        };
+		2380FCE12045A58A00763F43 = {
+			isa = PBXGroup;
+			children = (
+				EC14A06120468EA600B2220D /* Images */,
+				2380FCEC2045A58A00763F43 /* monPkEtMoi */,
+				2380FD042045A58D00763F43 /* monPkEtMoiTests */,
+				2380FD0F2045A58E00763F43 /* monPkEtMoiUITests */,
+				2380FCEB2045A58A00763F43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2380FCEB2045A58A00763F43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2380FCEA2045A58A00763F43 /* monPkEtMoi.app */,
+				2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */,
+				2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
+			isa = PBXGroup;
+			children = (
+				C1F31B4B205EB3E200233282 /* Cells */,
+				C1FCF72C205D76E50088C3F4 /* Seeds */,
+				B2D3E140205ADD9400BC26B3 /* Models */,
+				C13F327E2058859D00C7CC8A /* Helpers */,
+				C13F32832058860300C7CC8A /* Controllers */,
+				C13F327D2058858900C7CC8A /* Components */,
+				2380FCED2045A58A00763F43 /* AppDelegate.swift */,
+				2380FCF12045A58A00763F43 /* Main.storyboard */,
+				2380FCF72045A58C00763F43 /* Assets.xcassets */,
+				2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */,
+				2380FCFC2045A58D00763F43 /* Info.plist */,
+				2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */,
+			);
+			path = monPkEtMoi;
+			sourceTree = "<group>";
+		};
+		2380FD042045A58D00763F43 /* monPkEtMoiTests */ = {
+			isa = PBXGroup;
+			children = (
+				2380FD052045A58E00763F43 /* monPkEtMoiTests.swift */,
+				2380FD072045A58E00763F43 /* Info.plist */,
+			);
+			path = monPkEtMoiTests;
+			sourceTree = "<group>";
+		};
+		2380FD0F2045A58E00763F43 /* monPkEtMoiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */,
+				2380FD122045A58E00763F43 /* Info.plist */,
+			);
+			path = monPkEtMoiUITests;
+			sourceTree = "<group>";
+		};
+		B2D3E140205ADD9400BC26B3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */,
+				C1165B302061AC4F00F45453 /* EtatExtension.swift */,
+				C1165B322061AD7700F45453 /* EvenementExtension.swift */,
+				C1165B342061AE9700F45453 /* MedicamentExtension.swift */,
+				C1165B362061B22C00F45453 /* PosologieExtension.swift */,
+				C1165B382061B5D200F45453 /* TypeAvisExtension.swift */,
+				C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */,
+				C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */,
+				23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */,
+				EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C13F327D2058858900C7CC8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B2254869205420F80027FB86 /* DatePicker.swift */,
+				B225486B205437850027FB86 /* CountDownPicker.swift */,
+				C15943792059F4FA004968E0 /* DateAndTimePicker.swift */,
+				C1B1E00F205E880F003F9C66 /* TimePicker.swift */,
+				C1C1F672206476A900B60CCB /* DateLabel.swift */,
+				C1C1F674206478DA00B60CCB /* TimeLabel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C13F327E2058859D00C7CC8A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C15943732058ABEF004968E0 /* FormValidatorHelper.swift */,
+				B2DF00742051717A0055B0CA /* CoreDataManager.swift */,
+				B2DF0076205171960055B0CA /* DialogBoxHelper.swift */,
+				C1823D93205D89B000DFCA42 /* DataHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C13F32832058860300C7CC8A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC837EA3204DAC930089A823 /* AddPatientViewController.swift */,
+				234E135D205064B7000658F7 /* HomeViewController.swift */,
+				23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
+				C159436B2058968B004968E0 /* PatientSettingsViewController.swift */,
+				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
+				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
+				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
+				B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
+				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
+				B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */,
+				C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */,
+				C17050C5205EF463007C6E14 /* HomePriseViewController.swift */,
+				C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */,
+				C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */,
+				C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */,
+				23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
+				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
+				EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
+				EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
+				236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
+				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
+				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C1F31B4B205EB3E200233282 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
+				C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
+				236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
+				399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */,
+				C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
+				C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C1FCF72C205D76E50088C3F4 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				C1CA35E9205DB43000937BFF /* EtatSeed.swift */,
+				C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */,
+				C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */,
+				C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */,
+				C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */,
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
+		EC14A06120468EA600B2220D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        2380FCE92045A58A00763F43 /* monPkEtMoi */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 2380FD152045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoi" */;
-            buildPhases = (
-                2380FCE62045A58A00763F43 /* Sources */,
-                2380FCE72045A58A00763F43 /* Frameworks */,
-                2380FCE82045A58A00763F43 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = monPkEtMoi;
-            productName = monPkEtMoi;
-            productReference = 2380FCEA2045A58A00763F43 /* monPkEtMoi.app */;
-            productType = "com.apple.product-type.application";
-        };
-        2380FD002045A58D00763F43 /* monPkEtMoiTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 2380FD182045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiTests" */;
-            buildPhases = (
-                2380FCFD2045A58D00763F43 /* Sources */,
-                2380FCFE2045A58D00763F43 /* Frameworks */,
-                2380FCFF2045A58D00763F43 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                2380FD032045A58D00763F43 /* PBXTargetDependency */,
-            );
-            name = monPkEtMoiTests;
-            productName = monPkEtMoiTests;
-            productReference = 2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        2380FD0B2045A58E00763F43 /* monPkEtMoiUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 2380FD1B2045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiUITests" */;
-            buildPhases = (
-                2380FD082045A58E00763F43 /* Sources */,
-                2380FD092045A58E00763F43 /* Frameworks */,
-                2380FD0A2045A58E00763F43 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                2380FD0E2045A58E00763F43 /* PBXTargetDependency */,
-            );
-            name = monPkEtMoiUITests;
-            productName = monPkEtMoiUITests;
-            productReference = 2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		2380FCE92045A58A00763F43 /* monPkEtMoi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2380FD152045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoi" */;
+			buildPhases = (
+				2380FCE62045A58A00763F43 /* Sources */,
+				2380FCE72045A58A00763F43 /* Frameworks */,
+				2380FCE82045A58A00763F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = monPkEtMoi;
+			productName = monPkEtMoi;
+			productReference = 2380FCEA2045A58A00763F43 /* monPkEtMoi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2380FD002045A58D00763F43 /* monPkEtMoiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2380FD182045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiTests" */;
+			buildPhases = (
+				2380FCFD2045A58D00763F43 /* Sources */,
+				2380FCFE2045A58D00763F43 /* Frameworks */,
+				2380FCFF2045A58D00763F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2380FD032045A58D00763F43 /* PBXTargetDependency */,
+			);
+			name = monPkEtMoiTests;
+			productName = monPkEtMoiTests;
+			productReference = 2380FD012045A58D00763F43 /* monPkEtMoiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2380FD0B2045A58E00763F43 /* monPkEtMoiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2380FD1B2045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiUITests" */;
+			buildPhases = (
+				2380FD082045A58E00763F43 /* Sources */,
+				2380FD092045A58E00763F43 /* Frameworks */,
+				2380FD0A2045A58E00763F43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2380FD0E2045A58E00763F43 /* PBXTargetDependency */,
+			);
+			name = monPkEtMoiUITests;
+			productName = monPkEtMoiUITests;
+			productReference = 2380FD0C2045A58E00763F43 /* monPkEtMoiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        2380FCE22045A58A00763F43 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0830;
-                LastUpgradeCheck = 0830;
-                ORGANIZATIONNAME = "CHU-polytech";
-                TargetAttributes = {
-                    2380FCE92045A58A00763F43 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        ProvisioningStyle = Automatic;
-                    };
-                    2380FD002045A58D00763F43 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 2380FCE92045A58A00763F43;
-                    };
-                    2380FD0B2045A58E00763F43 = {
-                        CreatedOnToolsVersion = 8.3.3;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 2380FCE92045A58A00763F43;
-                    };
-                };
-            };
-            buildConfigurationList = 2380FCE52045A58A00763F43 /* Build configuration list for PBXProject "monPkEtMoi" */;
-            compatibilityVersion = "Xcode 3.2";
-            developmentRegion = English;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                Base,
-            );
-            mainGroup = 2380FCE12045A58A00763F43;
-            productRefGroup = 2380FCEB2045A58A00763F43 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                2380FCE92045A58A00763F43 /* monPkEtMoi */,
-                2380FD002045A58D00763F43 /* monPkEtMoiTests */,
-                2380FD0B2045A58E00763F43 /* monPkEtMoiUITests */,
-            );
-        };
+		2380FCE22045A58A00763F43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "CHU-polytech";
+				TargetAttributes = {
+					2380FCE92045A58A00763F43 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					2380FD002045A58D00763F43 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2380FCE92045A58A00763F43;
+					};
+					2380FD0B2045A58E00763F43 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2380FCE92045A58A00763F43;
+					};
+				};
+			};
+			buildConfigurationList = 2380FCE52045A58A00763F43 /* Build configuration list for PBXProject "monPkEtMoi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = 2380FCE12045A58A00763F43;
+			productRefGroup = 2380FCEB2045A58A00763F43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2380FCE92045A58A00763F43 /* monPkEtMoi */,
+				2380FD002045A58D00763F43 /* monPkEtMoiTests */,
+				2380FD0B2045A58E00763F43 /* monPkEtMoiUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        2380FCE82045A58A00763F43 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */,
-                2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */,
-                2380FCF32045A58A00763F43 /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FCFF2045A58D00763F43 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FD0A2045A58E00763F43 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		2380FCE82045A58A00763F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2380FCFB2045A58C00763F43 /* LaunchScreen.storyboard in Resources */,
+				2380FCF82045A58C00763F43 /* Assets.xcassets in Resources */,
+				2380FCF32045A58A00763F43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FCFF2045A58D00763F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FD0A2045A58E00763F43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        2380FCE62045A58A00763F43 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
-                236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
-                C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
-                EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
-                C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
-                C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
-                23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
-                C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
-                C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */,
-                C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
-                2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
-                B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
-                EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
-                39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */,
-                C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */,
-                C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
-                C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
-                EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */,
-                B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */,
-                C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */,
-                C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */,
-                C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
-                C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
-                399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
-                234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
-                C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
-                2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
-                B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
-                B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
-                C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
-                C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
-                C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
-                23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */,
-                C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
-                C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
-                C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
-                EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,
-                C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
-                C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
-                C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
-                23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
-                C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
-                C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
-                C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
-                B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
-                C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
-                236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
-                C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
-                C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
-                236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */,
-                23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,
-                C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */,
-                23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,
-                B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FCFD2045A58D00763F43 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        2380FD082045A58E00763F43 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		2380FCE62045A58A00763F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
+				236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
+				C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
+				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
+				C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
+				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
+				C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */,
+				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
+				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
+				C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */,
+				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
+				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
+				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
+				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
+				39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */,
+				C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */,
+				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
+				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,
+				EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */,
+				B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */,
+				C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */,
+				C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */,
+				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
+				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
+				399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
+				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
+				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
+				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
+				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
+				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
+				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
+				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
+				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
+				23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */,
+				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
+				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
+				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
+				EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,
+				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
+				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
+				C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
+				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
+				C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
+				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
+				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
+				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
+				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
+				236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
+				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
+				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
+				236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */,
+				23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,
+				C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */,
+				23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,
+				B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FCFD2045A58D00763F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2380FD062045A58E00763F43 /* monPkEtMoiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2380FD082045A58E00763F43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        2380FD032045A58D00763F43 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 2380FCE92045A58A00763F43 /* monPkEtMoi */;
-            targetProxy = 2380FD022045A58D00763F43 /* PBXContainerItemProxy */;
-        };
-        2380FD0E2045A58E00763F43 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 2380FCE92045A58A00763F43 /* monPkEtMoi */;
-            targetProxy = 2380FD0D2045A58E00763F43 /* PBXContainerItemProxy */;
-        };
+		2380FD032045A58D00763F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2380FCE92045A58A00763F43 /* monPkEtMoi */;
+			targetProxy = 2380FD022045A58D00763F43 /* PBXContainerItemProxy */;
+		};
+		2380FD0E2045A58E00763F43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2380FCE92045A58A00763F43 /* monPkEtMoi */;
+			targetProxy = 2380FD0D2045A58E00763F43 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        2380FCF12045A58A00763F43 /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                2380FCF22045A58A00763F43 /* Base */,
-                B2DF0078205172AC0055B0CA /* fr */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                2380FCFA2045A58C00763F43 /* Base */,
-                B2DF0079205172B00055B0CA /* fr */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		2380FCF12045A58A00763F43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2380FCF22045A58A00763F43 /* Base */,
+				B2DF0078205172AC0055B0CA /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2380FCF92045A58C00763F43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2380FCFA2045A58C00763F43 /* Base */,
+				B2DF0079205172B00055B0CA /* fr */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        2380FD132045A58E00763F43 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu99;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        2380FD142045A58E00763F43 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu99;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                TARGETED_DEVICE_FAMILY = "1,2";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        2380FD162045A58E00763F43 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                INFOPLIST_FILE = monPkEtMoi/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoi";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-            };
-            name = Debug;
-        };
-        2380FD172045A58E00763F43 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                INFOPLIST_FILE = monPkEtMoi/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoi";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-            };
-            name = Release;
-        };
-        2380FD192045A58E00763F43 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                INFOPLIST_FILE = monPkEtMoiTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiTests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monPkEtMoi.app/monPkEtMoi";
-            };
-            name = Debug;
-        };
-        2380FD1A2045A58E00763F43 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                INFOPLIST_FILE = monPkEtMoiTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiTests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monPkEtMoi.app/monPkEtMoi";
-            };
-            name = Release;
-        };
-        2380FD1C2045A58E00763F43 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                INFOPLIST_FILE = monPkEtMoiUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiUITests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-                TEST_TARGET_NAME = monPkEtMoi;
-            };
-            name = Debug;
-        };
-        2380FD1D2045A58E00763F43 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                INFOPLIST_FILE = monPkEtMoiUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiUITests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 3.0;
-                TEST_TARGET_NAME = monPkEtMoi;
-            };
-            name = Release;
-        };
+		2380FD132045A58E00763F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2380FD142045A58E00763F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2380FD162045A58E00763F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = monPkEtMoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2380FD172045A58E00763F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = monPkEtMoi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		2380FD192045A58E00763F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = monPkEtMoiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monPkEtMoi.app/monPkEtMoi";
+			};
+			name = Debug;
+		};
+		2380FD1A2045A58E00763F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = monPkEtMoiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monPkEtMoi.app/monPkEtMoi";
+			};
+			name = Release;
+		};
+		2380FD1C2045A58E00763F43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = monPkEtMoiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = monPkEtMoi;
+			};
+			name = Debug;
+		};
+		2380FD1D2045A58E00763F43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = monPkEtMoiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "CHU-polytech.monPkEtMoiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = monPkEtMoi;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        2380FCE52045A58A00763F43 /* Build configuration list for PBXProject "monPkEtMoi" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                2380FD132045A58E00763F43 /* Debug */,
-                2380FD142045A58E00763F43 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        2380FD152045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoi" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                2380FD162045A58E00763F43 /* Debug */,
-                2380FD172045A58E00763F43 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        2380FD182045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                2380FD192045A58E00763F43 /* Debug */,
-                2380FD1A2045A58E00763F43 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        2380FD1B2045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                2380FD1C2045A58E00763F43 /* Debug */,
-                2380FD1D2045A58E00763F43 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		2380FCE52045A58A00763F43 /* Build configuration list for PBXProject "monPkEtMoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2380FD132045A58E00763F43 /* Debug */,
+				2380FD142045A58E00763F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2380FD152045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2380FD162045A58E00763F43 /* Debug */,
+				2380FD172045A58E00763F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2380FD182045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2380FD192045A58E00763F43 /* Debug */,
+				2380FD1A2045A58E00763F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2380FD1B2045A58E00763F43 /* Build configuration list for PBXNativeTarget "monPkEtMoiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2380FD1C2045A58E00763F43 /* Debug */,
+				2380FD1D2045A58E00763F43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */,
-            );
-            currentVersion = 2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */;
-            path = monPkEtMoi.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		2380FCF42045A58B00763F43 /* monPkEtMoi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */,
+			);
+			currentVersion = 2380FCF52045A58B00763F43 /* monPkEtMoi.xcdatamodel */;
+			path = monPkEtMoi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 2380FCE22045A58A00763F43 /* Project object */;
+	};
+	rootObject = 2380FCE22045A58A00763F43 /* Project object */;
 }
