@@ -13,6 +13,8 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     
     @IBOutlet weak var tableShowActivite: UITableView!
     var listeActivite : [ActivitePrescrite] = []
+    var posActivite: Int? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
@@ -37,6 +39,7 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
         if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
             let activiteViewController = segue.destination as! ShowActiviteDetailViewController
            activiteViewController.activite = self.listeActivite[indexPath.row]
+            activiteViewController.posActivite = indexPath.row
         }
     }
     
@@ -53,18 +56,6 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
         
         return cell
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func unwindFromAddActivite(segue: UIStoryboardSegue){
         tableShowActivite.reloadData()
