@@ -5198,10 +5198,10 @@
     <resources>
         <image name="accueil" width="25" height="25"/>
         <image name="contactIcon" width="25" height="25"/>
-        <image name="exercice" width="25" height="25"/>
+        <image name="exercice" width="50" height="50"/>
         <image name="logo" width="256" height="256"/>
         <image name="prise" width="25" height="25"/>
-        <image name="reglageIcon" width="25" height="25"/>
+        <image name="reglageIcon" width="50" height="50"/>
         <image name="rendez-vous" width="25" height="25"/>
         <image name="supprimerIcon" width="24" height="24"/>
         <image name="tracker" width="25" height="25"/>
