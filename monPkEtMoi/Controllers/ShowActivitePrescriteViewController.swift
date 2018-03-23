@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import CoreData
 
-class ShowActivitePrescriteViewController: UIViewController {
-
+class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+    @IBOutlet weak var tableShowActivite: UITableView!
+    var listeActivite : [ActivitePrescrite] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        do{
+            listeActivite = try ActivitePrescrite.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -24,6 +31,33 @@ class ShowActivitePrescriteViewController: UIViewController {
     @IBAction func unwindToActivitePrescrite(segue: UIStoryboardSegue){
         
     }
+    
+    // MARK: - Envoyer la posologie à la vue suivante
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
+            let activiteViewController = segue.destination as! ShowActiviteDetailViewController
+           activiteViewController.activite = self.listeActivite[indexPath.row]
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.listeActivite.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableShowActivite.dequeueReusableCell(withIdentifier: "activiteCell", for: indexPath) as! ActivitePrescriteTableViewCell
+        
+        cell.libelleActivitePrescrite.text! = self.listeActivite[indexPath.row].libelleActivite!
+        
+        cell.dureePrescriteLabel.text! = self.listeActivite[indexPath.row].dureeActivite.description
+        
+        cell.dateDebutLabel.text! = self.listeActivite[indexPath.row].dateDebut!.description
+        
+        cell.dateFinLabel.text! = self.listeActivite[indexPath.row].dateFin!.description
+        return cell
+    }
+    
+    
 
     /*
     // MARK: - Navigation
