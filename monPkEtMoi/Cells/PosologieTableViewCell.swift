@@ -10,5 +10,9 @@ import Foundation
 import UIKit
 
 class PosologieTableViewCell: UITableViewCell{
+    
+    @IBOutlet weak var nomMedicament: UILabel!
+    @IBOutlet weak var nbrPriseJours: UILabel!
+    
 }
 

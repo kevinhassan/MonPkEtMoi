@@ -81,6 +81,10 @@ class AddPriseHeuresViewController: UITableViewController {
         heuresPriseCell[indexPath.row] = cell
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! HomePriseViewController
+        destinationVC.medicamentsPrescrit.append(medoc!)
+    }
 }
 
 

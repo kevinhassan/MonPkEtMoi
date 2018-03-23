@@ -37,27 +37,25 @@ class AddActivitePrescriteViewController: UITableViewController {
             }
             return 0
         }
-        
-        if FormValidatorHelper.validateForm(inputs) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
-            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateD: dateDebut.getDate()!, withDateF: dateFin.getDate()!, withType: typeActivite.text!)
+                
+        if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
+            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateDebut: dateDebut.getDate()!, withDateFin: dateFin.getDate()!, withType: typeActivite.text!)
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
     
     // MARK: - Enregistrer les informations de l'activite
-    func saveNewActivitePrescrite(withDuree: Int16, withDateD: NSDate, withDateF: NSDate, withType: String) {
+    func saveNewActivitePrescrite(withDuree: Int16, withDateDebut: NSDate, withDateFin: NSDate, withType: String) {
         do{
-            let _ = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDateD, withDateF: withDateF, withType: withType)
-            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité à été ajoutée avec succès", closure: {(action)->() in
-                self.performSegue(withIdentifier: "homeActivite", sender: self)
+            newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDateDebut, withDateF: withDateFin, withType: withType)
+            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité a été ajoutée avec succès", closure: {(action)->() in
+                self.performSegue(withIdentifier: "showActivitePrescrite", sender: self)
             })
-        }catch{
-            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
         }
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

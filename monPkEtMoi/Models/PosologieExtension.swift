@@ -80,16 +80,16 @@ extension Posologie{
             throw error
         }
     }
-    /// Récupérer les types `Posologie` du type`Medicament` en BD
+    /// Récupérer le type `Posologie` du type`Medicament` en BD qui est toujours d'actualité
     /// - Parameters:
     ///   - withMedicament: `Medicament` dont on veut les types `Posologie`
-    static func get(withMedicament: Medicament) throws -> [Posologie]? {
-        let predicate = NSPredicate(format: "concerneMedicament == %@", withMedicament)
+    static func get(withMedicament: Medicament) throws -> Posologie? {
+        let predicate = NSPredicate(format: "concerneMedicament == %@ AND dateFinPosologie > %@", withMedicament, NSDate())
         let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
         request.predicate = predicate
         do {
             let posologies: [Posologie]? = try CoreDataManager.context.fetch(request)
-            return posologies
+            return posologies?.first
         } catch let error as NSError {
             throw error
         }
@@ -112,11 +112,38 @@ extension Posologie{
         request.predicate = predicate
         do{
             let posologies:[Posologie] = try CoreDataManager.context.fetch(request)
+            print(posologies.count)
             let medicaments:[Medicament] = posologies.map{$0.concerneMedicament!}
+            print(medicaments.count)
             return medicaments
         }catch let error as NSError{
             throw error
         }
+    }
+    // Prendre toutes les prises d'une posologie pour aujourd'hui
+    static func getAllPrisesPosologie(posologie: Posologie) throws -> [Prise] {
+        let predicate: NSPredicate = NSPredicate(format: "concernePosologie == %@", posologie)
+        let request: NSFetchRequest<Prise> = Prise.fetchRequest()
+        request.predicate = predicate
+        do{
+            let prises:[Prise] = try CoreDataManager.context.fetch(request)
+            return prises
+        }catch let error as NSError{
+            throw error
+        }
+    }
+    // compter le nombre de prise journalière pour un médicament
+    static func countPriseJourMedicament(medicament: Medicament) -> Int {
+        do{
+            // posologie du médicament à prendre
+            let posologieMedicament:Posologie = (try Posologie.get(withMedicament: medicament))!
+            // récupérer les prises associées à la posologie d'aujourd'hui
+            let prises:[Prise] = try Posologie.getAllPrisesPosologie(posologie: posologieMedicament)
+            return prises.count
+        }catch{
+            return 0
+        }
+
     }
     
     /// Supprimer une `Posologie`
