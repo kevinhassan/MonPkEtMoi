@@ -1033,24 +1033,21 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhI-FG-xDA">
                                                     <rect key="frame" x="15" y="-3.5" width="345" height="50.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-6A-fQX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="50.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-6A-fQX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="115" height="50.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cut-Kf-30j" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
-                                                            <rect key="frame" x="42" y="0.0" width="42" height="50.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="115" y="0.0" width="115.5" height="50.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oV-F0-lDr" customClass="TimeLabel" customModule="monPkEtMoi" customModuleProvider="target">
-                                                            <rect key="frame" x="84" y="0.0" width="261" height="50.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wM2-4T-FMn"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="230.5" y="0.0" width="114.5" height="50.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1063,6 +1060,7 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="cut-Kf-30j" firstAttribute="centerX" secondItem="6e6-3k-8rF" secondAttribute="centerX" id="G0g-fp-xX4"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KhI-FG-xDA" secondAttribute="trailing" id="ZGJ-Lh-ImF"/>
                                                 <constraint firstItem="KhI-FG-xDA" firstAttribute="leading" secondItem="6e6-3k-8rF" secondAttribute="leadingMargin" id="vUK-KV-e7b"/>
                                                 <constraint firstItem="KhI-FG-xDA" firstAttribute="centerY" secondItem="6e6-3k-8rF" secondAttribute="centerY" id="wNJ-lp-Xur"/>
