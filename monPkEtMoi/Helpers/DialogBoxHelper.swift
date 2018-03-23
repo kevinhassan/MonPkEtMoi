@@ -36,5 +36,18 @@ class DialogBoxHelper{
     class func alert(view: UIViewController, errorMessage: String){
         self.alert(view: view, WithTitle: "Erreur", andMessage: "\(errorMessage)")
     }
+    /// Instancier un popup de validation
+    /// - Parameters:
+    ///   - view : `UIViewController` vue sur laquelle s'affiche le popup
+    ///   - WithTitle: `String` titre du popup
+    ///   - andMessage: `String` message contenu dans le popup
+    ///   - closureContinue: `((UIAlertAction) -> Void)?` closure a exécuter si click sur le bouton "continuer" si non optionnelle
+    ///   - closureContinue: `((UIAlertAction) -> Void)?` closure a exécuter si click sur le bouton "annuler" si non optionnelle
+    class func alertAsk(view: UIViewController, WithTitle title : String, andMessage msg: String = "",closureContinue: ((UIAlertAction) -> Void)? = nil, closureCancel: ((UIAlertAction) -> Void)? = nil){
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Retour", style: .cancel, handler: closureCancel))
+        alert.addAction(UIAlertAction(title: "Continuer", style: .default, handler: closureContinue))
+        view.present(alert, animated: true)
+    }
 }
 

@@ -94,6 +94,31 @@ extension Posologie{
             throw error
         }
     }
+    /// Récupérer tous les types `RDV` sans condition
+    static func getAll() throws -> [Posologie] {
+        let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
+        do {
+            let posologies: [Posologie] = try CoreDataManager.context.fetch(request)
+            return posologies
+        } catch let error as NSError {
+            throw error
+        }
+    }
+
+    /// Récupérer tous les types `Médicament` ayant une posologie dont la date de fin n'est pas dépassée
+    static func getAllMedicamentPrescrit() throws -> [Medicament]{
+        let predicate: NSPredicate = NSPredicate(format: "dateFinPosologie > %@", NSDate())
+        let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
+        request.predicate = predicate
+        do{
+            let posologies:[Posologie] = try CoreDataManager.context.fetch(request)
+            let medicaments:[Medicament] = posologies.map{$0.concerneMedicament!}
+            return medicaments
+        }catch let error as NSError{
+            throw error
+        }
+    }
+    
     /// Supprimer une `Posologie`
     func delete() throws {
         do{
@@ -103,5 +128,4 @@ extension Posologie{
             throw error
         }
     }
-    
 }

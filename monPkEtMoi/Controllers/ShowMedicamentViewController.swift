@@ -15,6 +15,7 @@ class ShowMedicamentViewController: UITableViewController {
     
     var medicament:Medicament? = nil
     var posMedoc: Int? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,12 +33,17 @@ class ShowMedicamentViewController: UITableViewController {
         performSegue(withIdentifier: "showDoses", sender: self)
     }
     @IBAction func removeMedicament(_ sender: Any) {
-        do{
-            try medicament!.delete()
-            performSegue(withIdentifier: "removeMedicament", sender: self)
-        }catch{
-            DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
-        }
+        DialogBoxHelper.alertAsk(view: self, WithTitle: "Supprimer un médicament", andMessage: "Etes vous sûr de vouloir supprimer ce médicament", closureContinue: {(action) in
+            do{
+                try self.medicament!.delete()
+                DialogBoxHelper.alert(view: self, WithTitle: "Suppression du médicament", andMessage: "Suppression avec succès", closure: {(action) in
+                    self.performSegue(withIdentifier: "removeMedicament", sender: self)
+                })
+            }catch{
+                DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
+            }
+        }, closureCancel: nil)
+
     }
     
     @IBAction func saveMedicament(_ sender: Any) {

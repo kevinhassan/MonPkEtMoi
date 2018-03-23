@@ -28,8 +28,8 @@ extension RDV{
     ///   - withDateRDV:  `NSDate` date du `RDV`
     ///   - withDescription: `String?` description `RDV`
     ///   - withHeureRDV: `NSDate` heure du `RDV`
-    ///   - withLieuRDV: `String` lieu du `RDV`
-    static func create(withTypeSoignant : TypeSoignant,withDateRDV: NSDate, withDescription: String?, withHeureRDV: NSDate, withLieuRDV: String) throws -> RDV {
+    ///   - withLieuRDV: `String?` lieu du `RDV`
+    static func create(withTypeSoignant : TypeSoignant,withDateRDV: NSDate, withDescription: String?, withHeureRDV: NSDate, withLieuRDV: String?) throws -> RDV {
         let newRDV = RDV(context: CoreDataManager.context)
         newRDV.dateRDV = withDateRDV
         newRDV.descriptionRDV = withDescription
@@ -43,7 +43,7 @@ extension RDV{
         }
         return newRDV
     }
-    /// Récupérer tous les types `RDV`
+    /// Récupérer tous les types `RDV` sans condition
     static func getAll() throws -> [RDV] {
         let request: NSFetchRequest<RDV> = RDV.fetchRequest()
         do {
@@ -59,6 +59,20 @@ extension RDV{
             CoreDataManager.context.delete(self)
             try CoreDataManager.save()
         }catch let error as NSError{
+            throw error
+        }
+    }
+    // Récupére tous les types `RDV` dont la date n'est pas encore passée
+    static func getAllComing() throws -> [RDV]{
+        let request: NSFetchRequest<RDV> = RDV.fetchRequest()
+        let predicate: NSPredicate = NSPredicate(format: "dateRDV > %@", NSDate())
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "dateRDV", ascending: true)]
+        do {
+            let rdvs: [RDV] = try CoreDataManager.context.fetch(request)
+            print(rdvs.count)
+            return rdvs
+        } catch let error as NSError {
             throw error
         }
     }

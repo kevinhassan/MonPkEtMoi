@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ActivitePrescrite" representedClassName="ActivitePrescrite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -75,9 +75,9 @@
         <relationship name="concernePosologie" maxCount="1" deletionRule="Nullify" destinationEntity="Posologie" inverseName="avoirPrise" inverseEntity="Posologie" syncable="YES"/>
     </entity>
     <entity name="RDV" representedClassName="RDV" syncable="YES" codeGenerationType="class">
-        <attribute name="dateRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dateRDV" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="descriptionRDV" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="heureRDV" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heureRDV" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="lieuRDV" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="assistePar" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="assisterA" inverseEntity="Patient" syncable="YES"/>
         <relationship name="donner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="donner" inverseEntity="TypeSoignant" syncable="YES"/>

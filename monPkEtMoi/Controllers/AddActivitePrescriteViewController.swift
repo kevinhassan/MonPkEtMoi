@@ -19,7 +19,7 @@ class AddActivitePrescriteViewController: UITableViewController {
     
     @IBOutlet var jours: [UISwitch]!
     
-    
+    var newActivite: ActivitePrescrite? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,10 @@ class AddActivitePrescriteViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ShowActivitePrescriteViewController
+        destinationVC.listeActivite.append(newActivite!)
+    }
     
 }
 

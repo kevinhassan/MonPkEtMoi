@@ -58,4 +58,17 @@ extension ActivitePrescrite{
             throw error
         }
     }
+    /// Récupérer tous les types `ActivitePrescrite` stockés
+    static func getAllComing() throws -> [ActivitePrescrite] {
+        let request: NSFetchRequest<ActivitePrescrite> = ActivitePrescrite.fetchRequest()
+        let predicate: NSPredicate = NSPredicate(format: "dateFin > %@, NSDate()")
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "dateFin", ascending: true)]
+        do {
+            let activites: [ActivitePrescrite] = try CoreDataManager.context.fetch(request)
+            return activites
+        } catch let error as NSError {
+            throw error
+        }
+    }
 }

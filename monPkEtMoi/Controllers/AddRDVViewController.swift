@@ -23,6 +23,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     var typesSoignants : [TypeSoignant] = []
     var posSoignant: Int?
+    var newRDV: RDV? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     func saveRDV(withTypeSoignant ts : TypeSoignant, withDateRDV dateRDV : NSDate, withDescription descriptionRDV : String, withHeureRDV heureRDV : NSDate, withLieuRDV lieuRDV : String) {
         do{
-            let _ = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
+            newRDV = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Rendez-vous ajouté", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "showRdv", sender: self)
             })
@@ -89,7 +90,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     {
         let inputs:[String: UITextField] = ["dateRDV": dateRDV,"heureRDV": heureRDV, "typeSoignant": typeSoignant,"descriptionRDV": descriptionRDV]
         
-        if FormValidatorHelper.validateForm(inputs){
+        if (FormValidatorHelper.validateForm(inputs) && dateRDV.getDate()! as Date > Date()){
             let typeSoignant = typesSoignants[posSoignant!]
             let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
             let heureRDV:NSDate = ((self.heureRDV))!.getDate()
@@ -101,5 +102,8 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ShowRDVViewController
+        destinationVC.rdvs!.append(self.newRDV!)
+    }
 }
