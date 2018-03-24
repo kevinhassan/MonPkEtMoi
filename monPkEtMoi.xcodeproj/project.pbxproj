@@ -24,6 +24,7 @@
 		2380FD112045A58E00763F43 /* monPkEtMoiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2380FD102045A58E00763F43 /* monPkEtMoiUITests.swift */; };
 		238284EA206670FF00F94373 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284E9206670FF00F94373 /* DateHelper.swift */; };
 		238284ED2066790400F94373 /* Jour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284EC2066790400F94373 /* Jour.swift */; };
+		238284F02066A63500F94373 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284EF2066A63500F94373 /* NSDateExtension.swift */; };
 		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
 		399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */; };
@@ -115,6 +116,7 @@
 		2380FD122045A58E00763F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		238284E9206670FF00F94373 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		238284EC2066790400F94373 /* Jour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jour.swift; sourceTree = "<group>"; };
+		238284EF2066A63500F94373 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
+				238284EE2066A60C00F94373 /* Extensions */,
 				238284EB2066786D00F94373 /* Structs */,
 				C1F31B4B205EB3E200233282 /* Cells */,
 				C1FCF72C205D76E50088C3F4 /* Seeds */,
@@ -257,6 +260,14 @@
 				238284EC2066790400F94373 /* Jour.swift */,
 			);
 			name = Structs;
+			sourceTree = "<group>";
+		};
+		238284EE2066A60C00F94373 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				238284EF2066A63500F94373 /* NSDateExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		B2D3E140205ADD9400BC26B3 /* Models */ = {
@@ -504,6 +515,7 @@
 				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
 				C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
+				238284F02066A63500F94373 /* NSDateExtension.swift in Sources */,
 				C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,

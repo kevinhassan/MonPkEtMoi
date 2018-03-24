@@ -147,12 +147,16 @@ extension Posologie{
     }
     
     func generatePrises(){
-        let calendar = NSCalendar.current
-        let date1 = calendar.startOfDay(for: (self.dateDebutPosologie! as? Date)!)
-        let date2 = calendar.startOfDay(for: (self.dateFinPosologie! as? Date)!)
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
-        print(components.day)
-        
+        let dates = DateHelper.getDates(dateD: self.dateDebutPosologie!, dateF: self.dateFinPosologie!)
+        var priseDates:[NSDate] = []
+        //for date in dates{
+        for date in dates{
+            for heure in self.heuresPrise!{
+                priseDates.append(DateHelper.changeHour(date: date, heureMin: heure))
+            }
+            //Prise.create(withHeurePrise: <#T##NSDate#>, withPosologie: self)
+        }
+        print(priseDates)
     }
     
     /// Supprimer une `Posologie`
