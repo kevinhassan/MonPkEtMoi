@@ -45,7 +45,16 @@ class ShowActiviteDetailViewController: UITableViewController {
         }, closureCancel: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC = segue.destination as! ShowActivitePrescriteViewController
-        destinationVC.listeActivite.remove(at: posActivite!)
+        if segue.identifier == "returnToActivite" {
+            let destinationVC = segue.destination as! ShowActivitePrescriteViewController
+            destinationVC.listeActivite.remove(at: Int(posActivite!))
+        }
+        if segue.identifier == "goToValidation"{
+            
+            let validateViewController = segue.destination as! ValidateActiviteViewController
+            validateViewController.activite = self.activite!
+            validateViewController.posActivite = posActivite
+
+        }
     }
 }

@@ -64,10 +64,12 @@
 		C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */; };
 		C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
 		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
+		EC52076620665039000B102E /* ValidateActiviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52076520665039000B102E /* ValidateActiviteViewController.swift */; };
 		EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */; };
 		EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */; };
 		EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED1220629F55008A5DA2 /* RDVExtention.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
+		EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,10 +155,12 @@
 		C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseHeuresViewController.swift; sourceTree = "<group>"; };
 		C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
 		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
+		EC52076520665039000B102E /* ValidateActiviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidateActiviteViewController.swift; sourceTree = "<group>"; };
 		EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowRDVViewController.swift; sourceTree = "<group>"; };
 		EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRDVViewController.swift; sourceTree = "<group>"; };
 		EC76ED1220629F55008A5DA2 /* RDVExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVExtention.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
+		EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteRealiserExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +313,7 @@
 				236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
 				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
 				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
+				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -509,8 +514,10 @@
 				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
 				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
+				EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */,
 				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
 				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
+				EC52076620665039000B102E /* ValidateActiviteViewController.swift in Sources */,
 				23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */,
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
