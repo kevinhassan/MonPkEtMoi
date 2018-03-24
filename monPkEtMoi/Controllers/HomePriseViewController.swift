@@ -11,6 +11,8 @@ import UIKit
 class HomePriseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var medicamentsPrescrit: [Medicament] = []
+    var posMedoc: Int = 0
+    
     @IBOutlet weak var tableMedicamentPrescrit: UITableView!
 
     override func viewDidLoad() {
@@ -43,5 +45,17 @@ class HomePriseViewController: UIViewController, UITableViewDataSource, UITableV
         cell.nomMedicament.text = self.medicamentsPrescrit[indexPath.row].nomMedicament!
         cell.nbrPriseJours.text = "\(Prise.countPriseJourMedicament(medicament: (self.medicamentsPrescrit[indexPath.row]))) prises"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        posMedoc = indexPath.row
+        performSegue(withIdentifier: "showHeuresPrise", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHeuresPrise"{
+            let destinationVC = segue.destination as! ShowHeuresPriseViewController
+            destinationVC.medicament = self.medicamentsPrescrit[posMedoc]
+        }
     }
 }
