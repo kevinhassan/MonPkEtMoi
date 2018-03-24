@@ -125,6 +125,7 @@ extension Posologie{
         //for date in dates{
         for date in dates{
             for heure in self.heuresPrise!{
+                print(heure)
                 priseDates.append(DateHelper.changeHour(date: date, heureMin: heure))
             }
         }
