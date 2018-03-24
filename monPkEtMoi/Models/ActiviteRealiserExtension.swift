@@ -26,20 +26,21 @@ extension ActiviteRealisee{
     ///   - withDateD:  `NSDate` date début de l' `ActivitePrescrite`
     ///   - withDateF: `NSDate` date fin de l' `ActivitePrescrite`
     ///   - withType: `String` type de l' `ActivitePrescrite`
-    static func create(withDuree: Int16, withDate : [NSDate], withHeure: NSDate) throws -> ActivitePrescrite {
+    static func create(withDate : [NSDate]) throws -> [ActiviteRealisee] {
         let newActiviteRealisee = ActiviteRealisee(context: CoreDataManager.context)
-        let activiteRTab : [ActiviteRealisee]? = nil
+        var activiteRTab : [ActiviteRealisee]? = nil
         for element in withDate{
             
             newActiviteRealisee.dateActivite = element
             newActiviteRealisee.estRealise = false
-            newActiviteRealisee.heureActivite = withHeure
         
-        do{
-            try CoreDataManager.save()
-        }catch let error as NSError{
-            throw error
+            do{
+                try CoreDataManager.save()
+            }catch let error as NSError{
+                throw error
+            }
+            activiteRTab?.append(newActiviteRealisee)
         }
+        return activiteRTab!
     }
-        return newActivitePrescrite
 }

@@ -23,6 +23,7 @@ class AddActivitePrescriteViewController: UITableViewController {
     @IBOutlet var jours: [UISwitch]!
     
     var newActivite: ActivitePrescrite? = nil
+    var newActiviteAR: [ActiviteRealisee]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,13 @@ class AddActivitePrescriteViewController: UITableViewController {
                 
         if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
             saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDates: dates, withType: typeActivite.text!)
+            
+            saveNewActiviteAR(withDates: dates)
+            
+            
+            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité a été ajoutée avec succès", closure: {(action)->() in
+                self.performSegue(withIdentifier: "showActivitePrescrite", sender: self)
+            })
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire incomplétes")
         }
@@ -70,13 +78,24 @@ class AddActivitePrescriteViewController: UITableViewController {
     // MARK: - Enregistrer les informations de l'activite
     func saveNewActivitePrescrite(withDuree: Int16, withDates: [NSDate], withType: String) {
         do{
-            newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDates: withDates, withType: withType)
-            DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité a été ajoutée avec succès", closure: {(action)->() in
-                self.performSegue(withIdentifier: "showActivitePrescrite", sender: self)
-            })
+            newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDates[0], withDateF: withDates[withDates.count-1], withType: withType)
+            
+            
+            
+            
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
+    }
+    // MARK: - Enregistrer les informations de l'activite
+    func saveNewActiviteAR(withDates: [NSDate]) {
+        do{
+            newActiviteAR = try ActiviteRealisee.create(withDate : withDates)
+            
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    
     }
     
     override func didReceiveMemoryWarning() {
