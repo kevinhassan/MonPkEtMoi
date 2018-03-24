@@ -146,6 +146,15 @@ extension Posologie{
 
     }
     
+    func generatePrises(){
+        let calendar = NSCalendar.current
+        let date1 = calendar.startOfDay(for: (self.dateDebutPosologie! as? Date)!)
+        let date2 = calendar.startOfDay(for: (self.dateFinPosologie! as? Date)!)
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        print(components.day)
+        
+    }
+    
     /// Supprimer une `Posologie`
     func delete() throws {
         do{

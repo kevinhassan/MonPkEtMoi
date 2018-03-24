@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23187EF920664F9E00894DB9 /* PriseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23187EF820664F9E00894DB9 /* PriseExtension.swift */; };
 		23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
@@ -87,6 +88,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23187EF820664F9E00894DB9 /* PriseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriseExtension.swift; sourceTree = "<group>"; };
 		23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */,
 				23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */,
 				EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
+				23187EF820664F9E00894DB9 /* PriseExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
+				23187EF920664F9E00894DB9 /* PriseExtension.swift in Sources */,
 				236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
 				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,

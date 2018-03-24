@@ -43,17 +43,35 @@ class AddPriseHeuresViewController: UITableViewController {
     //MARK: - Sauvegarder la posologie si le formulaire est valide
     //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     @IBAction func savePosologie(_ sender: Any) {
-            let heures:[NSDate] = heuresPriseCell.map{(cell) in
-            return cell.heurePriseTF.getDate()
+        let nbHeure: Int = self.heuresPriseCell.count
+        let heuresPriseCell:[HeurePriseTableViewCell] = self.heuresPriseCell.filter{(cell) in
+            if let _ = cell.heurePriseTF.getDate(){
+                return true
+            }
+            return false
         }
-        do{
-            let _ = try Posologie.create(withNbMedicament: nb!, withDosage: dosage!, withDateDebut: dateD!, withDateFin: dateF!, withHeures: heures, withMedicament: medoc!)
-            DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
-                self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
-            })
-        } catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
+        if nbHeure == heuresPriseCell.count{
+            let heures:[NSDate] = self.heuresPriseCell.map{(cell) in
+                return cell.heurePriseTF.getDate()!
+            }
+            do{
+                let posologie: Posologie = try Posologie.create(withNbMedicament: nb!, withDosage: dosage!, withDateDebut: dateD!, withDateFin: dateF!, withHeures: heures, withMedicament: medoc!)
+                generatePrises(posologie: posologie)
+                /*DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
+                 self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
+                 })*/
+            } catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Formulaire invalide")
         }
+
+    }
+    
+    func generatePrises(posologie: Posologie){
+        posologie.generatePrises()
+        
     }
 
     override func viewDidLoad() {

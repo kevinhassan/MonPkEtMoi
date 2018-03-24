@@ -40,7 +40,10 @@ class TimePicker: UITextField {
     /// Récupérer l'heure
     ///
     /// Prendre l'heure selon le bon format pour l'ajout en BD
-    func getDate()->NSDate{
-        return self.dateFormatter.date(from: self.text!)! as NSDate
+    func getDate()->NSDate?{
+        guard let date = self.dateFormatter.date(from: self.text!) else{
+            return nil
+        }
+        return date as NSDate
     }
 }

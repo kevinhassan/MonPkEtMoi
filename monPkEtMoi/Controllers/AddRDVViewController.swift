@@ -93,7 +93,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         if (FormValidatorHelper.validateForm(inputs) && dateRDV.getDate()! as Date > Date()){
             let typeSoignant = typesSoignants[posSoignant!]
             let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
-            let heureRDV:NSDate = ((self.heureRDV))!.getDate()
+            let heureRDV:NSDate = ((self.heureRDV))!.getDate()!
             saveRDV(withTypeSoignant : typeSoignant,withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
                 self.performSegue(withIdentifier: "unwindToShowRDV", sender: self)
