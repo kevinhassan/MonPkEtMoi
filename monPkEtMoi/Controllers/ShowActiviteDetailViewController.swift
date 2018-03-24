@@ -34,16 +34,7 @@ class ShowActiviteDetailViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func removeActivite(_ sender: Any) {
-        DialogBoxHelper.alertAsk(view: self, WithTitle: "Supprimer activité", andMessage: "Etes vous sûr de vouloir supprimer l'activité", closureContinue: {(action) in
-            do{
-                let _ = try ActivitePrescrite.delete(self.activite!)
-                self.performSegue(withIdentifier: "returnToActivite", sender: nil)
-            }catch{
-                DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
-            }
-        }, closureCancel: nil)
-    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "returnToActivite" {
             let destinationVC = segue.destination as! ShowActivitePrescriteViewController

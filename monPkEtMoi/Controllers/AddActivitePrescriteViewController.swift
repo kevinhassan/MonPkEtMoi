@@ -29,30 +29,12 @@ class AddActivitePrescriteViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    func generateDate(lhs:NSDate, rhs:NSDate) -> [NSDate] {
-        var dates: [NSDate] = []
-        let cal = NSCalendar.current // or NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let days = NSDateComponents()
-        var dayCount = 0
-        while true {
-            days.day = dayCount
-            let date:NSDate = cal.date(byAdding : days as DateComponents, to: lhs as Date)! as NSDate
-            if date.compare(rhs as Date) == .orderedDescending {
-                break
-            }
-            dayCount += 1
-            dates.append(date)
-        }
-        
-        return dates
-    }
-
+    
     /// Ajouter les activités à réaliser après l'ajout de l'activité prescrite en faisant un tableau de jours concernés
     @IBAction func addActiviteePrescrite(_ sender: Any) {
         
        
         let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
-        let dates : [NSDate] = self.generateDate(lhs: dateDebut.getDate()!, rhs: dateFin.getDate()!)
         
         var joursActivite:[Int] = jours.map{(jour: UISwitch) in
             if jour.isOn {
@@ -62,9 +44,7 @@ class AddActivitePrescriteViewController: UITableViewController {
         }
                 
         if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
-            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDates: dates, withType: typeActivite.text!)
-            
-            saveNewActiviteAR(withDates: dates)
+            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateD: dateDebut.getDate()!, withDateF: dateFin.getDate()!,withType: typeActivite.text!)
             
             
             DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité a été ajoutée avec succès", closure: {(action)->() in
@@ -76,26 +56,13 @@ class AddActivitePrescriteViewController: UITableViewController {
     }
     
     // MARK: - Enregistrer les informations de l'activite
-    func saveNewActivitePrescrite(withDuree: Int16, withDates: [NSDate], withType: String) {
+    func saveNewActivitePrescrite(withDuree: Int16, withDateD: NSDate,withDateF: NSDate, withType: String) {
         do{
-            newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDates[0], withDateF: withDates[withDates.count-1], withType: withType)
-            
-            
-            
+            newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDateD, withDateF: withDateF, withType: withType)
             
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
-    }
-    // MARK: - Enregistrer les informations de l'activite
-    func saveNewActiviteAR(withDates: [NSDate]) {
-        do{
-            newActiviteAR = try ActiviteRealisee.create(withDate : withDates)
-            
-        }catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
-        }
-    
     }
     
     override func didReceiveMemoryWarning() {

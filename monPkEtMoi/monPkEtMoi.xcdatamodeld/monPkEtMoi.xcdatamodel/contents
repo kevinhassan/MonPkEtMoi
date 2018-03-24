@@ -6,7 +6,7 @@
         <attribute name="dureeActivite" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="libelleActivite" attributeType="String" syncable="YES"/>
         <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirActivite" inverseEntity="Patient" syncable="YES"/>
-        <relationship name="estEffectue" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
+        <relationship name="estEffectue" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
     </entity>
     <entity name="ActiviteRealisee" representedClassName="ActiviteRealisee" syncable="YES" codeGenerationType="class">
         <attribute name="dateActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>

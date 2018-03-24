@@ -34,12 +34,14 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
         self.tableShowActivite.reloadData()
     }
     
-    // MARK: - Envoyer la posologie à la vue suivante
+    
+    
+    // MARK: - Envoyer l'activite à la vue suivante
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
-            let activiteViewController = segue.destination as! ShowActiviteDetailViewController
-           activiteViewController.activite = self.listeActivite[indexPath.row]
-            activiteViewController.posActivite = indexPath.row
+            let activiteARViewController = segue.destination as! ShowActiviteARViewController
+           activiteARViewController.activite = self.listeActivite[indexPath.row]
+            activiteARViewController.posActivite = indexPath.row
         }
     }
     

@@ -69,6 +69,8 @@
 		EC76ED1320629F55008A5DA2 /* RDVExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76ED1220629F55008A5DA2 /* RDVExtention.swift */; };
 		EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC837EA3204DAC930089A823 /* AddPatientViewController.swift */; };
 		EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */; };
+		EC975C6E20667970009524AD /* ShowActiviteARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC975C6D2066796F009524AD /* ShowActiviteARViewController.swift */; };
+		EC975C7020667BBB009524AD /* ActiviteARTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC975C6F20667BBB009524AD /* ActiviteARTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +161,8 @@
 		EC76ED1220629F55008A5DA2 /* RDVExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDVExtention.swift; sourceTree = "<group>"; };
 		EC837EA3204DAC930089A823 /* AddPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPatientViewController.swift; sourceTree = "<group>"; };
 		EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteRealiserExtension.swift; sourceTree = "<group>"; };
+		EC975C6D2066796F009524AD /* ShowActiviteARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActiviteARViewController.swift; sourceTree = "<group>"; };
+		EC975C6F20667BBB009524AD /* ActiviteARTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActiviteARTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +316,7 @@
 				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
 				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
 				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
+				EC975C6D2066796F009524AD /* ShowActiviteARViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */,
 				C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
 				C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */,
+				EC975C6F20667BBB009524AD /* ActiviteARTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
 				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
+				EC975C7020667BBB009524AD /* ActiviteARTableViewCell.swift in Sources */,
 				EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
@@ -532,6 +539,7 @@
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
 				236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
 				C1753B16205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift in Sources */,
+				EC975C6E20667970009524AD /* ShowActiviteARViewController.swift in Sources */,
 				C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */,
 				236DBBF620641F5B00E8534B /* DoseAjoutTableViewCell.swift in Sources */,
 				23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */,

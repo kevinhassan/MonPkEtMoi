@@ -32,11 +32,15 @@ extension ActivitePrescrite{
         newActivitePrescrite.dateDebut = withDateD
         newActivitePrescrite.dureeActivite = withDuree
         newActivitePrescrite.libelleActivite = withType
+    
         do{
+            let _ = try newActivitePrescrite.generateActivitesAR()
             try CoreDataManager.save()
+            
         }catch let error as NSError{
             throw error
         }
+        
         return newActivitePrescrite
     }
     /// Récupérer tous les types `ActivitePrescrite` stockés
@@ -70,5 +74,40 @@ extension ActivitePrescrite{
         } catch let error as NSError {
             throw error
         }
+    }
+    
+    func generateDate(lhs:NSDate, rhs:NSDate) -> [NSDate] {
+        var dates: [NSDate] = []
+        let cal = NSCalendar.current // or NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let days = NSDateComponents()
+        var dayCount = 0
+        while true {
+            days.day = dayCount
+            let date:NSDate = cal.date(byAdding : days as DateComponents, to: lhs as Date)! as NSDate
+            if date.compare(rhs as Date) == .orderedDescending {
+                break
+            }
+            dayCount += 1
+            dates.append(date)
+        }
+        
+        return dates
+    }
+
+    func generateActivitesAR() throws{
+        // générer les activitées à réaliser
+        let dates = self.generateDate(lhs: self.dateDebut!, rhs: self.dateFin!)
+        for element in dates{
+            do{
+                let ar = try ActiviteRealisee.create(withDate: element, withAP : self)
+                self.addToEstEffectue(ar)
+                
+            }catch let error as NSError{
+                throw error
+            }
+           
+            
+        }
+
     }
 }

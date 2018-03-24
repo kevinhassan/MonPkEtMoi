@@ -26,21 +26,31 @@ extension ActiviteRealisee{
     ///   - withDateD:  `NSDate` date début de l' `ActivitePrescrite`
     ///   - withDateF: `NSDate` date fin de l' `ActivitePrescrite`
     ///   - withType: `String` type de l' `ActivitePrescrite`
-    static func create(withDate : [NSDate]) throws -> [ActiviteRealisee] {
+    static func create(withDate : NSDate, withAP : ActivitePrescrite) throws -> ActiviteRealisee {
         let newActiviteRealisee = ActiviteRealisee(context: CoreDataManager.context)
-        var activiteRTab : [ActiviteRealisee]? = nil
-        for element in withDate{
-            
-            newActiviteRealisee.dateActivite = element
-            newActiviteRealisee.estRealise = false
+        newActiviteRealisee.dateActivite = withDate
+        newActiviteRealisee.estRealise = false
+        newActiviteRealisee.concerneActivite = withAP
         
             do{
                 try CoreDataManager.save()
             }catch let error as NSError{
                 throw error
             }
-            activiteRTab?.append(newActiviteRealisee)
-        }
-        return activiteRTab!
+        return newActiviteRealisee
     }
+    
+    static func getAllComing() throws -> [ActiviteRealisee] {
+        let request: NSFetchRequest<ActiviteRealisee> = ActiviteRealisee.fetchRequest()
+        let predicate: NSPredicate = NSPredicate(format: "dateFin > %@, NSDate()")
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "dateFin", ascending: true)]
+        do {
+            let activites: [ActiviteRealisee] = try CoreDataManager.context.fetch(request)
+            return activites
+        } catch let error as NSError {
+            throw error
+        }
+    }
+
 }

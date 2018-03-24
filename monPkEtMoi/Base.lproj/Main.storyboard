@@ -947,7 +947,7 @@
                                         <connections>
                                             <outlet property="dureePrescriteLabel" destination="Obk-Of-AFK" id="evK-2k-mUm"/>
                                             <outlet property="libelleActivitePrescrite" destination="55M-07-GL0" id="GBd-AV-Pv4"/>
-                                            <segue destination="xbE-dl-buf" kind="show" id="DRN-LB-CZg"/>
+                                            <segue destination="xbE-dl-buf" kind="show" identifier="returnToActivite" id="DRN-LB-CZg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -5318,7 +5318,7 @@
         <!--Activités à réaliser-->
         <scene sceneID="FzQ-uH-IwB">
             <objects>
-                <viewController id="xbE-dl-buf" customClass="ShowActivitePrescriteViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xbE-dl-buf" customClass="ShowActiviteARViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PKs-ml-P2s"/>
                         <viewControllerLayoutGuide type="bottom" id="jzj-eu-zCb"/>
@@ -5327,36 +5327,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-jU-tA6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-jU-tA6">
+                                <rect key="frame" x="0.0" y="115" width="375" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activiteCell" rowHeight="55" id="ECW-pH-EYR" customClass="ActivitePrescriteTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activiteARCell" rowHeight="83" id="ECW-pH-EYR" customClass="ActiviteARTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ECW-pH-EYR" id="DDU-fd-MEZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="83"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-T0-Kqm">
-                                                    <rect key="frame" x="24" y="8" width="327" height="38.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="f5Y-T0-Kqm">
+                                                    <rect key="frame" x="24" y="31" width="327" height="20.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCN-nJ-Ebv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vf-M8-NHS">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hL-2b-FJ0">
-                                                            <rect key="frame" x="0.0" y="20.5" width="327" height="18"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCN-nJ-Ebv">
+                                                            <rect key="frame" x="92" y="0.0" width="235" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="3hL-2b-FJ0" secondAttribute="trailing" id="b42-TY-iks"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -5366,8 +5363,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dureePrescriteLabel" destination="3hL-2b-FJ0" id="yF7-Tc-PFc"/>
-                                            <outlet property="libelleActivitePrescrite" destination="qCN-nJ-Ebv" id="kaA-CZ-i5A"/>
+                                            <outlet property="dateARLabel" destination="5vf-M8-NHS" id="84e-7R-jkL"/>
+                                            <outlet property="estEffectueeLabel" destination="qCN-nJ-Ebv" id="f0H-AY-gFN"/>
                                             <segue destination="KjS-WX-XNt" kind="show" id="Bfp-px-Izf"/>
                                         </connections>
                                     </tableViewCell>
@@ -5377,6 +5374,13 @@
                                     <outlet property="delegate" destination="xbE-dl-buf" id="6vy-GG-wYp"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Wq-6n-H6l">
+                                <rect key="frame" x="166" y="86" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -5389,17 +5393,20 @@
                     <navigationItem key="navigationItem" title="Activités à réaliser" id="mCh-gh-ck2">
                         <barButtonItem key="rightBarButtonItem" title="Supprimer" id="836-gj-zCf">
                             <connections>
-                                <action selector="removeActivite:" destination="KjS-WX-XNt" id="5Jg-58-yT4"/>
+                                <action selector="removeActivite:" destination="xbE-dl-buf" id="CdA-0k-1w8"/>
+                                <segue destination="tyH-dz-bnu" kind="unwind" unwindAction="unwindToActivitePrescriteWithSegue:" id="pDA-ty-hwz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableShowActivite" destination="Wwe-jU-tA6" id="eB1-so-YMr"/>
+                        <outlet property="activiteLibelle" destination="8Wq-6n-H6l" id="RNl-8f-Hws"/>
+                        <outlet property="tableActiviteAR" destination="Wwe-jU-tA6" id="9Ag-Ba-xue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkh-NC-zaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tyH-dz-bnu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5724" y="749"/>
+            <point key="canvasLocation" x="5724" y="748.87556221889065"/>
         </scene>
     </scenes>
     <resources>
