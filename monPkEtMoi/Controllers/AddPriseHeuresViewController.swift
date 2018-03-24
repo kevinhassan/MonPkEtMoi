@@ -55,11 +55,11 @@ class AddPriseHeuresViewController: UITableViewController {
                 return cell.heurePriseTF.getDate()!
             }
             do{
-                let posologie: Posologie = try Posologie.create(withNbMedicament: nb!, withDosage: dosage!, withDateDebut: dateD!, withDateFin: dateF!, withHeures: heures, withMedicament: medoc!)
-                generatePrises(posologie: posologie)
-                /*DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
+                posologie = try Posologie.create(withNbMedicament: nb!, withDosage: dosage!, withDateDebut: dateD!, withDateFin: dateF!, withHeures: heures, withMedicament: medoc!)
+                generatePrises()
+                DialogBoxHelper.alert(view: self, WithTitle: "Posologie ajoutée", andMessage: "Ajout avec succès", closure: {(action) in
                  self.performSegue(withIdentifier: "unwindFromAddHeuresPrise", sender: self)
-                 })*/
+                 })
             } catch let error as NSError{
                 DialogBoxHelper.alert(view: self, error: error)
             }
@@ -69,8 +69,12 @@ class AddPriseHeuresViewController: UITableViewController {
 
     }
     
-    func generatePrises(posologie: Posologie){
-        posologie.generatePrises()
+    func generatePrises(){
+        do{
+            try posologie?.generatePrises()
+        }catch{
+            DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de la création des prises")
+        }
         
     }
 

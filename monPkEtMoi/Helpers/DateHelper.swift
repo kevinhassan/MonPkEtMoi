@@ -37,13 +37,10 @@ class DateHelper{
             numJour = cal.component(.weekday, from: date as Date)
             week[Jour().getJourIndex(jour:numJour!)].append(date)
         }
-        print(week)
         return week
     }
     /// Changer une date en lui affectant une nouvelle heure et de nouvelle minute
     static func changeHour(date: NSDate, heureMin: NSDate) -> NSDate{
-        print(date)
-        print(heureMin)
         var component1 = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date as Date)
         let component2 = cal.dateComponents([.hour, .minute, .second], from: heureMin as Date)
         component1.hour = component2.hour
@@ -52,4 +49,23 @@ class DateHelper{
         let date = cal.date(from: component1)!
         return date as NSDate
     }
+    
+    static func startOfDay(day: NSDate) -> NSDate {
+        let gregorian = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        let unitFlags: NSCalendar.Unit = [.minute, .hour, .day, .month, .year]
+        var todayComponents = gregorian!.components(unitFlags, from: day as Date)
+        todayComponents.hour = 0
+        todayComponents.minute = 0
+        return (gregorian?.date(from: todayComponents))! as NSDate
+    }
+    
+    static func endOfDay(day: NSDate) -> NSDate {
+        let gregorian = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        let unitFlags: NSCalendar.Unit = [.minute, .hour, .day, .month, .year]
+        var todayComponents = gregorian!.components(unitFlags, from: day as Date)
+        todayComponents.hour = 23
+        todayComponents.minute = 59
+        return (gregorian?.date(from: todayComponents))! as NSDate
+    }
+    
 }

@@ -218,8 +218,8 @@
 		2380FCEC2045A58A00763F43 /* monPkEtMoi */ = {
 			isa = PBXGroup;
 			children = (
-				238284EE2066A60C00F94373 /* Extensions */,
-				238284EB2066786D00F94373 /* Structs */,
+				C14ACC112066CC5D0056558F /* Extensions */,
+				C14ACC0F2066CC2A0056558F /* Structs */,
 				C1F31B4B205EB3E200233282 /* Cells */,
 				C1FCF72C205D76E50088C3F4 /* Seeds */,
 				B2D3E140205ADD9400BC26B3 /* Models */,
@@ -252,22 +252,6 @@
 				2380FD122045A58E00763F43 /* Info.plist */,
 			);
 			path = monPkEtMoiUITests;
-			sourceTree = "<group>";
-		};
-		238284EB2066786D00F94373 /* Structs */ = {
-			isa = PBXGroup;
-			children = (
-				238284EC2066790400F94373 /* Jour.swift */,
-			);
-			name = Structs;
-			sourceTree = "<group>";
-		};
-		238284EE2066A60C00F94373 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				238284EF2066A63500F94373 /* NSDateExtension.swift */,
-			);
-			name = Extensions;
 			sourceTree = "<group>";
 		};
 		B2D3E140205ADD9400BC26B3 /* Models */ = {
@@ -342,6 +326,22 @@
 				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C14ACC0F2066CC2A0056558F /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				238284EC2066790400F94373 /* Jour.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		C14ACC112066CC5D0056558F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				238284EF2066A63500F94373 /* NSDateExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C1F31B4B205EB3E200233282 /* Cells */ = {

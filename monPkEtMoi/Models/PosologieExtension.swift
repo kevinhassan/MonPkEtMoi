@@ -105,48 +105,21 @@ extension Posologie{
         }
     }
 
-    /// Récupérer tous les types `Médicament` ayant une posologie dont la date de fin n'est pas dépassée
+    /// Récupérer tous les types `Médicament` ayant une posologie dont la date de fin n'est pas dépassée et dont le médicament n'est pas encore pris
     static func getAllMedicamentPrescrit() throws -> [Medicament]{
         let predicate: NSPredicate = NSPredicate(format: "dateFinPosologie > %@", NSDate())
         let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
         request.predicate = predicate
         do{
             let posologies:[Posologie] = try CoreDataManager.context.fetch(request)
-            print(posologies.count)
             let medicaments:[Medicament] = posologies.map{$0.concerneMedicament!}
-            print(medicaments.count)
             return medicaments
         }catch let error as NSError{
             throw error
         }
     }
-    // Prendre toutes les prises d'une posologie pour aujourd'hui
-    static func getAllPrisesPosologie(posologie: Posologie) throws -> [Prise] {
-        let predicate: NSPredicate = NSPredicate(format: "concernePosologie == %@", posologie)
-        let request: NSFetchRequest<Prise> = Prise.fetchRequest()
-        request.predicate = predicate
-        do{
-            let prises:[Prise] = try CoreDataManager.context.fetch(request)
-            return prises
-        }catch let error as NSError{
-            throw error
-        }
-    }
-    // compter le nombre de prise journalière pour un médicament
-    static func countPriseJourMedicament(medicament: Medicament) -> Int {
-        do{
-            // posologie du médicament à prendre
-            let posologieMedicament:Posologie = (try Posologie.get(withMedicament: medicament))!
-            // récupérer les prises associées à la posologie d'aujourd'hui
-            let prises:[Prise] = try Posologie.getAllPrisesPosologie(posologie: posologieMedicament)
-            return prises.count
-        }catch{
-            return 0
-        }
-
-    }
     
-    func generatePrises(){
+    func generatePrises() throws {
         let dates = DateHelper.getDates(dateD: self.dateDebutPosologie!, dateF: self.dateFinPosologie!)
         var priseDates:[NSDate] = []
         //for date in dates{
@@ -154,9 +127,14 @@ extension Posologie{
             for heure in self.heuresPrise!{
                 priseDates.append(DateHelper.changeHour(date: date, heureMin: heure))
             }
-            //Prise.create(withHeurePrise: <#T##NSDate#>, withPosologie: self)
         }
-        print(priseDates)
+        for date in priseDates{
+            do{
+                let _:Prise = try Prise.create(withHeurePrise: date, withPosologie: self)
+            }catch let error as NSError{
+                throw error
+            }
+        }
     }
     
     /// Supprimer une `Posologie`

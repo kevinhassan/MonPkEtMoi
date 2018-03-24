@@ -70,7 +70,6 @@ extension RDV{
         request.sortDescriptors = [NSSortDescriptor(key: "dateRDV", ascending: true)]
         do {
             let rdvs: [RDV] = try CoreDataManager.context.fetch(request)
-            print(rdvs.count)
             return rdvs
         } catch let error as NSError {
             throw error
