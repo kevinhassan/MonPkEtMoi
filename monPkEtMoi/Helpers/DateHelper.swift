@@ -42,10 +42,8 @@ class DateHelper{
     }
     /// Changer une date en lui affectant une nouvelle heure et de nouvelle minute
     static func changeHour(date: NSDate, heureMin: NSDate) -> NSDate{
-        print(date)
-        print(heureMin)
         var component1 = cal.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date as Date)
-        let component2 = cal.dateComponents([.hour, .minute, .second], from: heureMin as Date)
+        var component2 = cal.dateComponents([.hour, .minute, .second], from: heureMin as Date)
         component1.hour = component2.hour
         component1.minute = component2.minute
         component1.second = component2.second
