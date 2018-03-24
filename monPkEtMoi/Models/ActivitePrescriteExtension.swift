@@ -26,12 +26,13 @@ extension ActivitePrescrite{
     ///   - withDateD:  `NSDate` date début de l' `ActivitePrescrite`
     ///   - withDateF: `NSDate` date fin de l' `ActivitePrescrite`
     ///   - withType: `String` type de l' `ActivitePrescrite`
-    static func create(withDuree: Int16, withDateD: NSDate, withDateF: NSDate, withType: String) throws -> ActivitePrescrite {
+    static func create(withDuree: Int16, withDate : [NSDate], withType: String) throws -> ActivitePrescrite {
         let newActivitePrescrite = ActivitePrescrite(context: CoreDataManager.context)
-        newActivitePrescrite.dateFin = withDateF
-        newActivitePrescrite.dateDebut = withDateD
+        newActivitePrescrite.dateFin = withDate[withDate.count-1]
+        newActivitePrescrite.dateDebut = withDate[0]
         newActivitePrescrite.dureeActivite = withDuree
         newActivitePrescrite.libelleActivite = withType
+        
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
