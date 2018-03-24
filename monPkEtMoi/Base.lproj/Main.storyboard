@@ -830,39 +830,41 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="posologieCell" textLabel="Tbz-mR-2yh" detailTextLabel="msw-Pv-B2J" rowHeight="57" style="IBUITableViewCellStyleValue1" id="Us8-rR-RNH" userLabel="posologieCell" customClass="PosologieTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="posologieCell" rowHeight="57" id="Us8-rR-RNH" userLabel="posologieCell" customClass="PosologieTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Us8-rR-RNH" id="fSh-5w-JW8">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tbz-mR-2yh">
-                                                    <rect key="frame" x="15" y="18" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znu-Ca-he0">
-                                                    <rect key="frame" x="139" y="18" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="msw-Pv-B2J">
-                                                    <rect key="frame" x="296" y="18" width="44" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9a-PC-43H">
+                                                    <rect key="frame" x="16" y="0.0" width="326" height="56.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDC-IE-iKD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="288.5" height="56.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzA-tp-72m">
+                                                            <rect key="frame" x="288.5" y="0.0" width="37.5" height="56.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y9a-PC-43H" firstAttribute="centerY" secondItem="fSh-5w-JW8" secondAttribute="centerY" id="VhQ-fB-caQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="y9a-PC-43H" secondAttribute="trailing" id="Yz1-hM-awf"/>
+                                                <constraint firstItem="y9a-PC-43H" firstAttribute="height" secondItem="fSh-5w-JW8" secondAttribute="height" id="ijf-Zx-Chg"/>
+                                                <constraint firstItem="y9a-PC-43H" firstAttribute="leading" secondItem="fSh-5w-JW8" secondAttribute="leading" constant="16" id="z4T-Xh-XFf"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="nbrPriseJours" destination="znu-Ca-he0" id="nWI-nV-OJf"/>
-                                            <outlet property="nomMedicament" destination="Tbz-mR-2yh" id="CMd-6d-Rkc"/>
+                                            <outlet property="nbrPriseJours" destination="xzA-tp-72m" id="89M-Ce-Lg5"/>
+                                            <outlet property="nomMedicament" destination="vDC-IE-iKD" id="HDM-CM-dqL"/>
                                             <segue destination="Yiq-N9-vpY" kind="show" id="g8u-13-mLr"/>
                                         </connections>
                                     </tableViewCell>

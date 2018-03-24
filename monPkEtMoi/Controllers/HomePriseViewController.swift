@@ -41,7 +41,7 @@ class HomePriseViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableMedicamentPrescrit.dequeueReusableCell(withIdentifier: "posologieCell", for: indexPath) as! PosologieTableViewCell
         cell.nomMedicament.text = self.medicamentsPrescrit[indexPath.row].nomMedicament!
-        cell.nbrPriseJours.text = String(Prise.countPriseJourMedicament(medicament: (self.medicamentsPrescrit[indexPath.row])))
+        cell.nbrPriseJours.text = "\(Prise.countPriseJourMedicament(medicament: (self.medicamentsPrescrit[indexPath.row]))) prises"
         return cell
     }
 }
