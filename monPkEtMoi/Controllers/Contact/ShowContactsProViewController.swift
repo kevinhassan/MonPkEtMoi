@@ -11,6 +11,8 @@ import UIKit
 class ShowContactsProViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var contactsPro:[ContactPro] = []
+    var posContact: Int? = nil
+    
     @IBOutlet weak var tableContactsPro: UITableView!
     
     override func viewDidLoad() {
@@ -47,7 +49,18 @@ class ShowContactsProViewController: UIViewController, UITableViewDelegate, UITa
         cell.typeSoignantContact.text = contactsPro[indexPath.row].etreDuType?.libelleTypeSoignant!
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        posContact = indexPath.row
+        performSegue(withIdentifier: "showContactPro", sender: self)
+    }
     @IBAction func unwindToListContactPro(segue: UIStoryboardSegue){
         tableContactsPro.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showContactPro"{
+            let destinationVC = segue.destination as! ShowContactProTableViewController
+            destinationVC.contactPro = contactsPro[posContact!]
+        }
     }
 }

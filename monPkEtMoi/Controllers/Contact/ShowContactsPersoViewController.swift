@@ -11,6 +11,8 @@ import UIKit
 class ShowContactsPersoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var contactsPerso:[ContactPerso]? = nil
+    var contactSelected: ContactPerso? = nil
+    
     @IBOutlet weak var tableContactPerso: UITableView!
     
     override func viewDidLoad() {
@@ -47,7 +49,17 @@ class ShowContactsPersoViewController: UIViewController, UITableViewDataSource, 
         cell.numContact.text = contactsPerso![indexPath.row].telContact!
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.contactSelected = contactsPerso?[indexPath.row ]
+        performSegue(withIdentifier: "showContactPerso", sender: self)
+    }
     @IBAction func unwindToListContactPerso(segue: UIStoryboardSegue){
         tableContactPerso.reloadData()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showContactPerso"{
+            let destinationVC = segue.destination as! ShowContactPersoTableViewController
+            destinationVC.contactPerso = contactSelected
+        }
     }
 }
