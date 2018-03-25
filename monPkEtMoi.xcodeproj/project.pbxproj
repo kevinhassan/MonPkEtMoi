@@ -67,6 +67,7 @@
 		C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */; };
 		C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
 		C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */; };
+		C1CD32652067D8AF00B71A6E /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD32642067D8AF00B71A6E /* NotificationHelper.swift */; };
 		C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */; };
 		C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
 		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
@@ -164,6 +165,7 @@
 		C1CA35EB205DB44600937BFF /* typeSoignantSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeSoignantSeed.swift; sourceTree = "<group>"; };
 		C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
 		C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisSeed.swift; sourceTree = "<group>"; };
+		C1CD32642067D8AF00B71A6E /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
 		C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseHeuresViewController.swift; sourceTree = "<group>"; };
 		C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
 		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				B2DF0076205171960055B0CA /* DialogBoxHelper.swift */,
 				C1823D93205D89B000DFCA42 /* DataHelper.swift */,
 				238284E9206670FF00F94373 /* DateHelper.swift */,
+				C1CD32642067D8AF00B71A6E /* NotificationHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
 				C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
+				C1CD32652067D8AF00B71A6E /* NotificationHelper.swift in Sources */,
 				238284F02066A63500F94373 /* NSDateExtension.swift in Sources */,
 				C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
