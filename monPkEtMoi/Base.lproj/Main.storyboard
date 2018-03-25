@@ -4186,8 +4186,6 @@
         <!--Show Posologie View Controller-->
         <scene sceneID="QL6-OU-Mu6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rf3-iJ-Fc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FSm-AJ-Z0i" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="0af-1b-Ud8" customClass="ShowPosologieViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D3r-vg-uAm"/>
@@ -4357,6 +4355,8 @@
                         <segue destination="FSm-AJ-Z0i" kind="unwind" identifier="returnToPosologies" unwindAction="unwindFromRealisePriseWithSegue:" id="Eyf-W8-UdH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rf3-iJ-Fc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FSm-AJ-Z0i" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5388" y="2212"/>
         </scene>

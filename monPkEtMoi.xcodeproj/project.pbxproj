@@ -307,31 +307,14 @@
 		C13F32832058860300C7CC8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EC837EA3204DAC930089A823 /* AddPatientViewController.swift */,
+				C1CD32612067D82800B71A6E /* Prise */,
+				C1CD32602067D80F00B71A6E /* Activité */,
+				C1CD325F2067D7DD00B71A6E /* Medicament */,
+				C1CD325E2067D7D200B71A6E /* RDV */,
+				C1CD325D2067D7BF00B71A6E /* Evenement */,
+				C1CD325C2067D7B200B71A6E /* Docteur */,
+				C1CD325B2067D78E00B71A6E /* Patient */,
 				234E135D205064B7000658F7 /* HomeViewController.swift */,
-				23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
-				C159436B2058968B004968E0 /* PatientSettingsViewController.swift */,
-				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
-				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
-				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
-				B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
-				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
-				B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */,
-				C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */,
-				C17050C5205EF463007C6E14 /* HomePriseViewController.swift */,
-				C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */,
-				C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */,
-				C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */,
-				23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
-				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
-				EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
-				EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
-				236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
-				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
-				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
-				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
-				C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */,
-				C14ACC16206714170056558F /* ShowPosologieViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +333,80 @@
 				238284EF2066A63500F94373 /* NSDateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1CD325B2067D78E00B71A6E /* Patient */ = {
+			isa = PBXGroup;
+			children = (
+				EC837EA3204DAC930089A823 /* AddPatientViewController.swift */,
+				23D9F35D2058179F0018C37E /* EditPatientViewController.swift */,
+				C159436B2058968B004968E0 /* PatientSettingsViewController.swift */,
+				C159436F20589AC0004968E0 /* HomePatientViewController.swift */,
+			);
+			path = Patient;
+			sourceTree = "<group>";
+		};
+		C1CD325C2067D7B200B71A6E /* Docteur */ = {
+			isa = PBXGroup;
+			children = (
+				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
+				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
+			);
+			path = Docteur;
+			sourceTree = "<group>";
+		};
+		C1CD325D2067D7BF00B71A6E /* Evenement */ = {
+			isa = PBXGroup;
+			children = (
+				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
+				B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
+			);
+			path = Evenement;
+			sourceTree = "<group>";
+		};
+		C1CD325E2067D7D200B71A6E /* RDV */ = {
+			isa = PBXGroup;
+			children = (
+				EC76ED102062970F008A5DA2 /* AddRDVViewController.swift */,
+				EC556DF22062C0DB00277540 /* ShowRDVViewController.swift */,
+			);
+			path = RDV;
+			sourceTree = "<group>";
+		};
+		C1CD325F2067D7DD00B71A6E /* Medicament */ = {
+			isa = PBXGroup;
+			children = (
+				C17050C7205F0DF4007C6E14 /* ShowMedicamentsViewController.swift */,
+				C17050C9205F147F007C6E14 /* ShowMedicamentViewController.swift */,
+				C1753B15205F3DBB001EA44D /* ShowDosageMedicamentViewController.swift */,
+				236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */,
+				236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */,
+			);
+			path = Medicament;
+			sourceTree = "<group>";
+		};
+		C1CD32602067D80F00B71A6E /* Activité */ = {
+			isa = PBXGroup;
+			children = (
+				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
+				23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
+				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
+				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
+			);
+			name = "Activité";
+			path = "Activité";
+			sourceTree = "<group>";
+		};
+		C1CD32612067D82800B71A6E /* Prise */ = {
+			isa = PBXGroup;
+			children = (
+				B2DDBB92205AD9A300E7F3C1 /* AddPriseViewController.swift */,
+				C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */,
+				C17050C5205EF463007C6E14 /* HomePriseViewController.swift */,
+				C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */,
+				C14ACC16206714170056558F /* ShowPosologieViewController.swift */,
+			);
+			path = Prise;
 			sourceTree = "<group>";
 		};
 		C1F31B4B205EB3E200233282 /* Cells */ = {
