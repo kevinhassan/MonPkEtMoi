@@ -73,7 +73,6 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     
     //MARK: - Sauvegarder la posologie si le formulaire est valide
-    //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     func saveRDV(withTypeSoignant ts : TypeSoignant, withDateRDV dateRDV : NSDate, withDescription descriptionRDV : String, withHeureRDV heureRDV : NSDate, withLieuRDV lieuRDV : String) {
         do{
             newRDV = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)

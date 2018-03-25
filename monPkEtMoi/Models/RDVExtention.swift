@@ -75,6 +75,10 @@ extension RDV{
             throw error
         }
     }
-    
+    /// Renvoie vrai si le rendez-vous est avec un neurologue
+    /// Le but étant de démarrer le questionnaire 5 jours avant la date du RDV
+    func estRDVTypeNeurologue() -> Bool{
+        return self.donner!.libelleTypeSoignant!.lowercased() == "neurologue"
+    }
     
 }
