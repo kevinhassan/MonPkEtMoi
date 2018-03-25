@@ -22,7 +22,7 @@ class ShowPosologieViewController: UIViewController {
     var prise: Prise? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        var posologie: Posologie = (prise?.concernePosologie)!
+        let posologie: Posologie = (prise?.concernePosologie)!
         nomMedicamentLabel.text = posologie.concerneMedicament?.nomMedicament
         if (prise?.estPris)!{
             estPrisLabel.text = "Oui"

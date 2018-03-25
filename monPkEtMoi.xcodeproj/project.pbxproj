@@ -68,6 +68,14 @@
 		C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */; };
 		C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */; };
 		C1CD32652067D8AF00B71A6E /* NotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD32642067D8AF00B71A6E /* NotificationHelper.swift */; };
+		C1CD32682068099400B71A6E /* ContactPersoExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD32672068099400B71A6E /* ContactPersoExtension.swift */; };
+		C1CD326A206809C100B71A6E /* ContactProExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD3269206809C100B71A6E /* ContactProExtension.swift */; };
+		C1CD327020680E2000B71A6E /* ShowContactsPersoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */; };
+		C1CD327220680E3600B71A6E /* ShowContactsProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */; };
+		C1CD327420680F4E00B71A6E /* ContactProTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD327320680F4E00B71A6E /* ContactProTableViewCell.swift */; };
+		C1CD32762068131000B71A6E /* AddContactPersoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */; };
+		C1CD327A2068139000B71A6E /* ContactPersoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD32792068139000B71A6E /* ContactPersoTableViewCell.swift */; };
+		C1CD327C20681F7000B71A6E /* AddContactProViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */; };
 		C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */; };
 		C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */; };
 		C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */; };
@@ -166,6 +174,14 @@
 		C1CA35ED205DB46300937BFF /* typeEvenementSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeEvenementSeed.swift; sourceTree = "<group>"; };
 		C1CA35F7205DBDEC00937BFF /* TypeAvisSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisSeed.swift; sourceTree = "<group>"; };
 		C1CD32642067D8AF00B71A6E /* NotificationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHelper.swift; sourceTree = "<group>"; };
+		C1CD32672068099400B71A6E /* ContactPersoExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPersoExtension.swift; sourceTree = "<group>"; };
+		C1CD3269206809C100B71A6E /* ContactProExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactProExtension.swift; sourceTree = "<group>"; };
+		C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactsPersoViewController.swift; sourceTree = "<group>"; };
+		C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowContactsProViewController.swift; sourceTree = "<group>"; };
+		C1CD327320680F4E00B71A6E /* ContactProTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactProTableViewCell.swift; sourceTree = "<group>"; };
+		C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactPersoTableViewController.swift; sourceTree = "<group>"; };
+		C1CD32792068139000B71A6E /* ContactPersoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPersoTableViewCell.swift; sourceTree = "<group>"; };
+		C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactProViewController.swift; sourceTree = "<group>"; };
 		C1F31B45205E96A900233282 /* AddPriseHeuresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriseHeuresViewController.swift; sourceTree = "<group>"; };
 		C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeurePriseTableViewCell.swift; sourceTree = "<group>"; };
 		C1FCF72D205D770C0088C3F4 /* MedicamentSeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicamentSeed.swift; sourceTree = "<group>"; };
@@ -277,6 +293,8 @@
 				EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
 				EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */,
 				23187EF820664F9E00894DB9 /* PriseExtension.swift */,
+				C1CD32672068099400B71A6E /* ContactPersoExtension.swift */,
+				C1CD3269206809C100B71A6E /* ContactProExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -310,6 +328,7 @@
 		C13F32832058860300C7CC8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1CD32662068097700B71A6E /* Contact */,
 				C1CD32612067D82800B71A6E /* Prise */,
 				C1CD32602067D80F00B71A6E /* Activité */,
 				C1CD325F2067D7DD00B71A6E /* Medicament */,
@@ -412,6 +431,17 @@
 			path = Prise;
 			sourceTree = "<group>";
 		};
+		C1CD32662068097700B71A6E /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */,
+				C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */,
+				C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */,
+				C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
 		C1F31B4B205EB3E200233282 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +452,8 @@
 				C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
 				C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */,
 				C14ACC122066DFE10056558F /* PriseTableViewCell.swift */,
+				C1CD327320680F4E00B71A6E /* ContactProTableViewCell.swift */,
+				C1CD32792068139000B71A6E /* ContactPersoTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -578,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CD327420680F4E00B71A6E /* ContactProTableViewCell.swift in Sources */,
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
 				236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
 				C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
@@ -586,6 +619,7 @@
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
 				C1CD32652067D8AF00B71A6E /* NotificationHelper.swift in Sources */,
 				238284F02066A63500F94373 /* NSDateExtension.swift in Sources */,
+				C1CD327220680E3600B71A6E /* ShowContactsProViewController.swift in Sources */,
 				C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */,
 				23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */,
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
@@ -607,6 +641,7 @@
 				399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
+				C1CD327020680E2000B71A6E /* ShowContactsPersoViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
 				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
@@ -619,11 +654,13 @@
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
 				C14ACC17206714170056558F /* ShowPosologieViewController.swift in Sources */,
+				C1CD32762068131000B71A6E /* AddContactPersoTableViewController.swift in Sources */,
 				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
 				C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */,
 				EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				238284ED2066790400F94373 /* Jour.swift in Sources */,
+				C1CD32682068099400B71A6E /* ContactPersoExtension.swift in Sources */,
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
 				C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
 				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
@@ -631,7 +668,9 @@
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
 				C14ACC132066DFE10056558F /* PriseTableViewCell.swift in Sources */,
+				C1CD327A2068139000B71A6E /* ContactPersoTableViewCell.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
+				C1CD326A206809C100B71A6E /* ContactProExtension.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
 				23187EF920664F9E00894DB9 /* PriseExtension.swift in Sources */,
 				236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */,
@@ -643,6 +682,7 @@
 				23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */,
 				B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */,
 				238284EA206670FF00F94373 /* DateHelper.swift in Sources */,
+				C1CD327C20681F7000B71A6E /* AddContactProViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

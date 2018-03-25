@@ -16,7 +16,7 @@ import CoreData
  **adresse**: Patient -> String
  **mail**: Patient -> String
  **nom**: Patient -> String
- **prenom**: Patient -> NSDate
+ **prenom**: Patient -> String
  **tel**: Patient -> Int
  **tempsPreparation**: Patient -> Int16
  **dateNaissance**: Patient -> NSDate

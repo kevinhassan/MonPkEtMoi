@@ -21,6 +21,19 @@
         <relationship name="concerneTraceur" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="avoirAvis" inverseEntity="Traceur" syncable="YES"/>
         <relationship name="etreType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeAvis" inverseName="avoirAvis" inverseEntity="TypeAvis" syncable="YES"/>
     </entity>
+    <entity name="Contact" representedClassName="Contact" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="mailContact" attributeType="String" syncable="YES"/>
+        <attribute name="nomContact" attributeType="String" syncable="YES"/>
+        <attribute name="prenomContact" attributeType="String" syncable="YES"/>
+        <attribute name="telContact" attributeType="String" syncable="YES"/>
+        <relationship name="appartenirA" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirContact" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="ContactPerso" representedClassName="ContactPerso" parentEntity="Contact" syncable="YES" codeGenerationType="class">
+        <attribute name="adresseContact" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ContactPro" representedClassName="ContactPro" parentEntity="Contact" syncable="YES" codeGenerationType="class">
+        <relationship name="etreDuType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="appartenirAContact" inverseEntity="TypeSoignant" syncable="YES"/>
+    </entity>
     <entity name="Etat" representedClassName="Etat" syncable="YES" codeGenerationType="class">
         <attribute name="libelleEtat" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirEtat" inverseEntity="PlageHoraire" syncable="YES"/>
@@ -42,6 +55,7 @@
         <attribute name="tempsPreparation" attributeType="Integer 64" minValueString="0" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="assisterA" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="assistePar" inverseEntity="RDV" syncable="YES"/>
         <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="concernePatient" inverseEntity="ActivitePrescrite" syncable="YES"/>
+        <relationship name="avoirContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contact" inverseName="appartenirA" inverseEntity="Contact" syncable="YES"/>
         <relationship name="avoirEvenement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evenement" inverseName="concernePatient" inverseEntity="Evenement" syncable="YES"/>
         <relationship name="avoirTraceur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="concernePatient" inverseEntity="Traceur" syncable="YES"/>
         <relationship name="prisPar" toMany="YES" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concernePatient" inverseEntity="Posologie" syncable="YES"/>
@@ -102,6 +116,7 @@
     </entity>
     <entity name="TypeSoignant" representedClassName="TypeSoignant" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeSoignant" attributeType="String" syncable="YES"/>
+        <relationship name="appartenirAContact" toMany="YES" deletionRule="Nullify" destinationEntity="ContactPro" inverseName="etreDuType" inverseEntity="ContactPro" syncable="YES"/>
         <relationship name="avoirSoignant" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Soignant" inverseName="avoirType" inverseEntity="Soignant" syncable="YES"/>
         <relationship name="donner" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RDV" inverseName="donner" inverseEntity="RDV" syncable="YES"/>
     </entity>
@@ -112,7 +127,7 @@
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="105"/>
-        <element name="Patient" positionX="-207" positionY="-346" width="108" height="150"/>
+        <element name="Patient" positionX="-207" positionY="-346" width="108" height="163"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
         <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>
@@ -122,6 +137,9 @@
         <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
-        <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="88"/>
+        <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="103"/>
+        <element name="Contact" positionX="-531" positionY="-18" width="128" height="118"/>
+        <element name="ContactPro" positionX="-360" positionY="-153" width="128" height="60"/>
+        <element name="ContactPerso" positionX="-351" positionY="-144" width="128" height="60"/>
     </elements>
 </model>
