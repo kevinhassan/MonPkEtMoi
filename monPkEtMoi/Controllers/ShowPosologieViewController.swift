@@ -32,7 +32,7 @@ class ShowPosologieViewController: UIViewController {
         nbMedicamentLabel.text = String(describing:posologie.nbMedicament)
         dosagePosologieLabel.text = posologie.dosagePosologie
         dateDebutLabel.setDate(date: posologie.dateDebutPosologie!)
-        dateFinLabel.setDate(date: posologie.dateDebutPosologie!)
+        dateFinLabel.setDate(date: posologie.dateFinPosologie!)
         heurePriseLabel.setDate(heure: (prise?.heurePrise!)!)
     }
 

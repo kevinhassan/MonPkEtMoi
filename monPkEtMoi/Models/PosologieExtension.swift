@@ -106,6 +106,7 @@ extension Posologie{
     }
 
     /// Récupérer tous les types `Médicament` ayant une posologie dont la date de fin n'est pas dépassée et dont le médicament n'est pas encore pris
+    /// Ne pas retourner les médicaments prescrit qui n'ont plus de prise aujourd'hui
     static func getAllMedicamentPrescrit() throws -> [Medicament]{
         let predicate: NSPredicate = NSPredicate(format: "dateFinPosologie > %@", NSDate())
         let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
@@ -113,19 +114,27 @@ extension Posologie{
         do{
             let posologies:[Posologie] = try CoreDataManager.context.fetch(request)
             let medicaments:[Medicament] = posologies.map{$0.concerneMedicament!}
-            return medicaments
+            var medocs:[Medicament] = []
+            var pos: Int = 0
+            for medoc in medicaments{
+                pos =  Prise.countPriseJourMedicament(medicament: medoc)
+                // Il reste des prises à prendre aujourd'hui
+                if pos > 0{
+                    medocs.append(medoc)
+                }
+            }
+            return medocs
         }catch let error as NSError{
             throw error
         }
     }
-    
+    /// Générer les prises à effectuer selon l'intervalle dateDebut et dateFin de la posologie associée
     func generatePrises() throws {
         let dates = DateHelper.getDates(dateD: self.dateDebutPosologie!, dateF: self.dateFinPosologie!)
         var priseDates:[NSDate] = []
         //for date in dates{
         for date in dates{
             for heure in self.heuresPrise!{
-                print(heure)
                 priseDates.append(DateHelper.changeHour(date: date, heureMin: heure))
             }
         }
