@@ -47,7 +47,7 @@ extension Prise{
             throw error
         }
     }
-    // compter le nombre de prise journalière pour un médicament
+    // Compter le nombre de prise journalière pour un médicament
     static func countPriseJourMedicament(medicament: Medicament) -> Int {
         do{
             // posologie du médicament à prendre
@@ -57,6 +57,16 @@ extension Prise{
             return prises.count
         }catch{
             return 0
+        }
+    }
+    /// Passer la prise a effectuée
+    func realiserPrise() throws{
+        self.estPris = true
+        self.heureReelle = NSDate()
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
         }
     }
 }

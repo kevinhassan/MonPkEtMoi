@@ -995,7 +995,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mF0-bS-B9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4948" y="749"/>
+            <point key="canvasLocation" x="4945" y="727"/>
         </scene>
         <!--Rendez-vous-->
         <scene sceneID="mfe-pZ-uwx">
@@ -4134,7 +4134,7 @@
             </objects>
             <point key="canvasLocation" x="3854" y="2212"/>
         </scene>
-        <!--Heures de prise-->
+        <!--Médicament - Prises-->
         <scene sceneID="Zri-oF-qDi">
             <objects>
                 <tableViewController id="Yiq-N9-vpY" customClass="ShowHeuresPriseViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
@@ -4166,7 +4166,6 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="heurePrise" destination="k0F-L1-GzD" id="6Zm-2H-1Zg"/>
-                                    <segue destination="0af-1b-Ud8" kind="show" id="Mua-9a-J5X"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -4175,17 +4174,21 @@
                             <outlet property="delegate" destination="Yiq-N9-vpY" id="gSe-vL-tMj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Heures de prise" id="52d-QR-wR9"/>
+                    <navigationItem key="navigationItem" title="Médicament - Prises" id="52d-QR-wR9"/>
+                    <connections>
+                        <segue destination="0af-1b-Ud8" kind="show" identifier="showPosologieFromHeure" id="aCu-RX-PnP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxu-1f-TEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4567" y="2212"/>
         </scene>
-        <!--View Controller-->
+        <!--Show Posologie View Controller-->
         <scene sceneID="QL6-OU-Mu6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rf3-iJ-Fc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="0af-1b-Ud8" sceneMemberID="viewController">
+                <exit id="FSm-AJ-Z0i" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="0af-1b-Ud8" customClass="ShowPosologieViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D3r-vg-uAm"/>
                         <viewControllerLayoutGuide type="bottom" id="QAM-JX-8HT"/>
@@ -4193,8 +4196,166 @@
                     <view key="view" contentMode="scaleToFill" id="bIj-ri-HaQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom médicament" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-1Z-TbI">
+                                <rect key="frame" x="32" y="80" width="311" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="SRK-A0-XST">
+                                <rect key="frame" x="16" y="136.5" width="343" height="394"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4Z-En-Jjb">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Médicament pris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncJ-xf-rDf">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npp-EU-mjP">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="43"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwv-Bq-jnN">
+                                        <rect key="frame" x="0.0" y="93" width="343" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nombre de médicament à prendre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIH-Jv-h6q">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-nP-f75">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9DS-w2-k6i">
+                                        <rect key="frame" x="0.0" y="163" width="343" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="284-bH-NYo" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNw-rK-kvx">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTt-uM-cpC">
+                                        <rect key="frame" x="0.0" y="234" width="343" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Début de prise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh7-tm-JEY">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WI-md-Lhm" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfT-Hq-5xd">
+                                        <rect key="frame" x="0.0" y="304" width="343" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Fin de prise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUF-Ey-xtY" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jee-vB-bDH" customClass="DateLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOA-DQ-3bc">
+                                        <rect key="frame" x="0.0" y="374" width="343" height="20"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Heure de prise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaE-cl-VhT" customClass="TimeLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA1-sF-67G" customClass="TimeLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                <rect key="frame" x="301" y="0.0" width="42" height="20"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zTt-uM-cpC" firstAttribute="top" secondItem="SRK-A0-XST" secondAttribute="top" constant="234" id="H3b-sO-2fq"/>
+                                    <constraint firstItem="Zwv-Bq-jnN" firstAttribute="top" secondItem="SRK-A0-XST" secondAttribute="top" constant="93" id="Ia8-Ct-3ZS"/>
+                                    <constraint firstItem="9DS-w2-k6i" firstAttribute="top" secondItem="SRK-A0-XST" secondAttribute="top" constant="163" id="TdM-Js-ICQ"/>
+                                    <constraint firstItem="zfT-Hq-5xd" firstAttribute="top" secondItem="SRK-A0-XST" secondAttribute="top" constant="304" id="a1c-qO-7xl"/>
+                                    <constraint firstAttribute="bottom" secondItem="zfT-Hq-5xd" secondAttribute="bottom" constant="70" id="bHI-By-4FP"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDF-pw-eeg">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.17038068175315857" green="0.25543162226676941" blue="0.38467615842819214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="YV6-h1-021"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Prendre">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="realiserPrise:" destination="0af-1b-Ud8" eventType="touchUpInside" id="OWS-u0-s0Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QAM-JX-8HT" firstAttribute="top" secondItem="uDF-pw-eeg" secondAttribute="bottom" id="2Ot-0F-n8h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SRK-A0-XST" secondAttribute="trailing" id="51V-i8-1pP"/>
+                            <constraint firstAttribute="trailing" secondItem="uDF-pw-eeg" secondAttribute="trailing" id="5AH-n7-Kes"/>
+                            <constraint firstItem="Zpu-1Z-TbI" firstAttribute="leading" secondItem="bIj-ri-HaQ" secondAttribute="leadingMargin" constant="16" id="7Td-oI-vjo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zpu-1Z-TbI" secondAttribute="trailing" constant="16" id="9ms-OF-urj"/>
+                            <constraint firstItem="SRK-A0-XST" firstAttribute="top" secondItem="Zpu-1Z-TbI" secondAttribute="bottom" constant="25" id="F5y-R3-QeQ"/>
+                            <constraint firstItem="Zpu-1Z-TbI" firstAttribute="top" secondItem="D3r-vg-uAm" secondAttribute="bottom" constant="16" id="Kqo-XM-uBR"/>
+                            <constraint firstItem="SRK-A0-XST" firstAttribute="leading" secondItem="bIj-ri-HaQ" secondAttribute="leadingMargin" id="V7S-DS-j3y"/>
+                            <constraint firstItem="uDF-pw-eeg" firstAttribute="leading" secondItem="bIj-ri-HaQ" secondAttribute="leading" id="nQi-pz-pTQ"/>
+                            <constraint firstItem="SRK-A0-XST" firstAttribute="centerY" secondItem="bIj-ri-HaQ" secondAttribute="centerY" id="olT-oY-393"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateDebutLabel" destination="1WI-md-Lhm" id="yxo-4H-sOd"/>
+                        <outlet property="dateFinLabel" destination="Jee-vB-bDH" id="nWu-gD-4Gm"/>
+                        <outlet property="dosagePosologieLabel" destination="xNw-rK-kvx" id="qZY-Ud-v1f"/>
+                        <outlet property="estPrisLabel" destination="npp-EU-mjP" id="qoA-co-3me"/>
+                        <outlet property="heurePriseLabel" destination="kA1-sF-67G" id="FXw-oo-phN"/>
+                        <outlet property="nbMedicamentLabel" destination="5ec-nP-f75" id="A7l-iE-Aa5"/>
+                        <outlet property="nomMedicamentLabel" destination="Zpu-1Z-TbI" id="R7O-cW-ZcH"/>
+                        <segue destination="FSm-AJ-Z0i" kind="unwind" identifier="returnToPosologies" unwindAction="unwindFromRealisePriseWithSegue:" id="Eyf-W8-UdH"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="5388" y="2212"/>

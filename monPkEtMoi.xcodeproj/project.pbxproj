@@ -46,6 +46,7 @@
 		C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */; };
 		C14ACC132066DFE10056558F /* PriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC122066DFE10056558F /* PriseTableViewCell.swift */; };
 		C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */; };
+		C14ACC17206714170056558F /* ShowPosologieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC16206714170056558F /* ShowPosologieViewController.swift */; };
 		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
 		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
@@ -142,6 +143,7 @@
 		C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieTableViewCell.swift; sourceTree = "<group>"; };
 		C14ACC122066DFE10056558F /* PriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriseTableViewCell.swift; sourceTree = "<group>"; };
 		C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeuresPriseViewController.swift; sourceTree = "<group>"; };
+		C14ACC16206714170056558F /* ShowPosologieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPosologieViewController.swift; sourceTree = "<group>"; };
 		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
 		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
 				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
 				C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */,
+				C14ACC16206714170056558F /* ShowPosologieViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */,
 				C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */,
 				C1165B312061AC4F00F45453 /* EtatExtension.swift in Sources */,
+				C14ACC17206714170056558F /* ShowPosologieViewController.swift in Sources */,
 				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
 				C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */,
 				EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,

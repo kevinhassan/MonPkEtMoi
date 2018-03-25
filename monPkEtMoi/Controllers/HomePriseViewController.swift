@@ -35,6 +35,14 @@ class HomePriseViewController: UIViewController, UITableViewDataSource, UITableV
     @IBAction func unwindFromAddHeuresPrise(segue: UIStoryboardSegue){
         tableMedicamentPrescrit.reloadData()
     }
+    @IBAction func unwindFromRealisePrise(segue: UIStoryboardSegue){
+        do{
+            medicamentsPrescrit = try Posologie.getAllMedicamentPrescrit()
+            tableMedicamentPrescrit.reloadData()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.medicamentsPrescrit.count

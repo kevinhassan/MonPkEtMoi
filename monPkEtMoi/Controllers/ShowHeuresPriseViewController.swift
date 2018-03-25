@@ -12,9 +12,11 @@ class ShowHeuresPriseViewController: UITableViewController {
 
     var medicament: Medicament? = nil
     var prises:[Prise]? = nil
+    var posPrise: Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "\(medicament!.nomMedicament!) - Prises"
         do{
             let posologie: Posologie = (try Posologie.get(withMedicament: medicament!))!
             
@@ -48,5 +50,13 @@ class ShowHeuresPriseViewController: UITableViewController {
         cell.heurePrise.setDate(heure: prises![indexPath.row].heurePrise!)
 
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        posPrise = indexPath.row
+        performSegue(withIdentifier: "showPosologieFromHeure", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! ShowPosologieViewController
+        destinationVC.prise = prises![posPrise!]
     }
 }
