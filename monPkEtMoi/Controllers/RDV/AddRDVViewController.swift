@@ -73,7 +73,6 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     
     //MARK: - Sauvegarder la posologie si le formulaire est valide
-    //TODO: Vérifier que le formulaire n'est pas vide pour les heures de prises
     func saveRDV(withTypeSoignant ts : TypeSoignant, withDateRDV dateRDV : NSDate, withDescription descriptionRDV : String, withHeureRDV heureRDV : NSDate, withLieuRDV lieuRDV : String) {
         do{
             newRDV = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
@@ -93,7 +92,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         if (FormValidatorHelper.validateForm(inputs) && dateRDV.getDate()! as Date > Date()){
             let typeSoignant = typesSoignants[posSoignant!]
             let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
-            let heureRDV:NSDate = ((self.heureRDV))!.getDate()
+            let heureRDV:NSDate = ((self.heureRDV))!.getDate()!
             saveRDV(withTypeSoignant : typeSoignant,withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             DialogBoxHelper.alert(view: self, WithTitle: "Bienvenue", andMessage: "Le compte a été créé avec succès", closure: {(action)->() in
                 self.performSegue(withIdentifier: "unwindToShowRDV", sender: self)

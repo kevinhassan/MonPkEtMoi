@@ -43,16 +43,25 @@ class AddMedicamentDosesViewController: UITableViewController {
     }
  
     @IBAction func saveMedicament(_ sender: Any) {
-        let doses:[String] = dosesPriseCell.map{(cell) in
-            return cell.doseTF.text!
+        let nbDose:Int = dosesPriseCell.count
+        let dosesCell: [DoseAjoutTableViewCell] = dosesPriseCell.filter{(cell) in
+            return !(cell.doseTF.text?.isEmpty ?? true)
         }
-        do{
-            newMedicament = try Medicament.create(withDescription: self.descriptionMedoc, withNom: self.nomMedoc!, withDosage: doses)
-            DialogBoxHelper.alert(view: self, WithTitle: "Medicament ajouté", andMessage: "Ajout avec succès", closure: {(action) in
-                self.performSegue(withIdentifier: "addMedicament", sender: self)
-            })
-        } catch let error as NSError{
-            DialogBoxHelper.alert(view: self, error: error)
+        if nbDose == dosesCell.count{
+            let doses:[String] = dosesPriseCell.map{(cell) in
+                return cell.doseTF.text!
+            }
+            do{
+                newMedicament = try Medicament.create(withDescription: self.descriptionMedoc, withNom: self.nomMedoc!, withDosage: doses)
+                DialogBoxHelper.alert(view: self, WithTitle: "Medicament ajouté", andMessage: "Ajout avec succès", closure: {(action) in
+                    self.performSegue(withIdentifier: "addMedicament", sender: self)
+                })
+            } catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
+
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Dosages incorrectes")
         }
     }
     // TODO: Sort le tableau après l'ajout du nouveau médicament

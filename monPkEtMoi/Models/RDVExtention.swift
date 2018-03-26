@@ -70,12 +70,15 @@ extension RDV{
         request.sortDescriptors = [NSSortDescriptor(key: "dateRDV", ascending: true)]
         do {
             let rdvs: [RDV] = try CoreDataManager.context.fetch(request)
-            print(rdvs.count)
             return rdvs
         } catch let error as NSError {
             throw error
         }
     }
-    
+    /// Renvoie vrai si le rendez-vous est avec un neurologue
+    /// Le but étant de démarrer le questionnaire 5 jours avant la date du RDV
+    func estRDVTypeNeurologue() -> Bool{
+        return self.donner!.libelleTypeSoignant!.lowercased() == "neurologue"
+    }
     
 }

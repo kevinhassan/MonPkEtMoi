@@ -11,6 +11,8 @@ import UIKit
 class HomePriseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
     var medicamentsPrescrit: [Medicament] = []
+    var posMedoc: Int = 0
+    
     @IBOutlet weak var tableMedicamentPrescrit: UITableView!
 
     override func viewDidLoad() {
@@ -31,7 +33,15 @@ class HomePriseViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @IBAction func unwindFromAddHeuresPrise(segue: UIStoryboardSegue){
-        
+        tableMedicamentPrescrit.reloadData()
+    }
+    @IBAction func unwindFromRealisePrise(segue: UIStoryboardSegue){
+        do{
+            medicamentsPrescrit = try Posologie.getAllMedicamentPrescrit()
+            tableMedicamentPrescrit.reloadData()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,7 +51,19 @@ class HomePriseViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableMedicamentPrescrit.dequeueReusableCell(withIdentifier: "posologieCell", for: indexPath) as! PosologieTableViewCell
         cell.nomMedicament.text = self.medicamentsPrescrit[indexPath.row].nomMedicament!
-        cell.nbrPriseJours.text = String(Posologie.countPriseJourMedicament(medicament: (self.medicamentsPrescrit[indexPath.row])))
+        cell.nbrPriseJours.text = "\(Prise.countPriseJourMedicament(medicament: (self.medicamentsPrescrit[indexPath.row]))) prises"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        posMedoc = indexPath.row
+        performSegue(withIdentifier: "showHeuresPrise", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showHeuresPrise"{
+            let destinationVC = segue.destination as! ShowHeuresPriseViewController
+            destinationVC.medicament = self.medicamentsPrescrit[posMedoc]
+        }
     }
 }
