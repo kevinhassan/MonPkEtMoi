@@ -18,7 +18,6 @@
     <entity name="Avis" representedClassName="Avis" syncable="YES" codeGenerationType="class">
         <attribute name="commentaireAvis" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="reponseAvis" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="concerneTraceur" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="avoirAvis" inverseEntity="Traceur" syncable="YES"/>
         <relationship name="etreType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeAvis" inverseName="avoirAvis" inverseEntity="TypeAvis" syncable="YES"/>
     </entity>
     <entity name="Contact" representedClassName="Contact" isAbstract="YES" syncable="YES" codeGenerationType="class">
@@ -57,7 +56,7 @@
         <relationship name="avoirActivite" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="concernePatient" inverseEntity="ActivitePrescrite" syncable="YES"/>
         <relationship name="avoirContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Contact" inverseName="appartenirA" inverseEntity="Contact" syncable="YES"/>
         <relationship name="avoirEvenement" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Evenement" inverseName="concernePatient" inverseEntity="Evenement" syncable="YES"/>
-        <relationship name="avoirTraceur" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="concernePatient" inverseEntity="Traceur" syncable="YES"/>
+        <relationship name="avoirTracker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Tracker" inverseName="concernePatient" inverseEntity="Tracker" syncable="YES"/>
         <relationship name="prisPar" toMany="YES" deletionRule="Nullify" destinationEntity="Posologie" inverseName="concernePatient" inverseEntity="Posologie" syncable="YES"/>
     </entity>
     <entity name="Personne" representedClassName="Personne" syncable="YES" codeGenerationType="class">
@@ -71,7 +70,6 @@
         <attribute name="heureDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="heureFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="avoirEtat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="concerneHoraire" inverseEntity="Etat" syncable="YES"/>
-        <relationship name="avoirTraceur" maxCount="1" deletionRule="Nullify" destinationEntity="Traceur" inverseName="concerneHoraire" inverseEntity="Traceur" syncable="YES"/>
     </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutPosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -100,11 +98,11 @@
     <entity name="Soignant" representedClassName="Soignant" parentEntity="Personne" syncable="YES" codeGenerationType="class">
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="avoirSoignant" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
-    <entity name="Traceur" representedClassName="Traceur" syncable="YES" codeGenerationType="class">
-        <attribute name="dateTraceur" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="avoirAvis" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avis" inverseName="concerneTraceur" inverseEntity="Avis" syncable="YES"/>
-        <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirTraceur" inverseEntity="PlageHoraire" syncable="YES"/>
-        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTraceur" inverseEntity="Patient" syncable="YES"/>
+    <entity name="Tracker" representedClassName="Tracker" syncable="YES" codeGenerationType="class">
+        <attribute name="heureDebut" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="heureFin" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="intervalle" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTracker" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="TypeAvis" representedClassName="TypeAvis" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeAvis" optional="YES" attributeType="String" syncable="YES"/>
@@ -123,23 +121,23 @@
     <elements>
         <element name="ActivitePrescrite" positionX="-218" positionY="-45" width="128" height="135"/>
         <element name="ActiviteRealisee" positionX="-243" positionY="152" width="128" height="120"/>
-        <element name="Avis" positionX="333" positionY="-339" width="128" height="105"/>
+        <element name="Avis" positionX="333" positionY="-339" width="128" height="90"/>
+        <element name="Contact" positionX="-531" positionY="-18" width="128" height="118"/>
+        <element name="ContactPerso" positionX="-351" positionY="-144" width="128" height="60"/>
+        <element name="ContactPro" positionX="-360" positionY="-153" width="128" height="60"/>
         <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="105"/>
-        <element name="Patient" positionX="-207" positionY="-346" width="108" height="163"/>
+        <element name="Patient" positionX="-207" positionY="-346" width="108" height="165"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
-        <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="103"/>
+        <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="90"/>
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>
         <element name="Prise" positionX="9" positionY="182" width="128" height="105"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="135"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="58"/>
-        <element name="Traceur" positionX="106" positionY="-324" width="128" height="103"/>
+        <element name="Tracker" positionX="106" positionY="-324" width="128" height="105"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
         <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="103"/>
-        <element name="Contact" positionX="-531" positionY="-18" width="128" height="118"/>
-        <element name="ContactPro" positionX="-360" positionY="-153" width="128" height="60"/>
-        <element name="ContactPerso" positionX="-351" positionY="-144" width="128" height="60"/>
     </elements>
 </model>

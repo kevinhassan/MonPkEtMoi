@@ -46,4 +46,10 @@ class TimePicker: UITextField {
         }
         return date as NSDate
     }
+    /// Insérer l'heure
+    ///
+    func setDate(heure: NSDate){
+        self.text = dateFormatter.string(from: heure as Date)
+        self.resignFirstResponder()
+    }
 }

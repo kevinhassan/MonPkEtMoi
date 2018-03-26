@@ -114,4 +114,18 @@ extension Patient{
             throw error
         }
     }
+    /// Récupérer les informations du tracker du patient
+    static func getTracker() throws -> Tracker?{
+        let request: NSFetchRequest<Tracker> = Tracker.fetchRequest()
+        do {
+            let trackers: [Tracker] = try CoreDataManager.context.fetch(request)
+            if (trackers.count > 0) {
+                return trackers[0]
+            } else {
+                return nil
+            }
+        } catch let error as NSError {
+            throw error
+        }
+    }
 }

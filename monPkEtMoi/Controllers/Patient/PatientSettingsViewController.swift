@@ -19,5 +19,8 @@ class PatientSettingsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    @IBAction func unwindToSettings(segue: UIStoryboardSegue){
+        
+    }
 }
 

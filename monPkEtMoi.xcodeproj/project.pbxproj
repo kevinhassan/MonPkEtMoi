@@ -64,6 +64,8 @@
 		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
+		C1B844B920698C130070F017 /* EditSettingsQuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */; };
+		C1B844BB206990480070F017 /* TrackerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B844BA206990480070F017 /* TrackerExtension.swift */; };
 		C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */; };
 		C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F672206476A900B60CCB /* DateLabel.swift */; };
 		C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F674206478DA00B60CCB /* TimeLabel.swift */; };
@@ -174,6 +176,8 @@
 		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingsQuestionnaireViewController.swift; sourceTree = "<group>"; };
+		C1B844BA206990480070F017 /* TrackerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerExtension.swift; sourceTree = "<group>"; };
 		C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVTableViewCell.swift; sourceTree = "<group>"; };
 		C1C1F672206476A900B60CCB /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
 		C1C1F674206478DA00B60CCB /* TimeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLabel.swift; sourceTree = "<group>"; };
@@ -302,6 +306,7 @@
 				EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
 				EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */,
 				23187EF820664F9E00894DB9 /* PriseExtension.swift */,
+				C1B844BA206990480070F017 /* TrackerExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 		C13F32832058860300C7CC8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C1B844B720698BDB0070F017 /* Parametres */,
 				C1CD32662068097700B71A6E /* Contact */,
 				C1CD32612067D82800B71A6E /* Prise */,
 				C1CD32602067D80F00B71A6E /* Activité */,
@@ -393,6 +399,14 @@
 				C1CD3269206809C100B71A6E /* ContactProExtension.swift */,
 			);
 			path = Contact;
+			sourceTree = "<group>";
+		};
+		C1B844B720698BDB0070F017 /* Parametres */ = {
+			isa = PBXGroup;
+			children = (
+				C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */,
+			);
+			path = Parametres;
 			sourceTree = "<group>";
 		};
 		C1CD325B2067D78E00B71A6E /* Patient */ = {
@@ -687,6 +701,8 @@
 				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
 				23B1AD3320691C7600918C57 /* EditContactPersoTableViewController.swift in Sources */,
 				EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */,
+				C1B844B920698C130070F017 /* EditSettingsQuestionnaireViewController.swift in Sources */,
+				C1B844BB206990480070F017 /* TrackerExtension.swift in Sources */,
 				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
 				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
 				EC52076620665039000B102E /* ValidateActiviteViewController.swift in Sources */,

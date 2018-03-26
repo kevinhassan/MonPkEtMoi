@@ -67,5 +67,8 @@ class DateHelper{
         todayComponents.minute = 59
         return (gregorian?.date(from: todayComponents))! as NSDate
     }
+    static func checkInterval(heureDebut: NSDate, heureFin: NSDate, intervalle: Int){
+        
+    }
     
 }
