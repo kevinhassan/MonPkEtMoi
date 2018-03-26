@@ -20,16 +20,11 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
-            let ar = try ActiviteRealisee.getAllComing();
+            activiteAR = try ActiviteRealisee.getAllComing(activitePrescrite: activite!)
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
         
-        for item in ar! {
-            if item.concerneActivite == activite {
-                activiteAR?.append(item)
-            }
-        }
     }
 
     

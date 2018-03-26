@@ -40,9 +40,10 @@ extension ActiviteRealisee{
         return newActiviteRealisee
     }
     
-    static func getAllComing() throws -> [ActiviteRealisee] {
+    static func getAllComing(activitePrescrite : ActivitePrescrite) throws -> [ActiviteRealisee] {
+        
+        let predicate: NSPredicate = NSPredicate(format: "concerneActivite == %@ AND estRealise == %@ ",activitePrescrite,false as CVarArg,DateHelper.startOfDay(day: NSDate()),DateHelper.endOfDay(day: NSDate()))
         let request: NSFetchRequest<ActiviteRealisee> = ActiviteRealisee.fetchRequest()
-        let predicate: NSPredicate = NSPredicate(format: "dateFin > %@, NSDate()")
         request.predicate = predicate
         request.sortDescriptors = [NSSortDescriptor(key: "dateFin", ascending: true)]
         do {

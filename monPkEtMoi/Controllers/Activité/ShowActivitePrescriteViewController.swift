@@ -41,7 +41,6 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
         if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
             let activiteARViewController = segue.destination as! ShowActiviteARViewController
            activiteARViewController.activite = self.listeActivite[indexPath.row]
-            activiteARViewController.posActivite = indexPath.row
         }
     }
     
