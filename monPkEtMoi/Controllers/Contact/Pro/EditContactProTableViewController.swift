@@ -76,10 +76,14 @@ class EditContactProTableViewController: UITableViewController, UIPickerViewDele
     @IBAction func editContactPro(_ sender: Any) {
         let inputs: [String:UITextField] = ["nom": nomContact, "prenom": prenomContact,"mail": mailContact, "specialite": specialiteContact, "tel": telContact]
         if FormValidatorHelper.validateForm(inputs){
-            
-            DialogBoxHelper.alert(view: self, WithTitle: "Edition du contact", andMessage: "La mise à jours du contact est effectuée", closure: {(action) in
-                self.performSegue(withIdentifier: "editContactPro", sender: self)
-            })
+            do{
+                try contactPro?.edit(withMail: mailContact.text!, withNom: nomContact.text!, withPrenom: prenomContact.text!, withTel: telContact.text!, withTypeSoignant: specialitesContact[posSoignant!])
+                DialogBoxHelper.alert(view: self, WithTitle: "Edition du contact", andMessage: "La mise à jours du contact est effectuée", closure: {(action) in
+                    self.performSegue(withIdentifier: "editContactPro", sender: self)
+                })
+            }catch{
+                    DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de l'ajout du contact professionnel")
+            }
         }else{
             DialogBoxHelper.alert(view: self, errorMessage: "Formulaire invalide")
         }

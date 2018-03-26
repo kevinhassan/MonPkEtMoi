@@ -33,6 +33,18 @@ class EditContactPersoTableViewController: UITableViewController {
     }
 
     @IBAction func editContactPerso(_ sender: Any) {
-        performSegue(withIdentifier: "editContactPerso", sender: self)
+        let inputs: [String:UITextField] = ["nom": nomContact, "prenom": prenomContact,"mail": mailContact, "adresse": adresseContact, "tel": telContact]
+        if FormValidatorHelper.validateForm(inputs){
+            do{
+                try contactPerso?.edit(withMail: mailContact.text!, withNom: nomContact.text!, withPrenom: prenomContact.text!, withTel: telContact.text!, withAdresse: adresseContact.text!)
+                DialogBoxHelper.alert(view: self, WithTitle: "Edition du contact", andMessage: "La mise à jours du contact est effectuée", closure: {(action) in
+                    self.performSegue(withIdentifier: "editContactPerso", sender: self)
+                })
+            }catch{
+                DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de l'ajout du contact professionnel")
+            }
+        }else{
+            DialogBoxHelper.alert(view: self, errorMessage: "Formulaire invalide")
+        }
     }
 }

@@ -68,7 +68,7 @@ extension ContactPro{
     ///   - withPrenom: `String` prénom du `ContactPro`
     ///   - withTel: `String` téléphone du `ContactPro`
     ///   - withTypeSoignant: `TypeSoignant` type du soignant `ContactPro`
-    func editer(withMail: String, withNom: String, withPrenom: String, withTel: String, withTypeSoignant: TypeSoignant) throws {
+    func edit(withMail: String, withNom: String, withPrenom: String, withTel: String, withTypeSoignant: TypeSoignant) throws {
         
         /// mail du ContactPro
         self.mailContact = withMail

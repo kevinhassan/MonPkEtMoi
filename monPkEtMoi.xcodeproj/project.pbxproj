@@ -289,6 +289,7 @@
 		B2D3E140205ADD9400BC26B3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C1787A3720697A9C0052C901 /* Contact */,
 				B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */,
 				C1165B302061AC4F00F45453 /* EtatExtension.swift */,
 				C1165B322061AD7700F45453 /* EvenementExtension.swift */,
@@ -301,8 +302,6 @@
 				EC76ED1220629F55008A5DA2 /* RDVExtention.swift */,
 				EC975C6B20666463009524AD /* ActiviteRealiserExtension.swift */,
 				23187EF820664F9E00894DB9 /* PriseExtension.swift */,
-				C1CD32672068099400B71A6E /* ContactPersoExtension.swift */,
-				C1CD3269206809C100B71A6E /* ContactProExtension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +362,37 @@
 				238284EF2066A63500F94373 /* NSDateExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C1787A35206976AA0052C901 /* Pro */ = {
+			isa = PBXGroup;
+			children = (
+				23B1AD2F206919F500918C57 /* ShowContactProTableViewController.swift */,
+				C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */,
+				C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */,
+				23B1AD3420691C8B00918C57 /* EditContactProTableViewController.swift */,
+			);
+			path = Pro;
+			sourceTree = "<group>";
+		};
+		C1787A36206976B90052C901 /* Perso */ = {
+			isa = PBXGroup;
+			children = (
+				23B1AD2E206919F500918C57 /* ShowContactPersoTableViewController.swift */,
+				C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */,
+				C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */,
+				23B1AD3220691C7600918C57 /* EditContactPersoTableViewController.swift */,
+			);
+			path = Perso;
+			sourceTree = "<group>";
+		};
+		C1787A3720697A9C0052C901 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				C1CD32672068099400B71A6E /* ContactPersoExtension.swift */,
+				C1CD3269206809C100B71A6E /* ContactProExtension.swift */,
+			);
+			path = Contact;
 			sourceTree = "<group>";
 		};
 		C1CD325B2067D78E00B71A6E /* Patient */ = {
@@ -442,14 +472,8 @@
 		C1CD32662068097700B71A6E /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				23B1AD2E206919F500918C57 /* ShowContactPersoTableViewController.swift */,
-				23B1AD2F206919F500918C57 /* ShowContactProTableViewController.swift */,
-				C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */,
-				C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */,
-				C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */,
-				C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */,
-				23B1AD3220691C7600918C57 /* EditContactPersoTableViewController.swift */,
-				23B1AD3420691C8B00918C57 /* EditContactProTableViewController.swift */,
+				C1787A36206976B90052C901 /* Perso */,
+				C1787A35206976AA0052C901 /* Pro */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
