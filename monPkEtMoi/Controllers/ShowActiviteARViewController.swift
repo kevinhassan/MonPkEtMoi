@@ -15,12 +15,13 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     var posActivite: Int? = nil
     var activiteAR : [ActiviteRealisee]? = nil
     
-    @IBOutlet weak var activiteLibelle: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
             activiteAR = try ActiviteRealisee.getAllComing(activitePrescrite: activite!)
+            print(activiteAR!)
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
@@ -28,21 +29,23 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     }
 
     
-    @IBAction func removeActivite(_ sender: Any) {
-        DialogBoxHelper.alertAsk(view: self, WithTitle: "Supprimer activité", andMessage: "Etes vous sûr de vouloir supprimer l'activité", closureContinue: {(action) in
-            do{
-                let _ = try ActivitePrescrite.delete(self.activite!)
-                self.performSegue(withIdentifier: "returnToActivite", sender: nil)
-            }catch{
-                DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
-            }
-        }, closureCancel: nil)
-    }
+//    @IBAction func removeActivite(_ sender: Any) {
+//        DialogBoxHelper.alertAsk(view: self, WithTitle: "Supprimer activité", andMessage: "Etes vous sûr de vouloir supprimer l'activité", closureContinue: {(action) in
+//            do{
+//                let _ = try ActivitePrescrite.delete(self.activite!)
+//                self.performSegue(withIdentifier: "returnToActivite", sender: nil)
+//            }catch{
+//                DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
+//            }
+//        }, closureCancel: nil)
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.activiteAR!.count)
@@ -50,11 +53,13 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        activiteLibelle.text! = (activite?.libelleActivite)!
+        
         let cell = self.tableActiviteAR.dequeueReusableCell(withIdentifier: "activiteARCell", for: indexPath) as! ActiviteARTableViewCell
         
         cell.dateActiviteAR.text! = "Date de l'activité : " + (activiteAR![indexPath.row].dateActivite?.description)!
         
+        cell.libelleActiviteAR.text! = (activite?.libelleActivite)!
+
         cell.heureAR.text! = (activite?.dureeActivite.description)! + " minutes"
         
         return cell

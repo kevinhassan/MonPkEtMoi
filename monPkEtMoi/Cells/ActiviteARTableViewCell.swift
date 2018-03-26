@@ -13,6 +13,8 @@ class ActiviteARTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateActiviteAR: UILabel!
     @IBOutlet weak var heureAR: UILabel!
+    
+    @IBOutlet weak var libelleActiviteAR: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
