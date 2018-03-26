@@ -26,10 +26,17 @@ class ShowContactProTableViewController: UITableViewController {
         mailLabel.text = contactPro?.mailContact
         telLabel.text = contactPro?.telContact
         specialiteLabel.text = contactPro?.etreDuType?.libelleTypeSoignant
+        self.title = "\(contactPro!.prenomContact!) \(contactPro!.nomContact!)"
+
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! EditContactProTableViewController
+        destinationVC.contactPro = contactPro
     }
 }

@@ -25,6 +25,7 @@ class ShowContactPersoTableViewController: UITableViewController {
         adresseLabel.text = contactPerso?.adresseContact
         mailLabel.text = contactPerso?.mailContact
         telLabel.text = contactPerso?.telContact
+        self.title = "\(contactPerso!.prenomContact!) \(contactPerso!.nomContact!)"
     }
 
     override func didReceiveMemoryWarning() {

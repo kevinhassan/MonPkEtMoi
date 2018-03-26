@@ -25,6 +25,10 @@
 		238284EA206670FF00F94373 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284E9206670FF00F94373 /* DateHelper.swift */; };
 		238284ED2066790400F94373 /* Jour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284EC2066790400F94373 /* Jour.swift */; };
 		238284F02066A63500F94373 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238284EF2066A63500F94373 /* NSDateExtension.swift */; };
+		23B1AD30206919F500918C57 /* ShowContactPersoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1AD2E206919F500918C57 /* ShowContactPersoTableViewController.swift */; };
+		23B1AD31206919F500918C57 /* ShowContactProTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1AD2F206919F500918C57 /* ShowContactProTableViewController.swift */; };
+		23B1AD3320691C7600918C57 /* EditContactPersoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1AD3220691C7600918C57 /* EditContactPersoTableViewController.swift */; };
+		23B1AD3520691C8B00918C57 /* EditContactProTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1AD3420691C8B00918C57 /* EditContactProTableViewController.swift */; };
 		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
 		399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */; };
@@ -129,6 +133,10 @@
 		238284E9206670FF00F94373 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		238284EC2066790400F94373 /* Jour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Jour.swift; sourceTree = "<group>"; };
 		238284EF2066A63500F94373 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		23B1AD2E206919F500918C57 /* ShowContactPersoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowContactPersoTableViewController.swift; sourceTree = "<group>"; };
+		23B1AD2F206919F500918C57 /* ShowContactProTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowContactProTableViewController.swift; sourceTree = "<group>"; };
+		23B1AD3220691C7600918C57 /* EditContactPersoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactPersoTableViewController.swift; sourceTree = "<group>"; };
+		23B1AD3420691C8B00918C57 /* EditContactProTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactProTableViewController.swift; sourceTree = "<group>"; };
 		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteTableViewCell.swift; sourceTree = "<group>"; };
@@ -434,10 +442,14 @@
 		C1CD32662068097700B71A6E /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				23B1AD2E206919F500918C57 /* ShowContactPersoTableViewController.swift */,
+				23B1AD2F206919F500918C57 /* ShowContactProTableViewController.swift */,
 				C1CD326F20680E2000B71A6E /* ShowContactsPersoViewController.swift */,
 				C1CD327120680E3600B71A6E /* ShowContactsProViewController.swift */,
 				C1CD32752068131000B71A6E /* AddContactPersoTableViewController.swift */,
 				C1CD327B20681F7000B71A6E /* AddContactProViewController.swift */,
+				23B1AD3220691C7600918C57 /* EditContactPersoTableViewController.swift */,
+				23B1AD3420691C8B00918C57 /* EditContactProTableViewController.swift */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -628,6 +640,7 @@
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
+				23B1AD31206919F500918C57 /* ShowContactProTableViewController.swift in Sources */,
 				39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */,
 				C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */,
 				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
@@ -641,11 +654,14 @@
 				399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
+				23B1AD30206919F500918C57 /* ShowContactPersoTableViewController.swift in Sources */,
 				C1CD327020680E2000B71A6E /* ShowContactsPersoViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
+				23B1AD3520691C8B00918C57 /* EditContactProTableViewController.swift in Sources */,
 				B225486C205437850027FB86 /* CountDownPicker.swift in Sources */,
 				B225486A205420F80027FB86 /* DatePicker.swift in Sources */,
 				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
+				23B1AD3320691C7600918C57 /* EditContactPersoTableViewController.swift in Sources */,
 				EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */,
 				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
 				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
