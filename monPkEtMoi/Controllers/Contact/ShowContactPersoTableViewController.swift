@@ -32,4 +32,8 @@ class ShowContactPersoTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! EditContactPersoTableViewController
+        destinationVC.contactPerso = contactPerso!
+    }
 }

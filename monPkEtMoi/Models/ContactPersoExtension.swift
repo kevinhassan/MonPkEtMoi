@@ -59,4 +59,29 @@ extension ContactPerso{
             throw error
         }
     }
+    /// Editer les informations du `ContactPerso`
+    ///
+    /// - Parameters:
+    ///   - withMail:  `String` mail du `ContactPerso`
+    ///   - withNom: `String` nom du `ContactPerso`
+    ///   - withPrenom: `String` prénom du `ContactPerso`
+    ///   - withTel: `String` téléphone du `ContactPerso`
+    ///   - withAdresse: `String` adresse du `ContactPerso`
+    func edit(withMail: String, withNom: String, withPrenom: String, withTel: String, withAdresse: String) throws {
+        /// mail du contactPerso
+        self.mailContact = withMail
+        /// nom du contactPerso
+        self.nomContact = withNom
+        /// prenom du contactPerso
+        self.prenomContact = withPrenom
+        /// tel du contactPerso
+        self.telContact = withTel
+        /// adresse du contactPerso
+        self.adresseContact = withAdresse
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
+    }
 }

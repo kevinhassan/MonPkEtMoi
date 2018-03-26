@@ -60,4 +60,31 @@ extension ContactPro{
             throw error
         }
     }
+    /// Editer un `ContactPro`
+    ///
+    /// - Parameters:
+    ///   - withMail:  `String` mail du `ContactPro`
+    ///   - withNom: `String` nom du `ContactPro`
+    ///   - withPrenom: `String` prénom du `ContactPro`
+    ///   - withTel: `String` téléphone du `ContactPro`
+    ///   - withTypeSoignant: `TypeSoignant` type du soignant `ContactPro`
+    func editer(withMail: String, withNom: String, withPrenom: String, withTel: String, withTypeSoignant: TypeSoignant) throws {
+        
+        /// mail du ContactPro
+        self.mailContact = withMail
+        /// nom du ContactPro
+        self.nomContact = withNom
+        /// prenom du ContactPro
+        self.prenomContact = withPrenom
+        /// tel du ContactPro
+        self.telContact = withTel
+        /// Type de soignant pour le ContactPro
+        self.etreDuType = withTypeSoignant
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
+    }
+
 }
