@@ -45,7 +45,6 @@ extension ActiviteRealisee{
         let predicate: NSPredicate = NSPredicate(format: "concerneActivite == %@ AND estRealise == %@ ",activitePrescrite,false as CVarArg,DateHelper.startOfDay(day: NSDate()),DateHelper.endOfDay(day: NSDate()))
         let request: NSFetchRequest<ActiviteRealisee> = ActiviteRealisee.fetchRequest()
         request.predicate = predicate
-        request.sortDescriptors = [NSSortDescriptor(key: "dateFin", ascending: true)]
         do {
             let activites: [ActiviteRealisee] = try CoreDataManager.context.fetch(request)
             return activites

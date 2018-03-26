@@ -11,9 +11,10 @@ import UIKit
 class ActiviteARTableViewCell: UITableViewCell {
 
     
-    @IBOutlet weak var dateARLabel: UILabel!
-    @IBOutlet weak var estEffectueeLabel: UILabel!
-        override func awakeFromNib() {
+    @IBOutlet weak var dateActiviteAR: UILabel!
+    @IBOutlet weak var heureAR: UILabel!
+
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

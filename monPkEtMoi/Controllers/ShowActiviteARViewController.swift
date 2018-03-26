@@ -14,7 +14,7 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     var activite : ActivitePrescrite? = nil
     var posActivite: Int? = nil
     var activiteAR : [ActiviteRealisee]? = nil
-    let ar : [ActiviteRealisee]? = nil
+    
     @IBOutlet weak var activiteLibelle: UILabel!
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
-        
+        print(self.activiteAR!.count)
     }
 
     
@@ -45,16 +45,17 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.ar!.count)
+        return (self.activiteAR!.count)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        activiteLibelle.text! = (activite?.libelleActivite)!
         let cell = self.tableActiviteAR.dequeueReusableCell(withIdentifier: "activiteARCell", for: indexPath) as! ActiviteARTableViewCell
         
-        cell.dateARLabel.text! = "Date de l'activité : " + (activiteAR![indexPath.row].dateActivite?.description)!
+        cell.dateActiviteAR.text! = "Date de l'activité : " + (activiteAR![indexPath.row].dateActivite?.description)!
         
-        cell.estEffectueeLabel.text! = activiteAR![indexPath.row].estRealise.description
+        cell.heureAR.text! = (activite?.dureeActivite.description)! + " minutes"
         
         return cell
     }
