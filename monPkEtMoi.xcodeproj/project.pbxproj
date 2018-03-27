@@ -13,6 +13,7 @@
 		23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
+		233FD30B206AC69200209D31 /* AddTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233FD30A206AC69200209D31 /* AddTrackerViewController.swift */; };
 		234E135E205064B7000658F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E135D205064B7000658F7 /* HomeViewController.swift */; };
 		236DBBF12063FAD900E8534B /* AddMedicamentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */; };
 		236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */; };
@@ -122,6 +123,7 @@
 		23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
+		233FD30A206AC69200209D31 /* AddTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTrackerViewController.swift; sourceTree = "<group>"; };
 		234E135D205064B7000658F7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		236DBBF02063FAD900E8534B /* AddMedicamentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentViewController.swift; sourceTree = "<group>"; };
 		236DBBF22063FF9C00E8534B /* AddMedicamentDosesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicamentDosesViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */,
+				233FD30A206AC69200209D31 /* AddTrackerViewController.swift */,
 			);
 			name = Tracker;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
 				234E135E205064B7000658F7 /* HomeViewController.swift in Sources */,
 				C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */,
+				233FD30B206AC69200209D31 /* AddTrackerViewController.swift in Sources */,
 				23B1AD30206919F500918C57 /* ShowContactPersoTableViewController.swift in Sources */,
 				C1CD327020680E2000B71A6E /* ShowContactsPersoViewController.swift in Sources */,
 				2380FCEE2045A58A00763F43 /* AppDelegate.swift in Sources */,
