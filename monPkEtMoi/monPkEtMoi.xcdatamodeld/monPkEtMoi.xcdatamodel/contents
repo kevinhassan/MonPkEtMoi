@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ActivitePrescrite" representedClassName="ActivitePrescrite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -96,7 +96,7 @@
     <entity name="Tracker" representedClassName="Tracker" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <relationship name="avoirEtat" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="avoirTracker" inverseEntity="Etat" syncable="YES"/>
-        <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTracker" inverseEntity="Patient" syncable="YES"/>
+        <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTracker" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="TypeAvis" representedClassName="TypeAvis" syncable="YES" codeGenerationType="class">
         <attribute name="libelleTypeAvis" optional="YES" attributeType="String" syncable="YES"/>

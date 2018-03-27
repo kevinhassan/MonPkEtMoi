@@ -70,17 +70,17 @@ class AddPriseHeuresViewController: UITableViewController {
     }
     
     func generatePrises(){
-        var counter: Double
-        do{
-            let dates: [NSDate] = (try posologie?.generatePrises())!
+        //var counter: Double
+        //do{
+            //let dates: [NSDate] = (try posologie?.generatePrises())!
             // génération des notifs pour les prises
-            for date in dates{
+            //for date in dates{
 //                counter = DateHelper.substractDateInSeconds(heure1: date,heure2: NSDate())
 //                NotificationHelper.init(type: .Prise).setTime(timeInterval: TimeInterval(Int64(counter)))
-            }
-        }catch{
-            DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de la création des prises")
-        }
+            //}
+        //}catch{
+            //DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de la création des prises")
+        //Ò}
         
     }
 

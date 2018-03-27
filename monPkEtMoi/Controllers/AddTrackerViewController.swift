@@ -40,15 +40,15 @@ class AddTrackerViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
     
     @IBAction func addTracker(_ sender: Any) {
-        if (etatTF.text?.isEmpty) != nil {
+        if (etatTF.text!.isEmpty){
+            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire invalide")
+        }else{
             do{
                 let _ = try Tracker.create(withDate: NSDate(), withEtat: etats[posEtat])
                 performSegue(withIdentifier: "addTracker", sender: self)
-            }catch {
+            }catch{
                 DialogBoxHelper.alert(view: self, errorMessage: "Erreur lors de l'ajout")
             }
-        }else{
-            DialogBoxHelper.alert(view: self, errorMessage: "Données du formulaire invalide")
         }
     }
 
