@@ -3396,7 +3396,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8Z-TO-Sfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NUZ-nL-Vgk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3270" y="1476"/>
+            <point key="canvasLocation" x="3257" y="1480"/>
         </scene>
         <!--Home Doctor View Controller-->
         <scene sceneID="7V6-8h-d4i">

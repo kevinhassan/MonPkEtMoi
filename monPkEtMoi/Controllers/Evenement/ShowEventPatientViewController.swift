@@ -24,6 +24,16 @@ class ShowEventPatientViewController: UIViewController {
             DialogBoxHelper.alert(view: self, error: error)
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        do {
+            nbPriseToday.text = String(describing: try Prise.countPrises())
+            nbRDV.text = String(describing: try RDV.countRVDComing())
+            nbAccident.text = String(describing: try Evenement.countSixMonth())
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -31,12 +41,6 @@ class ShowEventPatientViewController: UIViewController {
     }
     
     @IBAction func unwindToHomePatient(segue: UIStoryboardSegue){
-        if segue.identifier == "returnToHomePatient"{
-            do {
-                nbAccident.text = String(describing: try Evenement.countSixMonth())
-            }catch let error as NSError{
-                DialogBoxHelper.alert(view: self, error: error)
-            }
-        }
+
     }   
 }
