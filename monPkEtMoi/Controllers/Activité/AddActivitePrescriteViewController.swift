@@ -36,12 +36,6 @@ class AddActivitePrescriteViewController: UITableViewController {
        
         let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
         
-        var joursActivite:[Int] = jours.map{(jour: UISwitch) in
-            if jour.isOn {
-                return 1
-            }
-            return 0
-        }
                 
         if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
             saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateD: dateDebut.getDate()!, withDateF: dateFin.getDate()!,withType: typeActivite.text!)

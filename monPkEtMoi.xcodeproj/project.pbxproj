@@ -28,7 +28,6 @@
 		23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */; };
 		23D9F35E2058179F0018C37E /* EditPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9F35D2058179F0018C37E /* EditPatientViewController.swift */; };
 		399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */; };
-		39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */; };
 		B225486A205420F80027FB86 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2254869205420F80027FB86 /* DatePicker.swift */; };
 		B225486C205437850027FB86 /* CountDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B225486B205437850027FB86 /* CountDownPicker.swift */; };
 		B2D3E144205AEA7F00BC26B3 /* PatientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */; };
@@ -136,7 +135,6 @@
 		23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowEventPatientViewController.swift; sourceTree = "<group>"; };
 		23D9F35D2058179F0018C37E /* EditPatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientViewController.swift; sourceTree = "<group>"; };
 		399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteTableViewCell.swift; sourceTree = "<group>"; };
-		39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowActiviteDetailViewController.swift; sourceTree = "<group>"; };
 		B2254869205420F80027FB86 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		B225486B205437850027FB86 /* CountDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownPicker.swift; sourceTree = "<group>"; };
 		B2D3E143205AEA7F00BC26B3 /* PatientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientExtension.swift; sourceTree = "<group>"; };
@@ -420,7 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				EC4A1A6220691C51003341BD /* ShowActiviteARViewController.swift */,
-				39A27D6720647B0300EF2CA2 /* ShowActiviteDetailViewController.swift */,
 				23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */,
 				23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */,
 				EC52076520665039000B102E /* ValidateActiviteViewController.swift */,
@@ -641,7 +638,6 @@
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,
-				39A27D6820647B0300EF2CA2 /* ShowActiviteDetailViewController.swift in Sources */,
 				C1C1F675206478DA00B60CCB /* TimeLabel.swift in Sources */,
 				C1CA35F8205DBDEC00937BFF /* TypeAvisSeed.swift in Sources */,
 				C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */,

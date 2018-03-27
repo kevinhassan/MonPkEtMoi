@@ -12,7 +12,7 @@ class ActiviteARTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var dateActiviteAR: UILabel!
-    @IBOutlet weak var heureAR: UILabel!
+    @IBOutlet weak var dureeAR: UILabel!
     
     @IBOutlet weak var libelleActiviteAR: UILabel!
 

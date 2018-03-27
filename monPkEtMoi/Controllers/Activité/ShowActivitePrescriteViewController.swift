@@ -38,11 +38,14 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     
     // MARK: - Envoyer l'activite à la vue suivante
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "showActiviteAR"){
         if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
             let activiteARViewController = segue.destination as! ShowActiviteARViewController
            activiteARViewController.activite = self.listeActivite[indexPath.row]
+            activiteARViewController.posActivite = indexPath.row
         }
     }
+}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.listeActivite.count

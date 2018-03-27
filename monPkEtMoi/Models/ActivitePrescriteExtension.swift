@@ -58,7 +58,7 @@ extension ActivitePrescrite{
         do{
             CoreDataManager.context.delete(self)
             try CoreDataManager.save()
-        }catch let error as NSError{
+        }catch let error as NSError {
             throw error
         }
     }
@@ -76,36 +76,22 @@ extension ActivitePrescrite{
         }
     }
     
-    func generateDate(lhs:NSDate, rhs:NSDate) -> [NSDate] {
-        var dates: [NSDate] = []
-        let cal = NSCalendar.current // or NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let days = NSDateComponents()
-        var dayCount = 0
-        while true {
-            days.day = dayCount
-            let date:NSDate = cal.date(byAdding : days as DateComponents, to: lhs as Date)! as NSDate
-            if date.compare(rhs as Date) == .orderedDescending {
-                break
-            }
-            dayCount += 1
-            dates.append(date)
-        }
-        
-        return dates
-    }
-
+    
     func generateActivitesAR() throws{
         // générer les activitées à réaliser
-        let dates = self.generateDate(lhs: self.dateDebut!, rhs: self.dateFin!)
+        let dates = DateHelper.getDays(dateD: self.dateDebut!, dateF: self.dateFin!)
         for element in dates{
-            do{
-                let ar = try ActiviteRealisee.create(withDate: element, withAP : self)
-                self.addToEstEffectue(ar)
-                
-            }catch let error as NSError{
-                throw error
+            for date in element!{
+                do{
+                    let ar = try ActiviteRealisee.create(withDate: date, withAP : self)
+                    self.addToEstEffectue(ar)
+                    
+                }catch let error as NSError{
+                    throw error
+                }
+
             }
-           
+            
             
         }
 

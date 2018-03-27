@@ -52,5 +52,18 @@ extension ActiviteRealisee{
             throw error
         }
     }
+    
+    func validate(withDate : NSDate, withHeure : NSDate, withDuree : Int16) throws {
+        
+        self.estRealise = true
+        self.dureeRealise = withDuree
+        self.heureActivite = withHeure
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
+        }
+        
+    }
 
 }
