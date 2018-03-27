@@ -78,9 +78,13 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
             newRDV = try RDV.create(withTypeSoignant : ts, withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
             
             /// Récupérer le décalage de temps entre maintenant et le rendez vous à venir
-            let counter = DateHelper.substractDateInMinutes(heure1: dateRDV,heure2: heureRDV)
+            let counter = DateHelper.substractDateInSeconds(heure1: dateRDV,heure2: heureRDV)
             let notification = NotificationHelper.init(type: .RDV)
-            notification.setTime(timeInterval: counter)
+            // activer la notification selon le décalage de temps moins le temps de préparation du patient
+            do{
+                let tempsPrepa = try (Patient.get()?.tempsPreparation)! * 60
+                notification.setTime(timeInterval: (TimeInterval(Int64(counter) - tempsPrepa)))
+            }
             DialogBoxHelper.alert(view: self, WithTitle: "Rendez-vous ajouté", andMessage: "Ajout avec succès", closure: {(action) in
                 self.performSegue(withIdentifier: "showRdv", sender: self)
             })
@@ -94,7 +98,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     {
         let inputs:[String: UITextField] = ["dateRDV": dateRDV,"heureRDV": heureRDV, "typeSoignant": typeSoignant,"descriptionRDV": descriptionRDV]
         
-        if (FormValidatorHelper.validateForm(inputs)){
+        if (FormValidatorHelper.validateForm(inputs) && dateRDV.getDate()! as Date > NSDate() as Date){
             let typeSoignant = typesSoignants[posSoignant!]
             let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
             let heureRDV:NSDate = ((self.heureRDV))!.getDate()!

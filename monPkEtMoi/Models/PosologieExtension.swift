@@ -144,7 +144,7 @@ extension Posologie{
         }
     }
     /// Générer les prises à effectuer selon l'intervalle dateDebut et dateFin de la posologie associée
-    func generatePrises() throws {
+    func generatePrises() throws -> [NSDate]{
         let dates = DateHelper.getDates(dateD: self.dateDebutPosologie!, dateF: self.dateFinPosologie!)
         var priseDates:[NSDate] = []
         //for date in dates{
@@ -160,6 +160,7 @@ extension Posologie{
                 throw error
             }
         }
+        return priseDates
     }
     
     /// Supprimer une `Posologie`
