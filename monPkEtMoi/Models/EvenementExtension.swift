@@ -58,8 +58,17 @@ extension Evenement{
         request.predicate = predicate
         request.sortDescriptors = [NSSortDescriptor(key: "dateEvenement", ascending: true)]
         do {
-            let evenement: [Evenement] = try CoreDataManager.context.fetch(request)
-            return evenement
+            let evenements: [Evenement] = try CoreDataManager.context.fetch(request)
+            return evenements
+        } catch let error as NSError {
+            throw error
+        }
+    }
+    /// Compter les évenements survenus avant 6 mois à partir d'aujourd'hui
+    static func countSixMonth() throws -> Int {
+        do {
+            let evenements: [Evenement] = try getAllSixMonth()
+            return evenements.count
         } catch let error as NSError {
             throw error
         }

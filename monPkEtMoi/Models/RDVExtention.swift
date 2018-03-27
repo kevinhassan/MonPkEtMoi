@@ -62,7 +62,7 @@ extension RDV{
             throw error
         }
     }
-    // Récupére tous les types `RDV` dont la date n'est pas encore passée
+    /// Récupére tous les types `RDV` dont la date n'est pas encore passée
     static func getAllComing() throws -> [RDV]{
         let request: NSFetchRequest<RDV> = RDV.fetchRequest()
         let predicate: NSPredicate = NSPredicate(format: "dateRDV > %@", NSDate())
@@ -71,6 +71,15 @@ extension RDV{
         do {
             let rdvs: [RDV] = try CoreDataManager.context.fetch(request)
             return rdvs
+        } catch let error as NSError {
+            throw error
+        }
+    }
+    /// Récupére tous les types `RDV` dont la date n'est pas encore passée
+    static func countRVDComing() throws -> Int{
+        do {
+            let rdvs: [RDV] = try getAllComing()
+            return rdvs.count
         } catch let error as NSError {
             throw error
         }

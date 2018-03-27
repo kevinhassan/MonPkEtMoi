@@ -1,5 +1,5 @@
 //
-//  ShowEventPatientTableViewController.swift
+//  ShowEventPatientViewController.swift
 //  monPkEtMoi
 //
 //  Created by Kevin HASSAN on 15/03/2018.
@@ -10,9 +10,19 @@ import UIKit
 
 class ShowEventPatientViewController: UIViewController {
 
+    @IBOutlet weak var nbPriseToday: UILabel!
+    @IBOutlet weak var nbRDV: UILabel!
+    @IBOutlet weak var nbAccident: UILabel!
+    
     override func viewDidLoad() {
-        super.viewDidLoad()        
-
+        super.viewDidLoad()
+        do {
+            nbPriseToday.text = String(describing: try Prise.countPrises())
+            nbRDV.text = String(describing: try RDV.countRVDComing())
+            nbAccident.text = String(describing: try Evenement.countSixMonth())
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +31,12 @@ class ShowEventPatientViewController: UIViewController {
     }
     
     @IBAction func unwindToHomePatient(segue: UIStoryboardSegue){
-        
+        if segue.identifier == "returnToHomePatient"{
+            do {
+                nbAccident.text = String(describing: try Evenement.countSixMonth())
+            }catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
+            }
+        }
     }   
 }
