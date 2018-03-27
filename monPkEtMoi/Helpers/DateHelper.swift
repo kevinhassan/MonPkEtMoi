@@ -70,5 +70,8 @@ class DateHelper{
     static func checkInterval(heureDebut: NSDate, heureFin: NSDate, intervalle: Int){
         
     }
-    
+    static func substractDateInMinutes(heure1: NSDate, heure2: NSDate) -> Double{
+        let date = changeHour(date: heure1, heureMin: heure2)
+        return date.timeIntervalSince(NSDate() as Date)
+    }
 }
