@@ -49,6 +49,20 @@ extension Evenement{
             throw error
         }
     }
+    
+    /// Récupérer tous les évenements survenus avant 6 mois à partir d'aujourd'hui
+    static func getAllSixMonth() throws -> [Evenement] {
+        let date = Calendar.current.date(byAdding: .month, value: -6, to: Date())
+        let predicate = NSPredicate(format: "dateEvenement >= %@ AND dateEvenement =< %@", date! as NSDate, NSDate())
+        let request: NSFetchRequest<Evenement> = Evenement.fetchRequest()
+        request.predicate = predicate
+        do {
+            let evenement: [Evenement] = try CoreDataManager.context.fetch(request)
+            return evenement
+        } catch let error as NSError {
+            throw error
+        }
+    }
 }
 
 

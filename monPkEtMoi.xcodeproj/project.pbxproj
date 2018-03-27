@@ -51,6 +51,9 @@
 		C14ACC132066DFE10056558F /* PriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC122066DFE10056558F /* PriseTableViewCell.swift */; };
 		C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */; };
 		C14ACC17206714170056558F /* ShowPosologieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC16206714170056558F /* ShowPosologieViewController.swift */; };
+		C15434C62069B18100EE0984 /* EvenementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */; };
+		C15434C82069B23200EE0984 /* ShowEvenementDocteurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C72069B23200EE0984 /* ShowEvenementDocteurViewController.swift */; };
+		C15434CA2069B98E00EE0984 /* ShowEvenementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C92069B98E00EE0984 /* ShowEvenementViewController.swift */; };
 		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
 		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
@@ -163,6 +166,9 @@
 		C14ACC122066DFE10056558F /* PriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriseTableViewCell.swift; sourceTree = "<group>"; };
 		C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeuresPriseViewController.swift; sourceTree = "<group>"; };
 		C14ACC16206714170056558F /* ShowPosologieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPosologieViewController.swift; sourceTree = "<group>"; };
+		C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementTableViewCell.swift; sourceTree = "<group>"; };
+		C15434C72069B23200EE0984 /* ShowEvenementDocteurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEvenementDocteurViewController.swift; sourceTree = "<group>"; };
+		C15434C92069B98E00EE0984 /* ShowEvenementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEvenementViewController.swift; sourceTree = "<group>"; };
 		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
 		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
@@ -370,6 +376,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C15434C32069B0BB00EE0984 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				C1CD327320680F4E00B71A6E /* ContactProTableViewCell.swift */,
+				C1CD32792068139000B71A6E /* ContactPersoTableViewCell.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		C15434C42069B0D100EE0984 /* Dose */ = {
+			isa = PBXGroup;
+			children = (
+				C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
+				236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
+			);
+			path = Dose;
+			sourceTree = "<group>";
+		};
 		C1787A35206976AA0052C901 /* Pro */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +458,8 @@
 			children = (
 				23D07DB2205ACB2900ED2868 /* ShowEventPatientViewController.swift */,
 				B2DF2C0D205980DD00C608EA /* AddEventViewController.swift */,
+				C15434C72069B23200EE0984 /* ShowEvenementDocteurViewController.swift */,
+				C15434C92069B98E00EE0984 /* ShowEvenementViewController.swift */,
 			);
 			path = Evenement;
 			sourceTree = "<group>";
@@ -495,15 +521,14 @@
 		C1F31B4B205EB3E200233282 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C15434C42069B0D100EE0984 /* Dose */,
+				C15434C32069B0BB00EE0984 /* Contact */,
 				C1F31B4C205EB3F300233282 /* HeurePriseTableViewCell.swift */,
-				C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */,
-				236DBBF520641F5B00E8534B /* DoseAjoutTableViewCell.swift */,
 				399AC146206466E80031E261 /* ActivitePrescriteTableViewCell.swift */,
 				C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */,
 				C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */,
 				C14ACC122066DFE10056558F /* PriseTableViewCell.swift */,
-				C1CD327320680F4E00B71A6E /* ContactProTableViewCell.swift */,
-				C1CD32792068139000B71A6E /* ContactPersoTableViewCell.swift */,
+				C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -687,6 +712,7 @@
 				B2DDBB93205AD9A300E7F3C1 /* AddPriseViewController.swift in Sources */,
 				C17050CA205F147F007C6E14 /* ShowMedicamentViewController.swift in Sources */,
 				C17050C8205F0DF5007C6E14 /* ShowMedicamentsViewController.swift in Sources */,
+				C15434CA2069B98E00EE0984 /* ShowEvenementViewController.swift in Sources */,
 				C159437220589C73004968E0 /* DoctorSettingsViewController.swift in Sources */,
 				C1FCF72E205D770C0088C3F4 /* MedicamentSeed.swift in Sources */,
 				399AC147206466E80031E261 /* ActivitePrescriteTableViewCell.swift in Sources */,
@@ -720,11 +746,13 @@
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
 				C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
 				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
+				C15434C82069B23200EE0984 /* ShowEvenementDocteurViewController.swift in Sources */,
 				C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,
 				C1165B332061AD7700F45453 /* EvenementExtension.swift in Sources */,
 				C14ACC132066DFE10056558F /* PriseTableViewCell.swift in Sources */,
 				C1CD327A2068139000B71A6E /* ContactPersoTableViewCell.swift in Sources */,
+				C15434C62069B18100EE0984 /* EvenementTableViewCell.swift in Sources */,
 				B2DF2C0E205980DD00C608EA /* AddEventViewController.swift in Sources */,
 				C1CD326A206809C100B71A6E /* ContactProExtension.swift in Sources */,
 				C1CA35EE205DB46300937BFF /* typeEvenementSeed.swift in Sources */,
