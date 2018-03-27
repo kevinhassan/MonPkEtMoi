@@ -55,8 +55,10 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
         
         
         let cell = self.tableActiviteAR.dequeueReusableCell(withIdentifier: "activiteARCell", for: indexPath) as! ActiviteARTableViewCell
-        
-        cell.dateActiviteAR.text! = "Date de l'activité : " + (activiteAR![indexPath.row].dateActivite?.description)!
+        let formatter = DateFormatter()
+        let dateString = formatter.string(from: self.activiteAR![indexPath.row].dateActivite! as Date)
+        print(dateString)
+        cell.dateActiviteAR.text! = dateString
         
         cell.libelleActiviteAR.text! = (activite?.libelleActivite)!
 
