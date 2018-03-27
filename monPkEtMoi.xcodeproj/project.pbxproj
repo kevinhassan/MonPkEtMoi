@@ -54,6 +54,7 @@
 		C15434C62069B18100EE0984 /* EvenementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */; };
 		C15434C82069B23200EE0984 /* ShowEvenementDocteurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C72069B23200EE0984 /* ShowEvenementDocteurViewController.swift */; };
 		C15434CA2069B98E00EE0984 /* ShowEvenementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434C92069B98E00EE0984 /* ShowEvenementViewController.swift */; };
+		C15434CC2069C4B600EE0984 /* ShowPrisesByDocteurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15434CB2069C4B600EE0984 /* ShowPrisesByDocteurViewController.swift */; };
 		C159436C2058968B004968E0 /* PatientSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436B2058968B004968E0 /* PatientSettingsViewController.swift */; };
 		C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */; };
 		C159437020589AC0004968E0 /* HomePatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C159436F20589AC0004968E0 /* HomePatientViewController.swift */; };
@@ -169,6 +170,7 @@
 		C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenementTableViewCell.swift; sourceTree = "<group>"; };
 		C15434C72069B23200EE0984 /* ShowEvenementDocteurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEvenementDocteurViewController.swift; sourceTree = "<group>"; };
 		C15434C92069B98E00EE0984 /* ShowEvenementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEvenementViewController.swift; sourceTree = "<group>"; };
+		C15434CB2069C4B600EE0984 /* ShowPrisesByDocteurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPrisesByDocteurViewController.swift; sourceTree = "<group>"; };
 		C159436B2058968B004968E0 /* PatientSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientSettingsViewController.swift; sourceTree = "<group>"; };
 		C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDoctorViewController.swift; sourceTree = "<group>"; };
 		C159436F20589AC0004968E0 /* HomePatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePatientViewController.swift; sourceTree = "<group>"; };
@@ -449,6 +451,7 @@
 			children = (
 				C159436D20589AB1004968E0 /* HomeDoctorViewController.swift */,
 				C159437120589C73004968E0 /* DoctorSettingsViewController.swift */,
+				C15434CB2069C4B600EE0984 /* ShowPrisesByDocteurViewController.swift */,
 			);
 			path = Docteur;
 			sourceTree = "<group>";
@@ -700,6 +703,7 @@
 				C1F31B4D205EB3F300233282 /* HeurePriseTableViewCell.swift in Sources */,
 				C1F31B46205E96A900233282 /* AddPriseHeuresViewController.swift in Sources */,
 				C159437A2059F4FA004968E0 /* DateAndTimePicker.swift in Sources */,
+				C15434CC2069C4B600EE0984 /* ShowPrisesByDocteurViewController.swift in Sources */,
 				2380FCF62045A58B00763F43 /* monPkEtMoi.xcdatamodeld in Sources */,
 				B2DF00752051717A0055B0CA /* CoreDataManager.swift in Sources */,
 				EC837EA4204DAC930089A823 /* AddPatientViewController.swift in Sources */,

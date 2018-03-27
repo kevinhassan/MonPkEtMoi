@@ -18,9 +18,9 @@ class ShowHeuresPriseViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "\(medicament!.nomMedicament!) - Prises"
         do{
-            let posologie: Posologie = (try Posologie.get(withMedicament: medicament!))!
-            
-            prises = try Prise.getAllPrisesPosologieToday(posologie: posologie)
+            if let posologie = try Posologie.get(withMedicament: medicament!) {
+                prises = try Prise.getAllPrisesPosologieToday(posologie: posologie)
+            }
         }catch{
             DialogBoxHelper.alert(view: self, errorMessage: "Erreur dans la récupération des prises du médicament")
         }
@@ -40,7 +40,7 @@ class ShowHeuresPriseViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return (prises?.count)!
+        return prises?.count ?? 0
     }
 
     

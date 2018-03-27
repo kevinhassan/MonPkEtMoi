@@ -128,6 +128,21 @@ extension Posologie{
             throw error
         }
     }
+    /// Récupérer tous les types `Médicament` ayant une posologie dont la date de début est supérieur à 6 mois
+    static func getAllMedicamentPrescritSixMonth() throws -> [Medicament]{
+        let date = Calendar.current.date(byAdding: .month, value: -6, to: Date())
+        let predicate: NSPredicate = NSPredicate(format: "dateDebutPosologie > %@", date! as NSDate)
+        let request: NSFetchRequest<Posologie> = Posologie.fetchRequest()
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "dateDebutPosologie", ascending: true)]
+        do{
+            let posologies:[Posologie] = try CoreDataManager.context.fetch(request)
+            let medicaments:[Medicament] = posologies.map{$0.concerneMedicament!}
+            return medicaments
+        }catch let error as NSError{
+            throw error
+        }
+    }
     /// Générer les prises à effectuer selon l'intervalle dateDebut et dateFin de la posologie associée
     func generatePrises() throws {
         let dates = DateHelper.getDates(dateD: self.dateDebutPosologie!, dateF: self.dateFinPosologie!)
