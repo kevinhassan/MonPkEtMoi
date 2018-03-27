@@ -55,6 +55,7 @@ class NotificationHelper{
         self.request = UNNotificationRequest(identifier: self.identifier, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request!, withCompletionHandler: nil)
     }
+    
 }
 
 enum TypeNotification{

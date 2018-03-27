@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowEvenementDocteurViewController: UITableViewController {
+class ShowEvenementDocteurViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var evenements: [Evenement] = []
     var posEvent: Int? = nil
@@ -28,17 +28,17 @@ class ShowEvenementDocteurViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return (evenements.count)
     }
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         posEvent = indexPath.row
         performSegue(withIdentifier: "showAccident", sender: self)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "evenementCell", for: indexPath) as! EvenementTableViewCell
 
         cell.dateEvenement.setDate(date: evenements[indexPath.row].dateEvenement!)
