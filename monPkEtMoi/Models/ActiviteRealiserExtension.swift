@@ -40,6 +40,13 @@ extension ActiviteRealisee{
         return newActiviteRealisee
     }
     
+    
+    
+    /// Récupère toute les activité réalisée concernées par l'activité prescrite
+    ///
+    /// - Parameter activitePrescrite: activitePrescrite à laquelle appartient l'activtePrescrite
+    /// - Returns: renvoi la collection d'activite réalisée qui appartient a l'activité prescrite passée en paramètre
+    /// - Throws: error
     static func getAllComing(activitePrescrite : ActivitePrescrite) throws -> [ActiviteRealisee] {
         
         let predicate: NSPredicate = NSPredicate(format: "concerneActivite == %@ AND estRealise == %@ ",activitePrescrite,false as CVarArg,DateHelper.startOfDay(day: NSDate()),DateHelper.endOfDay(day: NSDate()))
@@ -53,6 +60,14 @@ extension ActiviteRealisee{
         }
     }
     
+    
+    /// Modifie le booléen validation concernant une activité réalisée et met à jour les attributs
+    ///
+    /// - Parameters:
+    ///   - withDate: 'NSDate' date a laquelle l'activité est réalisée
+    ///   - withHeure: 'NSDate' heure à laquelle l'activité est réalisée
+    ///   - withDuree: 'Int16' durée éffectuée d'activité
+    /// - Throws: error
     func validate(withDate : NSDate, withHeure : NSDate, withDuree : Int16) throws {
         
         self.estRealise = true
