@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		23187EF920664F9E00894DB9 /* PriseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23187EF820664F9E00894DB9 /* PriseExtension.swift */; };
+		231BE919206ABB0F000BF101 /* HomeTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */; };
+		231BE91B206ABDF7000BF101 /* TrackerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231BE91A206ABDF7000BF101 /* TrackerTableViewCell.swift */; };
 		23258C252062557600AB5022 /* AddActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */; };
 		23258C27206255A600AB5022 /* ShowActivitePrescriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */; };
 		23258C2920625CFF00AB5022 /* ActivitePrescriteExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */; };
@@ -68,7 +70,6 @@
 		C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */; };
 		C1823D94205D89B000DFCA42 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1823D93205D89B000DFCA42 /* DataHelper.swift */; };
 		C1B1E010205E880F003F9C66 /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B1E00F205E880F003F9C66 /* TimePicker.swift */; };
-		C1B844B920698C130070F017 /* EditSettingsQuestionnaireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */; };
 		C1B844BB206990480070F017 /* TrackerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1B844BA206990480070F017 /* TrackerExtension.swift */; };
 		C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */; };
 		C1C1F673206476A900B60CCB /* DateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C1F672206476A900B60CCB /* DateLabel.swift */; };
@@ -116,6 +117,8 @@
 
 /* Begin PBXFileReference section */
 		23187EF820664F9E00894DB9 /* PriseExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriseExtension.swift; sourceTree = "<group>"; };
+		231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTrackerViewController.swift; sourceTree = "<group>"; };
+		231BE91A206ABDF7000BF101 /* TrackerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackerTableViewCell.swift; sourceTree = "<group>"; };
 		23258C242062557600AB5022 /* AddActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C26206255A600AB5022 /* ShowActivitePrescriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowActivitePrescriteViewController.swift; sourceTree = "<group>"; };
 		23258C2820625CFF00AB5022 /* ActivitePrescriteExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitePrescriteExtension.swift; sourceTree = "<group>"; };
@@ -184,7 +187,6 @@
 		C1753B17205F44A7001EA44D /* DoseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoseTableViewCell.swift; sourceTree = "<group>"; };
 		C1823D93205D89B000DFCA42 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		C1B1E00F205E880F003F9C66 /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
-		C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingsQuestionnaireViewController.swift; sourceTree = "<group>"; };
 		C1B844BA206990480070F017 /* TrackerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerExtension.swift; sourceTree = "<group>"; };
 		C1C1F67020646EA800B60CCB /* RDVTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDVTableViewCell.swift; sourceTree = "<group>"; };
 		C1C1F672206476A900B60CCB /* DateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateLabel.swift; sourceTree = "<group>"; };
@@ -238,6 +240,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		231BE917206ABAC9000BF101 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */,
+			);
+			name = Tracker;
+			sourceTree = "<group>";
+		};
 		2380FCE12045A58A00763F43 = {
 			isa = PBXGroup;
 			children = (
@@ -348,7 +358,7 @@
 		C13F32832058860300C7CC8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C1B844B720698BDB0070F017 /* Parametres */,
+				231BE917206ABAC9000BF101 /* Tracker */,
 				C1CD32662068097700B71A6E /* Contact */,
 				C1CD32612067D82800B71A6E /* Prise */,
 				C1CD32602067D80F00B71A6E /* Activité */,
@@ -425,14 +435,6 @@
 				C1CD3269206809C100B71A6E /* ContactProExtension.swift */,
 			);
 			path = Contact;
-			sourceTree = "<group>";
-		};
-		C1B844B720698BDB0070F017 /* Parametres */ = {
-			isa = PBXGroup;
-			children = (
-				C1B844B820698C130070F017 /* EditSettingsQuestionnaireViewController.swift */,
-			);
-			path = Parametres;
 			sourceTree = "<group>";
 		};
 		C1CD325B2067D78E00B71A6E /* Patient */ = {
@@ -532,6 +534,7 @@
 				C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */,
 				C14ACC122066DFE10056558F /* PriseTableViewCell.swift */,
 				C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */,
+				231BE91A206ABDF7000BF101 /* TrackerTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -694,6 +697,7 @@
 				C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */,
 				EC556DF32062C0DB00277540 /* ShowRDVViewController.swift in Sources */,
 				C1C1F67120646EA900B60CCB /* RDVTableViewCell.swift in Sources */,
+				231BE91B206ABDF7000BF101 /* TrackerTableViewCell.swift in Sources */,
 				C1753B18205F44A7001EA44D /* DoseTableViewCell.swift in Sources */,
 				C1CD32652067D8AF00B71A6E /* NotificationHelper.swift in Sources */,
 				238284F02066A63500F94373 /* NSDateExtension.swift in Sources */,
@@ -731,7 +735,6 @@
 				C17050C6205EF463007C6E14 /* HomePriseViewController.swift in Sources */,
 				23B1AD3320691C7600918C57 /* EditContactPersoTableViewController.swift in Sources */,
 				EC975C6C20666463009524AD /* ActiviteRealiserExtension.swift in Sources */,
-				C1B844B920698C130070F017 /* EditSettingsQuestionnaireViewController.swift in Sources */,
 				C1B844BB206990480070F017 /* TrackerExtension.swift in Sources */,
 				C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */,
 				C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */,
@@ -750,6 +753,7 @@
 				C15943742058ABF0004968E0 /* FormValidatorHelper.swift in Sources */,
 				C1CA35EA205DB43000937BFF /* EtatSeed.swift in Sources */,
 				23D07DB3205ACB2900ED2868 /* ShowEventPatientViewController.swift in Sources */,
+				231BE919206ABB0F000BF101 /* HomeTrackerViewController.swift in Sources */,
 				C15434C82069B23200EE0984 /* ShowEvenementDocteurViewController.swift in Sources */,
 				C1165B352061AE9700F45453 /* MedicamentExtension.swift in Sources */,
 				C1CA35EC205DB44600937BFF /* typeSoignantSeed.swift in Sources */,

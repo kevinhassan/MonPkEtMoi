@@ -13,30 +13,23 @@ import CoreData
 /**
  Type Tracker
  
- **heureDebut**: Tracker -> NSDate
- **heureFin**: Tracker -> NSDate
- **intervalle**: Patient -> Int16
+ **date**: Tracker -> NSDate
+ **etat**: Tracker -> Etat
  */
 extension Tracker{
     /// Initialiser un `Tracker`
     ///
     /// - Parameters:
-    ///   - withHeureDebut: `NSDate` heure début du `Tracker`
-    ///   - withHeureFin:  `NSDate` heure fin du `Tracker`
-    ///   - withIntervalle: `Int16` intervalle de minutes pour `Tracker`
-    ///   - withPatient: `Patient` concerné par le `Tracker`
-    static func create(withHeureDebut: NSDate, withHeureFin: NSDate, withPatient: Patient, withIntervalle: Int16) throws -> Tracker {
+    ///   - withDate: date où le patient a relevé son état `NSDate`
+    ///   - withEtat: etat du patient au moment du relevé `String`
+    static func create(withDate: NSDate, withEtat: Etat) throws -> Tracker {
         
         let tracker = Tracker(context: CoreDataManager.context)
         
-        /// heure début du tracker
-        tracker.heureDebut = withHeureDebut
-        /// heure fin du tracker
-        tracker.heureFin = withHeureFin
-        /// intervalle de minutes du tracker
-        tracker.intervalle = withIntervalle
-        /// Tracker pour le patient
-        tracker.concernePatient = withPatient
+        /// date du tracker
+        tracker.date = withDate
+        /// etat du patient
+        tracker.avoirEtat = withEtat
         do{
             try CoreDataManager.save()
         }catch let error as NSError{
@@ -44,24 +37,18 @@ extension Tracker{
         }
         return tracker
     }
-    /// Editer les informations du `Tracker`
-    ///
-    /// - Parameters:
-    ///   - withHeureDebut: `NSDate` heure début du `Tracker`
-    ///   - withHeureFin:  `NSDate` heure fin du `Tracker`
-    ///   - withIntervalle: `Int16` intervalle de minutes pour `Tracker`
-    func edit(withHeureDebut: NSDate, withHeureFin: NSDate, withIntervalle: Int16) throws {
-        /// heure début du tracker
-        self.heureDebut = withHeureDebut
-        /// heure fin du tracker
-        self.heureFin = withHeureFin
-        /// intervalle de minutes du tracker
-        self.intervalle = withIntervalle
+    /// Récupérer tous les états sur 5 jours avant la date actuelle
+    static func getAll() throws -> [Tracker]{
+        let date = Calendar.current.date(byAdding: .day, value: -5, to: Date())
+        let predicate: NSPredicate = NSPredicate(format: "date > %@ AND date < %@", date! as NSDate, NSDate())
+        let request: NSFetchRequest<Tracker> = Tracker.fetchRequest()
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         do{
-            try CoreDataManager.save()
+            let trackers: [Tracker] = try CoreDataManager.context.fetch(request)
+            return trackers
         }catch let error as NSError{
             throw error
         }
     }
-
 }

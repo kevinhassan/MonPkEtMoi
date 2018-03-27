@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D102" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ActivitePrescrite" representedClassName="ActivitePrescrite" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -35,7 +35,7 @@
     </entity>
     <entity name="Etat" representedClassName="Etat" syncable="YES" codeGenerationType="class">
         <attribute name="libelleEtat" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="concerneHoraire" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlageHoraire" inverseName="avoirEtat" inverseEntity="PlageHoraire" syncable="YES"/>
+        <relationship name="avoirTracker" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tracker" inverseName="avoirEtat" inverseEntity="Tracker" syncable="YES"/>
     </entity>
     <entity name="Evenement" representedClassName="Evenement" syncable="YES" codeGenerationType="class">
         <attribute name="dateEvenement" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -66,11 +66,6 @@
         <attribute name="prenom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="PlageHoraire" representedClassName="PlageHoraire" syncable="YES" codeGenerationType="class">
-        <attribute name="heureDebut" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="heureFin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="avoirEtat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="concerneHoraire" inverseEntity="Etat" syncable="YES"/>
-    </entity>
     <entity name="Posologie" representedClassName="Posologie" syncable="YES" codeGenerationType="class">
         <attribute name="dateDebutPosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dateFinPosologie" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -99,9 +94,8 @@
         <relationship name="avoirType" maxCount="1" deletionRule="Nullify" destinationEntity="TypeSoignant" inverseName="avoirSoignant" inverseEntity="TypeSoignant" syncable="YES"/>
     </entity>
     <entity name="Tracker" representedClassName="Tracker" syncable="YES" codeGenerationType="class">
-        <attribute name="heureDebut" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="heureFin" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="intervalle" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="avoirEtat" maxCount="1" deletionRule="Nullify" destinationEntity="Etat" inverseName="avoirTracker" inverseEntity="Etat" syncable="YES"/>
         <relationship name="concernePatient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirTracker" inverseEntity="Patient" syncable="YES"/>
     </entity>
     <entity name="TypeAvis" representedClassName="TypeAvis" syncable="YES" codeGenerationType="class">
@@ -125,17 +119,16 @@
         <element name="Contact" positionX="-531" positionY="-18" width="128" height="118"/>
         <element name="ContactPerso" positionX="-351" positionY="-144" width="128" height="60"/>
         <element name="ContactPro" positionX="-360" positionY="-153" width="128" height="60"/>
-        <element name="Etat" positionX="331" positionY="-505" width="128" height="73"/>
+        <element name="Etat" positionX="331" positionY="-505" width="128" height="75"/>
         <element name="Evenement" positionX="-405" positionY="-207" width="128" height="105"/>
         <element name="Medicament" positionX="178" positionY="9" width="128" height="105"/>
         <element name="Patient" positionX="-207" positionY="-346" width="108" height="165"/>
         <element name="Personne" positionX="-288" positionY="-532" width="128" height="118"/>
-        <element name="PlageHoraire" positionX="108" positionY="-544" width="128" height="90"/>
         <element name="Posologie" positionX="-18" positionY="-13" width="128" height="165"/>
         <element name="Prise" positionX="9" positionY="182" width="128" height="105"/>
         <element name="RDV" positionX="-450" positionY="-376" width="128" height="135"/>
         <element name="Soignant" positionX="-468" positionY="-550" width="128" height="58"/>
-        <element name="Tracker" positionX="106" positionY="-324" width="128" height="105"/>
+        <element name="Tracker" positionX="106" positionY="-324" width="128" height="90"/>
         <element name="TypeAvis" positionX="304" positionY="-162" width="128" height="75"/>
         <element name="TypeEvenement" positionX="-567" positionY="-162" width="126" height="73"/>
         <element name="TypeSoignant" positionX="-657" positionY="-468" width="128" height="103"/>
