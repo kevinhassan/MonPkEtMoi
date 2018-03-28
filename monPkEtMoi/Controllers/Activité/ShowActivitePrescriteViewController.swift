@@ -31,17 +31,28 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     }
     
     @IBAction func unwindToActivitePrescrite(segue: UIStoryboardSegue){
+        do{
+            listeActivite = try ActivitePrescrite.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        // Do any additional setup after loading the view.
+        tableShowActivite.reloadData()
         self.tableShowActivite.reloadData()
     }
     
-    // MARK: - Envoyer la posologie à la vue suivante
+    
+    
+    // MARK: - Envoyer l'activite à la vue suivante
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "showActiviteAR"){
         if let indexPath = self.tableShowActivite.indexPathForSelectedRow{
-            let activiteViewController = segue.destination as! ShowActiviteDetailViewController
-           activiteViewController.activite = self.listeActivite[indexPath.row]
-            activiteViewController.posActivite = indexPath.row
+            let activiteARViewController = segue.destination as! ShowActiviteARViewController
+           activiteARViewController.activite = self.listeActivite[indexPath.row]
+            activiteARViewController.posActivite = indexPath.row
         }
     }
+}
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.listeActivite.count
@@ -58,6 +69,12 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     }
     
     @IBAction func unwindFromAddActivite(segue: UIStoryboardSegue){
+        do{
+            listeActivite = try ActivitePrescrite.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        // Do any additional setup after loading the view.
         tableShowActivite.reloadData()
     }
     

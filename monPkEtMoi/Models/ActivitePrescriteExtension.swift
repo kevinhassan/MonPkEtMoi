@@ -32,11 +32,15 @@ extension ActivitePrescrite{
         newActivitePrescrite.dateDebut = withDateD
         newActivitePrescrite.dureeActivite = withDuree
         newActivitePrescrite.libelleActivite = withType
+    
         do{
+            let _ = try newActivitePrescrite.generateActivitesAR()
             try CoreDataManager.save()
+            
         }catch let error as NSError{
             throw error
         }
+        
         return newActivitePrescrite
     }
     /// Récupérer tous les types `ActivitePrescrite` stockés
@@ -54,7 +58,7 @@ extension ActivitePrescrite{
         do{
             CoreDataManager.context.delete(self)
             try CoreDataManager.save()
-        }catch let error as NSError{
+        }catch let error as NSError {
             throw error
         }
     }
@@ -70,5 +74,26 @@ extension ActivitePrescrite{
         } catch let error as NSError {
             throw error
         }
+    }
+    
+    
+    func generateActivitesAR() throws{
+        // générer les activitées à réaliser
+        let dates = DateHelper.getDays(dateD: self.dateDebut!, dateF: self.dateFin!)
+        for element in dates{
+            for date in element!{
+                do{
+                    let ar = try ActiviteRealisee.create(withDate: date, withAP : self)
+                    self.addToEstEffectue(ar)
+                    
+                }catch let error as NSError{
+                    throw error
+                }
+
+            }
+            
+            
+        }
+
     }
 }
