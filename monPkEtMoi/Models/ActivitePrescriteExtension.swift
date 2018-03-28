@@ -83,7 +83,7 @@ extension ActivitePrescrite{
         for element in dates{
             for date in element!{
                 do{
-                    let ar = try ActiviteRealisee.create(withDate: date, withAP : self)
+                    let ar = try ActiviteRealisee.create(withDate: date, withPrescrit : self)
                     self.addToEstEffectue(ar)
                     
                 }catch let error as NSError{

@@ -29,16 +29,42 @@ class AddActivitePrescriteViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    func generateDate(lhs:NSDate, rhs:NSDate) -> [NSDate] {
+        var dates: [NSDate] = []
+        let cal = NSCalendar.current // or NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let days = NSDateComponents()
+        var dayCount = 0
+        while true {
+            days.day = dayCount
+            let date:NSDate = cal.date(byAdding : days as DateComponents, to: lhs as Date)! as NSDate
+            if date.compare(rhs as Date) == .orderedDescending {
+                break
+            }
+            dayCount += 1
+            dates.append(date)
+        }
+        
+        return dates
+    }
     
     /// Ajouter les activités à réaliser après l'ajout de l'activité prescrite en faisant un tableau de jours concernés
     @IBAction func addActiviteePrescrite(_ sender: Any) {
         
-       
-        let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
         
-                
+        let inputs:[String: UITextField] = ["dureeActivitee": dureePrescrite, "typeActivite": typeActivite, "dateDebut": dateDebut, "dateFin": dateFin]
+        let dates : [NSDate] = self.generateDate(lhs: dateDebut.getDate()!, rhs: dateFin.getDate()!)
+        
+        var joursActivite:[Int] = jours.map{(jour: UISwitch) in
+            if jour.isOn {
+                return 1
+            }
+            return 0
+        }
+        
         if FormValidatorHelper.validateForm(inputs ) && (self.dateDebut.getDate()! as Date) < (self.dateFin.getDate()! as Date){
-            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDateD: dateDebut.getDate()!, withDateF: dateFin.getDate()!,withType: typeActivite.text!)
+            saveNewActivitePrescrite(withDuree: Int16(dureePrescrite.text!)!, withDates: dates, withType: typeActivite.text!)
+            
+            saveNewActiviteAR(withDates: dates)
             
             
             DialogBoxHelper.alert(view: self, WithTitle: "Ajouté", andMessage: "L'activité a été ajoutée avec succès", closure: {(action)->() in

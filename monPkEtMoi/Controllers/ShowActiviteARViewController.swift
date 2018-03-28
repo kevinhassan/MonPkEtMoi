@@ -72,7 +72,6 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "validationSegue"{
-        
             if let indexPath = self.tableActiviteAR.indexPathForSelectedRow{
                 let destinationVC = segue.destination as! ValidateActiviteViewController
                 destinationVC.activiteAR = self.activiteAR?[indexPath.row]
