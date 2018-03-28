@@ -51,4 +51,17 @@ extension Tracker{
             throw error
         }
     }
+    static func getSynthese(numJour: Int) throws -> [Tracker] {
+        let date = Calendar.current.date(byAdding: .day, value: (-numJour-1), to: DateHelper.startOfDay(day: NSDate()) as Date)
+        let predicate: NSPredicate = NSPredicate(format: "date > %@ AND date < %@", date! as NSDate, DateHelper.endOfDay(day: date! as NSDate))
+        let request: NSFetchRequest<Tracker> = Tracker.fetchRequest()
+        request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        do{
+            let trackers: [Tracker] = try CoreDataManager.context.fetch(request)
+            return trackers
+        }catch let error as NSError{
+            throw error
+        }
+    }
 }

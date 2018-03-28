@@ -50,6 +50,8 @@
 		C1165B392061B5D200F45453 /* TypeAvisExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B382061B5D200F45453 /* TypeAvisExtension.swift */; };
 		C1165B3B2061B66500F45453 /* TypeEvenementExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */; };
 		C1165B3D2061B6AB00F45453 /* TypeSoignantExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */; };
+		C121C452206B0E5800B904D9 /* SyntheseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121C451206B0E5800B904D9 /* SyntheseTableViewCell.swift */; };
+		C121C456206B0F0F00B904D9 /* SyntheseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121C455206B0F0F00B904D9 /* SyntheseViewController.swift */; };
 		C14ACC072064A60C0056558F /* PosologieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */; };
 		C14ACC132066DFE10056558F /* PriseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC122066DFE10056558F /* PriseTableViewCell.swift */; };
 		C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */; };
@@ -168,6 +170,8 @@
 		C1165B382061B5D200F45453 /* TypeAvisExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAvisExtension.swift; sourceTree = "<group>"; };
 		C1165B3A2061B66500F45453 /* TypeEvenementExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeEvenementExtension.swift; sourceTree = "<group>"; };
 		C1165B3C2061B6AB00F45453 /* TypeSoignantExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSoignantExtension.swift; sourceTree = "<group>"; };
+		C121C451206B0E5800B904D9 /* SyntheseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseTableViewCell.swift; sourceTree = "<group>"; };
+		C121C455206B0F0F00B904D9 /* SyntheseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheseViewController.swift; sourceTree = "<group>"; };
 		C14ACC062064A60C0056558F /* PosologieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosologieTableViewCell.swift; sourceTree = "<group>"; };
 		C14ACC122066DFE10056558F /* PriseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriseTableViewCell.swift; sourceTree = "<group>"; };
 		C14ACC142066E1680056558F /* ShowHeuresPriseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeuresPriseViewController.swift; sourceTree = "<group>"; };
@@ -242,15 +246,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		231BE917206ABAC9000BF101 /* Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */,
-				233FD30A206AC69200209D31 /* AddTrackerViewController.swift */,
-			);
-			name = Tracker;
-			sourceTree = "<group>";
-		};
 		2380FCE12045A58A00763F43 = {
 			isa = PBXGroup;
 			children = (
@@ -332,6 +327,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C121C453206B0EC700B904D9 /* Synthese */ = {
+			isa = PBXGroup;
+			children = (
+				C121C455206B0F0F00B904D9 /* SyntheseViewController.swift */,
+			);
+			path = Synthese;
+			sourceTree = "<group>";
+		};
+		C121C454206B0EEE00B904D9 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				231BE918206ABB0F000BF101 /* HomeTrackerViewController.swift */,
+				233FD30A206AC69200209D31 /* AddTrackerViewController.swift */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
 		C13F327D2058858900C7CC8A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,7 +373,8 @@
 		C13F32832058860300C7CC8A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				231BE917206ABAC9000BF101 /* Tracker */,
+				C121C454206B0EEE00B904D9 /* Tracker */,
+				C121C453206B0EC700B904D9 /* Synthese */,
 				C1CD32662068097700B71A6E /* Contact */,
 				C1CD32612067D82800B71A6E /* Prise */,
 				C1CD32602067D80F00B71A6E /* Activité */,
@@ -538,6 +551,7 @@
 				C14ACC122066DFE10056558F /* PriseTableViewCell.swift */,
 				C15434C52069B18100EE0984 /* EvenementTableViewCell.swift */,
 				231BE91A206ABDF7000BF101 /* TrackerTableViewCell.swift */,
+				C121C451206B0E5800B904D9 /* SyntheseTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -694,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C121C452206B0E5800B904D9 /* SyntheseTableViewCell.swift in Sources */,
 				C1CD327420680F4E00B71A6E /* ContactProTableViewCell.swift in Sources */,
 				B2DF0077205171960055B0CA /* DialogBoxHelper.swift in Sources */,
 				236DBBF32063FF9C00E8534B /* AddMedicamentDosesViewController.swift in Sources */,
@@ -751,6 +766,7 @@
 				C1165B372061B22C00F45453 /* PosologieExtension.swift in Sources */,
 				C14ACC152066E1680056558F /* ShowHeuresPriseViewController.swift in Sources */,
 				EC76ED112062970F008A5DA2 /* AddRDVViewController.swift in Sources */,
+				C121C456206B0F0F00B904D9 /* SyntheseViewController.swift in Sources */,
 				C159436E20589AB1004968E0 /* HomeDoctorViewController.swift in Sources */,
 				238284ED2066790400F94373 /* Jour.swift in Sources */,
 				C1CD32682068099400B71A6E /* ContactPersoExtension.swift in Sources */,

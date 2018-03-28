@@ -3867,7 +3867,7 @@
         <!--Synthèse-->
         <scene sceneID="Maf-oG-NUc">
             <objects>
-                <viewController id="wa6-hu-x3o" sceneMemberID="viewController">
+                <viewController id="wa6-hu-x3o" customClass="SyntheseViewController" customModule="monPkEtMoi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FhC-eq-P3B"/>
                         <viewControllerLayoutGuide type="bottom" id="hlg-iW-g15"/>
@@ -3885,15 +3885,74 @@
                                     <segment title="Jour 4"/>
                                     <segment title="Jour 5"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeDay:" destination="wa6-hu-x3o" eventType="valueChanged" id="z5j-rL-Y2Y"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mIc-4K-a5v">
+                                <rect key="frame" x="16" y="127" width="343" height="491"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="syntheseCell" id="J3N-AC-5L7" customClass="SyntheseTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J3N-AC-5L7" id="xJl-92-g6j">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ze2-AB-K58">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Etat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsQ-ot-3JP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="266.5" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-aX-PxS" customClass="TimeLabel" customModule="monPkEtMoi" customModuleProvider="target">
+                                                            <rect key="frame" x="266.5" y="0.0" width="46.5" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ze2-AB-K58" firstAttribute="leading" secondItem="xJl-92-g6j" secondAttribute="leadingMargin" id="CLF-HA-fw4"/>
+                                                <constraint firstItem="Ze2-AB-K58" firstAttribute="height" secondItem="xJl-92-g6j" secondAttribute="height" id="ZoE-0V-ufm"/>
+                                                <constraint firstItem="Ze2-AB-K58" firstAttribute="centerY" secondItem="xJl-92-g6j" secondAttribute="centerY" id="Zs6-84-i8k"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ze2-AB-K58" secondAttribute="trailing" id="au1-xd-Gr5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="etatLabel" destination="bsQ-ot-3JP" id="LUj-4C-EiE"/>
+                                            <outlet property="heureLabel" destination="xdU-aX-PxS" id="cvd-hX-1aT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wa6-hu-x3o" id="qK4-ra-rZk"/>
+                                    <outlet property="delegate" destination="wa6-hu-x3o" id="SkY-cH-Wz6"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4EN-js-wDi" firstAttribute="top" secondItem="FhC-eq-P3B" secondAttribute="bottom" constant="10" id="1qc-4b-fpL"/>
+                            <constraint firstItem="hlg-iW-g15" firstAttribute="top" secondItem="mIc-4K-a5v" secondAttribute="bottom" id="3Oh-D2-1Zm"/>
+                            <constraint firstItem="mIc-4K-a5v" firstAttribute="top" secondItem="4EN-js-wDi" secondAttribute="bottom" constant="25" id="7n7-20-Tji"/>
                             <constraint firstItem="4EN-js-wDi" firstAttribute="centerX" secondItem="dF6-KO-5Dl" secondAttribute="centerX" id="Mqe-Ig-R7K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mIc-4K-a5v" secondAttribute="trailing" id="WGc-i5-LT6"/>
+                            <constraint firstItem="mIc-4K-a5v" firstAttribute="centerX" secondItem="dF6-KO-5Dl" secondAttribute="centerX" id="pP6-8k-nSA"/>
+                            <constraint firstItem="mIc-4K-a5v" firstAttribute="leading" secondItem="dF6-KO-5Dl" secondAttribute="leadingMargin" id="qhl-ON-9bU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Synthèse" image="syntheseIcon" id="2Ea-sk-AHL"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="4EN-js-wDi" id="FLR-H4-65w"/>
+                        <outlet property="tableViewSynthese" destination="mIc-4K-a5v" id="vXY-5O-aLD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl2-Tc-VT3" sceneMemberID="firstResponder"/>
             </objects>

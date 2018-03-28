@@ -28,6 +28,12 @@ class HomeTrackerViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func unwindToShowTracker(segue : UIStoryboardSegue){
+        do{
+            trackers = try Tracker.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+
         self.tableTrackers.reloadData()
     }
     // MARK: - Table view data source
