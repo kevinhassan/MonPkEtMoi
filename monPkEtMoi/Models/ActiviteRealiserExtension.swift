@@ -11,36 +11,28 @@ import CoreData
 
 // MARK: -
 /**
- Type ActivitePrescrite
+ Type ActiviteRealisee
  
- **dureeActivite**: ActivitePrescrite -> Int16
- **libelleActivite**: ActivitePrescrite -> String
- **dateDebut**: ActivitePrescrite -> NSDate
- **dateFin**: ActivitePrescrite -> NSDate
+ **date**: ActiviteRealisee -> NSDate
  */
 extension ActiviteRealisee{
     /// Initialiser une `ActivitePrescrite`
     ///
     /// - Parameters:
-    ///   - withDuree: `Int16` durée de l' `ActivitePrescrite`
-    ///   - withDateD:  `NSDate` date début de l' `ActivitePrescrite`
-    ///   - withDateF: `NSDate` date fin de l' `ActivitePrescrite`
-    ///   - withType: `String` type de l' `ActivitePrescrite`
-    static func create(withDate : [NSDate]) throws -> [ActiviteRealisee] {
+    ///   - withDuree: `Int16` durée de l' `ActiviteRealisee`
+    ///   - withPrescrit:  `ActivitePrescrite` date début de l' `ActiviteRealisee`
+    ///   - withDateF: `NSDate` date fin de l' `ActiviteRealisee`
+    ///   - withType: `String` type de l' `ActiviteRealisee`
+    static func create(withDate : NSDate, withPrescrit: ActivitePrescrite) throws -> ActiviteRealisee {
         let newActiviteRealisee = ActiviteRealisee(context: CoreDataManager.context)
-        var activiteRTab : [ActiviteRealisee]? = nil
-        for element in withDate{
-            
-            newActiviteRealisee.dateActivite = element
-            newActiviteRealisee.estRealise = false
-        
-            do{
-                try CoreDataManager.save()
-            }catch let error as NSError{
-                throw error
-            }
-            activiteRTab?.append(newActiviteRealisee)
+        newActiviteRealisee.dateActivite = withDate
+        newActiviteRealisee.estRealise = false
+        newActiviteRealisee.concerneActivite = withPrescrit
+        do{
+            try CoreDataManager.save()
+        }catch let error as NSError{
+            throw error
         }
-        return activiteRTab!
+        return newActiviteRealisee
     }
 }

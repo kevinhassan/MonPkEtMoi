@@ -79,10 +79,6 @@ class AddActivitePrescriteViewController: UITableViewController {
     func saveNewActivitePrescrite(withDuree: Int16, withDates: [NSDate], withType: String) {
         do{
             newActivite = try ActivitePrescrite.create(withDuree: withDuree, withDateD: withDates[0], withDateF: withDates[withDates.count-1], withType: withType)
-            
-            
-            
-            
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
@@ -90,12 +86,12 @@ class AddActivitePrescriteViewController: UITableViewController {
     // MARK: - Enregistrer les informations de l'activite
     func saveNewActiviteAR(withDates: [NSDate]) {
         do{
-            newActiviteAR = try ActiviteRealisee.create(withDate : withDates)
-            
+            for element in withDates{
+                let _ = try ActiviteRealisee.create(withDate: element, withPrescrit: self.newActivite!)
+            }
         }catch let error as NSError{
             DialogBoxHelper.alert(view: self, error: error)
         }
-    
     }
     
     override func didReceiveMemoryWarning() {
