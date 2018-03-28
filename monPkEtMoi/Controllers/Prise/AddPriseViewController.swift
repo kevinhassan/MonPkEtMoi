@@ -18,8 +18,9 @@ class AddPriseViewController: UITableViewController, UIPickerViewDelegate, UIPic
     
     var medocs: [Medicament] = []
     var posologie: Posologie? = nil
-    var posMedicament: Int? = nil
-    
+    var posMedicament: Int = 0
+    var posDosage: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let typePicker = UIPickerView()
@@ -40,6 +41,8 @@ class AddPriseViewController: UITableViewController, UIPickerViewDelegate, UIPic
     
     // MARK: - Fermer le clavier
     func donePressed(){
+        medicamentTF.text = medocs[posMedicament].nomMedicament
+        dosageLabel.text = medocs[posMedicament].dosageMedicament![posDosage]
         medicamentTF.resignFirstResponder()
     }
     
@@ -55,7 +58,7 @@ class AddPriseViewController: UITableViewController, UIPickerViewDelegate, UIPic
         heuresViewController.dosage = self.dosageLabel.text
         heuresViewController.dateD = (self.dateDebut)!.getDate()! as NSDate
         heuresViewController.dateF = (self.dateFin)!.getDate()! as NSDate
-        heuresViewController.medoc = medocs[posMedicament!]
+        heuresViewController.medoc = medocs[posMedicament]
     }
     
     // MARK: - UIPickerView Delegation
@@ -77,6 +80,7 @@ class AddPriseViewController: UITableViewController, UIPickerViewDelegate, UIPic
             return medocs[row].nomMedicament
         }else{
             let medicamentSelected = pickerView.selectedRow(inComponent: 0)
+            posDosage = row
             return medocs[medicamentSelected].dosageMedicament![row]
         }
     }

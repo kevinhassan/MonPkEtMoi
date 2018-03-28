@@ -18,7 +18,7 @@ class AddContactProViewController: UITableViewController,UIPickerViewDelegate, U
 
     var newContactPro: ContactPro? = nil
     var typesSoignants : [TypeSoignant] = []
-    var posSoignant: Int?
+    var posSoignant: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +45,7 @@ class AddContactProViewController: UITableViewController,UIPickerViewDelegate, U
     
     // MARK: - Fermer le clavier
     func donePressed(){
+        typeSoignantTF.text = typesSoignants[posSoignant].libelleTypeSoignant
         typeSoignantTF.resignFirstResponder()
     }
     
@@ -70,7 +71,7 @@ class AddContactProViewController: UITableViewController,UIPickerViewDelegate, U
         let inputs: [String: UITextField] = ["nom": nomTF,"prenom":prenomTF,"mail":mailTF,"tel":telTF, "typeSoignant": typeSoignantTF]
         if FormValidatorHelper.validateForm(inputs){
             do{
-                newContactPro = try ContactPro.create(withMail: mailTF.text!, withNom: nomTF.text!, withPrenom: prenomTF.text!, withTel: telTF.text!, withTypeSoignant: typesSoignants[posSoignant!])
+                newContactPro = try ContactPro.create(withMail: mailTF.text!, withNom: nomTF.text!, withPrenom: prenomTF.text!, withTel: telTF.text!, withTypeSoignant: typesSoignants[posSoignant])
                 DialogBoxHelper.alert(view: self, WithTitle: "Ajout du contact", andMessage: "Ajouté avec succès", closure: {(action) in
                     self.performSegue(withIdentifier: "showListContactPro", sender: self)
                 })

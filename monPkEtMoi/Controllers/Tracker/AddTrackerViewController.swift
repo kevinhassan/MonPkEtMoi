@@ -13,7 +13,7 @@ class AddTrackerViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var etats:[Etat] = []
     var posEtat: Int = 0
     @IBOutlet weak var etatTF: UITextField!
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let typePicker = UIPickerView()
@@ -24,7 +24,6 @@ class AddTrackerViewController: UIViewController, UIPickerViewDelegate, UIPicker
         toolbar.setItems([doneButton], animated: true)
         etatTF.inputAccessoryView = toolbar
         etatTF.inputView = typePicker
-        
         do{
             etats = try Etat.getAll()
         }catch let error as NSError{
@@ -35,6 +34,7 @@ class AddTrackerViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     // MARK: - Fermer le clavier
     func donePressed(){
+        etatTF.text = etats[posEtat].libelleEtat
         etatTF.resignFirstResponder()
     }
 

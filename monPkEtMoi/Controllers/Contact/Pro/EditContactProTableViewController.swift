@@ -12,7 +12,7 @@ class EditContactProTableViewController: UITableViewController, UIPickerViewDele
 
     var contactPro: ContactPro? = nil
     var specialitesContact:[TypeSoignant] = []
-    var posSoignant: Int? = 0
+    var posSoignant: Int = 0
     
     
     @IBOutlet weak var nomContact: UITextField!
@@ -47,6 +47,7 @@ class EditContactProTableViewController: UITableViewController, UIPickerViewDele
     
     // MARK: - Fermer le clavier
     func donePressed(){
+        specialiteContact.text = specialitesContact[posSoignant].libelleTypeSoignant
         specialiteContact.resignFirstResponder()
     }
     
@@ -77,7 +78,7 @@ class EditContactProTableViewController: UITableViewController, UIPickerViewDele
         let inputs: [String:UITextField] = ["nom": nomContact, "prenom": prenomContact,"mail": mailContact, "specialite": specialiteContact, "tel": telContact]
         if FormValidatorHelper.validateForm(inputs){
             do{
-                try contactPro?.edit(withMail: mailContact.text!, withNom: nomContact.text!, withPrenom: prenomContact.text!, withTel: telContact.text!, withTypeSoignant: specialitesContact[posSoignant!])
+                try contactPro?.edit(withMail: mailContact.text!, withNom: nomContact.text!, withPrenom: prenomContact.text!, withTel: telContact.text!, withTypeSoignant: specialitesContact[posSoignant])
                 DialogBoxHelper.alert(view: self, WithTitle: "Edition du contact", andMessage: "La mise à jours du contact est effectuée", closure: {(action) in
                     self.performSegue(withIdentifier: "editContactPro", sender: self)
                 })

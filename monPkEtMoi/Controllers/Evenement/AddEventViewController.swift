@@ -15,8 +15,8 @@ class AddEventViewController: UITableViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var typeEvent: UITextField!
     @IBOutlet weak var descriptionEvent: UITextField!
     
-    var typesEv: [TypeEvenement]? = nil
-    var posType: Int? = nil
+    var typesEv: [TypeEvenement] = []
+    var posType: Int = 0
     var typesEvenement: [String]?
 
     // MARK: - Vérifier que le formulaire est conforme
@@ -44,7 +44,7 @@ class AddEventViewController: UITableViewController, UIPickerViewDelegate, UIPic
         typeEvent.inputView = typePicker
         do{
             typesEv = try TypeEvenement.getAll()
-            typesEvenement = typesEv?.map{return $0.libelleTypeEvenement!}
+            typesEvenement = typesEv.map{return $0.libelleTypeEvenement!}
         }catch{
         }
     }
@@ -55,12 +55,13 @@ class AddEventViewController: UITableViewController, UIPickerViewDelegate, UIPic
     }
     // MARK: - Fermer le clavier
     func donePressed(){
+        typeEvent.text = typesEv[posType].libelleTypeEvenement
         typeEvent.resignFirstResponder()
     }
     
     // MARK: - Enregistrer le nouvel évenement
     func saveNewEvent(withDate date: NSDate, withDescription description: String?){
-        let type: TypeEvenement = self.typesEv![self.posType!]
+        let type: TypeEvenement = self.typesEv[self.posType]
         do{
             let _ = try Evenement.create(withDescription: description, withDate: date, withType: type)
         }catch let error as NSError{

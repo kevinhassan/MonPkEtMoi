@@ -22,7 +22,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     
     var typesSoignants : [TypeSoignant] = []
-    var posSoignant: Int?
+    var posSoignant: Int = 0
     var newRDV: RDV? = nil
     
     override func viewDidLoad() {
@@ -45,6 +45,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
     
     // MARK: - Fermer le clavier
     func donePressed(){
+        typeSoignant.text = typesSoignants[posSoignant].libelleTypeSoignant
         typeSoignant.resignFirstResponder()
     }
     
@@ -99,7 +100,7 @@ class AddRDVViewController: UITableViewController,UIPickerViewDelegate, UIPicker
         let inputs:[String: UITextField] = ["dateRDV": dateRDV,"heureRDV": heureRDV, "typeSoignant": typeSoignant,"descriptionRDV": descriptionRDV]
         
         if (FormValidatorHelper.validateForm(inputs) && dateRDV.getDate()! as Date > NSDate() as Date){
-            let typeSoignant = typesSoignants[posSoignant!]
+            let typeSoignant = typesSoignants[posSoignant]
             let dateRDV:NSDate = ((self.dateRDV))!.getDate()!
             let heureRDV:NSDate = ((self.heureRDV))!.getDate()!
             saveRDV(withTypeSoignant : typeSoignant,withDateRDV: dateRDV, withDescription: descriptionRDV.description, withHeureRDV: heureRDV, withLieuRDV: lieuRDV.description)
