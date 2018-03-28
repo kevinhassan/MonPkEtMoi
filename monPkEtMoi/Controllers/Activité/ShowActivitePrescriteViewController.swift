@@ -31,6 +31,13 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     }
     
     @IBAction func unwindToActivitePrescrite(segue: UIStoryboardSegue){
+        do{
+            listeActivite = try ActivitePrescrite.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        // Do any additional setup after loading the view.
+        tableShowActivite.reloadData()
         self.tableShowActivite.reloadData()
     }
     
@@ -62,6 +69,12 @@ class ShowActivitePrescriteViewController: UIViewController,UITableViewDataSourc
     }
     
     @IBAction func unwindFromAddActivite(segue: UIStoryboardSegue){
+        do{
+            listeActivite = try ActivitePrescrite.getAll()
+        }catch let error as NSError{
+            DialogBoxHelper.alert(view: self, error: error)
+        }
+        // Do any additional setup after loading the view.
         tableShowActivite.reloadData()
     }
     

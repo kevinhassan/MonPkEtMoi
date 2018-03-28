@@ -35,8 +35,8 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
                 DialogBoxHelper.alert(view: self, WithTitle: "Suppression de l'activité", andMessage: "Suppression réussie", closure: {(action) in
                     self.performSegue(withIdentifier: "removeActivite", sender: self)
                 })
-            }catch{
-                DialogBoxHelper.alert(view: self, errorMessage: "Suppression impossible")
+            }catch let error as NSError{
+                DialogBoxHelper.alert(view: self, error: error)
             }
         }, closureCancel: nil)
         
@@ -71,9 +71,12 @@ class ShowActiviteARViewController: UIViewController,UITableViewDelegate,UITable
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let indexPath = self.tableActiviteAR.indexPathForSelectedRow{
-            let destinationVC = segue.destination as! ValidateActiviteViewController
-            destinationVC.activiteAR = self.activiteAR?[indexPath.row]
+        if segue.identifier == "validationSegue"{
+        
+            if let indexPath = self.tableActiviteAR.indexPathForSelectedRow{
+                let destinationVC = segue.destination as! ValidateActiviteViewController
+                destinationVC.activiteAR = self.activiteAR?[indexPath.row]
+            }
         }
     }
 

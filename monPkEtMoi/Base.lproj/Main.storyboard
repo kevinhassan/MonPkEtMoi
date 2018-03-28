@@ -5289,7 +5289,7 @@
                         <outlet property="dateActivite" destination="Rpc-fm-K1e" id="azC-fl-0J4"/>
                         <outlet property="dureeRealisee" destination="APe-tv-C5X" id="0AO-PR-gBa"/>
                         <outlet property="heureExercice" destination="2yt-mG-bQW" id="s1e-LG-maQ"/>
-                        <segue destination="tBY-db-uT8" kind="unwind" unwindAction="unwindToActivitePrescriteWithSegue:" id="Nlf-ih-Cf3"/>
+                        <segue destination="tBY-db-uT8" kind="unwind" identifier="validationSegue" unwindAction="unwindToActivitePrescriteWithSegue:" id="5a7-Tg-jDW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDi-GP-Ybm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5370,7 +5370,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableActiviteAR" destination="wI8-dy-dlP" id="rLO-3Z-ow1"/>
-                        <segue destination="9Ym-Ki-pwC" kind="unwind" unwindAction="unwindToActivitePrescriteWithSegue:" id="Hvk-ax-FhE"/>
+                        <segue destination="9Ym-Ki-pwC" kind="unwind" identifier="removeActivite" unwindAction="unwindToActivitePrescriteWithSegue:" id="Hvk-ax-FhE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tkh-NC-zaQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

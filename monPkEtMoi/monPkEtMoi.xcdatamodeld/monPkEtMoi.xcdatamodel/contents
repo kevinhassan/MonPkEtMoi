@@ -6,14 +6,14 @@
         <attribute name="dureeActivite" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="libelleActivite" attributeType="String" syncable="YES"/>
         <relationship name="concernePatient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="avoirActivite" inverseEntity="Patient" syncable="YES"/>
-        <relationship name="estEffectue" toMany="YES" deletionRule="Nullify" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
+        <relationship name="estEffectue" toMany="YES" deletionRule="Cascade" destinationEntity="ActiviteRealisee" inverseName="concerneActivite" inverseEntity="ActiviteRealisee" syncable="YES"/>
     </entity>
     <entity name="ActiviteRealisee" representedClassName="ActiviteRealisee" syncable="YES" codeGenerationType="class">
         <attribute name="dateActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="dureeRealise" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="estRealise" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="heureActivite" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="concerneActivite" maxCount="1" deletionRule="Nullify" destinationEntity="ActivitePrescrite" inverseName="estEffectue" inverseEntity="ActivitePrescrite" syncable="YES"/>
+        <relationship name="concerneActivite" maxCount="1" deletionRule="Cascade" destinationEntity="ActivitePrescrite" inverseName="estEffectue" inverseEntity="ActivitePrescrite" syncable="YES"/>
     </entity>
     <entity name="Avis" representedClassName="Avis" syncable="YES" codeGenerationType="class">
         <attribute name="commentaireAvis" optional="YES" attributeType="String" syncable="YES"/>
