@@ -5775,7 +5775,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wwe-jU-tA6">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="-0.5" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activiteARCell" rowHeight="63" id="dK6-Lv-6VY" customClass="ActiviteARTableViewCell" customModule="monPkEtMoi" customModuleProvider="target">
@@ -5834,10 +5834,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="centerX" secondItem="1kq-V1-ZNg" secondAttribute="centerX" id="gNt-6w-CMs"/>
-                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="width" secondItem="1kq-V1-ZNg" secondAttribute="width" id="jyu-AB-cVS"/>
-                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="top" secondItem="PKs-ml-P2s" secondAttribute="bottom" id="rF9-PX-p9q"/>
-                            <constraint firstItem="jzj-eu-zCb" firstAttribute="top" secondItem="Wwe-jU-tA6" secondAttribute="bottom" id="uB0-ht-jbX"/>
+                            <constraint firstItem="jzj-eu-zCb" firstAttribute="top" secondItem="Wwe-jU-tA6" secondAttribute="bottom" id="8a7-Uq-3NP"/>
+                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="centerX" secondItem="1kq-V1-ZNg" secondAttribute="centerX" id="b3D-Xu-yfY"/>
+                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="width" secondItem="1kq-V1-ZNg" secondAttribute="width" id="jR7-Ce-ysu"/>
+                            <constraint firstItem="Wwe-jU-tA6" firstAttribute="top" secondItem="PKs-ml-P2s" secondAttribute="bottom" id="nBC-GE-t2X"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Exercices" image="exercice" id="vIa-0P-VsE"/>
