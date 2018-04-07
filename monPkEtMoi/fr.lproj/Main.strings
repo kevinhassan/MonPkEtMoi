@@ -1,0 +1,429 @@
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "0Bf-oZ-qjD"; */
+"0Bf-oZ-qjD.headerTitle" = "Informations de contact";
+
+/* Class = "UINavigationItem"; title = "Prénom Nom"; ObjectID = "0XB-T3-lZd"; */
+"0XB-T3-lZd.title" = "Prénom Nom";
+
+/* Class = "UIButton"; normalTitle = "Médecin"; ObjectID = "0l2-Hv-FBb"; */
+"0l2-Hv-FBb.normalTitle" = "Médecin";
+
+/* Class = "UITabBarItem"; title = "Synthèse"; ObjectID = "2Ea-sk-AHL"; */
+"2Ea-sk-AHL.title" = "Synthèse";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "2T3-wc-qH6"; */
+"2T3-wc-qH6.text" = "Prénom";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "2Yz-GT-xRe"; */
+"2Yz-GT-xRe.text" = "Prénom";
+
+/* Class = "UINavigationItem"; title = "Prénom Nom"; ObjectID = "3Ep-kY-4qz"; */
+"3Ep-kY-4qz.title" = "Prénom Nom";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter"; ObjectID = "3h0-iG-weY"; */
+"3h0-iG-weY.title" = "Ajouter";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "3uo-iX-iWh"; */
+"3uo-iX-iWh.text" = "Description";
+
+/* Class = "UILabel"; text = "PrénomValeur"; ObjectID = "3zn-dL-cm8"; */
+"3zn-dL-cm8.text" = "PrénomValeur";
+
+/* Class = "UILabel"; text = "Lieu"; ObjectID = "4lG-9T-bzx"; */
+"4lG-9T-bzx.text" = "Lieu";
+
+/* Class = "UILabel"; text = "Temps de préparation"; ObjectID = "52X-YZ-Afe"; */
+"52X-YZ-Afe.text" = "Temps de préparation";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "666-Zj-lh7"; */
+"666-Zj-lh7.headerTitle" = "Informations personnelles";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter"; ObjectID = "67M-Vc-eEw"; */
+"67M-Vc-eEw.title" = "Ajouter";
+
+/* Class = "UILabel"; text = "PrénomValeur"; ObjectID = "6EZ-xw-MM5"; */
+"6EZ-xw-MM5.text" = "PrénomValeur";
+
+/* Class = "UILabel"; text = "TelValeur"; ObjectID = "6JQ-Gx-VRr"; */
+"6JQ-Gx-VRr.text" = "TelValeur";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "6JY-qg-WTH"; */
+"6JY-qg-WTH.text" = "Mail";
+
+/* Class = "UILabel"; text = "LieuValeur"; ObjectID = "7eT-6V-qek"; */
+"7eT-6V-qek.text" = "LieuValeur";
+
+/* Class = "UILabel"; text = "Mon PK & Moi"; ObjectID = "8fR-Lj-Lsz"; */
+"8fR-Lj-Lsz.text" = "Mon PK & Moi";
+
+/* Class = "UILabel"; text = "Bienvenue sur l'application "; ObjectID = "8mU-4Z-1zk"; */
+"8mU-4Z-1zk.text" = "Bienvenue sur l'application ";
+
+/* Class = "UITabBarItem"; title = "Tracker"; ObjectID = "8pM-4P-oS6"; */
+"8pM-4P-oS6.title" = "Tracker";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "97b-8R-mBD"; */
+"97b-8R-mBD.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "9co-SK-gwI"; */
+"9co-SK-gwI.text" = "Tél";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "9rC-56-d8r"; */
+"9rC-56-d8r.text" = "Date";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "A9S-NA-faY"; */
+"A9S-NA-faY.text" = "Mail";
+
+/* Class = "UILabel"; text = "Prénom Nom"; ObjectID = "AfO-GY-NFi"; */
+"AfO-GY-NFi.text" = "Prénom Nom";
+
+/* Class = "UILabel"; text = "NomValeur"; ObjectID = "AsA-qJ-CNO"; */
+"AsA-qJ-CNO.text" = "NomValeur";
+
+/* Class = "UILabel"; text = "PrénomValeur"; ObjectID = "B2Z-1w-0lk"; */
+"B2Z-1w-0lk.text" = "PrénomValeur";
+
+/* Class = "UIViewController"; title = "Accueil non enregistré"; ObjectID = "BE2-a5-Vzb"; */
+"BE2-a5-Vzb.title" = "Accueil non enregistré";
+
+/* Class = "UINavigationItem"; title = "Liste de contacts"; ObjectID = "BKP-eK-vZ0"; */
+"BKP-eK-vZ0.title" = "Liste de contacts";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "BX5-az-XaD"; */
+"BX5-az-XaD.headerTitle" = "Informations de contact";
+
+/* Class = "UINavigationItem"; title = "Bienvenue!"; ObjectID = "Bc5-XG-pWZ"; */
+"Bc5-XG-pWZ.title" = "Bienvenue!";
+
+/* Class = "UILabel"; text = "Spécialité"; ObjectID = "Cyf-6K-Wrd"; */
+"Cyf-6K-Wrd.text" = "Spécialité";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "DD8-4h-Pr5"; */
+"DD8-4h-Pr5.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "DyJ-Pm-IPc"; */
+"DyJ-Pm-IPc.text" = "Adresse";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "E6Q-SX-MNQ"; */
+"E6Q-SX-MNQ.text" = "Mail";
+
+/* Class = "UINavigationItem"; title = "Prénom Nom"; ObjectID = "Eo3-aZ-rea"; */
+"Eo3-aZ-rea.title" = "Prénom Nom";
+
+/* Class = "UILabel"; text = "SpecialiteValeur"; ObjectID = "FPg-Bo-feM"; */
+"FPg-Bo-feM.text" = "SpecialiteValeur";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "FTB-50-bLt"; */
+"FTB-50-bLt.text" = "Nom";
+
+/* Class = "UIBarButtonItem"; title = "Sauvegarder"; ObjectID = "FlL-uT-jhD"; */
+"FlL-uT-jhD.title" = "Sauvegarder";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "G9r-m8-4cI"; */
+"G9r-m8-4cI.headerTitle" = "Informations de contact";
+
+/* Class = "UIBarButtonItem"; title = "Enregistrer"; ObjectID = "GhS-oR-7MW"; */
+"GhS-oR-7MW.title" = "Enregistrer";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "HG4-GV-GME"; */
+"HG4-GV-GME.headerTitle" = "Informations personnelles";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "HKE-qP-zNJ"; */
+"HKE-qP-zNJ.text" = "Nom";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "ICz-NL-bMi"; */
+"ICz-NL-bMi.text" = "Prénom";
+
+/* Class = "UILabel"; text = "AdresseValeur"; ObjectID = "IQr-Hj-wDv"; */
+"IQr-Hj-wDv.text" = "AdresseValeur";
+
+/* Class = "UILabel"; text = "Lieu"; ObjectID = "ISU-1K-MkG"; */
+"ISU-1K-MkG.text" = "Lieu";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "IUN-vJ-DYE"; */
+"IUN-vJ-DYE.headerTitle" = "Informations de contact";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "JPP-kY-oQp"; */
+"JPP-kY-oQp.text" = "Nom";
+
+/* Class = "UILabel"; text = "Lieu"; ObjectID = "Jpz-PE-Gb0"; */
+"Jpz-PE-Gb0.text" = "Lieu";
+
+/* Class = "UILabel"; text = "Temps de préparation"; ObjectID = "MWj-Fh-zsR"; */
+"MWj-Fh-zsR.text" = "Temps de préparation";
+
+/* Class = "UILabel"; text = "Bienvenue sur l'application "; ObjectID = "NCX-mW-6yg"; */
+"NCX-mW-6yg.text" = "Bienvenue sur l'application ";
+
+/* Class = "UILabel"; text = "Temps de préparation"; ObjectID = "OLs-Lv-mRd"; */
+"OLs-Lv-mRd.text" = "Temps de préparation";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "P24-IV-YHn"; */
+"P24-IV-YHn.text" = "Mail";
+
+/* Class = "UINavigationItem"; title = "Contacts médicaux"; ObjectID = "PAE-pm-cCh"; */
+"PAE-pm-cCh.title" = "Contacts médicaux";
+
+/* Class = "UILabel"; text = "Adresse"; ObjectID = "PHU-Tx-8bU"; */
+"PHU-Tx-8bU.text" = "Adresse";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "Qr2-Yc-yRs"; */
+"Qr2-Yc-yRs.headerTitle" = "Informations personnelles";
+
+/* Class = "UIButton"; normalTitle = "Patient"; ObjectID = "RR6-9o-oQU"; */
+"RR6-9o-oQU.normalTitle" = "Patient";
+
+/* Class = "UINavigationItem"; title = "Contact médical"; ObjectID = "RXg-WA-1XR"; */
+"RXg-WA-1XR.title" = "Contact médical";
+
+/* Class = "UIBarButtonItem"; title = "Ajouter"; ObjectID = "RfZ-yy-hj5"; */
+"RfZ-yy-hj5.title" = "Ajouter";
+
+/* Class = "UITabBarItem"; title = "Exercices"; ObjectID = "S2l-fB-Nfv"; */
+"S2l-fB-Nfv.title" = "Exercices";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "SNY-TZ-9Gb"; */
+"SNY-TZ-9Gb.text" = "Mail";
+
+/* Class = "UILabel"; text = "LieuValeur"; ObjectID = "SY5-c9-X4e"; */
+"SY5-c9-X4e.text" = "LieuValeur";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "Suo-tH-a6o"; */
+"Suo-tH-a6o.text" = "Prénom";
+
+/* Class = "UILabel"; text = "TelValeur"; ObjectID = "Tdg-eW-DmR"; */
+"Tdg-eW-DmR.text" = "TelValeur";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "Tx0-Ei-4ll"; */
+"Tx0-Ei-4ll.text" = "Detail";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "U7W-kk-bYB"; */
+"U7W-kk-bYB.headerTitle" = "Informations personnelles";
+
+/* Class = "UILabel"; text = "NomValeur"; ObjectID = "UVk-WK-QbL"; */
+"UVk-WK-QbL.text" = "NomValeur";
+
+/* Class = "UILabel"; text = "Date de naissance"; ObjectID = "UsP-uJ-UjV"; */
+"UsP-uJ-UjV.text" = "Date de naissance";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "WLv-IH-uJf"; */
+"WLv-IH-uJf.text" = "Tél";
+
+/* Class = "UINavigationItem"; title = "Ajouter événement"; ObjectID = "WYD-TK-rjS"; */
+"WYD-TK-rjS.title" = "Ajouter événement";
+
+/* Class = "UITabBarItem"; title = "Exercices"; ObjectID = "WZW-FB-NTu"; */
+"WZW-FB-NTu.title" = "Exercices";
+
+/* Class = "UIBarButtonItem"; title = "Editer"; ObjectID = "Xdw-ZZ-NfV"; */
+"Xdw-ZZ-NfV.title" = "Editer";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "Y5o-VX-eP3"; */
+"Y5o-VX-eP3.text" = "Mail";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "Y97-lx-ThX"; */
+"Y97-lx-ThX.text" = "Tél";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "YAG-1h-f2d"; */
+"YAG-1h-f2d.text" = "Detail";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "YHg-qj-obP"; */
+"YHg-qj-obP.text" = "Nom";
+
+/* Class = "UILabel"; text = "Prénom Nom"; ObjectID = "Yx0-r5-4G2"; */
+"Yx0-r5-4G2.text" = "Prénom Nom";
+
+/* Class = "UILabel"; text = "MailValeur"; ObjectID = "Yz1-ma-D0c"; */
+"Yz1-ma-D0c.text" = "MailValeur";
+
+/* Class = "UIBarButtonItem"; title = "Editer"; ObjectID = "aIv-ob-uUR"; */
+"aIv-ob-uUR.title" = "Editer";
+
+/* Class = "UILabel"; text = "Date de naissance"; ObjectID = "azU-PP-jFq"; */
+"azU-PP-jFq.text" = "Date de naissance";
+
+/* Class = "UILabel"; text = "Contacts personnels"; ObjectID = "bKE-Bz-Gqk"; */
+"bKE-Bz-Gqk.text" = "Contacts personnels";
+
+/* Class = "UILabel"; text = "Votre ami au quotidien !"; ObjectID = "btn-jm-74o"; */
+"btn-jm-74o.text" = "Votre ami au quotidien !";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "c9j-fN-UbE"; */
+"c9j-fN-UbE.text" = "Tél";
+
+/* Class = "UIButton"; normalTitle = "Ajouter rendez-vous"; ObjectID = "dzV-BI-yVX"; */
+"dzV-BI-yVX.normalTitle" = "Ajouter rendez-vous";
+
+/* Class = "UILabel"; text = "TelValeur"; ObjectID = "e7c-Lp-lf5"; */
+"e7c-Lp-lf5.text" = "TelValeur";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "ebO-nK-KND"; */
+"ebO-nK-KND.text" = "Type";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "ere-6B-1QS"; */
+"ere-6B-1QS.headerTitle" = "Informations personnelles";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "f2Z-Fi-38f"; */
+"f2Z-Fi-38f.text" = "Nom";
+
+/* Class = "UITabBarItem"; title = "Prises"; ObjectID = "feP-Ax-xzx"; */
+"feP-Ax-xzx.title" = "Prises";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "ff0-bJ-EAz"; */
+"ff0-bJ-EAz.headerTitle" = "Informations personnelles";
+
+/* Class = "UINavigationItem"; title = "Création compte patient"; ObjectID = "g08-yM-uF5"; */
+"g08-yM-uF5.title" = "Création compte patient";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "gF8-GB-A0S"; */
+"gF8-GB-A0S.text" = "Prénom";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "h8e-bs-W6m"; */
+"h8e-bs-W6m.text" = "Prénom";
+
+/* Class = "UILabel"; text = "Votre ami au quotidien !"; ObjectID = "hCV-tB-O59"; */
+"hCV-tB-O59.text" = "Votre ami au quotidien !";
+
+/* Class = "UILabel"; text = "Voir"; ObjectID = "hI4-Sn-qqr"; */
+"hI4-Sn-qqr.text" = "Voir";
+
+/* Class = "UILabel"; text = "Spécialité"; ObjectID = "heH-r4-v4H"; */
+"heH-r4-v4H.text" = "Spécialité";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "hgg-p4-MUj"; */
+"hgg-p4-MUj.headerTitle" = "Informations de contact";
+
+/* Class = "UILabel"; text = "SpecialiteValeur"; ObjectID = "iFf-rm-ULh"; */
+"iFf-rm-ULh.text" = "SpecialiteValeur";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "iUA-6k-cf3"; */
+"iUA-6k-cf3.text" = "Prénom";
+
+/* Class = "UILabel"; text = "TempsValeur"; ObjectID = "iZU-pY-LVY"; */
+"iZU-pY-LVY.text" = "TempsValeur";
+
+/* Class = "UILabel"; text = "Voir"; ObjectID = "ili-UL-cxn"; */
+"ili-UL-cxn.text" = "Voir";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "iq6-9R-tZV"; */
+"iq6-9R-tZV.text" = "Tél";
+
+/* Class = "UIButton"; normalTitle = "Ajouter prise"; ObjectID = "jER-BZ-3yk"; */
+"jER-BZ-3yk.normalTitle" = "Ajouter prise";
+
+/* Class = "UILabel"; text = "Spécialité"; ObjectID = "jKG-kl-Kwd"; */
+"jKG-kl-Kwd.text" = "Spécialité";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "jsJ-Z9-1sO"; */
+"jsJ-Z9-1sO.headerTitle" = "Informations de contact";
+
+/* Class = "UILabel"; text = "MailValeur"; ObjectID = "kL1-3Z-eW0"; */
+"kL1-3Z-eW0.text" = "MailValeur";
+
+/* Class = "UILabel"; text = "DateValeur"; ObjectID = "kQw-oh-Bk7"; */
+"kQw-oh-Bk7.text" = "DateValeur";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "knY-5U-0Ow"; */
+"knY-5U-0Ow.text" = "Tél";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "lqK-Tc-qOL"; */
+"lqK-Tc-qOL.headerTitle" = "Informations de contact";
+
+/* Class = "UITabBarItem"; title = "Médicaments"; ObjectID = "m6S-eh-7R3"; */
+"m6S-eh-7R3.title" = "Médicaments";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "mTi-js-rNi"; */
+"mTi-js-rNi.text" = "Mail";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "mrE-W5-f83"; */
+"mrE-W5-f83.text" = "Tél";
+
+/* Class = "UILabel"; text = "Spécialité"; ObjectID = "n2S-qT-hvY"; */
+"n2S-qT-hvY.text" = "Spécialité";
+
+/* Class = "UILabel"; text = "Temps de préparation"; ObjectID = "nQ4-o0-tXn"; */
+"nQ4-o0-tXn.text" = "Temps de préparation";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "nVi-gY-f8w"; */
+"nVi-gY-f8w.headerTitle" = "Informations personnelles";
+
+/* Class = "UILabel"; text = "Mail"; ObjectID = "nho-LG-GH4"; */
+"nho-LG-GH4.text" = "Mail";
+
+/* Class = "UIBarButtonItem"; title = "Editer"; ObjectID = "nv0-lW-mFI"; */
+"nv0-lW-mFI.title" = "Editer";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "oN9-V7-SSh"; */
+"oN9-V7-SSh.text" = "Nom";
+
+/* Class = "UILabel"; text = "NomValeur"; ObjectID = "oSq-d5-buW"; */
+"oSq-d5-buW.text" = "NomValeur";
+
+/* Class = "UINavigationItem"; title = "Prénom Nom"; ObjectID = "oaV-GV-rq1"; */
+"oaV-GV-rq1.title" = "Prénom Nom";
+
+/* Class = "UILabel"; text = "Lieu"; ObjectID = "pS1-F7-J5O"; */
+"pS1-F7-J5O.text" = "Lieu";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "pee-qk-TRh"; */
+"pee-qk-TRh.text" = "Nom";
+
+/* Class = "UILabel"; text = "MailValeur"; ObjectID = "rDi-3j-r1F"; */
+"rDi-3j-r1F.text" = "MailValeur";
+
+/* Class = "UITabBarItem"; title = "Accueil"; ObjectID = "rYG-ea-v4W"; */
+"rYG-ea-v4W.title" = "Accueil";
+
+/* Class = "UIBarButtonItem"; title = "Sauvegarder"; ObjectID = "rm2-oy-KNG"; */
+"rm2-oy-KNG.title" = "Sauvegarder";
+
+/* Class = "UILabel"; text = "Contacts médicaux"; ObjectID = "tNC-7p-HtD"; */
+"tNC-7p-HtD.text" = "Contacts médicaux";
+
+/* Class = "UILabel"; text = "Date de naissance"; ObjectID = "tia-bL-tMN"; */
+"tia-bL-tMN.text" = "Date de naissance";
+
+/* Class = "UINavigationItem"; title = "Contact personnel"; ObjectID = "tqo-yj-lu4"; */
+"tqo-yj-lu4.title" = "Contact personnel";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations de contact"; ObjectID = "u6e-qq-sgV"; */
+"u6e-qq-sgV.headerTitle" = "Informations de contact";
+
+/* Class = "UIButton"; normalTitle = "Commencer"; ObjectID = "uCl-dq-Kyd"; */
+"uCl-dq-Kyd.normalTitle" = "Commencer";
+
+/* Class = "UILabel"; text = "Mon PK & Moi"; ObjectID = "ubm-3T-K4h"; */
+"ubm-3T-K4h.text" = "Mon PK & Moi";
+
+/* Class = "UITabBarItem"; title = "Rendez-vous"; ObjectID = "wQl-Ql-JAZ"; */
+"wQl-Ql-JAZ.title" = "Rendez-vous";
+
+/* Class = "UILabel"; text = "Date de naissance"; ObjectID = "xGR-Vg-Lqg"; */
+"xGR-Vg-Lqg.text" = "Date de naissance";
+
+/* Class = "UIButton"; normalTitle = "Ajouter exercice"; ObjectID = "xMh-MK-k1S"; */
+"xMh-MK-k1S.normalTitle" = "Ajouter exercice";
+
+/* Class = "UILabel"; text = "Spécialité"; ObjectID = "xSo-aI-B5L"; */
+"xSo-aI-B5L.text" = "Spécialité";
+
+/* Class = "UINavigationItem"; title = "Prénom Nom"; ObjectID = "xel-Xs-eBd"; */
+"xel-Xs-eBd.title" = "Prénom Nom";
+
+/* Class = "UILabel"; text = "Tél"; ObjectID = "xkc-MU-pkN"; */
+"xkc-MU-pkN.text" = "Tél";
+
+/* Class = "UIButton"; normalTitle = "Ajouter événement"; ObjectID = "y3a-m8-H4a"; */
+"y3a-m8-H4a.normalTitle" = "Ajouter événement";
+
+/* Class = "UINavigationItem"; title = "Contacts personnels"; ObjectID = "yue-Ub-5w6"; */
+"yue-Ub-5w6.title" = "Contacts personnels";
+
+/* Class = "UILabel"; text = "Nom"; ObjectID = "zdR-Ou-PcK"; */
+"zdR-Ou-PcK.text" = "Nom";
+
+/* Class = "UITableViewSection"; headerTitle = "Informations personnelles"; ObjectID = "zoK-m5-CQc"; */
+"zoK-m5-CQc.headerTitle" = "Informations personnelles";
+
+/* Class = "UILabel"; text = "Prénom"; ObjectID = "zw1-aW-buE"; */
+"zw1-aW-buE.text" = "Prénom";

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // MARK: - Partie notification de l'application
+        UNUserNotificationCenter.current().delegate = self
+        NotificationHelper.authorizeNotification()
         // Override point for customization after application launch.
+        return true
+    }
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        // MARK: - Lancement des seeds pour remplir la BD
+        if(!UserDefaults.standard.bool(forKey: "wasLaunched")){
+            DataHelper.seedDataStore()
+            UserDefaults.standard.set(true, forKey: "wasLaunched")
+        }
+        do{
+            /// Vérifier l'existance d'un compte patient avant de lancer l'application
+            ///
+            /// Si le patient existe alors on le redirige vers son accueil
+            /// Sinon il crée son compte au lancement de l'application
+            let exist:Bool = try Patient.exists()
+            if exist {
+                let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "home") as! HomeViewController
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window?.rootViewController = homeViewController
+                self.window?.makeKeyAndVisible()
+            }
+        }catch{
+            fatalError("Application crashed")
+        }
         return true
     }
 
@@ -91,3 +120,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate:UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler(.alert)
+    }
+}
